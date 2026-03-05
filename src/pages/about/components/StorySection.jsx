@@ -33,9 +33,13 @@ const TitleBox = ({
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "white",
+          padding:{xs: "0!important" , md: 2}
         }}
       >
-        <Stack direction="row" justifyContent="center" paddingLeft={0}>
+        <Stack direction="row" justifyContent="center"  sx={{ 
+          padding:{xs: 0 , md: 2},
+          paddingLeft:"0!important"
+         }}>
           <Box
             sx={{
               padding: 0,

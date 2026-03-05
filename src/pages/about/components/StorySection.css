@@ -210,6 +210,9 @@
         left: 0;
         height: 100%;
     }
+    .about > div > div{
+        padding:0 !important
+    }
     .about h3{
         font-size: 1.25rem!important;
     }

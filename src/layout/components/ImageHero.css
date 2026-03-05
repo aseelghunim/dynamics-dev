@@ -20,7 +20,7 @@
         font-weight: 600;
     }
 
-    .ksurgery-imaلe-hero p {
+    .ksurgery-image-hero p, .juvelook-hero-1 p {
         text-align: left !important;
     }
 
@@ -33,10 +33,10 @@
     }
 
     .juvelook-hero-1,.juvelook-hero-2,.leninsa-hero-1 {
-        height: 70vh !important;
+        height: 100vh !important;
     }
 
-    .juvelook-hero-1 .text-holder,.juvelook-hero-2 .text-holder,.leninsa-hero-1 .text-holder,.lensina-image-hero-2 .text-holder{
+   .leninsa-hero-1 .text-holder,.lensina-image-hero-2 .text-holder{
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -111,14 +111,14 @@
         /* background-color: #E5E5E5; */
 
     }
-    .dimono-image-hero-1 h3,.drcyj-image-hero-1 h3,.lanluma-image-hero-1 h3,.lensina-image-hero-2 h2,.lensina-image-hero-1 h2{
+    .juvelook-hero-2 h2, .dimono-image-hero-1 h3,.drcyj-image-hero-1 h3,.lanluma-image-hero-1 h3,.lensina-image-hero-2 h2,.lensina-image-hero-1 h2, .juvelook-hero-1 h2{
         margin-bottom: 60px!important;
         margin-top: 17vh !important;
         font-size: 2.25rem;
         font-weight: 400!important;
 
     }
-    .dimono-image-hero-1 span,.drcyj-image-hero-1 span,.lensina-image-hero-2 span{
+    .juvelook-hero-2 p,  .dimono-image-hero-1 span,.drcyj-image-hero-1 span,.lensina-image-hero-2 span, .juvelook-hero-1 p{
         font-size: 18px;
 
     }

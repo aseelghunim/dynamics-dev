@@ -225,7 +225,11 @@ const FaceInjectionPointsJuvelook = () => {
                     sx={{ width: { xs: "60%", md: "30%" } }}
                     spacing={{ xs: 2, md: 5 }}
                   >
-                    <Box component="img" src={stretchImage} />
+                    <Box component="img" src={stretchImage} sx={{ 
+                     
+                     width: {xs:"100%!important", md:"auto"}
+
+                    }} />
                     <Box
                       sx={{
                         background: "#FFFFFF",
@@ -243,7 +247,11 @@ const FaceInjectionPointsJuvelook = () => {
                     sx={{ width: { xs: "60%", md: "30%" } }}
                     spacing={{ xs: 2, md: 5 }}
                   >
-                    <Box component="img" src={scarImage} />
+                    <Box component="img" src={scarImage} sx={{ 
+                     
+                      width: {xs:"100%!important", md:"auto"}
+
+                     }} />
                     <Box
                       sx={{
                         background: "#FFFFFF",

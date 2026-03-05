@@ -27,6 +27,7 @@ const JuvelookPage = (props) => {
       <Seo />
       <main>
         <VideoHero
+        name='juvelook'
           title2={t(tokens.brands.juvelook.pageTitle)}
           description={t(tokens.brands.juvelook.pageDescription)}
           videoSrc={video}

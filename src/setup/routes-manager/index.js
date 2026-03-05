@@ -35,7 +35,7 @@ export const routes = [
         element: <HomePage />,
       },
       {
-        path: "zoom",
+        path: "dynamics-dev",
         element: <HomePage />,
       },
       {
