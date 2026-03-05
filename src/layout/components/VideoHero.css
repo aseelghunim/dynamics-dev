@@ -1,0 +1,47 @@
+@media(max-width:768px){
+    .ellanse .video-text-holder,
+    .lanluma .video-text-holder,
+    .dimono .video-text-holder,
+    .maili .video-text-holder,
+    .drcyj .video-text-holder{
+        margin-top: 0!important;
+    }
+    .basic-page h2,.about-video-hero {
+        font-size: 2.25rem !important;
+        font-weight: 400 !important;
+    }
+
+    .basic-page a ,.basic-page button{
+        width: 240px !important;
+        margin: 0 auto;
+        color: #AC93E1 !important;
+        background-color: white;
+        border-color: white;
+        font-weight: 400 !important;
+        border-radius: 4px;
+        font-size: 14px!important;
+    }
+
+    .basic-page a:hover ,
+        .basic-page button:hover {
+        background-color: #AC93E1 !important;
+        color: white !important;
+        border-color: #AC93E1 !important;
+
+    }
+    .basic-page .video-text-holder{
+       margin-top:0!important 
+    }
+    .basic-page .video-text-holder p, .basic-page .video-text-holder p + div ,  
+    .basic-page .video-text-holder a,
+    .basic-page .video-text-holder button{
+        margin-top: 8px!important;
+    }
+    .basic-page .video-text-holder p + div{
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+
+  
+}

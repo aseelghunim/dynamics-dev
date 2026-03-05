@@ -1,0 +1,12 @@
+@media(max-width: 768px){
+    .about-us-page-dual-section-1 .container, .about-us-page-dual-section-2 .container{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .about-us-page-dual-section-1 h3, .about-us-page-dual-section-2 h3{
+        font-size: 1.25rem!important;
+    }
+    .about-us-page-dual-section-1 p, .about-us-page-dual-section-2 p{
+        text-align: left!important;
+    }
+}

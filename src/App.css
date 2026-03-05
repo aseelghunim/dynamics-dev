@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'TitleFonts';
+    src: url('./assets/fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ParagraphFonts';
+    src: url('./assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RTLTitleFonts';
+    src: url('./assets/fonts/alfont_com_GE-Dinar-One-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RTLParagraphFonts';
+    src: url('./assets/fonts/SF-Arabic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #eee8f5;
+    margin: 0;
+    color: #3f3f40;
+    font-family: "ParagraphFonts", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 899px) {
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    main {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* For left-to-right text */
+body:dir(ltr) {
+    font-family: "ParagraphFonts", serif;
+}
+
+/* For right-to-left text */
+body:dir(rtl) {
+    font-family: "RTLParagraphFonts", serif;
+}
+
+/* Title fonts for left-to-right text */
+body:dir(ltr) h1,
+body:dir(ltr) h2,
+body:dir(ltr) h3,
+body:dir(ltr) h4,
+body:dir(ltr) h5,
+body:dir(ltr) h6 {
+    font-family: "TitleFonts", serif;
+}
+
+/* Title fonts for right-to-left text */
+body:dir(rtl) h1,
+body:dir(rtl) h2,
+body:dir(rtl) h3,
+body:dir(rtl) h4,
+body:dir(rtl) h5,
+body:dir(rtl) h6 {
+    font-family: "RTLTitleFonts", serif;
+}
+
+.mirrored-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: scaleX(-1);
+    z-index: -1;
+}
+
+@media(max-width: 768px) {
+
+    .css-qq8w9n-MuiGrid-root,
+    .css-1sk9o47-MuiContainer-root,.css-1uyohl9 {
+        padding: 0 !important;
+    }
+    .css-qq8w9n-MuiGrid-root>.MuiGrid-item{
+        /* order: 2; */
+    }
+    .css-zc8q3n-MuiTypography-root{
+
+    }
+    .css-1bti41h::before,.css-jk7u3i::before{
+        background-size: cover !important;
+        background-position: left !important;
+    }
+    .css-f1k78n-MuiStack-root{
+        top: 100px;
+    }
+    .css-17t18k6-MuiContainer-root{
+        /* padding-bottom: 60px!important; */
+    }
+    .css-v39pk0-MuiStack-root{
+
+    }
+    .css-1tmxoo3-MuiStack-root>:not(style):not(style){
+        width: 100%!important;
+    }
+    .css-1ldf9ke-MuiGrid-root{
+        /* padding-top: 60px; */
+    }
+    .css-1g1tkon {
+        width: 100%!important;
+        transform: scale(2);
+        margin-top: -50px!important;
+    }
+    .css-rdde6b {
+        width: 100%!important;
+        transform: scale(1.5);
+        margin-top: -50px!important;
+    }
+    .css-udifax,.css-zk6mke{
+        width: 105%!important;
+        left: 0!important;
+    }
+    .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-6.css-1iggn1w-MuiGrid-root .css-1q0o83k{
+        /* display: none; */
+    }
+    .css-27h6s{
+        /* background-color: #EEE8F5!important; */
+    }
+    .css-hlmx3t{
+        /* background-color: transparent!important;
+        padding-top: 0px!important;
+        padding-bottom: 0px!important; */
+
+    }
+    .css-12jutib{
+        padding-bottom: 24px;
+    }
+}
