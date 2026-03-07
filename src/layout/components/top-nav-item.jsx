@@ -12,13 +12,12 @@ import { RouterLink } from "./router-link";
 import { useCallback, useState } from "react";
 import { alpha, Paper, Portal, Typography } from "@mui/material";
 
-const TOP_NAV_HEIGHT = 64;
-const TOP_NAV_SPACE = 16;
-const OFFSET = 16;
+const TOP_NAV_HEIGHT = 120; // ✅ updated to match your navbar
+const TOP_NAV_SPACE = 0;    // ✅ no extra space
+const OFFSET = 0;           // ✅ no extra offset
 
 const renderChildItems = ({ items, depth = 0 }) => {
   return items.map((item) => {
-    // Branch
     if (item.items) {
       return (
         <Dropdown key={item.title}>
@@ -36,7 +35,7 @@ const renderChildItems = ({ items, depth = 0 }) => {
                 primaryTypographyProps={{
                   sx: {
                     color: "text.secondary",
-                    fontSize: 18,
+                    fontSize: {sm:"14px", md:"14px"},
                     fontWeight: 500,
                   },
                 }}
@@ -74,37 +73,21 @@ const renderChildItems = ({ items, depth = 0 }) => {
 
     const linkProps = item.path
       ? item.external
-        ? {
-            component: "a",
-            href: item.path,
-            target: "_blank",
-          }
-        : {
-            component: RouterLink,
-            href: item.path,
-          }
+        ? { component: "a", href: item.path, target: "_blank" }
+        : { component: RouterLink, href: item.path }
       : {};
 
-    // Leaf
     return (
       <ListItemButton
         disabled={item.disabled}
         key={item.title}
-        sx={{
-          borderRadius: 1,
-          px: 1.5,
-          py: 0.5,
-        }}
+        sx={{ borderRadius: 1, px: 1.5, py: 0.5 }}
         {...linkProps}
       >
         <ListItemText
           primary={item.title}
           primaryTypographyProps={{
-            sx: {
-              color: "text.secondary",
-              fontSize: 18,
-              fontWeight: 500,
-            },
+            sx: { color: "text.secondary", fontSize: 18, fontWeight: 500 },
           }}
         />
       </ListItemButton>
@@ -113,38 +96,16 @@ const renderChildItems = ({ items, depth = 0 }) => {
 };
 
 export const TopNavItem = (props) => {
-  const {
-    active,
-    disabled,
-    external,
-    items,
-    icon,
-    label,
-    path,
-    title,
-    popover,
-  } = props;
+  const { active, disabled, external, items, icon, label, path, title, popover } = props;
   const [open, setOpen] = useState(false);
 
-  const handleMouseEnter = useCallback(() => {
-    setOpen(true);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    setOpen(false);
-  }, []);
+  const handleMouseEnter = useCallback(() => setOpen(true), []);
+  const handleMouseLeave = useCallback(() => setOpen(false), []);
 
   const linkProps = path
     ? external
-      ? {
-          component: "a",
-          href: path,
-          target: "_blank",
-        }
-      : {
-          component: RouterLink,
-          href: path,
-        }
+      ? { component: "a", href: path, target: "_blank" }
+      : { component: RouterLink, href: path }
     : {};
 
   if (items) {
@@ -163,12 +124,8 @@ export const TopNavItem = (props) => {
                 py: "6px",
                 textAlign: "left",
                 width: "100%",
-                ...(active && {
-                  backgroundColor: "var(--nav-item-active-bg)",
-                }),
-                "&:hover": {
-                  backgroundColor: "var(--nav-item-hover-bg)",
-                },
+                ...(active && { backgroundColor: "var(--nav-item-active-bg)" }),
+                "&:hover": { backgroundColor: "var(--nav-item-hover-bg)" },
               }}
             >
               <Box
@@ -179,9 +136,7 @@ export const TopNavItem = (props) => {
                   display: "inline-flex",
                   justifyContent: "center",
                   mr: 2,
-                  ...(active && {
-                    color: "var(--nav-item-icon-active-color)",
-                  }),
+                  ...(active && { color: "var(--nav-item-icon-active-color)" }),
                 }}
               >
                 {icon}
@@ -196,23 +151,13 @@ export const TopNavItem = (props) => {
                   fontWeight: 600,
                   lineHeight: "24px",
                   whiteSpace: "nowrap",
-                  ...(active && {
-                    color: "var(--nav-item-active-color)",
-                  }),
-                  ...(disabled && {
-                    color: "var(--nav-item-disabled-color)",
-                  }),
+                  ...(active && { color: "var(--nav-item-active-color)" }),
+                  ...(disabled && { color: "var(--nav-item-disabled-color)" }),
                 }}
               >
                 {title}
               </Box>
-              <SvgIcon
-                sx={{
-                  color: "var(--nav-item-chevron-color)",
-                  fontSize: 16,
-                  ml: 1,
-                }}
-              >
+              <SvgIcon sx={{ color: "var(--nav-item-chevron-color)", fontSize: 16, ml: 1 }}>
                 <ChevronDownIcon />
               </SvgIcon>
             </ButtonBase>
@@ -222,11 +167,7 @@ export const TopNavItem = (props) => {
           disableScrollLock
           PaperProps={{
             elevation: 8,
-            sx: {
-              maxWidth: "100%",
-              p: 1,
-              width: 200,
-            },
+            sx: { maxWidth: "100%", p: 1, width: 200 },
           }}
         >
           {renderChildItems({ items, depth: 0 })}
@@ -240,11 +181,7 @@ export const TopNavItem = (props) => {
       <>
         <Box
           component="li"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            height: "100%",
-          }}
+          sx={{ display: "flex", alignItems: "center", height: "100%" }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -258,54 +195,45 @@ export const TopNavItem = (props) => {
               px: "16px",
               py: "8px",
               textAlign: "left",
-              "&:hover": {
-                backgroundColor: "action.hover",
-              },
-              ...(active && {
-                backgroundColor: "action.hover",
-              }),
+              "&:hover": { backgroundColor: "action.hover" },
+              ...(active && { backgroundColor: "action.hover" }),
             }}
             {...linkProps}
           >
-            <Typography
-              component="span"
-              variant="subtitle2"
-              sx={{ fontSize: 18, fontWeight: 600 }}
-            >
+            <Typography component="span" variant="subtitle2" sx={{ fontSize: 18, fontWeight: 600 }}>
               {title}
             </Typography>
-            <SvgIcon
-              sx={{
-                fontSize: 16,
-                ml: 1,
-              }}
-            >
+            <SvgIcon sx={{ fontSize: 16, ml: 1 }}>
               <ChevronDownIcon />
             </SvgIcon>
           </ButtonBase>
         </Box>
+
         {open && (
           <Portal>
             <Box
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               sx={{
-                left: 0,
+                width:"575px",
+                left: {sm:"20%",md:"35%"},
                 position: "fixed",
                 pt: OFFSET + "px",
                 right: 0,
-                top: TOP_NAV_HEIGHT + TOP_NAV_SPACE,
+                top: "80px" , // ✅ 120px
                 zIndex: (theme) => theme.zIndex.appBar + 100,
+                borderRadius: "0!important"
               }}
             >
               <Paper
                 elevation={16}
                 sx={{
-                  backgroundColor: (theme) =>
-                    alpha(theme.palette.background.paper, 0.9),
+                  backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
                   backdropFilter: "blur(6px)",
                   mx: "auto",
-                  width: (theme) => theme.breakpoints.values.sm,
+                  width: "580px",
+                  borderRadius: "1pximportant",
+
                 }}
               >
                 {popover}
@@ -316,8 +244,6 @@ export const TopNavItem = (props) => {
       </>
     );
   }
-
-  // Without dropdown
 
   return (
     <li>
@@ -331,12 +257,8 @@ export const TopNavItem = (props) => {
           px: "16px",
           py: "8px",
           textAlign: "left",
-          "&:hover": {
-            backgroundColor: "action.hover",
-          },
-          ...(active && {
-            backgroundColor: "action.hover",
-          }),
+          "&:hover": { backgroundColor: "action.hover" },
+          ...(active && { backgroundColor: "action.hover" }),
         }}
         {...linkProps}
       >
@@ -349,9 +271,7 @@ export const TopNavItem = (props) => {
               display: "inline-flex",
               justifyContent: "center",
               mr: 2,
-              ...(active && {
-                color: "var(--nav-item-icon-active-color)",
-              }),
+              ...(active && { color: "var(--nav-item-icon-active-color)" }),
             }}
           >
             {icon}
@@ -367,27 +287,15 @@ export const TopNavItem = (props) => {
             fontWeight: 600,
             lineHeight: "24px",
             whiteSpace: "nowrap",
-            ...(active && {
-              color: "var(--nav-item-active-color)",
-            }),
-            ...(disabled && {
-              color: "var(--nav-item-disabled-color)",
-            }),
+            ...(active && { color: "var(--nav-item-active-color)" }),
+            ...(disabled && { color: "var(--nav-item-disabled-color)" }),
           }}
         >
-          <Typography
-            component="span"
-            variant="subtitle2"
-            sx={{ fontSize: 18, fontWeight: 600 }}
-          >
+          <Typography component="span" variant="subtitle2" sx={{ fontSize: 18, fontWeight: 600 }}>
             {title}
           </Typography>
         </Box>
-        {label && (
-          <Box component="span" sx={{ ml: 1 }}>
-            {label}
-          </Box>
-        )}
+        {label && <Box component="span" sx={{ ml: 1 }}>{label}</Box>}
       </ButtonBase>
     </li>
   );

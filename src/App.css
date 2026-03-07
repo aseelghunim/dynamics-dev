@@ -92,6 +92,10 @@ body:dir(rtl) h6 {
     z-index: -1;
 }
 
+
+.pop-over{
+    border-radius: 4px!important;
+}
 @media(max-width: 767px) {
 
     .css-qq8w9n-MuiGrid-root,

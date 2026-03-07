@@ -79,7 +79,7 @@ export const TopNav = (props) => {
   ];
 
   const pathname = usePathname();
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   const [elevate, setElevate] = useState(false);
@@ -110,6 +110,7 @@ export const TopNav = (props) => {
   return (
     <>
       <Box
+        className="top-nav"
         maxWidth="xxl"
         component="header"
         sx={{
@@ -133,17 +134,17 @@ export const TopNav = (props) => {
           }),
           zIndex: (theme) => theme.zIndex.appBar,
           width: "100%",
-          "@media (max-width: 991px)": {
+          "@media (max-width: 899px)": {
             width: "100vw",
             left: 0,
             right: 0,
-            background:elevate ?  "white" : "transparent"
+            background: elevate ? "white" : "transparent"
           },
         }}
       >
         <Container maxWidth="xl">
           {/* ✅ MOBILE HEADER */}
-          {!mdUp && (
+          {!smUp && (
             <Stack
               direction="row"
               alignItems="center"
@@ -178,7 +179,10 @@ export const TopNav = (props) => {
                   textDecoration: "none",
                 }}
               >
-                <img style={{ height: "100%" }} src={elevate ? logo : logoLight} alt="Dynamics" />
+                <img style={{ height: "100%" }} src={elevate ? logo : logoLight} alt="Dynamics"
+
+                 
+                />
               </Box>
 
               {/* Right: Menu */}
@@ -186,7 +190,7 @@ export const TopNav = (props) => {
                 <IconButton
                   onClick={handleMenuOpen}
                   aria-label="menu"
-                  sx={{ color: elevate ? "#ab92e1" : "#fff"}}
+                  sx={{ color: elevate ? "#ab92e1" : "#fff" }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -195,11 +199,11 @@ export const TopNav = (props) => {
           )}
 
           {/* ✅ DESKTOP HEADER */}
-          {mdUp && (
+          {smUp && (
             <Stack
               direction="row"
               sx={{
-                height: { xs: "70px", md: TOP_NAV_HEIGHT },
+                height: { xs: "70px", sm: TOP_NAV_HEIGHT },
                 alignItems: "center",
               }}
             >
@@ -211,18 +215,30 @@ export const TopNav = (props) => {
                   href={paths.index}
                   sx={{ textDecoration: "none" }}
                 >
-                  <Box style={{ height: "60px" }}>
+                  <Box style={{ height: "60px" }} sx={{ 
+                      "@media(min-width: 768px) and (max-width: 991px)": {
+                        width: "150px",
+                        objectFit: "cover"
+                      }
+                   }}>
                     <img
-                      style={{ height: "100%" }}
+                      style={{ height: "100%", 
+                     
+                       width: "100%",
+                       objectFit: "contain"
+                    
+                    
+                    }}
                       src={elevate ? logo : logoLight}
                       alt={"Dynamics"}
+
                     />
                   </Box>
                 </Stack>
               </Stack>
 
               <Stack alignItems={"center"} direction="column" spacing={2} sx={{ flex: 1 }}>
-                <Box component="nav" sx={{ height: "100%", width: "100%",  }}>
+                <Box component="nav" sx={{ height: "100%", width: "100%", }}>
                   <Stack
                     component="ul"
                     alignItems="center"
@@ -230,16 +246,18 @@ export const TopNav = (props) => {
                     direction="row"
                     spacing={1}
                     sx={{
-                      padding:"0!important",
+                      padding: "0!important",
                       width: "100%",
                       height: "100%",
                       listStyle: "none",
 
                       m: 0,
                       p: 0,
+                      justifyContent:{sm:"flex-end" , md:"center"} ,
+
                     }}
                   >
-                    {items.map((item) => {
+                    {items.map((item, index) => {
                       const checkPath = !!(item.path && pathname);
                       const partialMatch = checkPath ? pathname.includes(item.path) : false;
                       const exactMatch = checkPath ? pathname === item.path : false;
@@ -253,6 +271,7 @@ export const TopNav = (props) => {
                           path={item.path}
                           popover={item.popover}
                           title={item.title}
+                          isBrands={index === 2}
                         />
                       );
                     })}
@@ -271,10 +290,29 @@ export const TopNav = (props) => {
               </Stack>
             </Stack>
           )}
+
+          {/* {smUp && (
+            <Box sx={{
+              position: "fixed",
+
+              top: "106px",
+              left: "60%",
+              transform: "translateX(-50%)",
+              zIndex: 9999,
+              background: "white",
+              borderRadius: "2px",
+              boxShadow: "0px 4px 32px rgba(0, 0, 0, 0.33)",
+
+              minWidth: 600,
+            }}>
+              <BrandsPopover />
+            </Box>
+          )} */}
+
         </Container>
 
         {/* ✅ MOBILE MENU (APPEARS instantly, no slide) */}
-        {!mdUp && (
+        {!smUp && (
           <Popover
             open={menuOpen}
             anchorEl={menuAnchorEl}
@@ -291,7 +329,7 @@ export const TopNav = (props) => {
                 mx: "auto",
                 width: "45vw",
                 left: "unset!important",
-                right:"0",
+                right: "0",
                 maxWidth: 420,
                 borderRadius: "0",
                 overflow: "hidden",
@@ -340,3 +378,7 @@ export const TopNav = (props) => {
 TopNav.propTypes = {
   onMobileNavOpen: PropTypes.func,
 };
+
+
+
+

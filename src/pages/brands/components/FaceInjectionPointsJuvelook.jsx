@@ -65,15 +65,15 @@ const Point = ({ position }) => {
         </Popper>
 
         <IconButton
-       
+
           size="small"
           sx={{
-           
+
             color: "white",
             position: "absolute",
             // ✅ mobile (xs) uses topMobile/leftMobile when provided
             // ✅ md+ uses top/left
-            top: { xs: position.topMobile ?? position.top,sm:position.topTablet ?? position.top, md: position.top },
+            top: { xs: position.topMobile ?? position.top, sm: position.topTablet ?? position.top, md: position.top },
             left: { xs: position.leftMobile ?? position.left, sm: position.leftTablet ?? position.left, md: position.left },
             transform: "translate(-50%, -50%)",
             backgroundColor: "rgba(255, 255, 255, 0.3)",
@@ -85,12 +85,12 @@ const Point = ({ position }) => {
               backgroundColor: "rgba(255, 255, 255, 1)",
             },
             m: 1,
-            "@media(min-width:768px) and (max-width:991px)":{
-                   width:"15px!important",
-            height:"15px!important",
+            "@media(min-width:768px) and (max-width:991px)": {
+              width: "15px!important",
+              height: "15px!important",
             }
 
-       
+
           }}
           onClick={handleClick}
         >
@@ -191,15 +191,16 @@ const FaceInjectionPointsJuvelook = () => {
     >
       <Container
         maxWidth="xxl"
-        sx={{ position: "relative", zIndex: 1, height: "100%",
-        "@media(min-width:768px) and (max-width:991px)":{
-          paddingRight: "0!important",
-           paddingLeft:"80px!important"
-        }
-      
-      
-      
-      }}
+        sx={{
+          position: "relative", zIndex: 1, height: "100%",
+          "@media(min-width:768px) and (max-width:991px)": {
+            paddingRight: "0!important",
+            paddingLeft: "80px!important"
+          }
+
+
+
+        }}
       >
         <Stack
           alignItems="flex-end"
@@ -226,12 +227,13 @@ const FaceInjectionPointsJuvelook = () => {
               sx={{ height: "100%" }}
               spacing={{ xs: 4, md: 20 }}
             >
-              <Box sx={{ width: { xs: "80%", sm: "148px", md: "65%" },
-"@media(min-width:768px) and (max-width:991px)":{
+              <Box sx={{
+                width: { xs: "80%", sm: "148px", md: "65%" },
+                "@media(min-width:768px) and (max-width:991px)": {
 
-              marginLeft:"  -8px"
-}
-            }}>
+                  marginLeft: "  -8px"
+                }
+              }}>
                 <Box component="img" src={logo} sx={{
 
                   width: { xs: "100%", md: "100%" }
@@ -274,10 +276,10 @@ const FaceInjectionPointsJuvelook = () => {
                         p: 1,
                         textAlign: "center",
                         color: "#ABDFF4",
-                        fontSize: { xs: "0.75rem",sm:"9px", md: "inherit" },
-                        "@media(min-width:768px) and (max-width:991px)":{
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "inherit" },
+                        "@media(min-width:768px) and (max-width:991px)": {
                           width: "65px",
-                          padding:"0!important",
+                          padding: "0!important",
                         }
 
                       }}
@@ -301,10 +303,10 @@ const FaceInjectionPointsJuvelook = () => {
                         p: 1,
                         textAlign: "center",
                         color: "#ABDFF4",
-                        fontSize: { xs: "0.75rem", sm:"9px", md: "inherit" },
-                        "@media(min-width:768px) and (max-width:991px)":{
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "inherit" },
+                        "@media(min-width:768px) and (max-width:991px)": {
                           width: "65px",
-                          padding:"0!important",
+                          padding: "0!important",
                         }
                       }}
                     >
@@ -331,8 +333,8 @@ const FaceInjectionPointsJuvelook = () => {
                 height: "100%",
                 backgroundImage: `url(${faceImage})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: { xs:"cover",sm:"contain",md:"cover" },
-                backgroundPosition: { xs:"center",sm:"bottom",md:"center" } ,
+                backgroundSize: { xs: "cover", sm: "contain", md: "cover" },
+                backgroundPosition: { xs: "center", sm: "bottom", md: "center" },
                 zIndex: 0,
                 transform: isRtl ? "scaleX(-1)" : "none",
               },

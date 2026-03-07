@@ -38,19 +38,33 @@ const ReneePage = (props) => {
               backImage={background_green}
               passedImage={productImage}
               hideAction
+              paragraphSx={{
+                "@media(min-width:768px) and (max-width:991px)": {
+                  fontSize: "14px!important"
+
+                }
+              }}
             />
           </Container>
         </Box>
 
         {/* <ReneeProductComponent /> */}
 
-        <Box sx={{ display: "grid" }}>
-          <Box sx={{ order: { xs: 2, md: 1 } }}>
+        <Box sx={{
+          display: "grid",
+          "@media(min-width: 768px) and (max-width: 991px)":
+
+          {
+            display: "unset"
+          }
+
+        }}>
+          <Box sx={{ order: { xs: 2, sm: 1, md: 1 } }}>
             <ReneeProductComponent />
           </Box>
 
           <Box sx={{ order: { xs: 1, md: 2 }, backgroundColor: { xs: "white", md: "#E0FFF5" } }} maxWidth="xxl">
-            <Container maxWidth="xl" sx={{ padding: { xs: "0!important", md: 5 },}}>
+            <Container maxWidth="xl" sx={{ padding: { xs: "0!important", md: 5 }, }}>
               <StorySection
                 name="renee-story-2"
                 backgroundColor={{ xs: "white", md: "#E0FFF5" }}

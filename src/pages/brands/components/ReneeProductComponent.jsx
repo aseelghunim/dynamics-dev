@@ -204,7 +204,7 @@ const ReneeProductComponent = () => {
                         color: expanded ? product.mobileIndicatorColor : "#000",
                         maxWidth: expanded ? "85%" : "65%",
                         whiteSpace: "normal",
-                        
+
                       }}
                     >
                       {product.buttonTitle}
@@ -256,7 +256,12 @@ const ReneeProductComponent = () => {
                     </Box>
 
                     {/* Question section */}
-                    <Box sx={{ mb: 1.5 }}>
+                    <Box sx={{
+                      mb: 1.5,
+
+                      //   margin- top: 48px;
+                      // margin-bottom: 8px;
+                    }}>
                       {product.preQuestion && (
                         <Typography
                           variant="body2"
@@ -307,8 +312,8 @@ const ReneeProductComponent = () => {
               );
             })}
           </Box>
-        </Container>
-      </Box>
+        </Container >
+      </Box >
     );
   }
 
@@ -316,8 +321,10 @@ const ReneeProductComponent = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 2, sm: "2rem" },
+        padding: { xs: 2, sm: 7, md: "2rem" },
         borderRadius: "8px",
+        paddingRight: "24px",
+        paddingTop:"80px!important"
       }}
       maxWidth="xxl"
     >
@@ -327,7 +334,7 @@ const ReneeProductComponent = () => {
             {products?.map((product) =>
               product.value === tabValue ? (
                 <React.Fragment key={product.value}>
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={12} sm={4.5} md={4}>
                     <Typography
                       variant="body2"
                       sx={{
@@ -354,7 +361,7 @@ const ReneeProductComponent = () => {
                       </Typography>
                     </Box>
 
-                    <Box sx={{ mt: { xs: 1, sm: 2 }, mb: { xs: 1, sm: 2 } }}>
+                    <Box sx={{ mt: { xs: 1, sm: 6, md: 2 }, mb: { xs: 1, sm: 1, md: 2 } }}>
                       {product.preQuestion && (
                         <Typography
                           variant="body2"
@@ -389,12 +396,12 @@ const ReneeProductComponent = () => {
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={12} sm={3} md={4}>
                     <Box
                       sx={{
                         textAlign: "center",
                         position: "relative",
-                        minHeight: { xs: "auto", sm: "457px" },
+                        minHeight: { xs: "auto", sm: "auto", md: "457px" },
                         mb: { xs: 2, sm: 0 },
                       }}
                     >
@@ -412,7 +419,7 @@ const ReneeProductComponent = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={12} sm={4.5} md={4}>
                     <Typography
                       variant="body2"
                       sx={{
@@ -466,8 +473,8 @@ const ReneeProductComponent = () => {
                       }
                       onClick={() => setTabValue(product.value)}
                       sx={{
-                        minWidth: { xs: "100%", sm: "150px" },
-                        fontSize: { xs: "0.75rem", sm: "inherit" },
+                        minWidth: { xs: "100%", sm: "95px", md: "150px" },
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "0.75rem" },
                         py: { xs: 1, sm: 1.5 },
                         ...(product.value === tabValue
                           ? product.activeStyle
