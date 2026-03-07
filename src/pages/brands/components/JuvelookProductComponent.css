@@ -1,14 +1,13 @@
 @media(min-width:768px) and (max-width:991px){
-    .drcyj-product{
+    .juvelook-product{
        padding-left: 64px!important;
-       padding-right: 64px!important;
+       padding-right: 0!important;
     }
-    .drcyj-product h5, .drcyj-product h6{
+    .juvelook-product h5, .juvelook-product h6{
         font-size: 11px!important;
         font-weight: 600!important;
-
     }
-    .drcyj-product p,.drcyj-product li{
+    .juvelook-product p,.juvelook-product li{
         font-size: 9px!important;
     }
     

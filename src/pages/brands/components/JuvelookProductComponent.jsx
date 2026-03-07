@@ -1,17 +1,22 @@
 import { Box, Button, Grid, Typography, Container } from "@mui/material";
-import { Stack } from "@mui/system";
+import { Stack, useMediaQuery } from "@mui/system";
 import { tokens } from "locales/tokens";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "@mui/material/styles";
 
 import logo from "assets/juvelook/logo.png";
 import product1 from "assets/juvelook/juvelook-product-1.png";
-import productMobile from 'assets/juvelook/product-mobile-bg.png'
+import productTablet from 'assets/juvelook/product-mobile-bg.png'
+import './JuvelookProductComponent.css'
 const JuvelookProductComponent = () => {
   const { t } = useTranslation();
   const [tabValue, setTabValue] = useState("product-1");
+  const theme = useTheme();
 
-  const products = [
+  const isTablet = useMediaQuery("(min-width:768px) and (max-width:991px)");
+  const productImage = isTablet ? productTablet : product1;
+    const products = [
     {
       value: "product-1",
       title1: t(tokens.brands.juvelook.products[0].aging[0].title1),
@@ -35,7 +40,7 @@ const JuvelookProductComponent = () => {
         t(tokens.brands.juvelook.products[0].aging[0].items[1]),
         t(tokens.brands.juvelook.products[0].aging[0].items[2]),
       ],
-      img: product1,
+      img: productImage,
       buttonStyle: { color: "#0DADA5", borderColor: "#0DADA5" },
       activeStyle: { backgroundColor: "#0DADA5" },
     },
@@ -47,6 +52,7 @@ const JuvelookProductComponent = () => {
 
   return (
     <Box
+      className="juvelook-product"
       sx={{
         padding: { xs: 2, sm: "2rem" },
         borderRadius: "8px",
@@ -64,11 +70,11 @@ const JuvelookProductComponent = () => {
                 alt="Renee Lift"
                 loading="lazy"
                 sx={{
-                  paddingTop: {xs:"16px"},
-                  marginLeft: { xs: 0, sm: "-10px" },
+                  paddingTop: { xs: "16px", sm: 0, md: "16px" },
+                  marginLeft: { xs: 0, md: "-10px" },
                   maxWidth: "100%",
                   height: "auto",
-                  width: { xs: "120px", sm: "180px" },
+                  width: { xs: "120px", sm: "85px", md: "180px" },
                 }}
               />
               <Typography
@@ -76,7 +82,7 @@ const JuvelookProductComponent = () => {
                 sx={{
                   color: "#6D6E71",
                   mb: { xs: 2, sm: "50px" },
-                  fontSize: { xs: "0.875rem", sm: "inherit" },
+                  fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
                 }}
               >
                 {t(tokens.brands.juvelook.products[0].title)}
@@ -85,16 +91,16 @@ const JuvelookProductComponent = () => {
             {products?.map((product) =>
               product.value === tabValue ? (
                 <>
-                  <Grid item xs={12} sm={5}>
-                    <Stack spacing={{ xs: 3, sm: 6 }}>
+                  <Grid item xs={12} sm={4.5} md={3}>
+                    <Stack spacing={{ xs: 3, sm: 2, md: 6 }}>
                       <Box>
                         <Typography
-                        className="no-margin-p"
+                          className="no-margin-p"
                           variant="body2"
                           sx={{
                             color: "#1B5EA5",
                             mb: 2,
-                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
+                            fontSize: { xs: "1.25rem", sm: "11px", md: "1.25rem" },
                           }}
                         >
                           {product.title1}
@@ -111,7 +117,7 @@ const JuvelookProductComponent = () => {
                             lineHeight: 1.7,
                             display: "block",
                             width: "100%",
-                            fontSize: { xs: "0.875rem", sm: "inherit" },
+                            fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
                           }}
                         >
                           {product.description1}
@@ -123,8 +129,8 @@ const JuvelookProductComponent = () => {
                           sx={{
                             color: "#1B5EA5",
                             mb: 2,
-                            mt: { xs: 2, sm: 10 },
-                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
+                            mt: { xs: 2, sm: 3, md: 10 },
+                            fontSize: { xs: "1.25rem", sm: "11px", md: "1.25rem" },
                           }}
                         >
                           {product.title2}
@@ -141,7 +147,7 @@ const JuvelookProductComponent = () => {
                             lineHeight: 1.7,
                             display: "block",
                             width: "100%",
-                            fontSize: { xs: "0.875rem", sm: "inherit" },
+                            fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
                           }}
                         >
                           {product.description2}
@@ -149,42 +155,53 @@ const JuvelookProductComponent = () => {
                       </Box>
                     </Stack>
                   </Grid>
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={12} sm={3} md={6} sx={{
+
+                    "@media(min-width:768px) and (max-width:991px)": {
+                      alignSelf: "flex-end"
+                    }
+                  }}>
                     <Box
                       sx={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         textAlign: "center",
-                        minHeight: { xs: "auto", sm: "457px" },
-                        mt: { xs: 2,sm:"0", md: "-250px" },
+                        minHeight: { xs: "auto", md: "457px" },
+                        mt: { xs: 2, sm: 0, md: "-250px" },
                         mb: { xs: 2, sm: 0 },
                       }}
                     >
                       <Box
                         component="img"
-                        src={productMobile}
-                        alt="Renee Lift"
+                        src={product.img}
+                        alt="Juvelook product"
                         loading="lazy"
                         sx={{
                           maxWidth: "100%",
                           maxHeight: "100%",
                           height: "auto",
-                          width: { xs: "80%",sm:"70%", md: "auto" },
+                          width: { xs: "100%", sm: "95%", md: "auto" },
+                          "@media(max-width:767px)": {
+                             marginTop: "-50px !important",
+                             transform: "scale(2)",
+                          }
+
+
                         }}
                       />
                     </Box>
                   </Grid>
-                  <Grid item xs={12} sm={3}>
-                    <Stack spacing={{ xs: 3, sm: 6 }}>
+                  <Grid item xs={12} sm={4.5} md={3}>
+                    <Stack spacing={{ xs: 3, sm: 2, md: 6 }}>
                       <Box>
                         <Typography
                           variant="body2"
                           sx={{
                             mb: 2,
                             color: "#1B5EA5",
-                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
-                            marginTop: {xs: "120px", sm:"unset"}
+                            fontSize: { xs: "1.25rem", sm: "11px", md: "1.25rem" },
+                            marginTop: { xs: "120px", sm: "unset" }
                           }}
                         >
                           {product.title4}
@@ -193,7 +210,7 @@ const JuvelookProductComponent = () => {
                           component="ul"
                           sx={{
                             pl: 2,
-                            fontSize: { xs: "0.875rem", sm: "1rem" },
+                            fontSize: { xs: "0.875rem", sm: "9px", md: "1rem" },
                             color: "#6D6E71",
                           }}
                         >
@@ -208,7 +225,7 @@ const JuvelookProductComponent = () => {
                           sx={{
                             mb: 2,
                             color: "#1B5EA5",
-                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
+                            fontSize: { xs: "1.25rem", sm: "11px", md: "1.25rem" },
                           }}
                         >
                           {t(tokens.brands.renee.keyBenefits)}
@@ -217,7 +234,7 @@ const JuvelookProductComponent = () => {
                           component="ul"
                           sx={{
                             pl: 2,
-                            fontSize: { xs: "0.875rem", sm: "1rem" },
+                            fontSize: { xs: "0.875rem", sm: "9px", md: "1rem" },
                             color: "#6D6E71",
                           }}
                         >
