@@ -2,165 +2,230 @@
 
 /* ====== Container ====== */
 .carousel-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  backdrop-filter: blur(12px) saturate(150%);
+  border-top: 0.07rem solid hsla(0, 0%, 100%, 0.3);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== Scroller ====== */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  justify-content: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* ====== Items ====== */
+.carousel-item {
+  width: 113px;
+  height: 113px;
+  margin: 0 10px;
+  background-color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  /* desktop keeps this */
+  transition: all 0.1s ease-in-out;
+}
+
+.carousel-item>img {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  padding: 4px;
+}
+
+.carousel-item.active>img {
+  opacity: 1;
+}
+
+.carousel-item:active {
+  transform: scale(0.9);
+}
+
+.carousel-item:hover>img {
+  opacity: 1;
+}
+
+/* ====== Buttons (currently unused) ====== */
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+
+@media(min-width: 768px) and (max-width:991px) {
+  .carousel-container {
+    height: 120px;
+    width: 100vw;
     left: 0;
     right: 0;
-    height: 150px;
-    backdrop-filter: blur(12px) saturate(150%);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    /* your mobile request: remove blur/border */
+    backdrop-filter: none;
+    border-top: none;
+
+    /* allow active marker to be visible */
+    overflow: visible;
+    z-index: 99999;
     border-top: 0.07rem solid hsla(0, 0%, 100%, 0.3);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
   }
-  
-  /* ====== Scroller ====== */
+  .carousel-container > div{
+    padding-bottom: 0!important;
+  }
   .carousel {
-    display: flex;
+    justify-content: flex-start;
+
+    /* snap like you had */
+    scroll-snap-type: x mandatory;
+
+    /* IMPORTANT: allow vertical overflow for marker */
     overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    justify-content: center;
+    overflow-y: visible;
+
+    position: relative;
+
+    padding-left: 48px;
+    padding-right: 48px;
+
+    /* room for track + pill */
+    padding-bottom: 0;
   }
-  
-  .carousel::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-  }
-  
-  /* ====== Items ====== */
+
+
   .carousel-item {
-    width: 113px;
-    height: 113px;
-    margin: 0 10px;
-    background-color: #111;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    overflow: hidden; /* desktop keeps this */
-    transition: all 0.1s ease-in-out;
+    width: 93px;
+    height: 93px;
+    margin: 0 6px;
+
+    /* snap alignment */
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+
+    /* KEY: don't clip the ::after marker */
+    overflow: visible;
+
+    position: relative;
   }
-  
-  .carousel-item > img {
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: white;
-    padding: 4px;
-  }
-  
-  .carousel-item.active > img {
-    opacity: 1;
-  }
-  
-  .carousel-item:active {
-    transform: scale(0.9);
-  }
-  
-  .carousel-item:hover > img {
-    opacity: 1;
-  }
-  
-  /* ====== Buttons (currently unused) ====== */
-  .carousel-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    width: 50px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-  }
-  
-  /* =========================================================
+}
+
+/* =========================================================
      MOBILE ONLY (no desktop changes)
      ========================================================= */
-  @media (max-width: 899px) {
-    .carousel-container {
-      height: 120px;
-      width: 100vw;
-      left: 0;
-      right: 0;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 8px;
-      padding-right: 8px;
-  
-      /* your mobile request: remove blur/border */
-      backdrop-filter: none;
-      border-top: none;
-  
-      /* allow active marker to be visible */
-      overflow: visible;
-      z-index: 99999;
-    }
-  
-    .carousel {
-      justify-content: flex-start;
-  
-      /* snap like you had */
-      scroll-snap-type: x mandatory;
-  
-      /* IMPORTANT: allow vertical overflow for marker */
-      overflow-x: auto;
-      overflow-y: visible;
-  
-      position: relative;
-  
-      padding-left: 0;
-      padding-right: 0;
-  
-      /* room for track + pill */
-      padding-bottom: 16px;
-    }
-  
-    /* faint track line across the bottom (like screenshot) */
-    .carousel-container::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 22px; /* aligns with the pill */
-        height: 2px;
-        background: rgba(255, 255, 255, 0.35);
-        border-radius: 999px;
-        pointer-events: none;
-      }
-  
-    .carousel-item {
-      width: 90px;
-      height: 90px;
-      margin: 0 6px;
-  
-      /* snap alignment */
-      scroll-snap-align: center;
-      flex: 0 0 auto;
-  
-      /* KEY: don't clip the ::after marker */
-      overflow: visible;
-  
-      position: relative;
-    }
-  
-    /* active pill marker under the active logo */
-    .carousel-item.active::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -10px; /* adjust slightly if needed */
-      width: 34px;
-      height: 4px;
-      transform: translateX(-50%);
-      background: #fff;
-      border-radius: 999px;
-      pointer-events: none;
-    }
+@media (max-width: 767px) {
+  .carousel-container {
+    height: 120px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    /* your mobile request: remove blur/border */
+    backdrop-filter: none;
+    border-top: none;
+
+    /* allow active marker to be visible */
+    overflow: visible;
+    z-index: 99999;
   }
+
+  .carousel {
+    justify-content: flex-start;
+
+    /* snap like you had */
+    scroll-snap-type: x mandatory;
+
+    /* IMPORTANT: allow vertical overflow for marker */
+    overflow-x: auto;
+    overflow-y: visible;
+
+    position: relative;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    /* room for track + pill */
+    padding-bottom: 16px;
+  }
+
+  /* faint track line across the bottom (like screenshot) */
+  .carousel-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 22px;
+    /* aligns with the pill */
+    height: 2px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    pointer-events: none;
+  }
+
+  .carousel-item {
+    width: 90px;
+    height: 90px;
+    margin: 0 6px;
+
+    /* snap alignment */
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+
+    /* KEY: don't clip the ::after marker */
+    overflow: visible;
+
+    position: relative;
+  }
+
+  /* active pill marker under the active logo */
+  .carousel-item.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    /* adjust slightly if needed */
+    width: 34px;
+    height: 4px;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 999px;
+    pointer-events: none;
+  }
+}

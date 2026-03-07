@@ -30,6 +30,7 @@ const KsurgeryPage = (props) => {
       <Seo />
       <main>
         <VideoHero
+          name='ksurgery'
           title={t(tokens.brands.ksurgery.title)}
           description={t(tokens.brands.ksurgery.description)}
           videoSrc={video2}
@@ -40,7 +41,7 @@ const KsurgeryPage = (props) => {
         <Box maxWidth="xxl" sx={{ backgroundColor: "#EEE8F5" }}>
           <Container maxWidth="xxl">
             <StorySection
-            name="ksurgery-story-1"
+              name="ksurgery-story-1"
               backgroundColor="#EEE8F5"
               title={t(tokens.brands.ksurgery.whatIs)}
               paragraph={t(tokens.brands.ksurgery.whatIsDescription)}
@@ -100,11 +101,11 @@ const KsurgeryPage = (props) => {
             />
           </Container>
         </Box>
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#FFFFFF" }}>
+        <Box maxWidth="xxl" sx={{ backgroundColor:{xs:"#eee8f5", md :"#fff"}}}>
           <Container maxWidth="xxl">
             <StorySection
-           name= "ksurgery-story-2"
-              backgroundColor="#FFFFFF"
+              name="ksurgery-story-2"
+              backgroundColor={{ backgroundColor:{xs:"#eee8f5", md :"#fff"}}}
               reverse={true}
               title={t(tokens.brands.ksurgery.opera)}
               paragraph={t(tokens.brands.ksurgery.applicationDescription)}
@@ -169,18 +170,18 @@ const KsurgeryPage = (props) => {
             width: "100%",
             height: "auto",
             display: "block",
-            "@media (max-width: 899px)": {
+            "@media (max-width: 991px)": {
               width: "100vw",
               maxWidth: "100%",
             },
           }}
         />
         <SharedSection
-        name="ksurgery-shared-section"
+          name="ksurgery-shared-section"
           title={t(tokens.brands.ksurgery.howIs)}
           description={t(tokens.brands.ksurgery.howIsDescription)}
           background="linear-gradient(to right, #6bb6b6, #a9e0eb)"
-          descriptionSx={{ textAlign: {xs:"center", md:"justify"} }}
+          descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}
         />
 
         <KsurgeryProductComponent collection={1} />
@@ -188,13 +189,13 @@ const KsurgeryPage = (props) => {
         <SharedSection
           title={t(tokens.brands.ksurgery.skinbooster1)}
           description={t(tokens.brands.ksurgery.description3)}
-          descriptionSx={{ textAlign: {xs:"center", md:"justify"} }}
+          descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}
         />
 
         <KsurgeryProductComponent collection={2} />
 
         <ImageHero
-        name='ksurgery-image-hero'
+          name='ksurgery-image-hero'
           image={image}
           centerImage={false}
           title={t(tokens.brands.ksurgery.howIs)}

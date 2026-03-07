@@ -13,7 +13,7 @@ import { buttonStyle, videoStyle } from "./styles";
 const heroTextStyle = {
   color: "#fff",
   width: { xs: "100%", md: "50%" },
-  "@media (max-width: 899px)": {
+  "@media (max-width: 767px)": {
     height: "100%",
     justifyContent: "center",
     marginTop: "-70px !important"
@@ -41,9 +41,11 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
   return (
     <>
       <Container maxWidth="xl" sx={{
-        position: "relative", zIndex: 1, "@media (max-width: 899px)": {
+        position: "relative", zIndex: 1, "@media (max-width: 767px)": {
           height: "100%",
-
+        },
+        "@media (min-width: 768px) and (max-width:991px)": {
+          height: "80%",
         },
       }}>
         <Stack
@@ -54,7 +56,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             flexGrow: 1,
             paddingTop: { xs: "0", md: "10%" },
             px: { xs: 2, md: 0 },
-            "@media (max-width: 899px)": {
+            "@media (max-width: 991px)": {
               height: "100%",
               justifyContent: "center",
 
@@ -65,8 +67,8 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             <QuoteTypography
               variant="h6"
               sx={{
-                display: { xs: "none", md: "flex" },
-
+                display: { xs: "none", sm: "flex" },
+                mb: {xs: "16px !important",md: "unset" }
               }}
             >
               {title}
@@ -74,7 +76,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             <Typography
               variant="h5"
               sx={{
-                "@media (max-width: 899px)": {
+                "@media (max-width: 767px)": {
                   fontSize: "1.5rem",
                   marginTop: "0!important"
                 },
@@ -86,7 +88,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
               variant="body2"
               sx={{
                 textAlign: "justify",
-                "@media (max-width: 899px)": {
+                "@media (max-width: 767px)": {
                   fontSize: "1.125rem",
                   textAlign: "left",
 
@@ -99,7 +101,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
               <Button
                 sx={{
                   ...buttonStyle,
-                  "@media (max-width: 899px)": {
+                  "@media (max-width: 767px)": {
                     width: " 213px !important",
                     marginRight: "auto",
                     color: "#AC93E1 !important",
@@ -139,7 +141,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
         Your browser does not support the video tag.
       </video>
       <style>{`
-        @media (max-width: 899px) {
+        @media (max-width: 767px) {
           .brand-video-responsive {
             position: absolute !important;
             top: 50% !important;

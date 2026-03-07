@@ -12,7 +12,11 @@ const AboutUsBanner = (props) => {
   return (
     <>
       <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5" }}>
-        <Container maxWidth="xxl">
+        <Container maxWidth="xxl" sx={{ 
+           "@media (min-width: 768px) and (max-width: 991px)": {
+              padding: "16px!important"
+           }
+         }}>
           <StorySection
             name='about'
             title={t(tokens.about.title)}

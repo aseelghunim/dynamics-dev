@@ -33,20 +33,20 @@ const NewsBanner = () => {
 
   React.useEffect(() => {
     if (!isMobile) return;
-  
+
     const el = scrollerRef.current;
     if (!el) return;
-  
+
     const onScroll = () => {
       const slides = Array.from(el.querySelectorAll("[data-item-slide='true']"));
       if (!slides.length) return;
-  
+
       // Use the viewport center to decide which card is active
       const viewportCenter = el.scrollLeft + el.clientWidth / 2;
-  
+
       let bestIdx = 0;
       let bestDist = Infinity;
-  
+
       slides.forEach((node, idx) => {
         const slideCenter = node.offsetLeft + node.offsetWidth / 2;
         const dist = Math.abs(slideCenter - viewportCenter);
@@ -55,13 +55,13 @@ const NewsBanner = () => {
           bestIdx = idx;
         }
       });
-  
+
       setActive(bestIdx);
     };
-  
+
     el.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-  
+
     return () => el.removeEventListener("scroll", onScroll);
   }, [isMobile]);
 
@@ -82,7 +82,7 @@ const NewsBanner = () => {
       sx={{
         display: { xs: "none", sm: "block" },
         color: "#012169",
-        "@media (max-width: 899px)": { fontSize: "1rem" },
+        "@media (max-width: 991px)": { fontSize: "1rem" },
       }}
       variant="h6"
     >
@@ -91,14 +91,18 @@ const NewsBanner = () => {
   );
 
   const BannerCard = ({ item }) => (
-    <Card sx={{ width: "100%", height: "100%", borderRadius: 0 }}>
-      <CardMedia sx={{ height: { xs: 150, md: 300 } }} image={item.image} title={item.title} />
-      <CardContent sx={{ padding: { xs: 1, md: 2 } }}>
+    <Card sx={{
+      width: "100%", height: "100%", borderRadius: 0,
+      "@media (min-width: 768px) and (max-width:991px)":
+        { height: "95%!important" }
+    }}>
+      <CardMedia sx={{ height: { xs: 150, sm: 200, md: 300 } }} image={item.image} title={item.title} />
+      <CardContent sx={{ padding: { xs: 1, sm: 2 } }}>
         <Typography
           gutterBottom
           variant="body2"
           component="div"
-          sx={{ "@media (max-width: 899px)": { fontSize: "0.75rem" } }}
+          sx={{ "@media (max-width: 991px)": { fontSize: "0.875rem" } }}
         >
           {item.title}
         </Typography>
@@ -117,7 +121,7 @@ const NewsBanner = () => {
             hyphens: "auto",
             WebkitHyphens: "auto",
             msHyphens: "auto",
-            "@media (max-width: 899px)": { fontSize: "0.65rem" },
+            "@media (max-width: 991px)": { fontSize: "0.65rem" },
           }}
         >
           {item.description}
@@ -136,17 +140,28 @@ const NewsBanner = () => {
           sx={{
             position: "relative",
             height: "100%",
-            padding: { xs: 2, md: 10 },
+            padding: { xs: 2, sm: 2, md: 10 },
+            paddingTop: { xs: 2, sm: "5rem!important", md: 10 },
             margin: 0,
           }}
         >
-          <Grid container spacing={2} alignItems="stretch">
-            <Grid offset={{ xs: 0, md: 1 }} size={{ xs: 12, md: 3 }} sx={{ paddingTop: 1 }}>
+          <Grid container spacing={1} alignItems="stretch" justifyContent="center">
+            <Grid className="" offset={{ xs: 0, sm: 1 }} size={{ xs: 12, sm: 12, md: 3 }}
+
+              sx={{
+                paddingTop: 1,
+                "@media(min-width:768px) and (max-width: 991px)": {
+                  marginLeft: "0!important",
+                  marginBottom: "16px!important"
+                }
+
+              }}
+            >
               <BannerHeading />
             </Grid>
 
             {items.map((item, index) => (
-              <Grid key={item.title + index} size={{ xs: 6, md: 2 }}>
+              <Grid key={item.title + index} size={{ xs: 6, sm: 3, md: 2 }}>
                 <BannerCard item={item} />
               </Grid>
             ))}
@@ -162,7 +177,7 @@ const NewsBanner = () => {
             height: "100%",
             margin: 0,
             pt: 4, // keep vertical spacing
-            pb:2
+            pb: 2
           }}
         >
           <Box

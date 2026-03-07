@@ -23,15 +23,16 @@ const ReneePage = (props) => {
       <Seo />
       <main>
         <VideoHero
+          name='renee'
           title={t(tokens.brands.renee.title)}
           description={t(tokens.brands.renee.description)}
           videoSrc={video}
         />
-        <Box maxWidth="xxl" sx={{ backgroundColor: {xs:"white", md:"#E0FFF5"} }}>
+        <Box maxWidth="xxl" sx={{ backgroundColor: { xs: "white", md: "#E0FFF5" } }}>
           <Container maxWidth="xxl">
             <StorySection
               name="renee-story-1"
-              backgroundColor={{xs:"white", md:"#E0FFF5"}}
+              backgroundColor={{ xs: "white", md: "#E0FFF5" }}
               title={t(tokens.brands.renee.whatIs)}
               paragraph={t(tokens.brands.renee.whatIsDescription)}
               backImage={background_green}
@@ -48,25 +49,25 @@ const ReneePage = (props) => {
             <ReneeProductComponent />
           </Box>
 
-          <Box sx={{ order: { xs: 1, md: 2 }, backgroundColor: {xs:"white", md:"#E0FFF5"} }} maxWidth="xxl">
-            <Container maxWidth="xl">
-            <StorySection
-              name="renee-story-2"
-              backgroundColor= {{xs:"white", md:"#E0FFF5"}}
-              title={t(tokens.brands.renee.keyBenefits)}
-              paragraph={
-                <>
-                  <ul>
-                    <li>{t(tokens.brands.renee.keyBenefit1)}</li>
-                    <li>{t(tokens.brands.renee.keyBenefit2)}</li>
-                    <li>{t(tokens.brands.renee.keyBenefit3)}</li>
-                  </ul>
-                </>
-              }
-              passedImage={girlImage}
-              hideAction
-              reverse
-            />
+          <Box sx={{ order: { xs: 1, md: 2 }, backgroundColor: { xs: "white", md: "#E0FFF5" } }} maxWidth="xxl">
+            <Container maxWidth="xl" sx={{ padding: { xs: "0!important", md: 5 },}}>
+              <StorySection
+                name="renee-story-2"
+                backgroundColor={{ xs: "white", md: "#E0FFF5" }}
+                title={t(tokens.brands.renee.keyBenefits)}
+                paragraph={
+                  <>
+                    <ul>
+                      <li>{t(tokens.brands.renee.keyBenefit1)}</li>
+                      <li>{t(tokens.brands.renee.keyBenefit2)}</li>
+                      <li>{t(tokens.brands.renee.keyBenefit3)}</li>
+                    </ul>
+                  </>
+                }
+                passedImage={girlImage}
+                hideAction
+                reverse
+              />
             </Container>
           </Box>
         </Box>

@@ -2,7 +2,30 @@
     background-size: contain!important;
 }
 
-@media(max-width: 768px) {
+@media(min-width: 768px) and (max-width: 991px){
+    .image-hero-parent{
+        padding-left: 64px!important;
+        padding-right: 64px!important;
+
+    }
+    .text-holder{
+        padding-left: 0!important;
+        text-align: start!important;
+    }
+    .text-holder p,.text-holder span{
+        width: 60%;
+        text-align: start!important;
+        margin-right: auto!important;
+        font-size: 15px!important;
+    }
+    .drcyj-image-hero-1:before{
+        background-position: -260px 50px!important;
+    }
+}
+
+
+
+@media(max-width: 767px) {
     .ksurgery-image-hero{
         height: 400px;
     }
@@ -57,12 +80,15 @@
     .lanluma-image-hero-1{
         background-image: none!important;
         height: 100vh!important;
+        
     }
     .lanluma-image-hero-1::before{
         background-image: url('assets/lanluma/3.png')!important;
         transform: none!important;
            filter: brightness(50%);
            background-position: 30%!important;
+           background-size: cover !important;
+
     }
     .lanluma-image-hero-1 h3{
         margin-top: 17vh!important;

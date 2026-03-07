@@ -70,7 +70,7 @@ const AboutUsPage = (props) => {
               height: "100%",
               paddingTop: { xs: 2, md: 5 },
               paddingBottom: { xs: 2, md: 5 },
-              "@media (max-width: 899px)": {
+              "@media (max-width: 991px)": {
                 width: "100vw",
                 maxWidth: "100%",
                 marginLeft: 0,
@@ -141,7 +141,7 @@ const AboutUsPage = (props) => {
                                   <QuoteTypography
                                     variant="body1"
                                     sx={{
-                                      "@media (max-width: 899px)": {
+                                      "@media (max-width: 991px)": {
                                         fontSize: "0.875rem",
                                       },
                                     }}
@@ -151,7 +151,7 @@ const AboutUsPage = (props) => {
                                   <StyledTypography
                                     variant="h2"
                                     sx={{
-                                      "@media (max-width: 899px)": {
+                                      "@media (max-width: 991px)": {
                                         fontSize: "1.5rem",
                                       },
                                     }}
@@ -164,7 +164,7 @@ const AboutUsPage = (props) => {
                                       textAlign: "justify",
                                       whiteSpace: "normal",
                                       wordBreak: "break-word",
-                                      "@media (max-width: 899px)": {
+                                      "@media (max-width: 991px)": {
                                         fontSize: "0.875rem",
                                         lineHeight: 1.6,
                                       },
@@ -181,7 +181,7 @@ const AboutUsPage = (props) => {
                                         borderColor: "white",
                                         height: { xs: "50px", md: "65px" },
                                         width: { xs: "100%", md: "281px" },
-                                        "@media (max-width: 899px)": {
+                                        "@media (max-width: 991px)": {
                                           fontSize: "0.75rem",
                                         },
                                         "&:hover": {

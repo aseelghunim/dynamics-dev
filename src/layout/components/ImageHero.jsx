@@ -25,12 +25,12 @@ export const ImageHero = ({
 
   return (
     <Box
-    className = {name ?? ""}
+      className={`${name ?? ""} image-hero-parent`}
       maxWidth="xxl"
       sx={{
         position: "relative",
-        height: { xs: "auto", md: "100vh" },
-        minHeight: { xs: "400px", md: "100vh" },
+        height: { xs: "auto", sm: "45vh", md: "100vh" },
+        minHeight: { xs: "400px", sm: "45vh", md: "100vh" },
         width: "100%",
         overflow: "hidden",
         ...sectionSx,
@@ -74,16 +74,16 @@ export const ImageHero = ({
       >
         <Stack
           alignItems="center"
-          justifyContent="flex-start"
+          justifyContent={{ xs: "flex-start", sm: "center", md: "flex-start" }}
           spacing={2}
           sx={{
-            height: "100%",
+            height: { xs: "100%", sm: "45vh", md: "100%" },
             flexDirection: { xs: "column", md: "row" },
             py: { xs: 4, md: 0 },
           }}
         >
           <Stack
-          className="text-holder"
+            className="text-holder"
             spacing={3}
             sx={{
               color: "#fff",

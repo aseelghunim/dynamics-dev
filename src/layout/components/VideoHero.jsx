@@ -16,7 +16,7 @@ const heroButton = {
   color: "white",
   borderColor: "white",
   height: { xs: "50px", md: "65px" },
-  width: { xs: "100%", md: "281px" },
+  width: { xs: "100%",sm:"250px", md: "281px" },
   "&:hover": {
     borderColor: "white",
     color: "#ab92e1",
@@ -26,8 +26,8 @@ const heroButton = {
 
 const heroTextStyle = {
   color: "#fff",
-  textAlign: { xs: "right", md: "left" },
-  alignItems: { xs: "flex-end", md: "flex-start" },
+  textAlign: { xs: "right", sm:"start", md: "left" },
+  alignItems: { xs: "flex-end", sm: "flex-start" },
   position: "relative",
   zIndex: 2, // Ensure text appears above overlay
   paddingBottom: { xs: 0, md: "calc(5vh + 75px)" }, // 5vh + ~2cm (75px)
@@ -128,7 +128,7 @@ export const VideoHero = ({
 
   return (
     <Box
-      className={name ?? ""}
+      className={`video-parent ${name?? ""} `}
       maxWidth="xxl"
       sx={{
         position: "relative",
@@ -137,7 +137,7 @@ export const VideoHero = ({
         overflow: "hidden",
         margin: { xs: 0, md: "auto" },
         padding: 0,
-        "@media (max-width: 899px)": {
+        "@media (max-width: 991px)": {
           marginLeft: 0,
           marginRight: 0,
           width: "100vw",
@@ -160,7 +160,7 @@ export const VideoHero = ({
             xs: "rgba(0, 0, 0, 0.55)", // mobile
             md: "rgba(0, 0, 0, 0.2)",  // desktop
           },
-          "@media (max-width: 899px)": {
+          "@media (max-width: 991px)": {
             width: "100vw",
             left: 0,
           },
@@ -190,7 +190,7 @@ export const VideoHero = ({
         Your browser does not support the video tag.
       </video>
       <style>{`
-        @media (max-width: 899px) {
+        @media (max-width: 991px) {
           .video-hero-mobile-fix {
             left: 0 !important;
             transform: translateY(-50%) !important;
@@ -226,7 +226,7 @@ export const VideoHero = ({
           sx={{
             height: "100%",
             flexDirection: { xs: "column", md: "row" },
-            "@media (max-width: 899px)": {
+            "@media (max-width: 991px)": {
               marginTop: "-40px", // Move content up on mobile
             },
           }}
@@ -237,9 +237,9 @@ export const VideoHero = ({
                 <StyledTypography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "2.25rem", md: "3rem" },
+                    fontSize: { xs: "2.25rem",sm:"2.5rem", md: "3rem" },
 
-                    textAlign: { xs: "center", md: "inherit" }
+                    textAlign: { xs: "center", sm: "left", md:"inherit" }
                   }}
                 >
                   {title}
@@ -250,7 +250,7 @@ export const VideoHero = ({
               <Typography
                 variant="h3"
                 sx={{
-                  "@media (max-width: 899px)": {
+                  "@media (max-width: 991px)": {
                     fontSize: "2.25rem",
                     width: "100%",
                     textAlign: "center"
@@ -263,12 +263,12 @@ export const VideoHero = ({
             <StyledTypography
               variant="body2"
               sx={{
-                maxWidth: { xs: "100%", md: "500px" },
+                maxWidth: { xs: "100%", sm:"60%", md: "500px" },
                 whiteSpace: "normal",
                 wordWrap: "break-word",
                 overflowWrap: "break-word",
-                textAlign: { xs: "center", md: "justify" },
-                "@media (max-width: 899px)": {
+                textAlign: { xs: "center",sm:"start", md: "justify"},
+                "@media (max-width: 991px)": {
                   fontSize: "1.125rem",
                 },
               }}

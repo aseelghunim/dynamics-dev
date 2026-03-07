@@ -1,10 +1,42 @@
-@media(max-width:768px){
+@media(min-width: 768px) and (max-width: 991px){
+    .video-parent{
+        height: 60vh!important;
+    }
+    .video-parent .video-text-holder{
+        justify-content: end!important;
+        align-items: start!important;
+        padding-bottom: 120px;
+        margin-top: 0!important;
+        padding-left: 72px;
+
+    }
+    .video-text-holder p{
+        max-width: 65% !important;
+        text-align: justify !important;
+        font-size: 1.125rem !important;
+        word-spacing: 1px;
+    }
+    .video-text-holder h3{
+        text-align: start!important;
+    }
+
+    .video-parent .video-text-holder > div{
+        width: 100!important;
+    }
+}
+
+
+@media(max-width:767px){
     .ellanse .video-text-holder,
     .lanluma .video-text-holder,
     .dimono .video-text-holder,
     .maili .video-text-holder,
     .drcyj .video-text-holder,
-    .juvelook .video-text-holder{
+    .juvelook .video-text-holder,
+    .ksurgery .video-text-holder,
+    .lenisna .video-text-holder,
+    .renee .video-text-holder
+    {
         margin-top: 0!important;
     }
     .basic-page h2,.about-video-hero {

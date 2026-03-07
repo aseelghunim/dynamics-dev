@@ -52,7 +52,7 @@ const DRCYJPage = (props) => {
               // hideAction
               backImage={background_purple}
               paragraphSx={{
-                textAlign: "justify",
+                textAlign: {xs:"left"},
                 textJustify: "inter-word",
                 wordSpacing: "0.15em",
                 letterSpacing: "0.02em",
@@ -63,7 +63,7 @@ const DRCYJPage = (props) => {
                   <Typography
                     variant="h3"
                     sx={{
-                      fontSize: { xs: "1.5rem", md: "inherit" },
+                      fontSize: { xs: "1.5rem",sm:"1.25rem!important", md: "inherit" },
                     }}
                   >
                     {t(tokens.brands.drcyj.whatIs)}

@@ -73,7 +73,7 @@ const ValuesBanner = (props) => {
               <QuoteTypography
                 sx={{
                   color: "#012169",
-                  "@media (max-width: 899px)": {
+                  "@media (max-width: 991px)": {
                     fontSize: "1rem",
 
                   },
@@ -100,7 +100,7 @@ const ValuesBanner = (props) => {
                       variant="body2"
                       component="div"
                       sx={{
-                        "@media (max-width: 899px)": {
+                        "@media (max-width: 991px)": {
                           fontSize: "1rem",
                           fontWeight: 600,
                           marginBottom: "16px"

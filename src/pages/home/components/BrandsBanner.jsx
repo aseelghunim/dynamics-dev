@@ -102,7 +102,7 @@ const BrandsBanner = (props) => {
           margin: 0,
           // Mobile: fixed height for just the video/content area
           // Desktop: full 100% height so absolute carousel anchors to bottom
-          height: { xs: "100vh", md: "100%" },
+          height: { xs: "100vh",sm:"65vh", md: "100%" },
         }}
       >
         {selectedBrand === BRANDS.KSURGERY && (

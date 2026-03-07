@@ -17,10 +17,10 @@ import './DrcyjProductComponent.css';
 const DrcyjProductComponent = () => {
   const { t } = useTranslation();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const productImage = isMobile ? mobileProduct : product1;
   const product = {
-    img: product1,
+    img: productImage,
     mobileImg: mobileProduct,
     title: t(tokens.brands.drcyj.product.title),
     subtitle: t(tokens.brands.drcyj.product.subtitle),
@@ -89,14 +89,15 @@ const DrcyjProductComponent = () => {
 
   return (
     <Box
+      className="drcyj-product"
       sx={{
-        p: { xs: 0, md: "2rem" },
-        borderRadius: { xs: 0, md: "8px" },
+        p: { xs: 0, sm: 0, md: "2rem" },
+        borderRadius: { xs: 0, sm: "8px" },
         backgroundColor: "#FFFFFF",
       }}
       maxWidth="xxl"
     >
-      <Container maxWidth="xl" sx={{ py: { xs: 3, md: 2 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 3, sm: 2 } }}>
         {isMobile ? (
           // ✅ MOBILE: match screenshot (centered image, one-column sections)
           <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -106,7 +107,7 @@ const DrcyjProductComponent = () => {
                 {/* Title */}
                 <Typography
                   sx={{
-                    width:"100%",
+                    width: "100%",
                     color: "#19254F",
                     fontWeight: 700,
                     fontSize: "1.15rem",
@@ -120,20 +121,23 @@ const DrcyjProductComponent = () => {
                 {/* Subtitle (grey, uppercase) */}
                 <Typography
                   sx={{
+
                     color: "#8A8A8A",
                     textTransform: "uppercase",
                     letterSpacing: "0.5px",
                     fontSize: "1rem",
                     textAlign: "left!important",
                     lineHeight: 1.25,
-                    marginTop:"8px!important"
+                    marginTop: "8px!important",
+                 
+
                   }}
                 >
                   {product.subtitle}
                 </Typography>
 
                 {/* Centered product image (not full width) */}
-                     
+
                 <Box className="drcyj-img-holder" sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
                   <Box
                     component="img"
@@ -167,7 +171,7 @@ const DrcyjProductComponent = () => {
           // ✅ DESKTOP: keep your current layout
           <Grid container alignItems="center" spacing={4}>
             {/* LEFT */}
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} sm={4.5}>
               <Box>
                 <Typography variant="h5" sx={{ color: "#5A2772", fontWeight: 600 }}>
                   {product.title}
@@ -203,17 +207,23 @@ const DrcyjProductComponent = () => {
             </Grid>
 
             {/* CENTER IMAGE */}
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} sm={3} sx={{
+              "@media(min-width:768px) and (max-width:991px)": {
+
+                paddingLeft: 0,
+                paddingTop: "52px"
+              }
+            }}>
               <Box sx={{ textAlign: "center" }}>
                 <Box
                   component="img"
-                  src={product.img}
+                  src={product.mobileImg}
                   alt={product.title}
                   loading="lazy"
                   sx={{
                     maxWidth: "100%",
                     height: "auto",
-                    width: { xs: "70%", md: "90%" },
+                    width: { xs: "70%", sm: "70%", md: "90%" },
                     mt: 0,
                   }}
                 />
@@ -221,7 +231,7 @@ const DrcyjProductComponent = () => {
             </Grid>
 
             {/* RIGHT */}
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} sm={4.5}>
               <Box>
                 <Typography variant="h6" sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}>
                   {product.keyBenefitsTitle}

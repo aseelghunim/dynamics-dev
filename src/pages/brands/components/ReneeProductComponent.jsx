@@ -58,7 +58,7 @@ const ReneeProductComponent = () => {
   const [tabValue, setTabValue] = useState("product-1");
 
   // ✅ Mobile-only layout switch (desktop stays exactly the same)
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   const products = [
     {
@@ -160,12 +160,12 @@ const ReneeProductComponent = () => {
       <Box
         className="renee-product"
         sx={{
-          padding: { xs: 2, md: "2rem" },
+          padding: { xs: 2, sm: "2rem" },
           // borderRadius: "8px",
         }}
         maxWidth="xxl"
       >
-        <Container maxWidth="xl" sx={{ py: { xs: 1, md: 2 } }}>
+        <Container maxWidth="xl" sx={{ py: { xs: 1, sm: 2 } }}>
           <Box sx={{ width: "100%" }}>
             {products.map((product) => {
               const expanded = tabValue === product.value;
@@ -233,7 +233,7 @@ const ReneeProductComponent = () => {
                           color: "#6D6E71",
                           fontSize: "1rem",
                           mb: 2,
-                          mt: { xs: "-20px", md: 0 },
+                          mt: { xs: "-20px", sm: 0 },
                         }}
                       >
                         {product.subtitle}
@@ -279,7 +279,7 @@ const ReneeProductComponent = () => {
                       sx={{
                         color: "#6D6E71",
                         mb: 2,
-                        fontSize: { xs: "1rem", md: "1.25rem" },
+                        fontSize: { xs: "1rem", sm: "1.25rem" },
                       }}
                     >
                       {product.description}
@@ -291,7 +291,7 @@ const ReneeProductComponent = () => {
                       sx={{
                         mb: 1,
                         color: "#5A2772",
-                        fontSize: { xs: "1rem", md: "1.25rem" },
+                        fontSize: { xs: "1rem", sm: "1.25rem" },
                       }}
                     >
                       {t(tokens.brands.renee.keyBenefits)}
@@ -316,51 +316,51 @@ const ReneeProductComponent = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 2, md: "2rem" },
+        padding: { xs: 2, sm: "2rem" },
         borderRadius: "8px",
       }}
       maxWidth="xxl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
-        <Container maxWidth="xl" sx={{ py: { xs: 1, md: 2 } }}>
-          <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
+        <Container maxWidth="xl" sx={{ py: { xs: 1, sm: 2 } }}>
+          <Grid container spacing={{ xs: 2, sm: 4 }} alignItems="center">
             {products?.map((product) =>
               product.value === tabValue ? (
                 <React.Fragment key={product.value}>
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={12} sm={4}>
                     <Typography
                       variant="body2"
                       sx={{
-                        fontSize: { xs: "1rem", md: "inherit" },
-                        mb: { xs: 1, md: 0 },
+                        fontSize: { xs: "1rem", sm: "inherit" },
+                        mb: { xs: 1, sm: 0 },
                       }}
                     >
                       {product.title}
                     </Typography>
                     <Box
                       sx={{
-                        height: { xs: "auto", md: "50px" },
-                        mb: { xs: 1, md: 0 },
+                        height: { xs: "auto", sm: "50px" },
+                        mb: { xs: 1, sm: 0 },
                       }}
                     >
                       <Typography
                         variant="body1"
                         sx={{
                           color: "#6D6E71",
-                          fontSize: { xs: "0.875rem", md: "inherit" },
+                          fontSize: { xs: "0.875rem", sm: "inherit" },
                         }}
                       >
                         {product.subtitle}
                       </Typography>
                     </Box>
 
-                    <Box sx={{ mt: { xs: 1, md: 2 }, mb: { xs: 1, md: 2 } }}>
+                    <Box sx={{ mt: { xs: 1, sm: 2 }, mb: { xs: 1, sm: 2 } }}>
                       {product.preQuestion && (
                         <Typography
                           variant="body2"
                           sx={{
                             color: "#8B49AA",
-                            fontSize: { xs: "0.75rem", md: "inherit" },
+                            fontSize: { xs: "0.75rem", sm: "inherit" },
                           }}
                         >
                           {product.preQuestion}
@@ -370,7 +370,7 @@ const ReneeProductComponent = () => {
                         variant="body2"
                         sx={{
                           color: "#5A2772",
-                          fontSize: { xs: "0.75rem", md: "inherit" },
+                          fontSize: { xs: "0.75rem", sm: "inherit" },
                         }}
                       >
                         {product.question}
@@ -380,22 +380,22 @@ const ReneeProductComponent = () => {
                     <Typography
                       variant="body1"
                       sx={{
-                        mb: { xs: 1, md: 2 },
+                        mb: { xs: 1, sm: 2 },
                         color: "#6D6E71",
-                        fontSize: { xs: "0.75rem", md: "inherit" },
+                        fontSize: { xs: "0.75rem", sm: "inherit" },
                       }}
                     >
                       {product.description}
                     </Typography>
                   </Grid>
 
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={12} sm={4}>
                     <Box
                       sx={{
                         textAlign: "center",
                         position: "relative",
-                        minHeight: { xs: "auto", md: "457px" },
-                        mb: { xs: 2, md: 0 },
+                        minHeight: { xs: "auto", sm: "457px" },
+                        mb: { xs: 2, sm: 0 },
                       }}
                     >
                       <Box
@@ -406,19 +406,19 @@ const ReneeProductComponent = () => {
                         sx={{
                           maxWidth: "100%",
                           height: "auto",
-                          width: { xs: "80%", md: "100%" },
+                          width: { xs: "80%", sm: "100%" },
                         }}
                       />
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={12} sm={4}>
                     <Typography
                       variant="body2"
                       sx={{
                         mb: 1,
                         color: "#5A2772",
-                        fontSize: { xs: "0.875rem", md: "inherit" },
+                        fontSize: { xs: "0.875rem", sm: "inherit" },
                       }}
                     >
                       {t(tokens.brands.renee.keyBenefits)}
@@ -427,7 +427,7 @@ const ReneeProductComponent = () => {
                       component="ul"
                       sx={{
                         pl: 2,
-                        fontSize: { xs: "0.75rem", md: "1rem" },
+                        fontSize: { xs: "0.75rem", sm: "1rem" },
                       }}
                     >
                       {product.items.map((item, idx) => (
@@ -441,22 +441,22 @@ const ReneeProductComponent = () => {
               ) : null
             )}
 
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} sm={12}>
               {/* Button Section */}
               <Grid
                 item
                 xs={12}
-                md={12}
+                sm={12}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
-                  mt: { xs: 2, md: 0 },
+                  mt: { xs: 2, sm: 0 },
                 }}
               >
                 <Stack
-                  direction={{ xs: "column", md: "row" }}
-                  spacing={{ xs: 1, md: 2 }}
-                  sx={{ width: { xs: "100%", md: "auto" } }}
+                  direction={{ xs: "column", sm: "row" }}
+                  spacing={{ xs: 1, sm: 2 }}
+                  sx={{ width: { xs: "100%", sm: "auto" } }}
                 >
                   {products?.map((product) => (
                     <Button
@@ -466,9 +466,9 @@ const ReneeProductComponent = () => {
                       }
                       onClick={() => setTabValue(product.value)}
                       sx={{
-                        minWidth: { xs: "100%", md: "150px" },
-                        fontSize: { xs: "0.75rem", md: "inherit" },
-                        py: { xs: 1, md: 1.5 },
+                        minWidth: { xs: "100%", sm: "150px" },
+                        fontSize: { xs: "0.75rem", sm: "inherit" },
+                        py: { xs: 1, sm: 1.5 },
                         ...(product.value === tabValue
                           ? product.activeStyle
                           : product.buttonStyle),

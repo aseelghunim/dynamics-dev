@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import logo from "assets/juvelook/logo.png";
 import product1 from "assets/juvelook/juvelook-product-1.png";
-
+import productMobile from 'assets/juvelook/product-mobile-bg.png'
 const JuvelookProductComponent = () => {
   const { t } = useTranslation();
   const [tabValue, setTabValue] = useState("product-1");
@@ -48,7 +48,7 @@ const JuvelookProductComponent = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 2, md: "2rem" },
+        padding: { xs: 2, sm: "2rem" },
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
@@ -57,7 +57,7 @@ const JuvelookProductComponent = () => {
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
         <Container maxWidth="xl" sx={{ py: 2 }}>
           <Grid container alignItems="stretch">
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} sm={12}>
               <Box
                 component="img"
                 src={logo}
@@ -65,18 +65,18 @@ const JuvelookProductComponent = () => {
                 loading="lazy"
                 sx={{
                   paddingTop: {xs:"16px"},
-                  marginLeft: { xs: 0, md: "-10px" },
+                  marginLeft: { xs: 0, sm: "-10px" },
                   maxWidth: "100%",
                   height: "auto",
-                  width: { xs: "120px", md: "180px" },
+                  width: { xs: "120px", sm: "180px" },
                 }}
               />
               <Typography
                 variant="body1"
                 sx={{
                   color: "#6D6E71",
-                  mb: { xs: 2, md: "50px" },
-                  fontSize: { xs: "0.875rem", md: "inherit" },
+                  mb: { xs: 2, sm: "50px" },
+                  fontSize: { xs: "0.875rem", sm: "inherit" },
                 }}
               >
                 {t(tokens.brands.juvelook.products[0].title)}
@@ -85,8 +85,8 @@ const JuvelookProductComponent = () => {
             {products?.map((product) =>
               product.value === tabValue ? (
                 <>
-                  <Grid item xs={12} md={3}>
-                    <Stack spacing={{ xs: 3, md: 6 }}>
+                  <Grid item xs={12} sm={5}>
+                    <Stack spacing={{ xs: 3, sm: 6 }}>
                       <Box>
                         <Typography
                         className="no-margin-p"
@@ -94,7 +94,7 @@ const JuvelookProductComponent = () => {
                           sx={{
                             color: "#1B5EA5",
                             mb: 2,
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
                           }}
                         >
                           {product.title1}
@@ -111,7 +111,7 @@ const JuvelookProductComponent = () => {
                             lineHeight: 1.7,
                             display: "block",
                             width: "100%",
-                            fontSize: { xs: "0.875rem", md: "inherit" },
+                            fontSize: { xs: "0.875rem", sm: "inherit" },
                           }}
                         >
                           {product.description1}
@@ -123,8 +123,8 @@ const JuvelookProductComponent = () => {
                           sx={{
                             color: "#1B5EA5",
                             mb: 2,
-                            mt: { xs: 2, md: 10 },
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            mt: { xs: 2, sm: 10 },
+                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
                           }}
                         >
                           {product.title2}
@@ -141,7 +141,7 @@ const JuvelookProductComponent = () => {
                             lineHeight: 1.7,
                             display: "block",
                             width: "100%",
-                            fontSize: { xs: "0.875rem", md: "inherit" },
+                            fontSize: { xs: "0.875rem", sm: "inherit" },
                           }}
                         >
                           {product.description2}
@@ -149,42 +149,42 @@ const JuvelookProductComponent = () => {
                       </Box>
                     </Stack>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} sm={4}>
                     <Box
                       sx={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         textAlign: "center",
-                        minHeight: { xs: "auto", md: "457px" },
-                        mt: { xs: 2, md: "-250px" },
-                        mb: { xs: 2, md: 0 },
+                        minHeight: { xs: "auto", sm: "457px" },
+                        mt: { xs: 2,sm:"0", md: "-250px" },
+                        mb: { xs: 2, sm: 0 },
                       }}
                     >
                       <Box
                         component="img"
-                        src={product.img}
+                        src={productMobile}
                         alt="Renee Lift"
                         loading="lazy"
                         sx={{
                           maxWidth: "100%",
                           maxHeight: "100%",
                           height: "auto",
-                          width: { xs: "80%", md: "auto" },
+                          width: { xs: "80%",sm:"70%", md: "auto" },
                         }}
                       />
                     </Box>
                   </Grid>
-                  <Grid item xs={12} md={3}>
-                    <Stack spacing={{ xs: 3, md: 6 }}>
+                  <Grid item xs={12} sm={3}>
+                    <Stack spacing={{ xs: 3, sm: 6 }}>
                       <Box>
                         <Typography
                           variant="body2"
                           sx={{
                             mb: 2,
                             color: "#1B5EA5",
-                            fontSize: { xs: "1.25rem", md: "inherit" },
-                            marginTop: {xs: "120px", md:"unset"}
+                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
+                            marginTop: {xs: "120px", sm:"unset"}
                           }}
                         >
                           {product.title4}
@@ -193,7 +193,7 @@ const JuvelookProductComponent = () => {
                           component="ul"
                           sx={{
                             pl: 2,
-                            fontSize: { xs: "0.875rem", md: "1rem" },
+                            fontSize: { xs: "0.875rem", sm: "1rem" },
                             color: "#6D6E71",
                           }}
                         >
@@ -208,7 +208,7 @@ const JuvelookProductComponent = () => {
                           sx={{
                             mb: 2,
                             color: "#1B5EA5",
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            fontSize: { xs: "1.25rem",sm:"0.75rem", md: "inherit" },
                           }}
                         >
                           {t(tokens.brands.renee.keyBenefits)}
@@ -217,7 +217,7 @@ const JuvelookProductComponent = () => {
                           component="ul"
                           sx={{
                             pl: 2,
-                            fontSize: { xs: "0.875rem", md: "1rem" },
+                            fontSize: { xs: "0.875rem", sm: "1rem" },
                             color: "#6D6E71",
                           }}
                         >
@@ -233,7 +233,7 @@ const JuvelookProductComponent = () => {
             )}
 
             {products.length > 1 && (
-              <Grid item xs={12} md={12}>
+              <Grid item xs={12} sm={12}>
                 {/* Button Section */}
                 <Stack direction="row" justifyContent={"space-between"}>
                   {products?.map((product) => (

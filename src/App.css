@@ -35,7 +35,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 991px) {
 
     html,
     body {
@@ -92,11 +92,11 @@ body:dir(rtl) h6 {
     z-index: -1;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
 
     .css-qq8w9n-MuiGrid-root,
     .css-1sk9o47-MuiContainer-root,.css-1uyohl9 {
-        padding: 0 !important;
+        /* padding: 0 !important; */
     }
     .css-qq8w9n-MuiGrid-root>.MuiGrid-item{
         /* order: 2; */

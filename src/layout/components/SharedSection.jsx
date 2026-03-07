@@ -42,7 +42,7 @@ const SharedSection = ({
                 orientation={{ xs: "horizontal", md: "vertical" }}
                 flexItem
                 sx={{
-                  "@media (max-width: 899px)": {
+                  "@media (max-width: 991px)": {
                     width: "100%",
                     my: 1,
                   },

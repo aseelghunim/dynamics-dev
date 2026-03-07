@@ -1,5 +1,13 @@
-@media(max-width:768px){
-    .drcyj-img-holder{
-        /* margin-top: 0!important; */
+@media(min-width:768px) and (max-width:991px){
+    .drcyj-product{
+       padding-left: 64px!important;
+       padding-right: 64px!important;
     }
+    .drcyj-product h5, .drcyj-product h6{
+        font-size: 11px!important;
+    }
+    .drcyj-product p,.drcyj-product li{
+        font-size: 9px!important;
+    }
+    
 }

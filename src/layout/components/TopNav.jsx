@@ -133,7 +133,7 @@ export const TopNav = (props) => {
           }),
           zIndex: (theme) => theme.zIndex.appBar,
           width: "100%",
-          "@media (max-width: 899px)": {
+          "@media (max-width: 991px)": {
             width: "100vw",
             left: 0,
             right: 0,

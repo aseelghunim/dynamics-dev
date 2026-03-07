@@ -72,7 +72,7 @@ const TitleBox = ({
                     variant="h3"
                     sx={{
                       pt: { xs: 0, md: 2 },
-                      "@media (max-width: 899px)": {
+                      "@media (max-width: 991px)": {
                         fontSize: "1.5rem",
                       },
                     }}
@@ -85,7 +85,7 @@ const TitleBox = ({
                       textAlign: "justify",
                       whiteSpace: "normal",
                       wordBreak: "break-word",
-                      "@media (max-width: 899px)": {
+                      "@media (max-width: 991px)": {
                         fontSize: "0.875rem",
                         lineHeight: 1.6,
                       },
@@ -97,7 +97,7 @@ const TitleBox = ({
                     <Typography
                       variant="h3"
                       sx={{
-                        "@media (max-width: 899px)": {
+                        "@media (max-width: 991px)": {
                           fontSize: "1.5rem",
                         },
                       }}
@@ -109,7 +109,7 @@ const TitleBox = ({
                     <Typography
                       variant="body2"
                       sx={{
-                        "@media (max-width: 899px)": {
+                        "@media (max-width: 991px)": {
                           fontSize: "0.875rem",
                           lineHeight: 1.6,
                         },

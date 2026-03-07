@@ -37,7 +37,7 @@ const OurCollectionParagraph = (props) => {
                 orientation={{ xs: "horizontal", md: "vertical" }}
                 flexItem
                 sx={{
-                  "@media (max-width: 899px)": {
+                  "@media (max-width: 991px)": {
                     width: "100%",
                     my: 1,
                   },
@@ -48,7 +48,7 @@ const OurCollectionParagraph = (props) => {
             <StyledTypography
               variant={theme.direction === "ltr" ? "h2" : "h2"}
               sx={{
-                "@media (max-width: 899px)": {
+                "@media (max-width: 991px)": {
                   fontSize: "2.25rem",
                   textAlign: "center",
                   marginLeft: "auto!important",
@@ -62,7 +62,7 @@ const OurCollectionParagraph = (props) => {
             <StyledTypography
               variant="body2"
               sx={{
-                "@media (max-width: 899px)": {
+                "@media (max-width: 991px)": {
                   fontSize: "1.125rem",
                   lineHeight: 1.6,
                   textAlign: "center"

@@ -45,7 +45,7 @@ const OurCollectionBanner = () => {
       <QuoteTypography
         sx={{
           color: "#012169",
-          "@media (max-width: 899px)": { fontSize: "1rem" },
+          "@media (max-width: 991px)": { fontSize: "1rem" },
         }}
         variant="h6"
       >
@@ -55,7 +55,7 @@ const OurCollectionBanner = () => {
       <Typography
         sx={{
           color: "#012169",
-          "@media (max-width: 899px)": { fontSize: "1.25rem" },
+          "@media (max-width: 991px)": { fontSize: "1.25rem" },
         }}
         variant="h3"
       >

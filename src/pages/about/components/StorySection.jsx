@@ -21,10 +21,10 @@ const TitleBox = ({
 }) => {
   const { t } = useTranslation();
   const isMobile = useMediaQuery("(max-width: 600px)");
-  const isTablet = useMediaQuery("(min-width: 601px) and (max-width: 899px)");
+  const isTablet = useMediaQuery("(min-width: 601px) and (max-width: 991px)");
 
   return (
-    <Grid item xs={12} md={6} className={className}>
+    <Grid item xs={12} sm={6} className={className}>
       <Box
 
         sx={{
@@ -33,35 +33,44 @@ const TitleBox = ({
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "white",
-          padding:{xs: "0!important" , md: 2}
         }}
       >
-        <Stack direction="row" justifyContent="center"  sx={{ 
-          padding:{xs: 0 , md: 2},
-          paddingLeft:"0!important"
-         }}>
+        <Stack direction="row" justifyContent="center" paddingLeft={0}>
           <Box
             sx={{
               padding: 0,
-              width: { xs: "100%", md: "85%" },
-              minHeight: { xs: "auto", md: "660px" },
+              width: { xs: "100%", sm: "85%" },
+              minHeight: { xs: "auto", sm: "310px", md: "660px" },
               display: "flex",
               boxSizing: "border-box",
             }}
           >
             <Stack
+            className="first-stack"
               direction="column"
               justifyContent="flex-start"
               alignItems="flex-start"
               sx={{
                 height: "100%",
                 width: "100%",
-                px: { xs: 2, md: 12 },
-                py: { xs: 3, md: 8 },
-                pt: { xs: 3, md: 18 },
+                px: { xs: 2, sm: 4, md: 12 },
+                py: { xs: 3, sm: 8 },
+                pt: { xs: 3, sm: 18 },
+
+
+                // padding-left: 48px;
+                // padding-right: 48px;
+                // padding-top: 32px;
+                // padding-bottom: 64px;
                 textAlign: "left",
                 boxSizing: "border-box",
                 overflow: "hidden",
+                "@media (min-width: 768px) and (max-width: 991px)": {
+                  paddingLeft: "48px",
+                  paddingRight: "48px",
+                  paddingTop: "32px",
+                  paddingBottom: "64px",
+                }
               }}
             >
               {component ? (
@@ -78,8 +87,8 @@ const TitleBox = ({
                   <Typography
                     variant="h3"
                     sx={{
-                      pt: { xs: 0, md: 2 },
-                      "@media (max-width: 899px)": { fontSize: "1.5rem" },
+                      pt: { xs: 0, sm: 2 },
+                      "@media (max-width: 991px)": { fontSize: "1.25rem!important" },
                     }}
                   >
                     {title}
@@ -93,7 +102,7 @@ const TitleBox = ({
                       wordSpacing: "0.05em",
                       letterSpacing: "0.01em",
                       lineHeight: 1.7,
-                      maxWidth: { xs: "100%", md: "120%" },
+                      maxWidth: { xs: "100%", sm: "120%" },
                       width: "120%",
                       "@media (max-width: 900px)": { fontSize: "0.875rem" },
                       ...paragraphSx,
@@ -106,7 +115,7 @@ const TitleBox = ({
                     <Typography
                       variant="h3"
                       sx={{
-                        "@media (max-width: 899px)": { fontSize: "1.5rem" },
+                        "@media (max-width: 991px)": { fontSize: "1.25rem!important" },
                       }}
                     >
                       {title2}
@@ -117,7 +126,7 @@ const TitleBox = ({
                     <Typography
                       variant="body1"
                       sx={{
-                        "@media (max-width: 899px)": { fontSize: "0.875rem" },
+                        "@media (max-width: 991px)": { fontSize: "0.875rem" },
                       }}
                     >
                       {paragraph2}
@@ -136,7 +145,7 @@ const TitleBox = ({
                           height: "28px",
                           borderWidth: "1px",
                         },
-                        "@media (min-width: 601px) and (max-width: 899px)": {
+                        "@media (min-width: 601px) and (max-width: 991px)": {
                           fontSize: "0.75rem",
                           padding: "4px 10px",
                           minWidth: "auto",
@@ -156,8 +165,8 @@ const TitleBox = ({
             </Stack>
           </Box>
         </Stack>
-      </Box>
-    </Grid>
+      </Box >
+    </Grid >
   );
 };
 
@@ -170,11 +179,11 @@ const ImageBox = ({ reverse, passedImage, passedVideo }) => {
     <Grid
       item
       xs={12}
-      md={6}
+      sm={6}
       sx={{
         position: "relative",
         display: "block",
-        height: { xs: "300px", md: "auto" }
+        height: { xs: "300px", sm: "auto" }
 
       }}
       className="image-box"
@@ -184,10 +193,10 @@ const ImageBox = ({ reverse, passedImage, passedVideo }) => {
           position: "absolute",
           top: "10%",
           height: "80%",
-          width: { xs: "105%", md: "115%" },
+          width: { xs: "105%", sm: "115%" },
           overflow: "hidden",
 
-          ...(reverse ? { left: { xs: "0", md: -110 } } : { right: { xs: "0", md: -110 } }),
+          ...(reverse ? { left: { xs: "0", sm: -70, md: -110 } } : { right: { xs: "0", sm: -70, md: -110 } }),
         }}
       >
         {isVideo ? (
@@ -247,7 +256,7 @@ const StorySection = ({
 }) => {
   return (
     <Box
-      className={name ?? ""}
+      className={`${name ?? ""} story-section-parent`}
       maxWidth="xxl"
       sx={{
         backgroundColor,
@@ -257,17 +266,23 @@ const StorySection = ({
         paddingBottom: 5,
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{
+        padding: { xs: 0, sm: 2 }
+
+      }}>
         <Grid
           container
           spacing={2}
           alignItems="stretch"
-          sx={{ padding: { xs: 2, md: 5 } }}
+          sx={{
+            padding: { xs: 0, md: 5 },
+            // padding
+          }}
         >
           {reverse ? (
             <>
               <TitleBox
-              className="story-section-text-holder"
+                className="story-section-text-holder"
                 title={title}
                 paragraph={paragraph}
                 backImage={backImage}
@@ -278,7 +293,7 @@ const StorySection = ({
                 paragraphSx={paragraphSx}
               />
               <ImageBox reverse passedImage={passedImage} passedVideo={passedVideo} />
-           </>
+            </>
           ) : (
             <>
               <ImageBox
@@ -287,7 +302,7 @@ const StorySection = ({
                 passedVideo={passedVideo}
               />
               <TitleBox
-              className="story-section-text-holder"
+                className="story-section-text-holder"
 
                 title={title}
                 paragraph={paragraph}
