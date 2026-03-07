@@ -10,7 +10,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { Container, Stack } from "@mui/system";
+import { Container, Stack, padding } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
@@ -21,7 +21,7 @@ import stretchImage from "assets/juvelook/Stretch.png";
 
 import { tokens } from "locales/tokens";
 import { useTranslation } from "react-i18next";
-
+import './FaceInjectionPointsJuvelook.css';
 const Point = ({ position }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
@@ -65,14 +65,16 @@ const Point = ({ position }) => {
         </Popper>
 
         <IconButton
+       
           size="small"
           sx={{
+           
             color: "white",
             position: "absolute",
             // ✅ mobile (xs) uses topMobile/leftMobile when provided
             // ✅ md+ uses top/left
-            top: { xs: position.topMobile ?? position.top, md: position.top },
-            left: { xs: position.leftMobile ?? position.left, md: position.left },
+            top: { xs: position.topMobile ?? position.top,sm:position.topTablet ?? position.top, md: position.top },
+            left: { xs: position.leftMobile ?? position.left, sm: position.leftTablet ?? position.left, md: position.left },
             transform: "translate(-50%, -50%)",
             backgroundColor: "rgba(255, 255, 255, 0.3)",
             borderRadius: "50%",
@@ -83,6 +85,12 @@ const Point = ({ position }) => {
               backgroundColor: "rgba(255, 255, 255, 1)",
             },
             m: 1,
+            "@media(min-width:768px) and (max-width:991px)":{
+                   width:"15px!important",
+            height:"15px!important",
+            }
+
+       
           }}
           onClick={handleClick}
         >
@@ -106,7 +114,11 @@ const FaceInjectionPointsJuvelook = () => {
       top: "36%",
       left: "36%",
       topMobile: "33%",
-      leftMobile: "32%",
+      // leftMobile: "32%",
+      // topTablet: "44%",
+
+      topTablet: "48%",
+      leftMobile: "31%",
       label: t(tokens.brands.juvelook.face.point1),
     },
     {
@@ -115,6 +127,8 @@ const FaceInjectionPointsJuvelook = () => {
       left: "31%",
       topMobile: "50%",
       leftMobile: "23%",
+      topTablet: "60%",
+      leftTablet: "27%",
       label: t(tokens.brands.juvelook.face.point2),
     },
     {
@@ -123,6 +137,8 @@ const FaceInjectionPointsJuvelook = () => {
       left: "33%",
       topMobile: "60%",
       leftMobile: "24%",
+      topTablet: "66%",
+      leftTablet: "29%",
       label: t(tokens.brands.juvelook.face.point3),
     },
     {
@@ -131,20 +147,25 @@ const FaceInjectionPointsJuvelook = () => {
       left: "47%",
       topMobile: "59%",
       leftMobile: "46%",
+      topTablet: "67%",
+
       label: t(tokens.brands.juvelook.face.point4),
     },
     {
       id: 5,
       top: "65%",
       left: "55%",
-      topMobile:"62%",
-      leftMobile:"57%",
-      
+      topMobile: "62%",
+      leftMobile: "57%",
+      topTablet: "70%",
+
       label: t(tokens.brands.juvelook.face.point5),
     },
     {
       id: 6,
       top: "75%",
+      topTablet: "77%",
+
       left: "49%",
       label: t(tokens.brands.juvelook.face.point6),
     },
@@ -161,8 +182,8 @@ const FaceInjectionPointsJuvelook = () => {
       maxWidth="xxl"
       sx={{
         position: "relative",
-        height: { xs: "auto", md: "100vh" },
-        minHeight: { xs: "600px", md: "100vh" },
+        height: { xs: "auto", sm: "35vh", md: "100vh" },
+        minHeight: { xs: "600px", sm: "unset", md: "100vh" },
         width: "100%",
         overflow: "hidden",
         background: "#ABDFF4",
@@ -170,18 +191,26 @@ const FaceInjectionPointsJuvelook = () => {
     >
       <Container
         maxWidth="xxl"
-        sx={{ position: "relative", zIndex: 1, height: "100%" }}
+        sx={{ position: "relative", zIndex: 1, height: "100%",
+        "@media(min-width:768px) and (max-width:991px)":{
+          paddingRight: "0!important",
+           paddingLeft:"80px!important"
+        }
+      
+      
+      
+      }}
       >
         <Stack
           alignItems="flex-end"
-          direction={{ xs: "column", md: "row" }}
+          direction={{ xs: "column", sm: "row" }}
           spacing={2}
           sx={{
             height: "100%",
             py: { xs: 4, md: 0 },
             paddingBottom: "0!important",
-            paddingLeft : {xs:0,md: "16px"},
-            paddingRight : {xs:0,md: "16px"},
+            paddingLeft: { xs: 0, md: "16px" },
+            paddingRight: { xs: 0, md: "16px" },
 
           }}
         >
@@ -197,13 +226,21 @@ const FaceInjectionPointsJuvelook = () => {
               sx={{ height: "100%" }}
               spacing={{ xs: 4, md: 20 }}
             >
-              <Box sx={{ width: { xs: "80%", md: "65%" } }}>
-                <Box component="img" src={logo} sx={{ width: "100%" }} />
+              <Box sx={{ width: { xs: "80%", sm: "148px", md: "65%" },
+"@media(min-width:768px) and (max-width:991px)":{
+
+              marginLeft:"  -8px"
+}
+            }}>
+                <Box component="img" src={logo} sx={{
+
+                  width: { xs: "100%", md: "100%" }
+                }} />
                 <Typography
                   variant="body2"
                   sx={{
                     color: "#ffffff",
-                    fontSize: { xs: "0.875rem", md: "inherit" },
+                    fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
                     mt: { xs: 1, md: 0 },
                   }}
                 >
@@ -217,17 +254,18 @@ const FaceInjectionPointsJuvelook = () => {
                   alignItems="center"
                   direction="row"
                   spacing={{ xs: 3, md: 10 }}
-                  sx={{ width: "100%",
-                padding:{xs:"0 16px", md:"unset"}
-                }}
+                  sx={{
+                    width: "100%",
+                    padding: { xs: "0 16px", sm: "0 16px 60px 0", md: "unset" }
+                  }}
                 >
                   <Stack
-                    sx={{ width: { xs: "60%", md: "30%" } }}
+                    sx={{ width: { xs: "60%", sm: "66px", md: "30%" } }}
                     spacing={{ xs: 2, md: 5 }}
                   >
-                    <Box component="img" src={stretchImage} sx={{ 
-                     
-                     width: {xs:"100%!important", md:"auto"}
+                    <Box component="img" src={stretchImage} sx={{
+
+                      width: { xs: "100%!important", md: "auto" }
 
                     }} />
                     <Box
@@ -236,7 +274,12 @@ const FaceInjectionPointsJuvelook = () => {
                         p: 1,
                         textAlign: "center",
                         color: "#ABDFF4",
-                        fontSize: { xs: "0.75rem", md: "inherit" },
+                        fontSize: { xs: "0.75rem",sm:"9px", md: "inherit" },
+                        "@media(min-width:768px) and (max-width:991px)":{
+                          width: "65px",
+                          padding:"0!important",
+                        }
+
                       }}
                     >
                       Stretch marks
@@ -244,21 +287,25 @@ const FaceInjectionPointsJuvelook = () => {
                   </Stack>
 
                   <Stack
-                    sx={{ width: { xs: "60%", md: "30%" } }}
+                    sx={{ width: { xs: "60%", sm: "66px", md: "30%" } }}
                     spacing={{ xs: 2, md: 5 }}
                   >
-                    <Box component="img" src={scarImage} sx={{ 
-                     
-                      width: {xs:"100%!important", md:"auto"}
+                    <Box component="img" src={scarImage} sx={{
 
-                     }} />
+                      width: { xs: "100%!important", md: "auto" }
+
+                    }} />
                     <Box
                       sx={{
                         background: "#FFFFFF",
                         p: 1,
                         textAlign: "center",
                         color: "#ABDFF4",
-                        fontSize: { xs: "0.75rem", md: "inherit" },
+                        fontSize: { xs: "0.75rem", sm:"9px", md: "inherit" },
+                        "@media(min-width:768px) and (max-width:991px)":{
+                          width: "65px",
+                          padding:"0!important",
+                        }
                       }}
                     >
                       C-section scar
@@ -284,8 +331,8 @@ const FaceInjectionPointsJuvelook = () => {
                 height: "100%",
                 backgroundImage: `url(${faceImage})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundSize: { xs:"cover",sm:"contain",md:"cover" },
+                backgroundPosition: { xs:"center",sm:"bottom",md:"center" } ,
                 zIndex: 0,
                 transform: isRtl ? "scaleX(-1)" : "none",
               },
