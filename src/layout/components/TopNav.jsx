@@ -1,21 +1,21 @@
-// ✅ Changes:
-// 1) Use MUI Popover instead of Drawer (so it APPEARS instantly, no slide)
-// 2) Anchor it under the menu icon
-// 3) Keep your exact styles/look
-
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { alpha } from "@mui/system/colorManipulator";
 import PropTypes from "prop-types";
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
+import Collapse from "@mui/material/Collapse";
+import Typography from "@mui/material/Typography";
+import Popover from "@mui/material/Popover";
+import SvgIcon from "@mui/material/SvgIcon";
+import Tooltip from "@mui/material/Tooltip";
+
 import { RouterLink } from "./router-link";
 import { TopNavItem } from "./top-nav-item";
-import { SvgIcon, Tooltip } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { tokens } from "locales/tokens";
 import { useSettings } from "hooks/use-settings";
@@ -24,16 +24,94 @@ import { usePathname } from "hooks/use-pathname";
 import { useWindowScroll } from "hooks/use-window-scroll";
 import { paths } from "paths";
 
-import Popover from "@mui/material/Popover";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
 
 import logo from "assets/logo.png";
 import logoLight from "assets/dynamics.png";
+import mobileNavBg from 'assets/mobile-nav-bg.png';
 
+import logo1 from "assets/home-brands-logos/logo1.png";
+import logo2 from "assets/home-brands-logos/logo2.png";
+import logo3 from "assets/home-brands-logos/logo3.png";
+import logo4 from "assets/home-brands-logos/logo4.png";
+import logo5 from "assets/home-brands-logos/logo5.svg";
+import logo6 from "assets/home-brands-logos/logo6.svg";
+import logo7 from "assets/home-brands-logos/logo7.svg";
+import logo8 from "assets/home-brands-logos/logo8.svg";
+import logo9 from "assets/home-brands-logos/logo9.svg";
 const TOP_NAV_HEIGHT = 120;
+
+const MobileBrandsGrid = ({ onItemClick }) => {
+  const { t } = useTranslation();
+
+  const brandItems = [
+
+    { title: t(tokens.brands.drcyj.title), img: logo9, path: paths.brands.drcyj },
+    { title: t(tokens.brands.ksurgery.title), img: logo4, path: paths.brands.ksurgery },
+    { title: t(tokens.brands.lanluma.title), img: logo6, path: paths.brands.lanluma },
+    { title: t(tokens.brands.juvelook.title), img: logo1, path: paths.brands.juvelook },
+    { title: t(tokens.brands.dimono.title), img: logo8, path: paths.brands.dimono },
+    { title: t(tokens.brands.ellanse.title), img: logo5, path: paths.brands.ellanse },
+    { title: t(tokens.brands.maili.title), img: logo7, path: paths.brands.maili },
+    { title: t(tokens.brands.renee.title), img: logo3, path: paths.brands.renee },
+    { title: t(tokens.brands.lenisna.title), img: logo2, path: paths.brands.lenisna },
+  ];
+
+  return (
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gap: 3,
+        pt: 3,
+        pb: 4,
+        px:4
+      }}
+    >
+      {brandItems.map((item) => (
+        <Box
+          key={item.title}
+          component={RouterLink}
+          href={item.path}
+          onClick={onItemClick}
+          sx={{
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            sx={{
+              width: { xs: 75, xsm: 94 },
+              height: { xs: 75, xsm: 94 },
+              border: "1.5px solid #ab92e1",
+              borderRadius: "50%",
+              overflow: "hidden",
+
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              px: 1,
+              color: "#444",
+              fontSize: 13,
+              fontWeight: 500,
+              lineHeight: 1.2,
+              backgroundColor: "#fff",
+
+            }}
+          >
+            <img src={item.img} width="100%" style={{ objectFit: "cover" }} alt="" />
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  );
+};
+
+MobileBrandsGrid.propTypes = {
+  onItemClick: PropTypes.func,
+};
 
 export const TopNav = (props) => {
   const { t, i18n } = useTranslation();
@@ -48,6 +126,7 @@ export const TopNav = (props) => {
         setLanguageLabel("English");
         setLanguage("en");
       }
+
       if (lang === "en") {
         handleUpdate({ direction: "ltr" });
         setLanguageLabel("عربي");
@@ -74,13 +153,16 @@ export const TopNav = (props) => {
   const items = [
     { title: t(tokens.nav.home), path: paths.index },
     { title: t(tokens.nav.about), path: paths.aboutUs },
-    { title: t(tokens.nav.brands), path: paths.ourBrands, popover: <BrandsPopover /> },
+    {
+      title: t(tokens.nav.brands),
+      path: paths.ourBrands,
+      popover: <BrandsPopover />,
+    },
     { title: t(tokens.nav.contact), path: paths.contactUs },
   ];
 
   const pathname = usePathname();
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   const [elevate, setElevate] = useState(false);
   const offset = 64;
@@ -95,8 +177,9 @@ export const TopNav = (props) => {
 
   const mobileHeaderHeight = 70;
 
-  // ✅ Mobile menu popover state
   const [menuAnchorEl, setMenuAnchorEl] = useState(null);
+  const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false);
+
   const menuOpen = Boolean(menuAnchorEl);
 
   const handleMenuOpen = (event) => {
@@ -105,6 +188,7 @@ export const TopNav = (props) => {
 
   const handleMenuClose = () => {
     setMenuAnchorEl(null);
+    setMobileBrandsOpen(true);
   };
 
   return (
@@ -129,7 +213,8 @@ export const TopNav = (props) => {
             }),
           ...(elevate && {
             color: "#ab92e1",
-            backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
+            backgroundColor: (theme) =>
+              alpha(theme.palette.background.paper, 0.9),
             boxShadow: 8,
           }),
           zIndex: (theme) => theme.zIndex.appBar,
@@ -138,12 +223,11 @@ export const TopNav = (props) => {
             width: "100vw",
             left: 0,
             right: 0,
-            background: elevate ? "white" : "transparent"
+            background: elevate ? "white" : "transparent",
           },
         }}
       >
         <Container maxWidth="xl">
-          {/* ✅ MOBILE HEADER */}
           {!smUp && (
             <Stack
               direction="row"
@@ -151,13 +235,15 @@ export const TopNav = (props) => {
               sx={{
                 height: `${mobileHeaderHeight}px`,
                 position: "relative",
-                padding: 0
+                padding: 0,
               }}
             >
-              {/* Left: Language */}
               <Box sx={{ flex: "0 0 auto" }}>
                 <Tooltip title={languageLabel}>
-                  <IconButton onClick={() => handleChange(language)} aria-label="language">
+                  <IconButton
+                    onClick={() => handleChange(language)}
+                    aria-label="language"
+                  >
                     <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
                       <LanguageIcon />
                     </SvgIcon>
@@ -165,7 +251,6 @@ export const TopNav = (props) => {
                 </Tooltip>
               </Box>
 
-              {/* Center: Logo */}
               <Box
                 component={RouterLink}
                 href={paths.index}
@@ -179,13 +264,13 @@ export const TopNav = (props) => {
                   textDecoration: "none",
                 }}
               >
-                <img style={{ height: "100%" }} src={elevate ? logo : logoLight} alt="Dynamics"
-
-                 
+                <img
+                  style={{ height: "100%" }}
+                  src={elevate ? logo : logoLight}
+                  alt="Dynamics"
                 />
               </Box>
 
-              {/* Right: Menu */}
               <Box sx={{ marginLeft: "auto", flex: "0 0 auto" }}>
                 <IconButton
                   onClick={handleMenuOpen}
@@ -198,7 +283,6 @@ export const TopNav = (props) => {
             </Stack>
           )}
 
-          {/* ✅ DESKTOP HEADER */}
           {smUp && (
             <Stack
               direction="row"
@@ -207,7 +291,12 @@ export const TopNav = (props) => {
                 alignItems: "center",
               }}
             >
-              <Stack alignItems="center" direction="row" spacing={1} sx={{ flex: "0 0 auto" }}>
+              <Stack
+                alignItems="center"
+                direction="row"
+                spacing={1}
+                sx={{ flex: "0 0 auto" }}
+              >
                 <Stack
                   component={RouterLink}
                   alignItems="center"
@@ -215,30 +304,35 @@ export const TopNav = (props) => {
                   href={paths.index}
                   sx={{ textDecoration: "none" }}
                 >
-                  <Box style={{ height: "60px" }} sx={{ 
+                  <Box
+                    style={{ height: "60px" }}
+                    sx={{
                       "@media(min-width: 768px) and (max-width: 991px)": {
                         width: "150px",
-                        objectFit: "cover"
-                      }
-                   }}>
-                    <img
-                      style={{ height: "100%", 
-                     
-                       width: "100%",
-                       objectFit: "contain"
-                    
-                    
+                        objectFit: "cover",
+                      },
                     }}
+                  >
+                    <img
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        objectFit: "contain",
+                      }}
                       src={elevate ? logo : logoLight}
-                      alt={"Dynamics"}
-
+                      alt="Dynamics"
                     />
                   </Box>
                 </Stack>
               </Stack>
 
-              <Stack alignItems={"center"} direction="column" spacing={2} sx={{ flex: 1 }}>
-                <Box component="nav" sx={{ height: "100%", width: "100%", }}>
+              <Stack
+                alignItems={"center"}
+                direction="column"
+                spacing={2}
+                sx={{ flex: 1 }}
+              >
+                <Box component="nav" sx={{ height: "100%", width: "100%" }}>
                   <Stack
                     component="ul"
                     alignItems="center"
@@ -250,17 +344,19 @@ export const TopNav = (props) => {
                       width: "100%",
                       height: "100%",
                       listStyle: "none",
-
                       m: 0,
                       p: 0,
-                      justifyContent:{sm:"flex-end" , md:"center"} ,
-
+                      justifyContent: { sm: "flex-end", md: "center" },
                     }}
                   >
                     {items.map((item, index) => {
                       const checkPath = !!(item.path && pathname);
-                      const partialMatch = checkPath ? pathname.includes(item.path) : false;
-                      const exactMatch = checkPath ? pathname === item.path : false;
+                      const partialMatch = checkPath
+                        ? pathname.includes(item.path)
+                        : false;
+                      const exactMatch = checkPath
+                        ? pathname === item.path
+                        : false;
                       const active = item.popover ? partialMatch : exactMatch;
 
                       return (
@@ -279,9 +375,16 @@ export const TopNav = (props) => {
                 </Box>
               </Stack>
 
-              <Stack alignItems="center" direction="row" sx={{ flex: "0 0 auto" }}>
+              <Stack
+                alignItems="center"
+                direction="row"
+                sx={{ flex: "0 0 auto" }}
+              >
                 <Tooltip title={languageLabel}>
-                  <IconButton onClick={() => handleChange(language)} aria-label="language">
+                  <IconButton
+                    onClick={() => handleChange(language)}
+                    aria-label="language"
+                  >
                     <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
                       <LanguageIcon />
                     </SvgIcon>
@@ -290,84 +393,197 @@ export const TopNav = (props) => {
               </Stack>
             </Stack>
           )}
-
-          {/* {smUp && (
-            <Box sx={{
-              position: "fixed",
-
-              top: "106px",
-              left: "60%",
-              transform: "translateX(-50%)",
-              zIndex: 9999,
-              background: "white",
-              borderRadius: "2px",
-              boxShadow: "0px 4px 32px rgba(0, 0, 0, 0.33)",
-
-              minWidth: 600,
-            }}>
-              <BrandsPopover />
-            </Box>
-          )} */}
-
         </Container>
 
-        {/* ✅ MOBILE MENU (APPEARS instantly, no slide) */}
         {!smUp && (
           <Popover
             open={menuOpen}
             anchorEl={menuAnchorEl}
             onClose={handleMenuClose}
-            // Disable popover transition so it "just appears"
-            transitionDuration={0}
-            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-            transformOrigin={{ vertical: "top", horizontal: "center" }}
-            anchorPosition={{ top: 80, left: 200 }} // ✅ controls top & left directly
-
+            transitionDuration={2}
+            // TransitionComponent={Fragment}
+            // transitionDuration={0}
+            anchorReference="anchorEl"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            transformOrigin={{ vertical: "top", horizontal: "right" }}
             PaperProps={{
               sx: {
-                mt: 2,
-                mx: "auto",
-                width: "45vw",
-                left: "unset!important",
-                right: "0",
-                maxWidth: 420,
-                borderRadius: "0",
-                overflow: "hidden",
-                boxShadow: 12,
+                width: "calc(100vw - 50px)",
+                maxWidth: "100vw",
+                minHeight: "100vh",
+                borderRadius: 0,
+                overflowY: "auto",
+                boxShadow: "none",
+                backgroundColor: "#f8f8f8",
+                position: "fixed",
+                top: "0 !important",
+                left: "50px!important",
+                right: 0,
+                m: 0,
+                background: "white",
+
               },
             }}
           >
-            <List sx={{ p: 2 }}>
-              {items.map((item, idx) => {
-                const isLast = idx === items.length - 1;
+            <Box
+              sx={{
+                px: 0,
+                py: 5,
+                pb: 0,
+                minHeight: "100vh",
+              }}
+            >
 
-                return (
-                  <Box key={item.title}>
-                    <Box
-                      component={RouterLink}
-                      href={item.path}
-                      onClick={handleMenuClose}
-                      sx={{ textDecoration: "none", display: "block" }}
+              <Box
+                component="img"
+                src={mobileNavBg}
+                alt="Dynamics Medica"
+                sx={{ marginBottom: "72px", px: 4 }}
+              />
+              <Box sx={{
+                padding: "32px 32px 32px 0",
+                backgroundColor: "#F8F4FF",
+                borderRadius: "36px 36px 0 0",
+                height: "100vh"
+              }}>
+                <Box
+                  component={RouterLink}
+                  href={paths.index}
+                  onClick={handleMenuClose}
+                  sx={{
+                    textDecoration: "none",
+                    display: "block",
+                    mb: 1.5,
+
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontWeight: 400,
+                      color: "#1D1D1D",
+                      width: "100%",
+                      padding: "12px 0 12px 32px",
+                      borderRadius: "4px",
+                      "&:hover": {
+                        color: "white",
+                        backgroundColor: "#AC93E1"
+                      }
+                    }}
+                  >
+                    {t(tokens.nav.home)}
+                  </Typography>
+                </Box>
+
+                <Box
+                  component={RouterLink}
+                  href={paths.aboutUs}
+                  onClick={handleMenuClose}
+                  sx={{
+                    textDecoration: "none",
+                    display: "block",
+                    mb: 1.5,
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontWeight: 400,
+                      color: "#1D1D1D",
+                      width: "100%",
+                      padding: "12px 0 12px 32px",
+                      borderRadius: "4px",
+                      "&:hover": {
+                        color: "white",
+                        backgroundColor: "#AC93E1"
+                      }
+                    }}
+                  >
+                    {t(tokens.nav.about)}
+                  </Typography>
+                </Box>
+
+                <Box sx={{ mb: 0 }}>
+                  <Box
+                    onClick={() => setMobileBrandsOpen((prev) => !prev)}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      cursor: "pointer",
+                      mb: 1.5,
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: 18,
+                        fontWeight: 400,
+                        color: "#1D1D1D",
+                        width: "100%",
+                        padding: "12px 0 12px 32px",
+                        borderRadius: "4px",
+                        "&:hover": {
+                          color: "white",
+                          backgroundColor: "#AC93E1"
+                        }
+                      }}
                     >
-                      <ListItemButton
-                        sx={{
-                          py: 1,
-                          "& .MuiListItemText-primary": {
-                            fontSize: 16,
-                            fontWeight: 300,
-                            color: "#ab92e1",
-                          },
-                        }}
-                      >
-                        <ListItemText primary={item.title} />
-                      </ListItemButton>
-                    </Box>
+                      {t(tokens.nav.brands)}
+                    </Typography>
 
-                    {!isLast && <Divider />}
+                    <SvgIcon
+                      sx={{
+                        fontSize: 23,
+                        color: "#111",
+                        transform: mobileBrandsOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
+                        transition: "transform 0.2s ease",
+                      }}
+                    >
+                      <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7321 0.384149C23.1321 0.8454 23.078 1.53983 22.6113 1.9352L12.2243 10.7352C11.8075 11.0883 11.1926 11.0883 10.7757 10.7352L0.38866 1.9352C-0.0780163 1.53983 -0.132029 0.845399 0.267874 0.384148C0.667925 -0.0771022 1.37054 -0.130533 1.83721 0.264835L11.5 8.4512L21.1628 0.264836C21.6295 -0.130532 22.3321 -0.0771013 22.7321 0.384149Z" fill="#272727" />
+                      </svg>
+
+                    </SvgIcon>
                   </Box>
-                );
-              })}
-            </List>
+
+                  <Collapse in={mobileBrandsOpen} timeout={0}>
+                    <MobileBrandsGrid onItemClick={handleMenuClose} />
+                  </Collapse>
+                </Box>
+
+                <Box
+                  component={RouterLink}
+                  href={paths.contactUs}
+                  onClick={handleMenuClose}
+                  sx={{
+                    textDecoration: "none",
+                    display: "block",
+                    mt: 0,
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontWeight: 400,
+                      color: "#1D1D1D",
+                      width: "100%",
+                      padding: "12px 0 12px 32px",
+                      borderRadius: "4px",
+                      "&:hover": {
+                        color: "white",
+                        backgroundColor: "#AC93E1"
+                      }
+                    }}
+                  >
+                    {t(tokens.nav.contact)}
+                  </Typography>
+                </Box>
+              </Box>
+
+
+            </Box>
           </Popover>
         )}
       </Box>
@@ -378,7 +594,3 @@ export const TopNav = (props) => {
 TopNav.propTypes = {
   onMobileNavOpen: PropTypes.func,
 };
-
-
-
-

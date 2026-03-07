@@ -1,7 +1,5 @@
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
-import Stack from "@mui/material/Stack";
-import SvgIcon from "@mui/material/SvgIcon";
 import { paths } from "paths";
 import { RouterLink } from "./router-link";
 import { useTranslation } from "react-i18next";
@@ -9,29 +7,63 @@ import { tokens } from "locales/tokens";
 
 export const BrandsPopover = () => {
   const { t } = useTranslation();
-  
+
   const items = [
-    { title: t(tokens.brands.juvelook.title), path: paths.brands.juvelook, caption: t(tokens.brands.juvelook.subtitle) },
-    { title: t(tokens.brands.lenisna.title), path: paths.brands.lenisna, caption: t(tokens.brands.lenisna.subtitle) },
-    { title: t(tokens.brands.renee.title), path: paths.brands.renee, caption: t(tokens.brands.renee.subtitle) },
-    { title: t(tokens.brands.ksurgery.title), path: paths.brands.ksurgery, caption: t(tokens.brands.ksurgery.subtitle) },
-    { title: t(tokens.brands.dimono.title), path: paths.brands.dimono, caption: t(tokens.brands.dimono.subtitle) },
-    { title: t(tokens.brands.drcyj.title), path: paths.brands.drcyj, caption: t(tokens.brands.drcyj.subtitle) },
-    { title: t(tokens.brands.maili.title), path: paths.brands.maili, caption: t(tokens.brands.maili.subtitle) },
-    { title: t(tokens.brands.lanluma.title), path: paths.brands.lanluma, caption: t(tokens.brands.lanluma.subtitle) },
-    { title: t(tokens.brands.ellanse.title), path: paths.brands.ellanse, caption: t(tokens.brands.ellanse.subtitle) },
+    {
+      title: t(tokens.brands.juvelook.title),
+      path: paths.brands.juvelook,
+      caption: t(tokens.brands.juvelook.subtitle),
+    },
+    {
+      title: t(tokens.brands.lenisna.title),
+      path: paths.brands.lenisna,
+      caption: t(tokens.brands.lenisna.subtitle),
+    },
+    {
+      title: t(tokens.brands.renee.title),
+      path: paths.brands.renee,
+      caption: t(tokens.brands.renee.subtitle),
+    },
+    {
+      title: t(tokens.brands.ksurgery.title),
+      path: paths.brands.ksurgery,
+      caption: t(tokens.brands.ksurgery.subtitle),
+    },
+    {
+      title: t(tokens.brands.dimono.title),
+      path: paths.brands.dimono,
+      caption: t(tokens.brands.dimono.subtitle),
+    },
+    {
+      title: t(tokens.brands.drcyj.title),
+      path: paths.brands.drcyj,
+      caption: t(tokens.brands.drcyj.subtitle),
+    },
+    {
+      title: t(tokens.brands.maili.title),
+      path: paths.brands.maili,
+      caption: t(tokens.brands.maili.subtitle),
+    },
+    {
+      title: t(tokens.brands.lanluma.title),
+      path: paths.brands.lanluma,
+      caption: t(tokens.brands.lanluma.subtitle),
+    },
+    {
+      title: t(tokens.brands.ellanse.title),
+      path: paths.brands.ellanse,
+      caption: t(tokens.brands.ellanse.subtitle),
+    },
   ];
 
   return (
     <Box
-    // className='pop-over'
       sx={{
         display: "grid",
         gap: 1,
         gridTemplateColumns: "repeat(3, 1fr)",
         p: 5,
-        // borderRadius: "2pximportant",
-        overflow:"hidden"
+        overflow: "hidden",
       }}
     >
       {items.map((item) => {
@@ -72,6 +104,7 @@ export const BrandsPopover = () => {
             >
               {item.title}
             </Box>
+
             {item.caption && (
               <Box
                 component="span"
@@ -94,7 +127,3 @@ export const BrandsPopover = () => {
     </Box>
   );
 };
-
-
-/* Frame 2147238800 */
-

@@ -12,9 +12,9 @@ import { RouterLink } from "./router-link";
 import { useCallback, useState } from "react";
 import { alpha, Paper, Portal, Typography } from "@mui/material";
 
-const TOP_NAV_HEIGHT = 120; // ✅ updated to match your navbar
-const TOP_NAV_SPACE = 0;    // ✅ no extra space
-const OFFSET = 0;           // ✅ no extra offset
+const TOP_NAV_HEIGHT = 120;
+const TOP_NAV_SPACE = 0;
+const OFFSET = 0;
 
 const renderChildItems = ({ items, depth = 0 }) => {
   return items.map((item) => {
@@ -35,7 +35,7 @@ const renderChildItems = ({ items, depth = 0 }) => {
                 primaryTypographyProps={{
                   sx: {
                     color: "text.secondary",
-                    fontSize: {sm:"14px", md:"14px"},
+                    fontSize: { sm: "14px", md: "14px" },
                     fontWeight: 500,
                   },
                 }}
@@ -45,6 +45,7 @@ const renderChildItems = ({ items, depth = 0 }) => {
               </SvgIcon>
             </ListItemButton>
           </DropdownTrigger>
+
           <DropdownMenu
             anchorOrigin={{
               horizontal: "right",
@@ -96,7 +97,9 @@ const renderChildItems = ({ items, depth = 0 }) => {
 };
 
 export const TopNavItem = (props) => {
-  const { active, disabled, external, items, icon, label, path, title, popover } = props;
+  const { active, disabled, external, items, icon, label, path, title, popover } =
+    props;
+
   const [open, setOpen] = useState(false);
 
   const handleMouseEnter = useCallback(() => setOpen(true), []);
@@ -141,6 +144,7 @@ export const TopNavItem = (props) => {
               >
                 {icon}
               </Box>
+
               <Box
                 component="span"
                 sx={{
@@ -157,12 +161,16 @@ export const TopNavItem = (props) => {
               >
                 {title}
               </Box>
-              <SvgIcon sx={{ color: "var(--nav-item-chevron-color)", fontSize: 16, ml: 1 }}>
+
+              <SvgIcon
+                sx={{ color: "var(--nav-item-chevron-color)", fontSize: 16, ml: 1 }}
+              >
                 <ChevronDownIcon />
               </SvgIcon>
             </ButtonBase>
           </li>
         </DropdownTrigger>
+
         <DropdownMenu
           disableScrollLock
           PaperProps={{
@@ -200,9 +208,14 @@ export const TopNavItem = (props) => {
             }}
             {...linkProps}
           >
-            <Typography component="span" variant="subtitle2" sx={{ fontSize: 18, fontWeight: 600 }}>
+            <Typography
+              component="span"
+              variant="subtitle2"
+              sx={{ fontSize: 18, fontWeight: 600 }}
+            >
               {title}
             </Typography>
+
             <SvgIcon sx={{ fontSize: 16, ml: 1 }}>
               <ChevronDownIcon />
             </SvgIcon>
@@ -215,25 +228,25 @@ export const TopNavItem = (props) => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               sx={{
-                width:"575px",
-                left: {sm:"20%",md:"35%"},
+                width: "575px",
+                left: { sm: "20%", md: "35%" },
                 position: "fixed",
                 pt: OFFSET + "px",
                 right: 0,
-                top: "80px" , // ✅ 120px
+                top: "80px",
                 zIndex: (theme) => theme.zIndex.appBar + 100,
-                borderRadius: "0!important"
+                borderRadius: "0!important",
               }}
             >
               <Paper
                 elevation={16}
                 sx={{
-                  backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
+                  backgroundColor: (theme) =>
+                    alpha(theme.palette.background.paper, 0.9),
                   backdropFilter: "blur(6px)",
                   mx: "auto",
                   width: "580px",
                   borderRadius: "1pximportant",
-
                 }}
               >
                 {popover}
@@ -277,6 +290,7 @@ export const TopNavItem = (props) => {
             {icon}
           </Box>
         )}
+
         <Box
           component="span"
           sx={{
@@ -291,10 +305,15 @@ export const TopNavItem = (props) => {
             ...(disabled && { color: "var(--nav-item-disabled-color)" }),
           }}
         >
-          <Typography component="span" variant="subtitle2" sx={{ fontSize: 18, fontWeight: 600 }}>
+          <Typography
+            component="span"
+            variant="subtitle2"
+            sx={{ fontSize: 18, fontWeight: 600 }}
+          >
             {title}
           </Typography>
         </Box>
+
         {label && <Box component="span" sx={{ ml: 1 }}>{label}</Box>}
       </ButtonBase>
     </li>
