@@ -77,7 +77,7 @@ export const en = {
 
 
   [tokens.about.page.product.title]: "Commitment to Excellence",
-  [tokens.about.page.product.subtitle]: "Dynamics",
+  [tokens.about.page.product.subtitle]: "Dynamics Medica",
   [tokens.about.page.product
     .paragraph]: `Our pursuit of excellence is reflected in our carefully curated
   product selection, our expert team's knowledge, and our commitment

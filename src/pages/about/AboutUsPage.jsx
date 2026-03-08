@@ -31,7 +31,7 @@ const AboutUsPage = (props) => {
       <Seo />
       <main>
         <AboutUsHero />
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5", p:{xs:0, md:"16px"} }}>
+        <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5", p: { xs: 0, sm: "0", md: 0 } }}>
           <Container maxWidth="xxl">
             <DualSection
               name='about-us-page-dual-section-1'
@@ -61,15 +61,16 @@ const AboutUsPage = (props) => {
           <Container
             maxWidth="xxl"
             sx={{
-              display:{xs:'none',md:"block"},
+              display: { xs: 'none', sm: "block" },
               backgroundImage: `url(${isRtl ? productRtl : product})`,
-              backgroundSize: { xs: "cover", md: "cover" },
+              backgroundSize: { xs: "cover", sm: "cover", },
               backgroundRepeat: "no-repeat",
-              backgroundPosition: { xs: "center center", md: "top center" },
+              backgroundPosition: { xs: "center center", sm: "top center" },
               position: "relative",
               height: "100%",
-              paddingTop: { xs: 2, md: 5 },
-              paddingBottom: { xs: 2, md: 5 },
+
+              paddingTop: { xs: 2,sm:2, md: 5 },
+              paddingBottom: { xs: 2, sm: 2, md: 0 },
               "@media (max-width: 991px)": {
                 width: "100vw",
                 maxWidth: "100%",
@@ -79,14 +80,20 @@ const AboutUsPage = (props) => {
             }}
           >
             <Box maxWidth="xxl">
-              <Container maxWidth="xxl">
+              <Container maxWidth="xxl" sx={{
+
+                "@media (min-width: 768px) and (max-width:991px)": {
+                  paddingRight: "0!important",
+                  paddingLeft: "0!important"
+                }
+              }}>
                 <Grid
                   container
                   spacing={2}
                   alignItems="stretch"
-                  sx={{ padding: { xs: 2, md: 5 } }}
+                  sx={{ padding: { xs: 2, sm: 5 } }}
                 >
-                  <Grid size={{ xs: 12, md: 6 }}>
+                  <Grid size={{ xs: 12, }}>
                     <Box
                       sx={{
                         backgroundRepeat: "no-repeat",
@@ -95,11 +102,11 @@ const AboutUsPage = (props) => {
                         color: "white",
                       }}
                     >
-                      <Stack direction="row" justifyContent="center">
+                      <Stack className="bebebe" direction="row" justifyContent="center">
                         <Box
                           sx={{
-                            width: { xs: "100%", md: "80%" },
-                            minHeight: { xs: "auto", md: "660px" },
+                            width: { xs: "100%", },
+                            minHeight: { xs: "auto", md: "500px" },
                             display: "flex",
                           }}
                         >
@@ -111,9 +118,9 @@ const AboutUsPage = (props) => {
                             sx={{
                               height: "100%",
                               width: "100%",
-                              px: { xs: 2, md: 6 },
-                              py: { xs: 3, md: 8 },
-                              pt: { xs: 3, md: 18 },
+                              px: { xs: 2, sm: 3 },
+                              py: { xs: 3, sm: 0, md: 0 },
+                              pt: { xs: 3, sm: 0, },
                               textAlign: "left",
                             }}
                           >
@@ -125,7 +132,7 @@ const AboutUsPage = (props) => {
                               <Box
                                 maxWidth="xxl"
                                 sx={{
-                                  height: { xs: "auto", md: "100vh" },
+                                  height: { xs: "auto",  },
                                   width: "100%",
                                 }}
                               >
@@ -134,15 +141,20 @@ const AboutUsPage = (props) => {
                                   sx={{
                                     color: "#fff",
                                     height: "100%",
-                                    ml: { xs: 0, md: "-6%" },
+                                    ml: { xs: 0, sm: "0" },
                                   }}
                                   justifyContent="center"
                                 >
                                   <QuoteTypography
                                     variant="body1"
                                     sx={{
-                                      "@media (max-width: 991px)": {
-                                        fontSize: "0.875rem",
+                                      fontSize: "15px",
+                                      "@media (min-width: 768px) and (max-width:991px)": {
+                                        // fontSize: "15px!important",
+                                        fontSize: "12px!important"
+                                      },
+                                      "@media (max-width: 767px)": {
+                                        fontSize: "0.875rem!important",
                                       },
                                     }}
                                   >
@@ -150,9 +162,11 @@ const AboutUsPage = (props) => {
                                   </QuoteTypography>
                                   <StyledTypography
                                     variant="h2"
+
                                     sx={{
+                                      fontSize: "2.5rem",
                                       "@media (max-width: 991px)": {
-                                        fontSize: "1.5rem",
+                                        fontSize: "1.5rem!important",
                                       },
                                     }}
                                   >
@@ -164,8 +178,10 @@ const AboutUsPage = (props) => {
                                       textAlign: "justify",
                                       whiteSpace: "normal",
                                       wordBreak: "break-word",
+                                      fontSize: "1.125rem!important",
+                                      width: {xs:"100%",sm:"60%"},
                                       "@media (max-width: 991px)": {
-                                        fontSize: "0.875rem",
+                                        fontSize: "0.875rem!important",
                                         lineHeight: 1.6,
                                       },
                                     }}
@@ -179,10 +195,16 @@ const AboutUsPage = (props) => {
                                       sx={{
                                         color: "white",
                                         borderColor: "white",
-                                        height: { xs: "50px", md: "65px" },
-                                        width: { xs: "100%", md: "281px" },
+                                        height: { xs: "50px", sm: "45px", md: "65px" },
+                                        width: { xs: "100%", sm: "175px" },
+                                        marginTop:"60px!important",
+
+                                      // "@media (min-width: 768px) and (max-width:991px)": {
+                                      // },
                                         "@media (max-width: 991px)": {
                                           fontSize: "0.75rem",
+                                          marginTop:"24px!important",
+
                                         },
                                         "&:hover": {
                                           borderColor: "white",

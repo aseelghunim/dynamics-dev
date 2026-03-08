@@ -1,12 +1,31 @@
-@media(max-width: 767px){
-    .about-us-page-dual-section-1 .container, .about-us-page-dual-section-2 .container{
-        padding-left: 0!important;
-        padding-right: 0!important;
+@media(min-width: 768px) and (max-width:991px) {
+
+
+    .about-us-page-dual-section-1 .container,
+    .about-us-page-dual-section-1 .container>div,
+    .about-us-page-dual-section-2 .container,
+    .about-us-page-dual-section-2 .container>div {
+        padding: 0 !important;
     }
-    .about-us-page-dual-section-1 h3, .about-us-page-dual-section-2 h3{
-        font-size: 1.25rem!important;
+
+}
+
+
+@media(max-width: 767px) {
+
+    .about-us-page-dual-section-1 .container,
+    .about-us-page-dual-section-2 .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
-    .about-us-page-dual-section-1 p, .about-us-page-dual-section-2 p{
-        text-align: left!important;
+
+    .about-us-page-dual-section-1 h3,
+    .about-us-page-dual-section-2 h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .about-us-page-dual-section-1 p,
+    .about-us-page-dual-section-2 p {
+        text-align: left !important;
     }
 }

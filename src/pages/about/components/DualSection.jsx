@@ -19,7 +19,7 @@ const TitleBox = ({
   const { t } = useTranslation();
 
   return (
-    <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex" }} className="test">
+    <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex" }} className="test">
       {" "}
       <Box
         sx={{
@@ -35,8 +35,8 @@ const TitleBox = ({
         <Stack direction="row" justifyContent="center" sx={{ width: "100%" }}>
           <Box
             sx={{
-              width: { xs: "100%", md: "80%" },
-              minHeight: { md: "660px" },
+              width: { xs: "100%", sm: "80%" },
+              minHeight: { sm:"330px",md: "500px" },
               display: "flex",
               height: "100%",
             }}
@@ -49,9 +49,9 @@ const TitleBox = ({
               sx={{
                 height: "100%",
                 width: "100%",
-                px: { xs: 4, md: 6 },
+                px: { xs: 4,sm:0, md: 6 },
                 py: { xs: 4, md: 8 },
-                pt: { xs: 4, md: 18 },
+                pt: { xs: 4,sm:4, md: 18 },
                 textAlign: "left",
               }}
             >
@@ -67,14 +67,17 @@ const TitleBox = ({
                   {component}
                 </Box>
               ) : (
-                <Stack spacing={3} direction={"column"} sx={{ width: "100%" }}>
+                <Stack spacing={{xs: 3, sm:1.5,md:3}} direction={"column"} sx={{ width: "100%" }}>
                   <Typography
                     variant="h3"
                     sx={{
-                      pt: { xs: 0, md: 2 },
-                      "@media (max-width: 991px)": {
-                        fontSize: "1.5rem",
+                      pt: { xs: 0, sm: 2 },
+                      "@media (min-width:768px) and (max-width:991px)": {
+                        fontSize: "1.25rem",
                       },
+                      "@media (max-width:767px)":{
+                        fontSize: "1.5rem",
+                      }
                     }}
                   >
                     {title}
@@ -85,9 +88,10 @@ const TitleBox = ({
                       textAlign: "justify",
                       whiteSpace: "normal",
                       wordBreak: "break-word",
+                      fontSize:"1.125rem!important",
                       "@media (max-width: 991px)": {
-                        fontSize: "0.875rem",
-                        lineHeight: 1.6,
+                        fontSize: "0.875rem!important",
+                        lineHeight: 1.3,
                       },
                     }}
                   >
@@ -108,10 +112,13 @@ const TitleBox = ({
                   {paragraph2 && (
                     <Typography
                       variant="body2"
+                      
+
                       sx={{
+                        fontSize:"1.125rem!important",
                         "@media (max-width: 991px)": {
                           fontSize: "0.875rem",
-                          lineHeight: 1.6,
+                          lineHeight: 1.3,
                         },
                       }}
                     >
@@ -154,21 +161,24 @@ const DualSection = ({
         backgroundColor: { backgroundColor },
         position: "relative",
         height: "100%",
-        paddingTop: { xs: 2, md: 5 },
-        paddingBottom: { xs: 2, md: 5 },
+        paddingTop: { xs: 2, sm: 5 },
+        paddingBottom: { xs: 2, sm: 5 },
       }}
     >
-      <Container maxWidth="xxl" className='container'>
+      <Container maxWidth="xxl" className='container' 
+      
+      
+      >
         <Grid
           container
           spacing={2}
           alignItems="stretch"
           sx={{
-            paddingTop: { xs: 2, md: 5 },
-            paddingBottom: { xs: 2, md: 5 },
+            paddingTop: { xs: 2, sm: 5 },
+            paddingBottom: { xs: 2, sm: 5 },
 
-            paddinLeft:{xs:0,md:5},
-            paddingRight:{xs:0,md:5}
+            paddinLeft:{xs:0,sm:0,md:5},
+            paddingRight:{xs:0,sm:0, md:5}
             
           }}
         >

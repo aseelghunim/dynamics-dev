@@ -59,21 +59,33 @@ const ValuesBanner = (props) => {
         sx={{
           position: "relative",
           height: "100%",
-          padding: { xs: 2, md: 5 },
-          paddingTop: { xs: 0, md: 5 },
+          padding: { xs: 0, sm: 5 },
+          paddingTop: { xs: 0,sm:2, md: 5 },
           margin: 0,
         }}
       >
         <Grid container spacing={2} alignItems="stretch" >
-          <Grid className="ff1" size={12} sx={{ paddingTop: 1, display: { xs: "none", md: "block" } }}>
+          <Grid className="ff1" size={12} sx={{ paddingTop: 1, display: { xs: "none", sm: "block" } }}>
             <Grid
-              size={{ xs: 12, md: 3 }}
-              sx={{ paddingTop: 1, paddingBottom: 1 }}
+              size={{ xs: 12, sm: 3 }}
+              sx={{
+                paddingTop: 1, paddingBottom: 1,
+
+                "@media (min-width: 768px) and (max-width:991px)": {
+                  // fontSize: "15px!important",
+                  width: "100%"
+                },
+
+              }}
             >
               <QuoteTypography
                 sx={{
                   color: "#012169",
-                  "@media (max-width: 991px)": {
+                  "@media (min-width: 768px) and (max-width:991px)": {
+                    fontSize: "15px!important",
+                    width: "100%"
+                  },
+                  "@media (max-width: 767px)": {
                     fontSize: "1rem",
 
                   },
@@ -84,9 +96,9 @@ const ValuesBanner = (props) => {
               </QuoteTypography>
             </Grid>
           </Grid>
-          {items1.map((item, index) => {
+        {items1.map((item, index) => {
             return (
-              <Grid key={item.title + index} size={{ xs: 12, md: 4 }} >
+              <Grid key={item.title + index} size={{ xs: 12, sm: 6, md: 4 }} >
                 <Card
                   sx={{
                     width: "100%",
@@ -94,13 +106,17 @@ const ValuesBanner = (props) => {
                     borderRadius: 0,
                   }}
                 >
-                  <CardContent sx={{ padding: { xs: 4, md: 2 } }}>
+                  <CardContent sx={{ padding: { xs: 4, sm: 2 } }}>
                     <Typography
                       gutterBottom
                       variant="body2"
                       component="div"
                       sx={{
-                        "@media (max-width: 991px)": {
+                        "@media (min-width: 768px) and (max-width:991px)": {
+                          fontSize: "15px!important",
+
+                        },
+                        "@media (max-width: 768px)": {
                           fontSize: "1rem",
                           fontWeight: 600,
                           marginBottom: "16px"
@@ -113,13 +129,13 @@ const ValuesBanner = (props) => {
                       variant="caption"
                       component="div"
                       sx={{
-                        color: { xs: "#000", md: "text.secondary" },
-                        fontSize: { xs: "0.875rem", md: "1rem" },
-                        textAlign: { xs: "left", md: "left" },
+                        color: { xs: "#000", sm: "text.secondary" },
+                        fontSize: { xs: "0.875rem", sm: "10px", md: "1rem" },
+                        textAlign: { xs: "left", sm: "left" },
                         textJustify: "inter-word",
                         wordSpacing: "0.15em",
                         letterSpacing: "0.02em",
-                        lineHeight: 1.7,
+                        lineHeight: { xs: "1.7", sm: "1.4", md: "1.7" },
                         display: "block",
                         width: "100%",
                       }}
@@ -131,9 +147,9 @@ const ValuesBanner = (props) => {
               </Grid>
             );
           })}
-        </Grid>
-      </Container>
-    </Box>
+      </Grid>
+    </Container>
+    </Box >
   );
 };
 
