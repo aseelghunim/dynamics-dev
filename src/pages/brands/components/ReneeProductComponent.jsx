@@ -324,7 +324,8 @@ const ReneeProductComponent = () => {
         padding: { xs: 2, sm: 7, md: "2rem" },
         borderRadius: "8px",
         paddingRight: "24px",
-        paddingTop:"80px!important"
+        paddingTop:"80px!important",
+        backgroundColor:{sm:"white",md:"#f8f9fa"}
       }}
       maxWidth="xxl"
     >

@@ -16,11 +16,28 @@
         font-size: 14px!important;
 
     }
+    .renee-story-1 .first-stack{
+        padding-right: 40px;
+
+    }
     .drcyj-story-section-1 .first-stack{
         padding-left: 48px!important;
         padding-right: 0px!important;
         padding-top: 40px!important;
         padding-bottom: 48px!important;
+    }
+    .renee-story-2 .first-stack{
+        padding-left: 0;
+        padding-right: 100px;
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+    .renee-story-2 .first-stack ul{
+        padding-left: 12px!important;
+        line-height: 1.6;
+    }
+    .renee-story-2 .first-stack li{
+        font-size: 14px!important;
     }
     
 }
