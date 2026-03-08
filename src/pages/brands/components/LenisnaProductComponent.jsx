@@ -1,16 +1,21 @@
 import { Box, Button, Grid, Typography, Container } from "@mui/material";
-import { Stack } from "@mui/system";
+import { Stack, useMediaQuery } from "@mui/system";
 import { tokens } from "locales/tokens";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import logo from "assets/lenisna/logo.png";
 import product1 from "assets/lenisna/lenisna-product1.png";
+import productTablet from "assets/lenisna/tablet-product.png";
+
 import './LenisnaProductComponent.css'
 const LenisnaProductComponent = () => {
   const { t } = useTranslation();
   const [tabValue, setTabValue] = useState("product-1");
 
+
+  const isTablet = useMediaQuery("(min-width:768px) and (max-width:991px)");
+  const productImage = isTablet ? productTablet : product1;
   const products = [
     {
       value: "product-1",
@@ -34,7 +39,7 @@ const LenisnaProductComponent = () => {
         t(tokens.brands.lenisna.products[0].aging[0].items[1]),
         t(tokens.brands.lenisna.products[0].aging[0].items[2]),
       ],
-      img: product1,
+      img: productImage,
       buttonStyle: { color: "#0DADA5", borderColor: "#0DADA5" },
       activeStyle: { backgroundColor: "#0DADA5" },
     },
@@ -47,16 +52,16 @@ const LenisnaProductComponent = () => {
   return (
     <Box
       sx={{
-        padding: { xs: 2, md: "2rem" },
+        padding: { xs: 2,sm:8 ,md: "2rem" },
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
       maxWidth="xxl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
-        <Container maxWidth="xl" sx={{ py: 2 }}>
+        <Container maxWidth="xl" sx={{ py: {xs:2, sm:0,md:2} }}>
           <Grid container alignItems="stretch">
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} sm={12}>
               <Box
                 component="img"
                 src={logo}
@@ -66,15 +71,15 @@ const LenisnaProductComponent = () => {
                   marginLeft: { xs: 0, md: "-10px" },
                   maxWidth: "100%",
                   height: "auto",
-                  width: { xs: "120px", md: "180px" },
+                  width: { xs: "120px", sm: "85px", md: "180px" },
                 }}
               />
               <Typography
                 variant="body1"
                 sx={{
                   color: "#6D6E71",
-                  mb: { xs: 2, md: "90px" },
-                  fontSize: { xs: "0.875rem", md: "inherit" },
+                  mb: { xs: 2,sm:"32px", md: "90px" },
+                  fontSize: { xs: "0.875rem", sm: "10px", md: "0.875rem" },
                 }}
               >
                 {t(tokens.brands.lenisna.products[0].title)}
@@ -83,15 +88,15 @@ const LenisnaProductComponent = () => {
             {products?.map((product) =>
               product.value === tabValue ? (
                 <>
-                  <Grid item xs={12} md={3}>
+                  <Grid item xs={12} sm={4.5} md={3}>
                     <Box>
                       <Box>
                         <Typography
                           variant="body2"
                           sx={{
                             color: "#7B1237",
-                            mb: 2,
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            mb: {xs:"16px",sm:"4px",md:"16px"},
+                            fontSize: { xs: "1.25rem",sm:"10px", md: "1.25rem" },
                           }}
                         >
                           {product.title1}
@@ -108,19 +113,20 @@ const LenisnaProductComponent = () => {
                             lineHeight: 1.7,
                             display: "block",
                             width: "100%",
-                            fontSize: { xs: "0.875rem", md: "inherit" },
+                            fontSize: { xs: "0.875rem",sm:"9px", md: "0.875rem" },
                           }}
                         >
                           {product.description1}
                         </Typography>
                       </Box>
-                      <Box sx={{ mt: { xs: 2, md: "80px" } }}>
+                      <Box sx={{ mt: { xs: 2,sm:"66px", md: "80px" } }}>
                         <Typography
                           variant="body2"
                           sx={{
                             color: "#7B1237",
-                            mb: 2,
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            mb: {xs:"16px",sm:"4px",md:"16px"},
+
+                            fontSize: { xs: "1.25rem", sm: "10px" ,md:"1.25rem"},
                           }}
                         >
                           {product.title2}
@@ -129,7 +135,7 @@ const LenisnaProductComponent = () => {
                           variant="body1"
                           sx={{
                             color: "#6D6E71",
-                            fontSize: { xs: "0.875rem", md: "inherit" },
+                            fontSize: { xs: "0.875rem",sm:"9px", md: "0.875rem" },
                           }}
                         >
                           {product.description2}
@@ -137,13 +143,18 @@ const LenisnaProductComponent = () => {
                       </Box>
                     </Box>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} sm={3} md={6} sx={{
+
+                    "@media(min-width: 768px) and (max-width: 991px)": {
+                      alignSelf: "flex-end"
+                    }
+                  }}>
                     <Box
                       sx={{
                         textAlign: "center",
                         position: "relative",
                         minHeight: { xs: "auto", md: "457px" },
-                        mb: { xs: 2, md: 0 },
+                        mb: { xs: 2, sm: 0 },
                       }}
                     >
                       <Box
@@ -154,21 +165,25 @@ const LenisnaProductComponent = () => {
                         sx={{
                           maxWidth: "100%",
                           height: "auto",
-                          mt: { xs: 0, md: "-220px" },
-                          width: { xs: "80%", md: "100%" },
+                          mt: { xs: 0, sm: 0, md: "-220px" },
+                          width: { xs: "80%",sm:"90%", md: "100%" },
+                          "@media(min-width: 768px) and (max-width: 991px)": {
+                            // transform:"scale(2)"
+                          }
                         }}
                       />
                     </Box>
                   </Grid>
-                  <Grid item xs={12} md={3}>
+                  <Grid item xs={12} sm={4.5} md={3}>
                     <Box>
                       <Box>
                         <Typography
                           variant="body2"
                           sx={{
-                            mb: 2,
+                            mb: {xs:"16px",sm:"4px",md:"16px"},
+
                             color: "#7B1237",
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            fontSize: { xs: "1.25rem", sm: "10px" ,md:"1.25rem"},
                           }}
                         >
                           {product.title4}
@@ -177,7 +192,7 @@ const LenisnaProductComponent = () => {
                           component="ul"
                           sx={{
                             pl: 2,
-                            fontSize: { xs: "0.875rem", md: "1rem" },
+                            fontSize: { xs: "0.875rem",sm:"10px", md: "1rem" },
                             color: "#6D6E71",
                           }}
                         >
@@ -186,13 +201,14 @@ const LenisnaProductComponent = () => {
                           ))}
                         </Typography>
                       </Box>
-                      <Box sx={{ mt: { xs: 2, md: "40px" } }}>
+                      <Box sx={{ mt: { xs: 2, sm:"29px", md: "40px" } }}>
                         <Typography
                           variant="body2"
                           sx={{
-                            mb: 2,
+                            mb: {xs:"16px",sm:"4px",md:"16px"},
+
                             color: "#7B1237",
-                            fontSize: { xs: "1.25rem", md: "inherit" },
+                            fontSize: { xs: "1.25rem",sm: "10px" ,md:"1.25rem"},
                           }}
                         >
                           {t(tokens.brands.renee.keyBenefits)}
@@ -201,7 +217,7 @@ const LenisnaProductComponent = () => {
                           component="ul"
                           sx={{
                             pl: 2,
-                            fontSize: { xs: "0.875rem", md: "1rem" },
+                            fontSize: { xs: "0.875rem",sm:"9px", md: "1rem" },
                             color: "#6D6E71",
                           }}
                         >
@@ -217,7 +233,7 @@ const LenisnaProductComponent = () => {
             )}
 
             {products.length > 1 && (
-              <Grid item xs={12} md={12}>
+              <Grid item xs={12} sm={12}>
                 {/* Button Section */}
                 <Stack direction="row" justifyContent={"space-between"}>
                   {products?.map((product) => (

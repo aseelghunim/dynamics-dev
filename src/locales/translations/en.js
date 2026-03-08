@@ -12,7 +12,7 @@ export const en = {
   [tokens.common.buttons.readMore]: "Read More",
   [tokens.commitment.title]: "Our Commitment to Excellence",
   [tokens.commitment.paragraph]:
-    "At Dynamics, we're on an inspiring journey of growth and refinement in the world of aesthetics. Our passion guides us to explore new possibilities and bring fresh perspectives to our field. We're dedicated to thoughtfully expanding our range of products and enhancing our services, always with a focus on quality and innovation.",
+    "At Dynamics Medica, we're on an inspiring journey of growth and refinement in the world of aesthetics. Our passion guides us to explore new possibilities and bring fresh perspectives to our field. We're dedicated to thoughtfully expanding our range of products and enhancing our services, always with a focus on quality and innovation.",
   [tokens.about.title]: "About Us",
   [tokens.about.paragraph]:
     "We pride ourselves on our unique approach, which integrates the experience of seasoned professionals with the fresh perspectives of emerging talent. This synergy enables us to develop advanced products and services that not only keep pace with industry trends but often set new standards.",
@@ -508,7 +508,7 @@ export const en = {
   [tokens.brands.our_collection.title]: "Our Collection",
   [tokens.brands.our_collection.title1]: "Brands Collection",
   [tokens.brands.our_collection.paragraph]:
-    "At Dynamics, we've curated a portfolio of innovative aesthetic technologies, addressing unmet clinical needs with effective, long-lasting, and minimally-invasive treatments that deliver natural-looking results.",
+    "At Dynamics Medica, we've curated a portfolio of innovative aesthetic technologies, addressing unmet clinical needs with effective, long-lasting, and minimally-invasive treatments that deliver natural-looking results.",
   [tokens.brands.our_collection.paragraph2]: "Injectables",
   [tokens.brands.our_collection.paragraph3]:
     "Explore Our Premium Brand Selection ",
