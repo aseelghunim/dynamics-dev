@@ -64,7 +64,7 @@ const MobileSectionHeader = ({ label }) => {
  * - Title color changes when expanded
  * - Single accordion open at a time
  */
-const MobileAccordionList = ({ products,collection }) => {
+const MobileAccordionList = ({ products, collection }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panelId) => (_event, isExpanded) => {
@@ -149,13 +149,13 @@ const MobileAccordionList = ({ products,collection }) => {
                       borderRadius: 1,
                       mb: 2,
                       position: "relative",
-                       top: p.group == 1 ? "-100px" : "-70px"
+                      top: p.group == 1 ? "-100px" : "-70px"
                     }}
                   />
                 )}
 
                 {Array.isArray(p.items) && p.items.length > 0 && (
-                  <Box component="ul" sx={{ pl: 2.5, m: 0, marginTop: p.group == 1 ?"-200px":"-120px" }}>
+                  <Box component="ul" sx={{ pl: 2.5, m: 0, marginTop: p.group == 1 ? "-200px" : "-120px" }}>
                     {p.items.map((it, i) => (
                       <Box component="li" key={i} sx={{ mb: 0.5 }}>
                         <Typography>{it}</Typography>
@@ -166,12 +166,12 @@ const MobileAccordionList = ({ products,collection }) => {
 
                 {/* Optional extra description line for body if you want it visible on mobile */}
                 {p.description2 && (
-                  <Typography sx={{ 
+                  <Typography sx={{
 
-                    marginTop: p.group == 1 ?"-200px":"-120px" 
+                    marginTop: p.group == 1 ? "-200px" : "-120px"
 
 
-                   }}>{p.description2}</Typography>
+                  }}>{p.description2}</Typography>
                 )}
               </AccordionDetails>
             </Accordion>
@@ -205,7 +205,7 @@ const MobileFaceBodyLayout = ({
 
       <Stack spacing={3}>
         <MobileSectionHeader label={bodyLabel} />
-        <MobileAccordionList products={bodyProducts} collection={collection}  />
+        <MobileAccordionList products={bodyProducts} collection={collection} />
       </Stack>
     </Stack>
   );
@@ -225,7 +225,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
 
   const faceProducts = [
     {
-      group:1,
+      group: 1,
 
       value: "opera-1",
       title: t(tokens.brands.ksurgery.products[0].face[0].title),
@@ -241,7 +241,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
       img: opera_1_img,
     },
     {
-      group:1,
+      group: 1,
 
       value: "opera-2",
       title: t(tokens.brands.ksurgery.products[0].face[1].title),
@@ -257,7 +257,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
       img: opera_2_img,
     },
     {
-      group:1,
+      group: 1,
 
       value: "opera-3",
       title: t(tokens.brands.ksurgery.products[0].face[2].title),
@@ -273,7 +273,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
       img: opera_3_img,
     },
     {
-      group:1,
+      group: 1,
       value: "opera-4",
       title: t(tokens.brands.ksurgery.products[0].face[3].title),
       buttonTitle: t(tokens.brands.ksurgery.products[0].face[3].buttonTitle),
@@ -300,7 +300,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
 
   const bodyProducts = [
     {
-      group:1,
+      group: 1,
       value: "opera-body-1",
       title: t(tokens.brands.ksurgery.products[0].body[0].title),
       buttonTitle: t(tokens.brands.ksurgery.products[0].body[0].buttonTitle),
@@ -337,7 +337,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
       img: opera_1_rev_img,
     },
     {
-      group:2,
+      group: 2,
       title: t(tokens.brands.ksurgery.products[1].face[1].title),
       buttonTitle: t(tokens.brands.ksurgery.products[1].face[1].buttonTitle),
       subtitle: t(tokens.brands.ksurgery.products[1].face[1].subtitle),
@@ -364,7 +364,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
 
   const bodyRevProducts = [
     {
-      group:2,
+      group: 2,
       value: "opera-body-1",
       title: t(tokens.brands.ksurgery.products[1].body[0].title),
       buttonTitle: t(tokens.brands.ksurgery.products[1].body[0].buttonTitle),
@@ -393,7 +393,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
       sx={{
         height: { xs: "auto", md: "80vh" },
         minHeight: { xs: "400px", md: "80vh" },
-        backgroundColor: {xs:"#EEE8F5",md:"#fff"},
+        backgroundColor: { xs: "#EEE8F5", md: "#fff" },
       }}
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
@@ -401,7 +401,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
           {/* ✅ MOBILE: show Face section then Body section like screenshot */}
           {!mdUp ? (
             <MobileFaceBodyLayout
-            collection={collection}
+              collection={collection}
               faceProducts={faceShown}
               bodyProducts={bodyShown}
               faceLabel={t(tokens.brands.our_collection.face)}

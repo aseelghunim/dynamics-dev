@@ -37,6 +37,7 @@ const TitleBox = ({
       >
         <Stack direction="row" justifyContent="center" paddingLeft={0}>
           <Box
+          className="min-height-controller"
             sx={{
               padding: 0,
               width: { xs: "100%", sm: "85%" },

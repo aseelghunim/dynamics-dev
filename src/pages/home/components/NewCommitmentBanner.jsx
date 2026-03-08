@@ -84,7 +84,7 @@ const NewCommitmentBanner = () => {
                 textJustify: { sm: "inter-word" },
                 wordSpacing: { sm: "0.15em" },
                 letterSpacing: "0.02em",
-                lineHeight: 1.7,
+                lineHeight: 1.4,
                 maxWidth: { xs: 520, sm: "none" },
                 "@media (max-width: 767px)": {
                   fontSize: "0.95rem",

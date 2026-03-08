@@ -1,9 +1,9 @@
-import { Divider, useTheme } from "@mui/material";
-import { Box, Stack } from "@mui/system";
+import { useTheme } from "@emotion/react";
+import { Box, Divider, useMediaQuery } from "@mui/material";
+import { Stack } from "@mui/system";
 import StyledTypography from "layout/components/StyledTypography";
 import Section from "pages/home/components/Section";
-import './SharedSection.css';
-
+import "./SharedSection.css";
 
 const SharedSection = ({
   name = undefined,
@@ -13,58 +13,87 @@ const SharedSection = ({
   descriptionSx = {},
 }) => {
   const theme = useTheme();
+  const issmUp = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <Box
-      className={name ?? ""}
+      className={`ksurgery-shared-section ${name ?? ""}`}
       sx={{
-        background: background,
+        background,
         color: "white",
-        py: { xs: 2, md: 4 },
-        px: { xs: 2, md: 3 },
+        py: { xs: 4, sm: 4 },
+        px: { xs: 4, sm: 3 },
       }}
     >
-      <Section height={{ xs: "auto", md: "30vh" }}>
+      <Section height="auto">
         <Stack
-          sx={{
-            height: { xs: "auto", md: "30vh" },
-            minHeight: { xs: "200px", md: "30vh" },
-          }}
+          sx={{ minHeight: { xs: "auto", sm: "auto" } }}
           justifyContent="center"
         >
           <Stack
-            direction={{ xs: "column", md: "row" }}
+            direction={{ xs: "column", sm: "row" }}
             justifyContent="center"
             alignItems="center"
-            spacing={{ xs: 2, md: 5 }}
-            padding ="16px"
+            spacing={{ xs: 2, sm: "25px" }}
             divider={
               <Divider
-                orientation={{ xs: "horizontal", md: "vertical" }}
+                orientation={issmUp ? "vertical" : "horizontal"}
                 flexItem
-                sx={{
-                  "@media (max-width: 991px)": {
-                    width: "100%",
-                    my: 1,
-                  },
-                }}
+                sx={{ borderColor: "rgba(255,255,255,0.6)" }}
               />
             }
+            sx={{
+              width: "100%",
+              maxWidth: { xs: 520,sm:"none", md: "64%" },
+              mx: "auto",
+              textAlign: { xs: "center", sm: "left" },
+            }}
           >
-            <StyledTypography
-              variant={theme.direction === "ltr" ? "h2" : "h2"}
-              sx={{
-                width: { xs: "100%", md: "700px" },
-                fontSize: { xs: "2.25rem", md: "inherit" },
-                textAlign: { xs: "center", md: "inherit" },
-              }}
+            <Stack
+              alignItems={{ xs: "center", sm: "flex-start" }}
+              sx={{ width: { xs: "100%", sm: "auto" } }}
             >
-              {title}
-            </StyledTypography>
+              <StyledTypography
+                variant="h2"
+                fontSize="2rem"
+               
+                sx={{
+                  
+                  fontSize:"2.5rem!important",
+                  textAlign: { xs: "center", sm: "left" },
+                  lineHeight: 1.05,
+                  "@media (max-width: 767px)": {
+                    fontSize: "2.25rem!important",
+                  },
+                  "@media (min-width: 768px) and (max-width: 991px)": {
+                    fontSize: "2rem!important",
+                  },
+                }}
+              >
+                {title}
+              </StyledTypography>
+            </Stack>
+
             <StyledTypography
               variant="body2"
               sx={{
-                fontSize: { xs: "1.125rem", md: "inherit" },
-                lineHeight: { xs: 1.6, md: "inherit" },
+                textAlign: { xs: "center", sm: "justify!important",md:"justify" },
+                textJustify: { sm: "inter-word" },
+                wordSpacing: { sm: "0.15em" },
+                fontSize: "1.125rem!important",
+                // letterSpacing: "0.02em",
+                lineHeight: 1.6,
+                // textAlign: "justify",
+
+                maxWidth: { xs: 520, sm: "none"},
+                "@media (max-width: 767px)": {
+                  fontSize: "1.125rem!important",
+                },
+                "@media (min-width: 768px) and (max-width: 991px)": {
+                  fontSize: "0.875rem!important",
+                  marginLeft: "25px",
+                  textAlign:"justify"
+                },
                 ...descriptionSx,
               }}
             >

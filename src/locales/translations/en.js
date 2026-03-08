@@ -133,7 +133,8 @@ export const en = {
     "Our Italian-made hyaluronic acid treatments blend cutting-edge technology with natural beauty enhancement. Ksurgery MED, by Vidapharma, delivers safe, effective, and scientifically-validated products, designed to meet the high standards of medical professionals in aesthetic care.",
   [tokens.brands.ksurgery.whatIs]: "What is ksurgery?",
   [tokens.brands.ksurgery.whatIsDescription]:
-    "K-Surgery is a leading brand specializing in high-quality medical aesthetic products, particularly focusing on hyaluronic acid-based fillers and skin boosters. Offering solutions for facial rejuvenation, body contouring, and skin hydration, K-Surgery aims to provide professionals with safe, effective, and innovative products made entirely in Italy.",
+  "K-Surgery is a medical aesthetic brand specializing in high-quality hyaluronic acid fillers and skin boosters. Made in Italy, its products provide safe and effective solutions for facial rejuvenation, body contouring, and skin hydration, delivering natural-looking results, immediate and long-lasting effects, and customizable treatments tailored to each patient.",
+    // "K-Surgery is a leading brand specializing in high-quality medical aesthetic products, particularly focusing on hyaluronic acid-based fillers and skin boosters. Offering solutions for facial rejuvenation, body contouring, and skin hydration, K-Surgery aims to provide professionals with safe, effective, and innovative products made entirely in Italy.",
   [tokens.brands.ksurgery.keyBenefits]: "Key Benefits",
   [tokens.brands.ksurgery.keyBenefit1]: "Safe and effective treatments.",
   [tokens.brands.ksurgery.keyBenefit2]:

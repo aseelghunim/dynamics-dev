@@ -38,11 +38,18 @@ const KsurgeryPage = (props) => {
         />
 
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#EEE8F5" }}>
+        <Box maxWidth="xxl" sx={{
+          backgroundColor: "#EEE8F5",
+
+          "@media(min-width: 768px) ": {
+            backgroundColor: "#E0FFF5!important"
+          }
+        }}>
           <Container maxWidth="xxl">
             <StorySection
               name="ksurgery-story-1"
               backgroundColor="#EEE8F5"
+
               title={t(tokens.brands.ksurgery.whatIs)}
               paragraph={t(tokens.brands.ksurgery.whatIsDescription)}
               passedImage={productImage}
@@ -59,7 +66,7 @@ const KsurgeryPage = (props) => {
                   <Typography
                     variant="h3"
                     sx={{
-                      fontSize: { xs: "1.5rem", md: "inherit" },
+                      fontSize: { xs: "1.5rem", sm: "1.25rem", md: "1.5rem" },
                     }}
                   >
                     {t(tokens.brands.ksurgery.whatIs)}
@@ -72,13 +79,13 @@ const KsurgeryPage = (props) => {
                       wordSpacing: "0.15em",
                       letterSpacing: "0.02em",
                       lineHeight: 1.7,
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "0.875rem", md: "0.875rem" },
                     }}
                   >
                     {t(tokens.brands.ksurgery.whatIsDescription)}
                   </Typography>
                   <Box sx={{ height: { xs: "2px", md: "5px" } }} />
-                  <Typography
+                  {/* <Typography
                     variant="h4"
                     sx={{
                       fontSize: { xs: "1.25rem", md: "inherit" },
@@ -95,17 +102,30 @@ const KsurgeryPage = (props) => {
                     <li>{t(tokens.brands.ksurgery.keyBenefit1)}</li>
                     <li>{t(tokens.brands.ksurgery.keyBenefit2)}</li>
                     <li>{t(tokens.brands.ksurgery.keyBenefit3)}</li>
-                  </ul>
+                  </ul> */}
                 </Stack>
               }
             />
           </Container>
         </Box>
-        <Box maxWidth="xxl" sx={{ backgroundColor:{xs:"#eee8f5", md :"#fff"}}}>
+
+
+        {/* how is section - opera line */}
+        <SharedSection
+          name="ksurgery-shared-section"
+          title={t(tokens.brands.ksurgery.howIs)}
+          description={t(tokens.brands.ksurgery.howIsDescription)}
+          background="linear-gradient(to right, #6bb6b6, #a9e0eb)"
+          descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}
+        />
+
+        <Box maxWidth="xxl" sx={{
+          backgroundColor: { xs: "#eee8f5", sm: "#E0FFF5" }
+        }}>
           <Container maxWidth="xxl">
             <StorySection
               name="ksurgery-story-2"
-              backgroundColor={{ backgroundColor:{xs:"#eee8f5", md :"#fff"}}}
+              backgroundColor={{ backgroundColor: { xs: "#eee8f5" } }}
               reverse={true}
               title={t(tokens.brands.ksurgery.opera)}
               paragraph={t(tokens.brands.ksurgery.applicationDescription)}
@@ -124,7 +144,7 @@ const KsurgeryPage = (props) => {
                   <Typography
                     variant="h3"
                     sx={{
-                      fontSize: { xs: "1.5rem", md: "inherit" },
+                      fontSize: { xs: "1.5rem", sm: "1.25rem", md: "1.5rem" },
                     }}
                   >
                     {t(tokens.brands.ksurgery.opera)}
@@ -133,7 +153,11 @@ const KsurgeryPage = (props) => {
                     variant="body"
                     sx={{
                       textAlign: "justify",
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "0.875rem", md: "inherit" },
+                      "@media(min-width: 768px) and (max-width: 991px)": {
+                        marginTop: "20px!important",
+                        lineHeight: "1.4!important"
+                      }
                     }}
                   >
                     {t(tokens.brands.ksurgery.operaDescription)}
@@ -141,6 +165,10 @@ const KsurgeryPage = (props) => {
                   <Typography
                     variant="body"
                     sx={{
+                      "@media(min-width: 768px) and (max-width: 991px)": {
+                        marginTop: "0!important",
+                        lineHeight: "1.4!important"
+                      },
                       textAlign: "justify",
                       fontSize: { xs: "0.875rem", md: "inherit" },
                     }}
@@ -150,6 +178,11 @@ const KsurgeryPage = (props) => {
                   <Typography
                     variant="body"
                     sx={{
+                      "@media(min-width: 768px) and (max-width: 991px)": {
+                        marginTop: "0!important",
+                        lineHeight: "1.4!important"
+
+                      },
                       textAlign: "justify",
                       fontSize: { xs: "0.875rem", md: "inherit" },
                     }}
@@ -161,7 +194,9 @@ const KsurgeryPage = (props) => {
             />
           </Container>
         </Box>
+
         <Box
+        
           component={"img"}
           src={icons}
           className="icons"
@@ -176,17 +211,13 @@ const KsurgeryPage = (props) => {
             },
           }}
         />
-        <SharedSection
-          name="ksurgery-shared-section"
-          title={t(tokens.brands.ksurgery.howIs)}
-          description={t(tokens.brands.ksurgery.howIsDescription)}
-          background="linear-gradient(to right, #6bb6b6, #a9e0eb)"
-          descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}
-        />
+
+
 
         <KsurgeryProductComponent collection={1} />
 
         <SharedSection
+          name="ksurgery-shared-section-2 "
           title={t(tokens.brands.ksurgery.skinbooster1)}
           description={t(tokens.brands.ksurgery.description3)}
           descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}

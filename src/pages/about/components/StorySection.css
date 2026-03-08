@@ -1,54 +1,107 @@
-@media(min-width: 768px) and (max-width: 991px){
-    
-    .story-section-parent >div{
-        padding: 0!important;
+@media(min-width: 768px) and (max-width: 991px) {
+
+    .story-section-parent>div {
+        padding: 0 !important;
     }
-    .story-section-parent{
+
+    .story-section-parent {
         padding-left: 48px;
         padding-right: 48px;
     }
-    .story-section-parent span,.story-section-parent p{
-        text-align: justify!important;
-        font-size: 13px!important;
-        line-height: 13.8px!important;
+
+    .story-section-parent span,
+    .story-section-parent p {
+        text-align: justify !important;
+        font-size: 13px;
+        line-height: 13.8px;
     }
-    .renee-story-1 p{
-        font-size: 14px!important;
+
+    .renee-story-1 p {
+        font-size: 14px !important;
 
     }
-    .renee-story-1 .first-stack{
+
+    .renee-story-1 .first-stack {
         padding-right: 40px;
 
     }
-    .drcyj-story-section-1 .first-stack{
-        padding-left: 48px!important;
-        padding-right: 0px!important;
-        padding-top: 40px!important;
-        padding-bottom: 48px!important;
+
+    .drcyj-story-section-1 .first-stack {
+        padding-left: 48px !important;
+        padding-right: 0px !important;
+        padding-top: 40px !important;
+        padding-bottom: 48px !important;
     }
-    .renee-story-2 .first-stack{
+
+    .renee-story-2 .first-stack {
         padding-left: 0;
         padding-right: 100px;
         padding-top: 32px;
         padding-bottom: 64px;
     }
-    .renee-story-2 .first-stack ul{
-        padding-left: 12px!important;
+
+    .renee-story-2 .first-stack ul {
+        padding-left: 12px !important;
         line-height: 1.6;
     }
-    .renee-story-2 .first-stack li{
-        font-size: 14px!important;
+
+    .renee-story-2 .first-stack li {
+        font-size: 14px !important;
     }
-    
+
+    .ksurgery-story-1,
+    .ksurgery-story-2 {
+        padding-right: 12px;
+        padding-left: 12px;
+
+    }
+
+    .ksurgery-story-1 .first-stack {
+        padding-right: 8px !important;
+        padding-bottom: 40px !important;
+        padding-top: 60px !important;
+
+    }
+
+    .ksurgery-story-1 .min-height-controller {
+        min-height: 350px !important;
+    }
+
+    .ksurgery-story-1 span {
+        line-height: 1.4 !important;
+    }
+
+    .ksurgery-story-2 .first-stack {
+        padding-left: 0 !important;
+        padding-right: 48px;
+    }
+
+    .story-section-parent.ksurgery-story-2 span {
+        font-size: 14px !important;
+    }
+
+    .ksurgery-story-2 .image-box>div {
+        left: -56px !important;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .ksurgery-story-1,
+    .ksurgery-story-2 {
+        background-color: #E0FFF5 !important;
+    }
 }
 
 @media(max-width:767px) {
     .ksurgery-story-1 .image-box {
         display: none;
     }
-    .ksurgery-story-2{
-        padding-top:0 !important;
+
+    .ksurgery-story-2 {
+        padding-top: 0 !important;
     }
+
     .ksurgery-story-2 .image-box {
         transform: scaleX(-1);
         height: 285px !important;
@@ -224,7 +277,7 @@
     .maili-story-section-1 .image-box,
     .maili-story-section-2 .image-box,
     .dimono-story-section-1 .image-box,
-    .about .image-box{
+    .about .image-box {
         display: none;
     }
 
@@ -249,22 +302,24 @@
     }
 
     .drcyj-story-section-1 .image-box>div {
-      
+
         width: 100%;
         position: relative;
         top: 10% !important;
         left: 0;
         height: 100%;
     }
-    .about > div > div{
-        padding:0 !important
-    }
-    .about h3{
-        font-size: 1.25rem!important;
+
+    .about>div>div {
+        padding: 0 !important
     }
 
-    .about p{
-        font-size: 0.8375rem!important;
+    .about h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .about p {
+        font-size: 0.8375rem !important;
         padding-bottom: 40px;
     }
 }

@@ -1,6 +1,28 @@
+
+.ksurgery-shared-section{
+    padding-top: 88px!important;
+    padding-bottom: 88px!important;
+}
+/* .ksurgery-shared-section h2{
+width: 95px;
+}
+.ksurgery-shared-section-2 h2{
+    max-width: 185px!important; */
+
+
+@media(min-width: 768px) and (max-width: 991px){
+    .ksurgery-shared-section{
+        padding-top: 27px!important;
+        padding-bottom: 27px!important;
+    }
+    
+}
+
 @media(max-width:767px) {
     .ksurgery-shared-section {
-        /* padding-top: 24px;
-margin-top: 60px; */
+        padding-top: 32px!important;
+        padding-bottom: 48px!important;
+        padding-left: 32px!important;
+        padding-right: 32px!important;
     }
 }
