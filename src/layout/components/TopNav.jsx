@@ -4,13 +4,14 @@ import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { alpha } from "@mui/system/colorManipulator";
 import PropTypes from "prop-types";
-import { Fragment, useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
-import Popover from "@mui/material/Popover";
+import Drawer from "@mui/material/Drawer";
 import SvgIcon from "@mui/material/SvgIcon";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -24,10 +25,9 @@ import { usePathname } from "hooks/use-pathname";
 import { useWindowScroll } from "hooks/use-window-scroll";
 import { paths } from "paths";
 
-
 import logo from "assets/logo.png";
 import logoLight from "assets/dynamics.png";
-import mobileNavBg from 'assets/mobile-nav-bg.png';
+import mobileNavBg from "assets/mobile-nav-bg.svg";
 
 import logo1 from "assets/home-brands-logos/logo1.png";
 import logo2 from "assets/home-brands-logos/logo2.png";
@@ -38,13 +38,13 @@ import logo6 from "assets/home-brands-logos/logo6.svg";
 import logo7 from "assets/home-brands-logos/logo7.svg";
 import logo8 from "assets/home-brands-logos/logo8.svg";
 import logo9 from "assets/home-brands-logos/logo9.svg";
+
 const TOP_NAV_HEIGHT = 120;
 
 const MobileBrandsGrid = ({ onItemClick }) => {
   const { t } = useTranslation();
 
   const brandItems = [
-
     { title: t(tokens.brands.drcyj.title), img: logo9, path: paths.brands.drcyj },
     { title: t(tokens.brands.ksurgery.title), img: logo4, path: paths.brands.ksurgery },
     { title: t(tokens.brands.lanluma.title), img: logo6, path: paths.brands.lanluma },
@@ -64,7 +64,7 @@ const MobileBrandsGrid = ({ onItemClick }) => {
         gap: 3,
         pt: 3,
         pb: 4,
-        px:4
+        px: 4,
       }}
     >
       {brandItems.map((item) => (
@@ -87,7 +87,6 @@ const MobileBrandsGrid = ({ onItemClick }) => {
               border: "1.5px solid #ab92e1",
               borderRadius: "50%",
               overflow: "hidden",
-
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -98,7 +97,6 @@ const MobileBrandsGrid = ({ onItemClick }) => {
               fontWeight: 500,
               lineHeight: 1.2,
               backgroundColor: "#fff",
-
             }}
           >
             <img src={item.img} width="100%" style={{ objectFit: "cover" }} alt="" />
@@ -177,18 +175,16 @@ export const TopNav = (props) => {
 
   const mobileHeaderHeight = 70;
 
-  const [menuAnchorEl, setMenuAnchorEl] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false);
 
-  const menuOpen = Boolean(menuAnchorEl);
-
-  const handleMenuOpen = (event) => {
-    setMenuAnchorEl(event.currentTarget);
+  const handleMenuOpen = () => {
+    setMenuOpen(true);
   };
 
   const handleMenuClose = () => {
-    setMenuAnchorEl(null);
-    setMobileBrandsOpen(true);
+    setMenuOpen(false);
+    setMobileBrandsOpen(false);
   };
 
   return (
@@ -213,8 +209,7 @@ export const TopNav = (props) => {
             }),
           ...(elevate && {
             color: "#ab92e1",
-            backgroundColor: (theme) =>
-              alpha(theme.palette.background.paper, 0.9),
+            backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
             boxShadow: 8,
           }),
           zIndex: (theme) => theme.zIndex.appBar,
@@ -351,12 +346,8 @@ export const TopNav = (props) => {
                   >
                     {items.map((item, index) => {
                       const checkPath = !!(item.path && pathname);
-                      const partialMatch = checkPath
-                        ? pathname.includes(item.path)
-                        : false;
-                      const exactMatch = checkPath
-                        ? pathname === item.path
-                        : false;
+                      const partialMatch = checkPath ? pathname.includes(item.path) : false;
+                      const exactMatch = checkPath ? pathname === item.path : false;
                       const active = item.popover ? partialMatch : exactMatch;
 
                       return (
@@ -396,16 +387,13 @@ export const TopNav = (props) => {
         </Container>
 
         {!smUp && (
-          <Popover
+          <Drawer
+            anchor="right"
             open={menuOpen}
-            anchorEl={menuAnchorEl}
             onClose={handleMenuClose}
-            transitionDuration={2}
-            // TransitionComponent={Fragment}
-            // transitionDuration={0}
-            anchorReference="anchorEl"
-            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-            transformOrigin={{ vertical: "top", horizontal: "right" }}
+            ModalProps={{
+              keepMounted: true,
+            }}
             PaperProps={{
               sx: {
                 width: "calc(100vw - 50px)",
@@ -415,24 +403,51 @@ export const TopNav = (props) => {
                 overflowY: "auto",
                 boxShadow: "none",
                 backgroundColor: "#f8f8f8",
-                position: "fixed",
                 top: "0 !important",
-                left: "50px!important",
+                left: "auto",
                 right: 0,
                 m: 0,
                 background: "white",
-
               },
             }}
           >
             <Box
               sx={{
                 px: 0,
-                py: 5,
+                pt: 4.5,
                 pb: 0,
                 minHeight: "100vh",
               }}
             >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  px: 2,
+                  mb: 1,
+                  width: "33px",
+                  height:"33px",
+                  marginLeft: "auto"
+                }}
+              >
+                <IconButton
+                  onClick={handleMenuClose}
+                  aria-label="close menu"
+                  sx={{
+                    color: "#AC93E1",
+                    backgroundColor: "#fff",
+                    border: "none",
+                   width: "33px",
+                  height:"33px",
+                   
+                  }}
+                >
+                  <CloseIcon sx={{ 
+                        width: "33px",
+                        height: "33px",
+                   }} />
+                </IconButton>
+              </Box>
 
               <Box
                 component="img"
@@ -440,12 +455,15 @@ export const TopNav = (props) => {
                 alt="Dynamics Medica"
                 sx={{ marginBottom: "72px", px: 4 }}
               />
-              <Box sx={{
-                padding: "32px 32px 32px 0",
-                backgroundColor: "#F8F4FF",
-                borderRadius: "36px 36px 0 0",
-                height: "100vh"
-              }}>
+
+              <Box
+                sx={{
+                  padding: "32px 32px 32px 0",
+                  backgroundColor: "#F8F4FF",
+                  borderRadius: "36px 36px 0 0",
+                  height: "100vh",
+                }}
+              >
                 <Box
                   component={RouterLink}
                   href={paths.index}
@@ -454,7 +472,6 @@ export const TopNav = (props) => {
                     textDecoration: "none",
                     display: "block",
                     mb: 1.5,
-
                   }}
                 >
                   <Typography
@@ -467,8 +484,8 @@ export const TopNav = (props) => {
                       borderRadius: "4px",
                       "&:hover": {
                         color: "white",
-                        backgroundColor: "#AC93E1"
-                      }
+                        backgroundColor: "#AC93E1",
+                      },
                     }}
                   >
                     {t(tokens.nav.home)}
@@ -495,8 +512,8 @@ export const TopNav = (props) => {
                       borderRadius: "4px",
                       "&:hover": {
                         color: "white",
-                        backgroundColor: "#AC93E1"
-                      }
+                        backgroundColor: "#AC93E1",
+                      },
                     }}
                   >
                     {t(tokens.nav.about)}
@@ -524,8 +541,8 @@ export const TopNav = (props) => {
                         borderRadius: "4px",
                         "&:hover": {
                           color: "white",
-                          backgroundColor: "#AC93E1"
-                        }
+                          backgroundColor: "#AC93E1",
+                        },
                       }}
                     >
                       {t(tokens.nav.brands)}
@@ -541,10 +558,20 @@ export const TopNav = (props) => {
                         transition: "transform 0.2s ease",
                       }}
                     >
-                      <svg width="23" height="11" viewBox="0 0 23 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7321 0.384149C23.1321 0.8454 23.078 1.53983 22.6113 1.9352L12.2243 10.7352C11.8075 11.0883 11.1926 11.0883 10.7757 10.7352L0.38866 1.9352C-0.0780163 1.53983 -0.132029 0.845399 0.267874 0.384148C0.667925 -0.0771022 1.37054 -0.130533 1.83721 0.264835L11.5 8.4512L21.1628 0.264836C21.6295 -0.130532 22.3321 -0.0771013 22.7321 0.384149Z" fill="#272727" />
+                      <svg
+                        width="23"
+                        height="11"
+                        viewBox="0 0 23 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M22.7321 0.384149C23.1321 0.8454 23.078 1.53983 22.6113 1.9352L12.2243 10.7352C11.8075 11.0883 11.1926 11.0883 10.7757 10.7352L0.38866 1.9352C-0.0780163 1.53983 -0.132029 0.845399 0.267874 0.384148C0.667925 -0.0771022 1.37054 -0.130533 1.83721 0.264835L11.5 8.4512L21.1628 0.264836C21.6295 -0.130532 22.3321 -0.0771013 22.7321 0.384149Z"
+                          fill="#272727"
+                        />
                       </svg>
-
                     </SvgIcon>
                   </Box>
 
@@ -573,18 +600,16 @@ export const TopNav = (props) => {
                       borderRadius: "4px",
                       "&:hover": {
                         color: "white",
-                        backgroundColor: "#AC93E1"
-                      }
+                        backgroundColor: "#AC93E1",
+                      },
                     }}
                   >
                     {t(tokens.nav.contact)}
                   </Typography>
                 </Box>
               </Box>
-
-
             </Box>
-          </Popover>
+          </Drawer>
         )}
       </Box>
     </>
