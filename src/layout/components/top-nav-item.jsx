@@ -231,9 +231,9 @@ export const TopNavItem = (props) => {
                 width: "575px",
                 left: { sm: "20%", md: "35%" },
                 position: "fixed",
-                pt: OFFSET + "px",
+                pt: "0px",
                 right: 0,
-                top: "80px",
+                top: "65px",
                 zIndex: (theme) => theme.zIndex.appBar + 100,
                 borderRadius: "0!important",
               }}

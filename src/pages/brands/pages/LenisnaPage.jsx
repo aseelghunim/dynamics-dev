@@ -15,7 +15,6 @@ import StorySection from "pages/about/components/StorySection";
 import { useTranslation } from "react-i18next";
 import LenisnaProductComponent from "../components/LenisnaProductComponent";
 import FaceInjectionPointsLenisna from "../components/FaceInjectionPointsLenisna";
-
 const LenisnaPage = (props) => {
   const { t } = useTranslation();
 

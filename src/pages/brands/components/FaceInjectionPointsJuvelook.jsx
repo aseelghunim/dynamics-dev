@@ -65,7 +65,7 @@ const Point = ({ position }) => {
         </Popper>
 
         <IconButton
-
+          className='mark-svg'
           size="small"
           sx={{
 
