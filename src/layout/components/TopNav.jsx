@@ -39,7 +39,7 @@ import logo7 from "assets/home-brands-logos/logo7.svg";
 import logo8 from "assets/home-brands-logos/logo8.svg";
 import logo9 from "assets/home-brands-logos/logo9.svg";
 
-const TOP_NAV_HEIGHT = 120;
+const TOP_NAV_HEIGHT = 95;
 
 const MobileBrandsGrid = ({ onItemClick }) => {
   const { t } = useTranslation();
@@ -173,7 +173,7 @@ export const TopNav = (props) => {
 
   useWindowScroll({ handler: handleWindowScroll, delay });
 
-  const mobileHeaderHeight = 70;
+  const mobileHeaderHeight = 95;
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileBrandsOpen, setMobileBrandsOpen] = useState(false);
@@ -194,14 +194,16 @@ export const TopNav = (props) => {
         maxWidth="xxl"
         component="header"
         sx={{
+          height:{xs:"95px",sm:"72px", md:"90px"},
           left: 0,
           position: "fixed",
-          backdropFilter: "blur(6px)",
-          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          // backdropFilter: "blur(6px)",
+          backgroundColor:  elevate ? "white": "rgba(255, 255, 255, 0.2)",
+
           color: "#fff",
           right: 0,
           top: 0,
-          borderBottom: "1px solid #fff",
+          // borderBottom: "1px solid #fff",
           transition: (theme) =>
             theme.transitions.create("box-shadow, background-color", {
               easing: theme.transitions.easing.easeInOut,
@@ -209,16 +211,16 @@ export const TopNav = (props) => {
             }),
           ...(elevate && {
             color: "#ab92e1",
-            backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
+            // backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.9),
             boxShadow: 8,
           }),
           zIndex: (theme) => theme.zIndex.appBar,
           width: "100%",
-          "@media (max-width: 899px)": {
+          "@media (min-width: 899px)": {
             width: "100vw",
             left: 0,
             right: 0,
-            background: elevate ? "white" : "transparent",
+            // background: elevate ? "white" : "transparent",
           },
         }}
       >
@@ -282,7 +284,7 @@ export const TopNav = (props) => {
             <Stack
               direction="row"
               sx={{
-                height: { xs: "70px", sm: TOP_NAV_HEIGHT },
+                height: { xs: "95px", sm: "72px",md:"90px" },
                 alignItems: "center",
               }}
             >

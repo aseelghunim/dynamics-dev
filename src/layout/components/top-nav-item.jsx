@@ -308,7 +308,7 @@ export const TopNavItem = (props) => {
           <Typography
             component="span"
             variant="subtitle2"
-            sx={{ fontSize: 18, fontWeight: 600 }}
+            sx={{ fontSize: {sm:14,md:18}, fontWeight: 600 }}
           >
             {title}
           </Typography>
