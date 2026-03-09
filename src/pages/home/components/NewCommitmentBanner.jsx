@@ -22,6 +22,7 @@ const NewCommitmentBanner = () => {
 
   return (
     <Box
+    className="general-shared-section"
       sx={{
         background: "linear-gradient(to right, #6bb6b6, #a9e0eb)",
         color: "white",

@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mui/system";
+import { Box, Container, Stack, useMediaQuery } from "@mui/system";
 import image2 from "assets/ksurgery/cover-girl-2.svg";
 import image from "assets/ksurgery/cover-girl.png";
 import icons from "assets/ksurgery/icons.svg";
@@ -21,7 +21,7 @@ import KsurgeryProductComponent from "../components/KsurgeryProductComponent";
 import "./KsurgeryPage.css"
 const KsurgeryPage = (props) => {
   const { t } = useTranslation();
-
+  const isMobile = useMediaQuery("(max-width:767px)");
   usePageView();
   useScrollToTop();
 
@@ -37,7 +37,7 @@ const KsurgeryPage = (props) => {
           actionPath="#"
         />
 
-
+        {/* what is */}
         <Box maxWidth="xxl" sx={{
           backgroundColor: "#EEE8F5",
 
@@ -110,14 +110,23 @@ const KsurgeryPage = (props) => {
         </Box>
 
 
-        {/* how is section - opera line */}
-        <SharedSection
-          name="ksurgery-shared-section"
-          title={t(tokens.brands.ksurgery.howIs)}
-          description={t(tokens.brands.ksurgery.howIsDescription)}
-          background="linear-gradient(to right, #6bb6b6, #a9e0eb)"
-          descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}
-        />
+        {!isMobile && (
+          <>
+
+            {/* how is section - opera line */}
+            <SharedSection
+              name="ksurgery-shared-section"
+              title={t(tokens.brands.ksurgery.howIs)}
+              description={t(tokens.brands.ksurgery.howIsDescription)}
+              background="linear-gradient(to right, #6bb6b6, #a9e0eb)"
+              descriptionSx={{ textAlign: { xs: "center", sm: "justify" } }}
+            />
+          </>
+
+        )}
+
+
+
 
         <Box maxWidth="xxl" sx={{
           backgroundColor: { xs: "#eee8f5", sm: "#E0FFF5" }
@@ -194,7 +203,20 @@ const KsurgeryPage = (props) => {
             />
           </Container>
         </Box>
+        {isMobile && (
+          <>
 
+            {/* how is section - opera line */}
+            <SharedSection
+              name="ksurgery-shared-section"
+              title={t(tokens.brands.ksurgery.howIs)}
+              description={t(tokens.brands.ksurgery.howIsDescription)}
+              background="linear-gradient(to right, #6bb6b6, #a9e0eb)"
+              descriptionSx={{ textAlign: { xs: "center", sm: "justify" } }}
+            />
+          </>
+
+        )}
         <Box
 
           component={"img"}
@@ -248,11 +270,11 @@ const KsurgeryPage = (props) => {
                 <Typography
                   variant="h4"
                   sx={{
-                    fontSize: { xs: "1.25rem",sm:"1rem", md: "1.25rem" },
-                    "@media(min-width: 768px) and (max-width: 991px)":{
+                    fontSize: { xs: "1.25rem", sm: "1rem", md: "1.25rem" },
+                    "@media(min-width: 768px) and (max-width: 991px)": {
                       marginTop: "10px!important",
-                      marginBottom:"22px",
-                      fontWeight:"400"
+                      marginBottom: "22px",
+                      fontWeight: "400"
                     }
                   }}
                 >
@@ -262,8 +284,8 @@ const KsurgeryPage = (props) => {
                   variant="body2"
                   sx={{
                     textAlign: "justify",
-                    fontSize: { xs: "0.875rem", sm:"0.875rem", md: "0.875rem" },
-                    "@media(min-width: 768px) and (max-width: 991px)":{
+                    fontSize: { xs: "0.875rem", sm: "0.875rem", md: "0.875rem" },
+                    "@media(min-width: 768px) and (max-width: 991px)": {
                       lineHeight: "1.4"
                     }
                   }}
@@ -273,7 +295,7 @@ const KsurgeryPage = (props) => {
                 <Box
                   component="ul"
                   sx={{
-                    fontSize: { xs: "0.75rem",sm:"0.875rem", md: "0.75rem" },
+                    fontSize: { xs: "0.75rem", sm: "0.875rem", md: "0.75rem" },
                     pl: 2,
                     m: 0,
                   }}

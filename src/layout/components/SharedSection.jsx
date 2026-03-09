@@ -17,7 +17,7 @@ const SharedSection = ({
 
   return (
     <Box
-      className={`ksurgery-shared-section ${name ?? ""}`}
+      className={`ksurgery-shared-section general-shared-section ${name ?? ""}`}
       sx={{
         background,
         color: "white",
@@ -44,7 +44,7 @@ const SharedSection = ({
             }
             sx={{
               width: "100%",
-              maxWidth: { xs: 520,sm:"none", md: "64%" },
+              maxWidth: { xs: 520,sm:"none", md: "75%" },
               mx: "auto",
               textAlign: { xs: "center", sm: "left" },
             }}
@@ -84,6 +84,7 @@ const SharedSection = ({
                 // letterSpacing: "0.02em",
                 lineHeight: 1.6,
                 // textAlign: "justify",
+                marginLeft: "25px",
 
                 maxWidth: { xs: 520, sm: "none"},
                 "@media (max-width: 767px)": {
@@ -91,7 +92,6 @@ const SharedSection = ({
                 },
                 "@media (min-width: 768px) and (max-width: 991px)": {
                   fontSize: "0.875rem!important",
-                  marginLeft: "25px",
                   textAlign:"justify"
                 },
                 ...descriptionSx,
