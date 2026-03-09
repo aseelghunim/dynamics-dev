@@ -196,7 +196,7 @@ const KsurgeryPage = (props) => {
         </Box>
 
         <Box
-        
+
           component={"img"}
           src={icons}
           className="icons"
@@ -248,7 +248,12 @@ const KsurgeryPage = (props) => {
                 <Typography
                   variant="h4"
                   sx={{
-                    fontSize: { xs: "1.25rem", md: "inherit" },
+                    fontSize: { xs: "1.25rem",sm:"1rem", md: "1.25rem" },
+                    "@media(min-width: 768px) and (max-width: 991px)":{
+                      marginTop: "10px!important",
+                      marginBottom:"22px",
+                      fontWeight:"400"
+                    }
                   }}
                 >
                   {t(tokens.brands.ksurgery.benefits.title)}
@@ -257,7 +262,10 @@ const KsurgeryPage = (props) => {
                   variant="body2"
                   sx={{
                     textAlign: "justify",
-                    fontSize: { xs: "0.875rem", md: "inherit" },
+                    fontSize: { xs: "0.875rem", sm:"0.875rem", md: "0.875rem" },
+                    "@media(min-width: 768px) and (max-width: 991px)":{
+                      lineHeight: "1.4"
+                    }
                   }}
                 >
                   {t(tokens.brands.ksurgery.benefits.description)}
@@ -265,7 +273,7 @@ const KsurgeryPage = (props) => {
                 <Box
                   component="ul"
                   sx={{
-                    fontSize: { xs: "0.75rem", md: "inherit" },
+                    fontSize: { xs: "0.75rem",sm:"0.875rem", md: "0.75rem" },
                     pl: 2,
                     m: 0,
                   }}

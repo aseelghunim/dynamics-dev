@@ -13,10 +13,10 @@ const ProductDetails = ({ products, collection }) => {
       {products?.map((product) => {
         return product.value === productTab ? (
           <Stack
-            direction={{ xs: "column", sm: "column", md: "row" }}
+            direction={{ xs: "column", sm: "row" }}
             sx={{
               height: { xs: "auto", sm: "auto", md: "50vh" },
-              gap: { xs: 2, sm: 2, md: 0 },
+              gap: { xs: 2, sm: 6, md: 0 },
             }}
           >
             <Box
@@ -26,7 +26,7 @@ const ProductDetails = ({ products, collection }) => {
                   sm: "100%",
                   md: "40%",
                 },
-                padding: { xs: 2, sm: 2, md: 3 },
+                padding: { xs: 2, sm: 0, md: 3 },
                 height: "fit-content",
                 overflow: "hidden",
                 wordWrap: "break-word",
@@ -43,10 +43,10 @@ const ProductDetails = ({ products, collection }) => {
                 <Stack spacing={1}>
                   <Typography
                     variant="h5"
-                    fontWeight="bold"
+                    fontWeight={{ xs: "bold", sm: "regular", md: "bold" }}
                     gutterBottom
                     sx={{
-                      fontSize: { xs: "1rem", md: "inherit" },
+                      fontSize: { xs: "1rem", sm: "0.875rem", md: "1rem" },
                     }}
                   >
                     {product.title}
@@ -56,7 +56,7 @@ const ProductDetails = ({ products, collection }) => {
                     color={theme.palette.primary.main}
                     gutterBottom
                     sx={{
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "13px", md: "0.875rem" },
                     }}
                   >
                     {product.subtitle}
@@ -66,14 +66,14 @@ const ProductDetails = ({ products, collection }) => {
                     component="div"
                     gutterBottom
                     sx={{
-                      fontSize: { xs: "0.75rem", md: "inherit" },
+                      fontSize: { xs: "0.75rem", sm: "13px", md: "0.75rem" },
                       ...(product.descriptionSx || {}),
                     }}
                   >
                     {product.description}
                   </Typography>
                 </Stack>
-                <Box sx={{ mt: { xs: "10px", md: "20px" } }}>
+                <Box sx={{ mt: { xs: "10px", sm: "20px" } }}>
                   <ul
                     style={{
                       margin: 0,
@@ -85,7 +85,7 @@ const ProductDetails = ({ products, collection }) => {
                         <li key={item}>
                           <Typography
                             sx={{
-                              fontSize: { xs: "0.75rem", md: "inherit" },
+                              fontSize: { xs: "0.75rem", sm: "13px", md: "0.75rem" },
                             }}
                           >
                             {item}{" "}
@@ -101,7 +101,7 @@ const ProductDetails = ({ products, collection }) => {
                     gutterBottom
                     sx={{
                       mt: 2,
-                      fontSize: { xs: "0.75rem", md: "inherit" },
+                      fontSize: { xs: "0.75rem", sm: "13px", md: "0.75rem" },
                     }}
                   >
                     {product.description2}
@@ -114,7 +114,7 @@ const ProductDetails = ({ products, collection }) => {
                 width: {
                   xs: "100%",
                   sm: "100%",
-                  md: "60%",
+                  sm: "60%",
                 },
                 display: "flex",
                 justifyContent: "center",
@@ -133,6 +133,9 @@ const ProductDetails = ({ products, collection }) => {
                     width: "100%",
                     maxWidth: "400px",
                     height: "auto",
+                    "@media(min-width: 768px) and (max-width: 991px)": {
+                      transform: "scale(1.5)"
+                    }
                   }}
                   alt="Product Image"
                 />
@@ -145,9 +148,12 @@ const ProductDetails = ({ products, collection }) => {
                       : "https://via.placeholder.com/250"
                   }
                   sx={{
-                    height: { xs: "300px", sm: "400px", md: "50vh" },
+                    height: { xs: "300px", sm: "auto", md: "50vh" },
                     width: "auto",
                     maxWidth: "100%",
+                    "@media(min-width: 768px) and (max-width: 991px)": {
+                      transform: "scale(1.5)"
+                    }
                   }}
                   alt="Product Image"
                 />
@@ -157,13 +163,20 @@ const ProductDetails = ({ products, collection }) => {
         ) : null;
       })}
 
-      <Stack alignItems={"center"} sx={{ mt: { xs: 2, md: 0 } }}>
+      <Stack alignItems={"center"} sx={{
+        mt: { xs: 2, sm:collection == '2'? 10:0,md:0 },
+
+      }}>
         <Stack
-          direction={{ xs: "column", md: "row" }}
+          direction={{ xs: "column", sm: "row" }}
           justifyContent={"space-around"}
-          spacing={{ xs: 1, md: 0 }}
+          spacing={{ xs: 1, sm: 0 }}
           sx={{
-            width: { xs: "100%", md: "50%" },
+            width: { xs: "100%",sm:collection == 1 ? "100%": "50%", md: "50%" },
+            "@media(min-width: 768px) and (max-width: 991px)": {
+              justifyContent: collection == '1' ? "center":"space-around",
+              columnGap: "12px"
+            }
           }}
         >
           {products.length > 1 &&
@@ -177,9 +190,16 @@ const ProductDetails = ({ products, collection }) => {
                     product.value === productTab ? "contained" : "outlined"
                   }
                   sx={{
-                    width: { xs: "100%", md: "auto" },
-                    fontSize: { xs: "0.75rem", md: "inherit" },
-                    py: { xs: 1, md: 1.5 },
+                    width: { xs: "100%", sm: "61px", md: "auto" },
+
+                    fontSize: { xs: "0.75rem", sm: "10px", md: "0.75rem" },
+                    py: { xs: 1, sm: 0, md: 1.5 },
+                    "@media(min-width: 768px) and (max-width: 991px)": {
+                      fontWeight: "medium",
+                      px: 0,
+                      height: "32px",
+                      borderRadius: "8px"
+                    }
                   }}
                 >
                   {product.buttonTitle}

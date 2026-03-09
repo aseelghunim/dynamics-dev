@@ -37,7 +37,7 @@ const MobileSectionHeader = ({ label }) => {
       sx={{
         bgcolor: "primary.main",
         color: "#fff",
-        borderRadius: { xs: "3px", md: 6 },
+        borderRadius: { xs: "3px", sm: 6 },
         px: 3,
         py: 2,
         width: "100%",
@@ -48,7 +48,7 @@ const MobileSectionHeader = ({ label }) => {
       <Typography
         sx={{
           fontWeight: 900,
-          fontSize: { xs: "1.5rem", md: "2.25rem" },
+          fontSize: { xs: "1.5rem", sm: "2.25rem" },
           lineHeight: 1,
         }}
       >
@@ -216,7 +216,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
   const [tabValue, setTabValue] = useState("face");
   const { t } = useTranslation();
   const theme = useTheme();
-  const mdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const smUp = useMediaQuery(theme.breakpoints.up("sm"));
 
   const tabs = [
     { value: "face", label: t(tokens.brands.our_collection.face) },
@@ -391,15 +391,22 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
     <Box
       maxWidth="xxl"
       sx={{
-        height: { xs: "auto", md: "80vh" },
-        minHeight: { xs: "400px", md: "80vh" },
-        backgroundColor: { xs: "#EEE8F5", md: "#fff" },
+        height: { xs: "auto", sm: "auto", md: "80vh" },
+        minHeight: { xs: "400px", sm: "unset", md: "80vh" },
+        backgroundColor: { xs: "#EEE8F5", sm: "#fff" },
       }}
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
-        <Container maxWidth="xl" sx={{ py: { xs: 1, md: 2 } }}>
+        <Container maxWidth="xl" sx={{
+          py: {
+            xs: 1, sm: 2,
+            "@media(min-width: 768px) and (max-width: 991px)": {
+              padding:"32px 88px 64px!important"
+            }
+          }
+        }}>
           {/* ✅ MOBILE: show Face section then Body section like screenshot */}
-          {!mdUp ? (
+          {!smUp ? (
             <MobileFaceBodyLayout
               collection={collection}
               faceProducts={faceShown}
@@ -409,16 +416,22 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
             />
           ) : (
             /* ✅ DESKTOP: keep your original code/behavior */
-            <Stack spacing={{ xs: 2, md: 5 }}>
+            <Stack spacing={{
+              xs: 2, sm: 5,
+              "@media(min-width: 768px) and (max-width: 991px)": {
+                padding: "32px"
+              }
+
+            }}>
               <Stack
-                direction={{ xs: "column", md: "row" }}
+                direction={{ xs: "column", sm: "row" }}
                 justifyContent={"center"}
-                sx={{ width: { xs: "100%", md: "auto" } }}
+                sx={{ width: { xs: "100%", sm: "auto" } }}
               >
                 <ButtonGroup
                   variant="contained"
-                  orientation={mdUp ? "horizontal" : "vertical"}
-                  sx={{ width: { xs: "100%", md: "auto" } }}
+                  orientation={smUp ? "horizontal" : "vertical"}
+                  sx={{ width: { xs: "100%", sm: "auto" } }}
                 >
                   {tabs.map((tab) => (
                     <Button
@@ -427,9 +440,14 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
                       color={tabValue === tab.value ? "primary" : "inherit"}
                       size="large"
                       sx={{
-                        width: { xs: "100%", md: "auto" },
-                        fontSize: { xs: "0.75rem", md: "inherit" },
-                        py: { xs: 1, md: 1.5 },
+                        width: { xs: "100%", sm: "auto" },
+                        fontSize: { xs: "0.75rem",sm:"10px", md: "0.75rem" },
+                        py: { xs: 1, sm: 1.5 },
+                        "@media(min-width: 768px) and (max-width: 991px)": {
+                          borderRadius:"8px",
+                          width:"53px",
+                          height:"32px"
+                        }
                       }}
                     >
                       {tab.label}

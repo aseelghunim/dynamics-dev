@@ -14,7 +14,7 @@
     }
     .text-holder p,.text-holder span{
         width: 60%;
-        text-align: start!important;
+        text-align: justify!important;
         margin-right: auto!important;
         font-size: 15px!important;
     }
