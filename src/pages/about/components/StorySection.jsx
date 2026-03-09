@@ -41,7 +41,7 @@ const TitleBox = ({
             sx={{
               padding: 0,
               width: { xs: "100%", sm: "85%" },
-              minHeight: { xs: "auto", sm: "310px", md: "660px" },
+              minHeight: { xs: "auto", sm: "350px", md: "660px" },
               display: "flex",
               boxSizing: "border-box",
             }}

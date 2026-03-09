@@ -9,11 +9,19 @@
         padding-right: 48px;
     }
 
+    .story-section-parent .first-stack {
+        padding-bottom: 0 !important;
+    }
+
+
+    .story-section-parent .first-stack h3 {
+        font-size: 1.25rem;
+    }
     .story-section-parent span,
     .story-section-parent p {
         text-align: justify !important;
         font-size: 13px;
-        line-height: 13.8px;
+        line-height: 1.4 !important;
     }
 
     .renee-story-1 p {
@@ -80,9 +88,117 @@
         font-size: 14px !important;
     }
 
-    .ksurgery-story-2 .image-box>div {
+    .ksurgery-story-2 .image-box>div,
+    .maili-story-section-2 .image-box>div,
+    .ellanse-story-section-2 .image-box>div {
         left: -56px !important;
     }
+
+    .lanluma-story-section-1 .first-stack,
+    .maili-story-section-1 .first-stack {
+
+        padding-right: 0 !important;
+    }
+
+    .lanluma-story-section-1 .min-height-controller,
+    .maili-story-section-1 .min-height-controller {
+        min-height: 350px;
+    }
+    .ellanse-story-section-2 .min-height-controller{
+        min-height: 400px!important;
+    }
+    .lanluma-story-section-1 {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* .lanluma-story-section-1, */
+    .lanluma-story-section-2,
+    .lanluma-story-section-3,
+    .maili-story-section-1,
+    .maili-story-section-2,
+    .ellanse-story-section-1,
+    .ellanse-story-section-2,
+    .ellanse-story-section-3,
+    .drcyj-story-section-1 {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 32px !important;
+    }
+
+
+    /* .maili-story-section-1,.maili-story-section-2{
+        padding-left: 24px;
+        padding-right: 24px;
+    } */
+
+    .lanluma-story-section-1 .first-stack,
+    .lanluma-story-section-2 .first-stack,
+    .ellanse-story-section-1 .first-stack,
+    .lanluma-story-section-3 .first-stack,
+
+    .maili-story-section-1 .first-stack {
+        padding-top: 48px;
+
+    }
+    .ellanse-story-section-3 .first-stack{
+        padding-top: 8px!important;
+        padding-right: 8px!important;
+    }
+    .story-section-parent h3 {
+        font-weight: 600 !important;
+        font-size: 1.25rem;
+
+    }
+
+    .story-section-parent .first-stack {
+        padding-bottom: 0 !important;
+    }
+
+    .lanluma-story-section-1 span,
+    .lanluma-story-section-2 span,
+    .lanluma-story-section-3 span,
+    .maili-story-section-1 span,
+    .ellanse-story-section-1 span,
+    .ellanse-story-section-2 span,
+    .ellanse-story-section-3 span,
+
+
+    .drcyj-story-section-1 span {
+        font-size: 14px !important;
+        line-height: 1.4;
+    }
+
+    .lanluma-story-section-2 .min-height-controller,
+    .maili-story-section-1 .min-height-controller,
+    .ellanse-story-section-2 .min-height-controller,
+    .ellanse-story-section-1 .min-height-controller,
+    .ellanse-story-section-3 .min-height-controller {
+        min-height: 350px;
+    }
+
+    .lanluma-story-section-2 .first-stack,
+    .maili-story-section-2 .first-stack,
+    .ellanse-story-section-2 .first-stack
+     {
+        padding-left: 0;
+    }
+
+    .lanluma-story-section-2 .image-box>div {
+        left: -55px;
+    }
+
+    .lanluma-story-section-3 .min-height-controller {
+        min-height: 350px;
+    }
+
+    .lanluma-story-section-3 .first-stack,
+    .ellanse-story-section-1 .first-stack
+    
+    {
+        padding-right: 0 !important;
+    }
+
 }
 
 @media(min-width: 768px) {
@@ -148,7 +264,7 @@
     }
 
     .renee-story-2 .image-box,
-    .ellanse-hero-image-1 .image-box,
+    .ellanse-story-section-1 .image-box,
     .lanluma-story-section-1 .image-box {
         display: none;
     }

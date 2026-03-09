@@ -1,37 +1,80 @@
-.dimono-image-hero-1::before,.lanluma-image-hero-1::before{
-    background-size: contain!important;
+.dimono-image-hero-1::before,
+.lanluma-image-hero-1::before {
+    background-size: contain !important;
 }
 
-@media(min-width: 768px) and (max-width: 991px){
-    .image-hero-parent{
-        padding-left: 64px!important;
-        padding-right: 64px!important;
+@media(min-width: 768px) and (max-width: 991px) {
+    .ellanse-logo{
+        width:211px;
+        height: 59px;
+        margin-right: auto !important;
+        margin-bottom: 0!important;
 
     }
-    .text-holder{
-        padding-left: 0!important;
-        text-align: start!important;
+    .image-hero-parent {
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+
     }
-    .text-holder p,.text-holder span{
+
+    .text-holder {
+        padding-left: 0 !important;
+        text-align: start !important;
+    }
+
+    .text-holder p,
+    .text-holder span {
         width: 60%;
-        text-align: justify!important;
-        margin-right: auto!important;
-        font-size: 15px!important;
+        text-align: justify !important;
+        margin-right: auto !important;
+        font-size: 15px !important;
     }
-    .drcyj-image-hero-1:before{
-        background-position: -260px 50px!important;
+
+    .drcyj-image-hero-1:before {
+        background-position: -260px 50px !important;
     }
-    .lensina-image-hero-2  p{
-        margin-top: 32px!important;
+
+    .lensina-image-hero-2 p {
+        margin-top: 32px !important;
     }
+
+    .lanluma-image-hero-1::before {
+        right: -232px !important;
+    }
+
+    .lanluma-image-hero-1 h3 {
+        font-size: 36px !important;
+    }
+
+    .lanluma-image-hero-1 span {
+        font-size: 18px !important;
+        width: 70% !important;
+    }
+    .maili-image-hero-1 h3{
+        font-size: 2rem;
+        margin-bottom: 8px!important;
+    }
+    .ellanse-hero-image-1 h3{
+        font-size: 29px!important;
+        font-weight: 400!important;
+    }
+    .ellanse-hero-image-1:before{
+        background-position: -100px!important;
+
+    }
+    .ellanse-hero-image-1 span{
+        margin-top: 27px!important;
+    }
+
 }
 
 
 
 @media(max-width: 767px) {
-    .ksurgery-image-hero{
+    .ksurgery-image-hero {
         height: 400px;
     }
+
     .ksurgery-image-hero:before {
         background-position: right !important;
         background-color: red
@@ -46,7 +89,8 @@
         font-weight: 600;
     }
 
-    .ksurgery-image-hero p, .juvelook-hero-1 p {
+    .ksurgery-image-hero p,
+    .juvelook-hero-1 p {
         text-align: left !important;
     }
 
@@ -58,75 +102,92 @@
         font-size: 14px !important;
     }
 
-    .juvelook-hero-1,.juvelook-hero-2,.leninsa-hero-1 {
+    .juvelook-hero-1,
+    .juvelook-hero-2,
+    .leninsa-hero-1 {
         height: 100vh !important;
     }
 
-   .leninsa-hero-1 .text-holder,.lensina-image-hero-2 .text-holder{
+    .leninsa-hero-1 .text-holder,
+    .lensina-image-hero-2 .text-holder {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
-    .leninsa-hero-1{
-        background-color: rgba(0,0,0,0.6);
+
+    .leninsa-hero-1 {
+        background-color: rgba(0, 0, 0, 0.6);
     }
-    .ellanse-hero-image-1:before{
-        background-image: none!important;
+
+    .ellanse-hero-image-1:before {
+        background-image: none !important;
     }
-    .ellanse-hero-image-1 svg{
-        margin-right: auto!important;
+
+    .ellanse-hero-image-1 svg {
+        margin-right: auto !important;
     }
+
     .ellanse-hero-image-1 {
-        height: auto!important;
-        padding: 16px 0!important;
+        height: auto !important;
+        padding: 16px 0 !important;
     }
-    .lanluma-image-hero-1{
-        background-image: none!important;
-        height: 100vh!important;
-        
-    }
-    .lanluma-image-hero-1::before{
-        background-image: url('assets/lanluma/3.png')!important;
-        transform: none!important;
-           filter: brightness(50%);
-           background-position: 30%!important;
-           background-size: cover !important;
+
+    .lanluma-image-hero-1 {
+        background-image: none !important;
+        height: 100vh !important;
 
     }
-    .lanluma-image-hero-1 h3{
-        margin-top: 17vh!important;
-        font-size: 2.25rem!important;
-        font-weight: 400!important;
+
+    .lanluma-image-hero-1::before {
+        background-image: url('assets/lanluma/3.png') !important;
+        transform: none !important;
+        filter: brightness(50%);
+        background-position: 30% !important;
+        background-size: cover !important;
+
     }
-    .lanluma-image-hero-1 h3, .lanluma-image-hero-1 span{
+
+    .lanluma-image-hero-1 h3 {
+        margin-top: 17vh !important;
+        font-size: 2.25rem !important;
+        font-weight: 400 !important;
+    }
+
+    .lanluma-image-hero-1 h3,
+    .lanluma-image-hero-1 span {
         color: white;
     }
-    .lanluma-image-hero-1 span{
 
-        font-size: 1.125rem!important;
+    .lanluma-image-hero-1 span {
+
+        font-size: 1.125rem !important;
     }
 
 
-    .maili-image-hero-1{
-        height: 70vh!important;
+    .maili-image-hero-1 {
+        height: 70vh !important;
     }
-    .text-holder{
-        padding: 32px!important;
+
+    .text-holder {
+        padding: 32px !important;
     }
-    .maili-image-hero-1:before{
-        background-image: url('assets/maili/1.png')!important;
-        background-size: cover!important;
+
+    .maili-image-hero-1:before {
+        background-image: url('assets/maili/1.png') !important;
+        background-size: cover !important;
         filter: brightness(50%);
         background-position: center left !important;
-        transform: none!important;
+        transform: none !important;
 
     }
-    .maili-image-hero-1 h3{
+
+    .maili-image-hero-1 h3 {
         /* margin-top: 40px!important; */
     }
-    .dimono-image-hero-1{
-        height: 90vh!important;
-        background-image: url('assets/dimono/mobile-img-hero-bg.svg')!important;
+
+    .dimono-image-hero-1 {
+        height: 90vh !important;
+        background-image: url('assets/dimono/mobile-img-hero-bg.svg') !important;
 
 
         background-position: right bottom !important;
@@ -135,37 +196,55 @@
         z-index: 9;
         /* filter: grayscale(0.1); */
     }
-    .dimono-image-hero-1:before{
-        background-image: none!important;
+
+    .dimono-image-hero-1:before {
+        background-image: none !important;
         /* background-color: #E5E5E5; */
 
     }
-    .juvelook-hero-2 h2, .dimono-image-hero-1 h3,.drcyj-image-hero-1 h3,.lanluma-image-hero-1 h3,.lensina-image-hero-2 h2,.lensina-image-hero-1 h2, .juvelook-hero-1 h2{
-        margin-bottom: 60px!important;
+
+    .juvelook-hero-2 h2,
+    .dimono-image-hero-1 h3,
+    .drcyj-image-hero-1 h3,
+    .lanluma-image-hero-1 h3,
+    .lensina-image-hero-2 h2,
+    .lensina-image-hero-1 h2,
+    .juvelook-hero-1 h2 {
+        margin-bottom: 60px !important;
         margin-top: 17vh !important;
         font-size: 2.25rem;
-        font-weight: 400!important;
+        font-weight: 400 !important;
 
     }
-    .juvelook-hero-2 p,  .dimono-image-hero-1 span,.drcyj-image-hero-1 span,.lensina-image-hero-2 span, .juvelook-hero-1 p{
+
+    .juvelook-hero-2 p,
+    .dimono-image-hero-1 span,
+    .drcyj-image-hero-1 span,
+    .lensina-image-hero-2 span,
+    .juvelook-hero-1 p {
         font-size: 18px;
 
     }
-    .drcyj-image-hero-1{
-        height: 100vh!important;
+
+    .drcyj-image-hero-1 {
+        height: 100vh !important;
         /* background-color: red; */
         background-color: rgba(0, 0, 0, 0.9);
     }
-    .drcyj-image-hero-1:before{
-        background-position: 70%!important;
-        background-size: cover!important;
+
+    .drcyj-image-hero-1:before {
+        background-position: 70% !important;
+        background-size: cover !important;
         filter: brightness(50%);
 
     }
-    .drcyj-image-hero-1 span,.drcyj-image-hero-1 h3{
-        color:white!important;
+
+    .drcyj-image-hero-1 span,
+    .drcyj-image-hero-1 h3 {
+        color: white !important;
     }
-    .drcyj-image-hero-1:after{
+
+    .drcyj-image-hero-1:after {
         content: "";
         position: absolute;
         left: 0;
@@ -174,7 +253,8 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.3);
     }
-    .lensina-image-hero-2{
-        height: 100vh!important;
+
+    .lensina-image-hero-2 {
+        height: 100vh !important;
     }
 }

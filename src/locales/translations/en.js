@@ -576,8 +576,9 @@ export const en = {
 
 
 
-  [tokens.brands.ellanse.box2p1]:
-    "Where others’ benefits end at correcting lines and folds, Ellansé goes beyond, goes deeper, working to treat the true causes of facial ageing. While it instantly addresses lines and wrinkles, it also uses your body’s natural processes to set in motion long-term collagen production, safely restoring volume, rejuvenating your appearance from within.",
+  [tokens.brands.ellanse.box2p1]: "Ellansé goes beyond correcting lines and wrinkles by addressing the root causes of facial ageing. It delivers immediate results while stimulating your body’s natural collagen production to restore volume and rejuvenate the face from within. Ellansé is indicated for long-lasting correction of facial volume loss through subdermal facial implantation.",
+
+    // "Where others’ benefits end at correcting lines and folds, Ellansé goes beyond, goes deeper, working to treat the true causes of facial ageing. While it instantly addresses lines and wrinkles, it also uses your body’s natural processes to set in motion long-term collagen production, safely restoring volume, rejuvenating your appearance from within.",
   [tokens.brands.ellanse.box2p2]:
     "Ellansé is indicated for the lasting correction of facial volume loss and for subdermal implantation in the face.",
 

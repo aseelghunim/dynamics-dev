@@ -1,13 +1,10 @@
+@media (min-screen: 992px){
+    .general-shared-section{
+        padding-top: 88px!important;
+        padding-bottom: 88px!important;
+    }
+}
 
-.general-shared-section{
-    padding-top: 88px!important;
-    padding-bottom: 88px!important;
-}
-/* .ksurgery-shared-section h2{
-width: 95px;
-}
-.ksurgery-shared-section-2 h2{
-    max-width: 185px!important; */
 
 
 @media(min-width: 768px) and (max-width: 991px){

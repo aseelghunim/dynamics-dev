@@ -22,7 +22,7 @@ const NewCommitmentBanner = () => {
 
   return (
     <Box
-    className="general-shared-section"
+      className="general-shared-section"
       sx={{
         background: "linear-gradient(to right, #6bb6b6, #a9e0eb)",
         color: "white",
@@ -36,12 +36,14 @@ const NewCommitmentBanner = () => {
             direction={{ xs: "column", sm: "row" }}
             justifyContent="center"
             alignItems="center"
-            spacing={{ xs: 2, sm: 5 }}
+            spacing={{ xs: 2,sm:"25px", md: 5 }}
             divider={
               <Divider
                 orientation={issmUp ? "vertical" : "horizontal"}
                 flexItem
-                sx={{ borderColor: "rgba(255,255,255,0.6)" }}
+                sx={{ borderColor: "rgba(255,255,255,0.6)",
+                
+              }}
               />
             }
             sx={{
@@ -57,11 +59,11 @@ const NewCommitmentBanner = () => {
                 sx={{
                   textAlign: { xs: "center", sm: "left" },
                   lineHeight: 1.05,
-                  
+
                   "@media (max-width: 767px)": {
                     fontSize: "2.25rem",
                   },
-                  " @media(min-width: 768px) and (max-width: 991px)":{
+                  " @media(min-width: 768px) and (max-width: 991px)": {
                     fontSize: "2rem"
                   }
                 }}
@@ -87,11 +89,14 @@ const NewCommitmentBanner = () => {
                 letterSpacing: "0.02em",
                 lineHeight: 1.4,
                 maxWidth: { xs: 520, sm: "none" },
+                marginLeft:"25px!important",
                 "@media (max-width: 767px)": {
                   fontSize: "0.95rem",
                 },
                 " @media(min-width: 768px) and (max-width: 991px)": {
                   fontSize: "0.875rem",
+              
+
                 },
               }}
             >

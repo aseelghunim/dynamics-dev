@@ -30,7 +30,7 @@ const EllansePage = (props) => {
   useScrollToTop();
 
   // ✅ detect mobile
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
     <>
@@ -47,7 +47,7 @@ const EllansePage = (props) => {
         <Box maxWidth="xxl" sx={{ backgroundColor: { xs: "#E0FFF5", md: "#fff" } }}>
           <Container maxWidth="xxl">
             <StorySection
-              name="ellanse-hero-image-1"
+              name="ellanse-story-section-1"
               backgroundColor={{ xs: "#E0FFF5", md: "#fff" }}
               backImage={background_green}
               title={t(tokens.brands.ellanse.whatIs)}
@@ -188,6 +188,7 @@ const EllansePage = (props) => {
 
               ) : (
                 <svg
+                className="ellanse-logo"
                   style={{ marginBottom: "24px" }}
                   width="243"
                   height="68"
@@ -246,7 +247,7 @@ const EllansePage = (props) => {
                   variant="h3"
                   sx={{
                     fontSize: { xs: "1.25rem", md: "1.5rem" },
-                    color: { xs: "white", md: "black" },
+                    color: { xs: "white", sm: "black" },
                   }}
                 >
                   {t(tokens.brands.ellanse.productoverviewTitle)}
@@ -256,8 +257,8 @@ const EllansePage = (props) => {
                   variant="body"
                   sx={{
                     fontSize: { xs: "0.875rem", md: "inherit" },
-                    color: { xs: "white", md: "black" },
-                    width: { xs: "100%", md: "80%" },
+                    color: { xs: "white", sm: "black" },
+                    width: { xs: "100%", sm: "80%" },
                   }}
                 >
                   {t(tokens.brands.ellanse.productoverviewDesc)}

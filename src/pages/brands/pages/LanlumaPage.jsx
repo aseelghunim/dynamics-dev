@@ -12,7 +12,7 @@ import video2 from "assets/lanluma/video2.mp4";
 import { Typography } from "@mui/material";
 import background_green from "assets/dynamics-gradient-green.png";
 import background_purple from "assets/gradient.png";
-
+import bgStoryOne from 'assets/lanluma/story-section-1-bg-desktop.svg'
 import { usePageView } from "hooks/use-page-view";
 import useScrollToTop from "hooks/useScrollToTop";
 import { ImageHero } from "layout/components/ImageHero";
@@ -41,7 +41,7 @@ const LanlumaPage = (props) => {
           actionPath="#"
         />
         <Box maxWidth="xxl" sx={{ backgroundColor: "#FFFFFF", }}>
-          <Container maxWidth="xxl" sx={{ padding: { xs: "0", md: "1rem" } }}>
+          <Container maxWidth="xxl" sx={{ padding: { xs: "0", sm: "1rem" } }}>
             <StorySection
               name="lanluma-story-section-1"
               backgroundColor="#FFFFFF"
@@ -49,7 +49,8 @@ const LanlumaPage = (props) => {
 
               title={t(tokens.brands.lanluma.whatIs)}
               paragraph={t(tokens.brands.lanluma.whatIsDescription)}
-              passedVideo={video2}
+              // passedVideo={video2}
+              passedImage={bgStoryOne}
               hideAction
               paragraphSx={{
                 textAlign: "justify",
@@ -63,7 +64,7 @@ const LanlumaPage = (props) => {
                   <Typography
                     variant="h3"
                     sx={{
-                      fontSize: { xs: "1.5rem", md: "inherit" },
+                      fontSize: { xs: "1.5rem",sm:"1.25rem", md: "1.5rem" },
                     }}
                   >
                     {t(tokens.brands.lanluma.whatIs)}
@@ -76,16 +77,16 @@ const LanlumaPage = (props) => {
                       wordSpacing: "0.15em",
                       letterSpacing: "0.02em",
                       lineHeight: 1.7,
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "inherit" },
                     }}
                   >
                     {t(tokens.brands.lanluma.whatIsDescription)}
                   </Typography>
-                  <Box sx={{ height: { xs: "2px", md: "5px" } }} />
+                  <Box sx={{ height: { xs: "2px", sm: "5px" } }} />
                   <Typography
                     variant="h4"
                     sx={{
-                      fontSize: { xs: "1.25rem", md: "inherit" },
+                      fontSize: { xs: "1.25rem", sm: "inherit" },
                     }}
                   >
                     {/* {t(tokens.brands.ellanse.box2Title)} */}
@@ -96,8 +97,8 @@ const LanlumaPage = (props) => {
                   </p>
                   {/* <ul
                     sx={{
-                      mt: { xs: 2, md: "160px" },
-                      fontSize: { xs: "0.75rem", md: "inherit" },
+                      mt: { xs: 2, sm: "160px" },
+                      fontSize: { xs: "0.75rem", sm: "inherit" },
                     }}
                   >
                     <li>{t(tokens.brands.ksurgery.keyBenefit1)}</li>
@@ -110,11 +111,11 @@ const LanlumaPage = (props) => {
           </Container>
         </Box>
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: { xs: "#EEE8F5", md: "#fff" } }}>
+        <Box maxWidth="xxl" sx={{ backgroundColor: { xs: "#EEE8F5", sm: "#fff" } }}>
           <Container maxWidth="xxl">
             <StorySection
               name="lanluma-story-section-2"
-              backgroundColor={{ xs: "#EEE8F5", md: "#fff" }}
+              backgroundColor={{ xs: "#EEE8F5", sm: "#fff" }}
               reverse={true}
               title={t(tokens.brands.lanluma.box2Title)}
               paragraph={t(tokens.brands.lanluma.box2p1)}
@@ -134,7 +135,7 @@ const LanlumaPage = (props) => {
                   <Typography
                     variant="h3"
                     sx={{
-                      fontSize: { xs: "1.5rem", md: "inherit" },
+                      fontSize: {  xs: "1.5rem",sm:"1.25rem", md: "1.5rem" },
                     }}
                   >
                     {t(tokens.brands.lanluma.box2Title)}
@@ -142,7 +143,7 @@ const LanlumaPage = (props) => {
                   <Typography
                     variant="body"
                     sx={{
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "inherit" },
                     }}
                   >
                     {t(tokens.brands.lanluma.box2p1)}
@@ -188,7 +189,7 @@ const LanlumaPage = (props) => {
                 <Typography
                   variant="h3"
                   sx={{
-                    fontSize: { xs: "1.5rem", md: "inherit" },
+                    fontSize: { xs: "1.5rem", sm: "inherit" },
                     color: "black"
                   }}
                 >
@@ -197,9 +198,9 @@ const LanlumaPage = (props) => {
                 <Typography
                   variant="body"
                   sx={{
-                    fontSize: { xs: "0.875rem", md: "inherit" },
+                    fontSize: { xs: "0.875rem", sm: "inherit" },
                     color: "black",
-                    width: { xs: "100%", md: "80%" }
+                    width: { xs: "100%", sm: "80%" }
 
                   }}
                 >
@@ -209,7 +210,7 @@ const LanlumaPage = (props) => {
                   variant="body2"
                   sx={{
                     textAlign: "justify",
-                    fontSize: { xs: "0.875rem", md: "inherit" },
+                    fontSize: { xs: "0.875rem", sm: "inherit" },
                   }}
                 >
                   {t(tokens.brands.ksurgery.benefits.description)}
@@ -217,7 +218,7 @@ const LanlumaPage = (props) => {
                 {/* <Box
                   component="ul"
                   sx={{
-                    fontSize: { xs: "0.75rem", md: "inherit" },
+                    fontSize: { xs: "0.75rem", sm: "inherit" },
                     pl: 2,
                     m: 0,
                   }}
@@ -261,7 +262,7 @@ const LanlumaPage = (props) => {
                   <Typography
                     variant="h3"
                     sx={{
-                      fontSize: { xs: "1.5rem", md: "inherit" },
+                      fontSize: { xs: "1.5rem", sm: "inherit" },
                     }}
                   >
                     {/* {t(tokens.brands.ellanse.box2Title)} */}
@@ -269,7 +270,7 @@ const LanlumaPage = (props) => {
                   <Typography
                     variant="body"
                     sx={{
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "inherit" },
                     }}
                   >
                     {t(tokens.brands.lanluma.box3p1)}

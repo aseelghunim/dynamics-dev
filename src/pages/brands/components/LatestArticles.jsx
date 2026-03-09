@@ -110,7 +110,7 @@ export default function LatestArticles(props) {
     };
 
     const HeadingBlock = () => (
-        <Box sx={{ pt: { xs: 0, md: 2 },  }}>
+        <Box sx={{ pt: { xs: 0, sm: 2 },  }}>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2,  }}>
                 <Box
                     sx={{
@@ -120,7 +120,7 @@ export default function LatestArticles(props) {
                         bgcolor: "#012169",
                         opacity: 0.6,
                         flexShrink: 0,
-                        marginLeft:{xs: "1rem", md:"unset"},
+                        marginLeft:{xs: "1rem", sm:"unset"},
 
                     }}
                 />
@@ -128,10 +128,10 @@ export default function LatestArticles(props) {
                     sx={{
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        fontSize: 12,
+                        fontSize: {xs:12,sm:10, md:12},
                         color: "#012169",
                         opacity: 0.85,
-                        marginLeft:{xs: "1rem", md:"unset"},
+                        marginLeft:{xs: "1rem", sm:"unset"},
 
                     }}
                 >
@@ -146,9 +146,9 @@ export default function LatestArticles(props) {
                     fontWeight: 500,
                     color: "#012169",
                     lineHeight: 1.05,
-                    fontSize: { xs: "1.6rem", md: "inherit" },
+                    fontSize: { xs: "1.6rem",sm:"1rem", md: "1.6rem" },
                    
-                    marginLeft:{xs: "1rem", md:"unset"},
+                    marginLeft:{xs: "1rem", sm:"unset"},
                 }}
             >
                 {t(`brands.${page}.articles.subtitle`)}
@@ -160,7 +160,8 @@ export default function LatestArticles(props) {
         <Box
             sx={{
                 bgcolor: "#fff",
-                height: "462px",
+                height: {xs:"462px",sm:285,md:462},
+                // 285,
                 overflow: "hidden",
                 boxShadow: "0 1px 0 rgba(0,0,0,0.06)",
             }}
@@ -171,16 +172,16 @@ export default function LatestArticles(props) {
                 alt={a.title}
                 sx={{
                     width: "100%",
-                    height: 260,
+                    height: {xs:260,sm:150,md:260},
                     objectFit: "cover",
                     display: "block",
                 }}
             />
 
-            <Box sx={{ p: 3 }}>
+            <Box sx={{ p: {xs:3,sm:1,md:3}, pt:{xs:3,sm:2,md:3} }}>
                 <Typography
                     sx={{
-                        fontSize: 16,
+                        fontSize: {xs:16,sm:9,md:16},
                         fontWeight: 500,
                         color: "#1F2A44",
                         mb: 1.25,
@@ -191,7 +192,8 @@ export default function LatestArticles(props) {
 
                 <Typography
                     sx={{
-                        fontSize: 12.5,
+                       
+                        fontSize: {xs: 12.5,sm:8,md: 12.5},
                         lineHeight: 1.6,
                         color: "#1F2A44",
                         opacity: 0.7,
@@ -204,17 +206,17 @@ export default function LatestArticles(props) {
     );
 
     return (
-        <Box component="section" sx={{ bgcolor:page == 'lanluma'? '#EEE8F5': "#E0FFF5", py: { xs: 6, md: 10 } }}>
+        <Box component="section" sx={{ bgcolor:page == 'lanluma'? '#EEE8F5': "#E0FFF5", py: { xs: 6, sm: 10 } }}>
             {/* Desktop / Tablet: unchanged */}
             {!isMobile ? (
                 <Box
                     sx={{
                         maxWidth: 1200,
                         mx: "auto",
-                        px: { xs: 3, md: 6 },
+                        px: { xs: 3, sm: 6 },
                         display: "grid",
-                        gridTemplateColumns: { xs: "1fr", md: "320px 1fr" },
-                        gap: { xs: 4, md: 2 },
+                        gridTemplateColumns: { xs: "1fr", sm: "180px 1fr" },
+                        gap: { xs: 4, sm: 2 },
                         alignItems: "start",
                     }}
                 >
@@ -224,7 +226,7 @@ export default function LatestArticles(props) {
                         sx={{
                             display: "grid",
                             gridTemplateColumns: { xs: "1fr", sm: "repeat(3, 1fr)" },
-                            gap: { xs: 1, md: 2 },
+                            gap: { xs: 1,sm:"12px", md: 2 },
                         }}
                     >
                         {articles.map((a) => (
