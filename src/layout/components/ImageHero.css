@@ -65,7 +65,18 @@
     .ellanse-hero-image-1 span{
         margin-top: 27px!important;
     }
-
+    .dimono-image-hero-1{
+        background-position: -25px 100px;
+    background-repeat: no-repeat;
+    }
+    .dimono-image-hero-1::before{
+        background-size: 50% !important;
+        background-position: 0 110px !important;
+    }
+    .dimono-image-hero-1 h3{
+        font-size: 2rem;
+        font-weight: 400;
+    }
 }
 
 

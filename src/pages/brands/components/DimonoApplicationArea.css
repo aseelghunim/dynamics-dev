@@ -1,3 +1,9 @@
+@media(min-width: 768px) and (max-width: 991px){
+    .dimono-logo img {
+        width: 142px;
+    }
+}
+
 @media(max-width:767px) {
     .dimono-area {
 margin-bottom: 30px;

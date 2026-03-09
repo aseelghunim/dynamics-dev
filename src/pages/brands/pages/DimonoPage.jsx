@@ -40,11 +40,11 @@ const DimonoPage = (props) => {
           videoSrc={video1}
           actionPath="#"
         />
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#FFFFFF" }}>
+        <Box maxWidth="xxl" sx={{ backgroundColor: {xs:"#fff",sm:"#E0FFF5",md:"#fff"} }}>
           <Container maxWidth="xxl">
             <StorySection
               name='dimono-story-section-1'
-              backgroundColor={{ xs: "transparent", md: "#fff" }}
+              backgroundColor={{ xs: "transparent",sm:"#E0FFF5", md: "#fff" }}
               backImage={background_green}
 
               title={t(tokens.brands.ellanse.whatIs)}

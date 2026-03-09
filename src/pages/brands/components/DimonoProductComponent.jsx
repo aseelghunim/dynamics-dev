@@ -10,7 +10,7 @@ import './DimonoProductComponent.css'
 const DimonoProductComponent = () => {
   const { t } = useTranslation();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const product = {
     img: product1,
@@ -71,8 +71,9 @@ const DimonoProductComponent = () => {
 
   return (
     <Box
+    className="dimono-product-component"
       sx={{
-        p: { xs: 2, md: "2rem" },
+        p: { xs: 2, sm: "2rem" },
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
@@ -85,6 +86,7 @@ const DimonoProductComponent = () => {
             {/* Header row: logo + title */}
             <Stack direction="column" spacing={1.5} alignItems="left">
               <Box
+                className="product-logo"
                 component="img"
                 src={productLogo}
                 alt="Dimono logo"
@@ -144,32 +146,34 @@ const DimonoProductComponent = () => {
           /* ✅ DESKTOP (your existing 3-column layout) */
           <Grid container alignItems="center" spacing={4}>
             {/* LEFT */}
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} sm={4.5} md={4}>
               <Box>
                 <Typography
                   variant="h5"
-                  sx={{ color: "#092BAF", fontWeight: 600, fontSize: "1.5rem" }}
+                  sx={{ color: "#19254F", fontWeight: 600, fontSize: { xs: "1.5rem", sm: "10px", md: "1.5rem" } }}
                 >
                   {product.title}
                 </Typography>
 
                 <Typography
                   variant="body1"
-                  sx={{ color: "#797979", fontSize: "0.875rem", mt: 0.5, mb: 3 }}
+                  sx={{ color: "#797979", fontSize: { xs: "0.875rem", sm: "10px", md: "0.875rem" }, mt: 0.5, mb: 3 }}
                 >
                   {product.subtitle}
                 </Typography>
 
                 <Typography
                   variant="h6"
-                  sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}
+                  sx={{ color: "#000", fontWeight: 400, fontSize: { xs: "1.25rem", sm: "10px", md: "1.25rem" }, mb: 1.5 }}
                 >
                   {product.featuresTitle}
                 </Typography>
 
                 <Box component="ul" sx={{ pl: 2, color: "#000", m: 0 }}>
                   {product.features.map((it) => (
-                    <li key={it}>{it}</li>
+                    <li key={it} sx={{ 
+                      
+                     }}>{it}</li>
                   ))}
                 </Box>
 
@@ -178,7 +182,7 @@ const DimonoProductComponent = () => {
                   sx={{
                     color: "#000",
                     fontWeight: 400,
-                    fontSize: "1.25rem",
+                    fontSize: { xs: "1.25rem", sm: "10px", md: "1.25rem" },
                     mt: 3,
                     mb: 1.5,
                   }}
@@ -195,7 +199,7 @@ const DimonoProductComponent = () => {
             </Grid>
 
             {/* CENTER IMAGE */}
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} sm={3} md={4}>
               <Box sx={{ textAlign: "center" }}>
                 <Box
                   component="img"
@@ -213,7 +217,7 @@ const DimonoProductComponent = () => {
             </Grid>
 
             {/* RIGHT */}
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} sm={4.5} md={3}>
               <Box>
                 <Typography
                   variant="h6"

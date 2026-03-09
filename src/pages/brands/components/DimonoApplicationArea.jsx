@@ -51,13 +51,13 @@ const DimonoApplicationArea = ({
   };
 
   return (
-    <Box className="dimono-area" sx={{ width: "100%", mt:{xs: "50px",md:"0"} } }>
+    <Box className="dimono-area" sx={{ width: "100%", mt: { xs: "50px", sm: "0" } }}>
       <Box
         sx={{
           position: "relative",
           width: "100%",
           overflow: "hidden",
-          borderRadius: { xs: 0, md: 0 },
+          borderRadius: { xs: 0, sm: 0 },
         }}
       >
         {/* Base image */}
@@ -69,7 +69,7 @@ const DimonoApplicationArea = ({
           sx={{
             display: "block",
             width: "100%",
-            height: { xs: "90vh", md: "auto" },
+            height: { xs: "90vh", sm: "auto" },
             objectFit: "cover",
           }}
         />
@@ -78,11 +78,10 @@ const DimonoApplicationArea = ({
           <>
             {/* Title / Logo */}
             <Box
-            className='dimono-logo'
+              className='dimono-logo'
               sx={{
-                
                 position: "absolute",
-                top: { xs: 40, md: 40 },
+                top: { xs: 40, sm: 40 },
                 left: 0,
                 right: 0,
                 textAlign: "center",
@@ -95,9 +94,10 @@ const DimonoApplicationArea = ({
                 sx={{
                   color: "#111",
                   fontWeight: 600,
-                  fontSize: { xs: 12, md: 16 },
-                  mt: { xs: 0.5, md: 0.75 },
+                  fontSize: { xs: 12, sm: 16 },
+                  mt: { xs: 0.5, sm: 0.75 },
                   opacity: 0.9,
+                  display:{xs:"block",sm:"none", md:"block"}
                 }}
               >
                 {t(tokens.brands?.dimono?.applicationArea?.subtitle) || "Application Area"}
@@ -105,7 +105,7 @@ const DimonoApplicationArea = ({
             </Box>
 
             {/* ── MOBILE: overlay labels directly on image ── */}
-            <Box sx={{ display: { xs: "block", md: "none"} }}>
+            <Box sx={{ display: { xs: "block", sm: "none" } }}>
               {allItems.map((it) => {
                 const pos = mobileLabelPositions[it.n];
                 if (!pos) return null;
@@ -131,38 +131,39 @@ const DimonoApplicationArea = ({
             </Box>
 
             {/* ── DESKTOP: original left/right column layout ── */}
-            <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {/* Left list */}
               <Box
                 sx={{
                   position: "absolute",
-                  top: "33%",
-                  left: 190,
+                  top: {sm:"30%",md:"33%"},
+                  left: {sm:0,md:190},
                   display: "flex",
                   flexDirection: "column",
-                  gap: "38px",
+                  gap: {sm:"17px",md:"38px"},
+
                   width: 260,
                 }}
               >
                 {leftItems.map((it) => (
-                  <Box key={it.n} sx={{ display: "flex", direction: "rtl", alignItems: "center", gap: 3 }}>
+                  <Box key={it.n} sx={{ display: "flex", direction: "rtl", alignItems: "center", gap:  {sm:1,md:3} }}>
                     <Box
                       sx={{
-                        width: 26,
-                        height: 26,
+                        width: {sm:15,md:26},
+                        height: {sm:15,md:26},
                         borderRadius: "50%",
                         bgcolor: "#fff",
                         color: "#111",
                         display: "grid",
                         placeItems: "center",
                         fontWeight: 800,
-                        fontSize: 12,
+                        fontSize: {sm:7,md:12},
                         flex: "0 0 auto",
                       }}
                     >
                       {it.n}
                     </Box>
-                    <Typography sx={{ color: "#111", fontSize: 14, lineHeight: 1.2 }}>
+                    <Typography sx={{ color: "#111", fontSize: {sm:7,md:14} , lineHeight: 1.2 }}>
                       {it.label}
                     </Typography>
                   </Box>
@@ -173,33 +174,34 @@ const DimonoApplicationArea = ({
               <Box
                 sx={{
                   position: "absolute",
-                  top: "33%",
-                  right: 190,
+                  top: {sm:"30%",md:"33%"},
+
+                  right: {sm:0,md:190},
                   display: "flex",
                   flexDirection: "column",
-                  gap: "38px",
+                  gap: {sm:"17px",md:"38px"},
                   width: 270,
                 }}
               >
                 {rightItems.slice(0, 4).map((it) => (
-                  <Box key={it.n} sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+                  <Box key={it.n} sx={{ display: "flex", alignItems: "center", gap: {sm:1,md:3} }}>
                     <Box
                       sx={{
-                        width: 26,
-                        height: 26,
+                        width: {sm:15,md:26},
+                        height: {sm:15,md:26},
                         borderRadius: "50%",
                         bgcolor: "#fff",
                         color: "#111",
                         display: "grid",
                         placeItems: "center",
                         fontWeight: 800,
-                        fontSize: 12,
+                        fontSize: {sm:7,md:12},
                         flex: "0 0 auto",
                       }}
                     >
                       {it.n}
                     </Box>
-                    <Typography sx={{ color: "#111", fontSize: 14, lineHeight: 1.2 }}>
+                    <Typography sx={{ color: "#111", fontSize: {sm:7,md:14}, lineHeight: 1.2 }}>
                       {it.label}
                     </Typography>
                   </Box>
@@ -210,7 +212,7 @@ const DimonoApplicationArea = ({
               <Box
                 sx={{
                   position: "absolute",
-                  right: 150,
+                  right: {sm:120, md:150},
                   top: "80%",
                   display: "flex",
                   alignItems: "center",
@@ -219,8 +221,8 @@ const DimonoApplicationArea = ({
               >
                 <Box
                   sx={{
-                    width: 40,
-                    height: 40,
+                    width:  {sm:15,md:40},
+                    height: {sm:15,md:40},
                     borderRadius: "50%",
                     bgcolor: "#fff",
                     display: "grid",
@@ -228,9 +230,14 @@ const DimonoApplicationArea = ({
                     boxShadow: "0 10px 22px rgba(0,0,0,0.12)",
                   }}
                 >
-                  <ArrowForwardRoundedIcon sx={{ color: "#6aaee5" }} />
+                  <ArrowForwardRoundedIcon sx={{ color: "#6aaee5",
+                    "@media (min-width: 768px) and (max-width: 991px)": {
+                      fontSize: "9px",
+                    },
+                
+                }} />
                 </Box>
-                <Typography sx={{ color: "#111", fontSize: 14, fontWeight: 600, whiteSpace: "nowrap" }}>
+                <Typography sx={{ color: "#111", fontSize: {sm:7,md:14}, fontWeight: 600, whiteSpace: "nowrap" }}>
                   {rightItems.find((x) => x.n === 10)?.label || "Hand rejuvenation"}
                 </Typography>
               </Box>

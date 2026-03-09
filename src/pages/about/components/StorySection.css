@@ -120,12 +120,18 @@
     .ellanse-story-section-1,
     .ellanse-story-section-2,
     .ellanse-story-section-3,
-    .drcyj-story-section-1 {
+    .renee-story-1,
+    .drcyj-story-section-1 ,
+    .dimono-story-section-1 
+    
+    {
         padding-left: 16px;
         padding-right: 16px;
         padding-top: 32px !important;
     }
-
+.renee-story-2{
+    padding: 40px!important;
+}
 
     /* .maili-story-section-1,.maili-story-section-2{
         padding-left: 24px;
@@ -193,7 +199,8 @@
     }
 
     .lanluma-story-section-3 .first-stack,
-    .ellanse-story-section-1 .first-stack
+    .ellanse-story-section-1 .first-stack,
+    .dimono-story-section-1 .first-stack
     
     {
         padding-right: 0 !important;

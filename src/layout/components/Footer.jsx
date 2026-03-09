@@ -32,7 +32,7 @@ export const Footer = () => {
   return (
     <Box
       sx={{
-        bgcolor: { xs: "#fff", sm: "#f5f3f8" },
+        bgcolor:"#fff",
         pt: { xs: 3, sm: 2 },
     
       }}
