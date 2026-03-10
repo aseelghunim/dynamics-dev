@@ -67,6 +67,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             <QuoteTypography
               variant="h6"
               sx={{
+                fontSize:"15px!important",
                 display: { xs: "none", sm: "flex" },
                 mb: {xs: "16px !important",md: "unset" }
               }}
@@ -76,6 +77,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             <Typography
               variant="h5"
               sx={{
+                fontSize:{xs:"24px",sm:"20px"},
                 "@media (max-width: 767px)": {
                   fontSize: "1.5rem",
                   marginTop: "0!important"
@@ -88,8 +90,9 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
               variant="body2"
               sx={{
                 textAlign: "justify",
+                fontSize:{xs:"18px",sm:"15px"},
                 "@media (max-width: 767px)": {
-                  fontSize: "1.125rem",
+                
                   textAlign: "left",
 
                 },

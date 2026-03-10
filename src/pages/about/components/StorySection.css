@@ -1,3 +1,86 @@
+@media(min-width: 992px) {
+    .story-section-parent .min-height-controller {
+        min-height: 440px;
+    }
+
+    .story-section-parent .first-stack {
+        padding-bottom: 0 !important;
+        padding-top: 75px !important;
+    }
+
+    .ellanse-story-section-3 .first-stack {
+        padding-top: 35px !important;
+    }
+
+    .renee-story-1 .min-height-controller {
+        min-height: 430px !important;
+    }
+    .story-section-parent.drcyj-story-1 .min-height-controller{
+        min-height: 447px!important;
+    }
+    .ksurgery-story-2 .min-height-controller,
+    .story-section-parent.ellanse-story-section-2 .min-height-controller {
+        min-height: 435px !important;
+    }
+
+    .story-section-parent.ksurgery-story-2 .first-stack,
+
+    .story-section-parent.ellanse-story-section-2 .first-stack,
+    .story-section-parent.lanluma-story-section-2 .first-stack,
+    .story-section-parent.maili-story-section-2 .first-stack {
+
+
+
+        padding-left: 0 !important;
+    }
+
+    .story-section-parent.dimono-story-2 .first-stack {
+        padding-right: 0 !important;
+    }
+
+    .story-section-parent.ellanse-story-section-1 span,
+    .story-section-parent.ellanse-story-section-2 span,
+    .story-section-parent.ellanse-story-section-3 span {
+        font-size: 18px !important;
+
+    }
+
+    .story-section-parent.renee-story-1 .first-stack {
+        padding-top: 48px !important;
+        padding-left: 84px !important;
+        padding-right: 56px !important;
+    }
+
+    .story-section-parent.renee-story-2 .first-stack {
+        padding-top: 70px !important;
+    }
+
+
+    .story-section-parent.ellanse-story-section-1 .first-stack {
+        padding-left: 88px;
+
+    }
+
+    .story-section-parent.ellanse-story-section-3 .min-height-controller {
+        min-height: 440px !important;
+    }
+
+
+
+
+    .story-section-parent .min-height-controller h3 {
+        font-size: 24px;
+    }
+
+    .story-section-parent .min-height-controller h3+p,
+    .story-section-parent .min-height-controller h3+span {
+        font-size: 18px;
+        line-height: 1.4;
+        text-align: justify;
+
+    }
+}
+
 @media(min-width: 768px) and (max-width: 991px) {
 
     .story-section-parent>div {
@@ -17,6 +100,7 @@
     .story-section-parent .first-stack h3 {
         font-size: 1.25rem;
     }
+
     .story-section-parent span,
     .story-section-parent p {
         text-align: justify !important;
@@ -102,11 +186,13 @@
 
     .lanluma-story-section-1 .min-height-controller,
     .maili-story-section-1 .min-height-controller {
-        min-height: 350px;
+        min-height: 350px !important;
     }
-    .ellanse-story-section-2 .min-height-controller{
-        min-height: 400px!important;
+
+    .ellanse-story-section-2 .min-height-controller {
+        min-height: 400px !important;
     }
+
     .lanluma-story-section-1 {
         padding-left: 24px;
         padding-right: 24px;
@@ -121,17 +207,16 @@
     .ellanse-story-section-2,
     .ellanse-story-section-3,
     .renee-story-1,
-    .drcyj-story-section-1 ,
-    .dimono-story-section-1 
-    
-    {
+    .drcyj-story-section-1,
+    .dimono-story-section-1 {
         padding-left: 16px;
         padding-right: 16px;
         padding-top: 32px !important;
     }
-.renee-story-2{
-    padding: 40px!important;
-}
+
+    .renee-story-2 {
+        padding: 40px !important;
+    }
 
     /* .maili-story-section-1,.maili-story-section-2{
         padding-left: 24px;
@@ -147,10 +232,12 @@
         padding-top: 48px;
 
     }
-    .ellanse-story-section-3 .first-stack{
-        padding-top: 8px!important;
-        padding-right: 8px!important;
+
+    .ellanse-story-section-3 .first-stack {
+        padding-top: 8px !important;
+        padding-right: 8px !important;
     }
+
     .story-section-parent h3 {
         font-weight: 600 !important;
         font-size: 1.25rem;
@@ -180,13 +267,12 @@
     .ellanse-story-section-2 .min-height-controller,
     .ellanse-story-section-1 .min-height-controller,
     .ellanse-story-section-3 .min-height-controller {
-        min-height: 350px;
+        min-height: 350px !important;
     }
 
     .lanluma-story-section-2 .first-stack,
     .maili-story-section-2 .first-stack,
-    .ellanse-story-section-2 .first-stack
-     {
+    .ellanse-story-section-2 .first-stack {
         padding-left: 0;
     }
 
@@ -195,14 +281,12 @@
     }
 
     .lanluma-story-section-3 .min-height-controller {
-        min-height: 350px;
+        min-height: 350px !important;
     }
 
     .lanluma-story-section-3 .first-stack,
     .ellanse-story-section-1 .first-stack,
-    .dimono-story-section-1 .first-stack
-    
-    {
+    .dimono-story-section-1 .first-stack {
         padding-right: 0 !important;
     }
 

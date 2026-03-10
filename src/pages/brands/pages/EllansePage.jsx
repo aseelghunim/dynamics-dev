@@ -21,7 +21,7 @@ import StorySection from "pages/about/components/StorySection";
 import { useTranslation } from "react-i18next";
 import KsurgeryProductComponent from "../components/KsurgeryProductComponent";
 import LatestArticles from "../components/LatestArticles";
-
+import './EllansePage.css'
 
 const EllansePage = (props) => {
   const { t } = useTranslation();
@@ -189,7 +189,10 @@ const EllansePage = (props) => {
               ) : (
                 <svg
                 className="ellanse-logo"
-                  style={{ marginBottom: "24px" }}
+                  style={{ 
+                    marginBottom: "24px",
+                   
+                 }}
                   width="243"
                   height="68"
                   viewBox="0 0 243 68"
@@ -246,7 +249,7 @@ const EllansePage = (props) => {
                 <Typography
                   variant="h3"
                   sx={{
-                    fontSize: { xs: "1.25rem", md: "1.5rem" },
+                    fontSize: { xs: "1.25rem", md: "2.25rem" },
                     color: { xs: "white", sm: "black" },
                   }}
                 >
@@ -256,7 +259,7 @@ const EllansePage = (props) => {
                 <Typography
                   variant="body"
                   sx={{
-                    fontSize: { xs: "0.875rem", md: "inherit" },
+                    fontSize: { xs: "0.875rem", md: "18px" },
                     color: { xs: "white", sm: "black" },
                     width: { xs: "100%", sm: "80%" },
                   }}

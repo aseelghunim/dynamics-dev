@@ -34,6 +34,7 @@ const TitleBox = ({
       >
         <Stack direction="row" justifyContent="center" sx={{ width: "100%" }}>
           <Box
+          class="dual-section-min-height-controller"
             sx={{
               width: { xs: "100%", sm: "80%" },
               minHeight: { sm:"330px",md: "500px" },
@@ -49,9 +50,9 @@ const TitleBox = ({
               sx={{
                 height: "100%",
                 width: "100%",
-                px: { xs: 4,sm:0, md: 6 },
+                px: { xs: 4,sm:4, md: 6 },
                 py: { xs: 4, md: 8 },
-                pt: { xs: 4,sm:4, md: 18 },
+                pt: { xs: 4,sm:4, md: 8 },
                 textAlign: "left",
               }}
             >
@@ -72,12 +73,13 @@ const TitleBox = ({
                     variant="h3"
                     sx={{
                       pt: { xs: 0, sm: 2 },
-                      "@media (min-width:768px) and (max-width:991px)": {
-                        fontSize: "1.25rem",
-                      },
-                      "@media (max-width:767px)":{
-                        fontSize: "1.5rem",
-                      }
+                      fontSize:{xs:"1.5rem",sm:"1.25rem",md:"1.5rem"}
+                      // "@media (min-width:768px) and (max-width:991px)": {
+                      //   fontSize: "1.25rem",
+                      // },
+                      // "@media (max-width:767px)":{
+                      //   fontSize: "1.5rem",
+                      // }
                     }}
                   >
                     {title}

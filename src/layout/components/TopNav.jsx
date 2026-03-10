@@ -478,7 +478,7 @@ export const TopNav = (props) => {
                 >
                   <Typography
                     sx={{
-                      fontSize: 18,
+                      fontSize: {sm:"14px",md:"15px"},
                       fontWeight: 400,
                       color: "#1D1D1D",
                       width: "100%",
@@ -506,7 +506,7 @@ export const TopNav = (props) => {
                 >
                   <Typography
                     sx={{
-                      fontSize: 18,
+                      fontSize: {sm:"14px",md:"15px"},
                       fontWeight: 400,
                       color: "#1D1D1D",
                       width: "100%",
@@ -535,7 +535,7 @@ export const TopNav = (props) => {
                   >
                     <Typography
                       sx={{
-                        fontSize: 18,
+                        fontSize: {sm:"14px",md:"15px"},
                         fontWeight: 400,
                         color: "#1D1D1D",
                         width: "100%",
@@ -594,7 +594,7 @@ export const TopNav = (props) => {
                 >
                   <Typography
                     sx={{
-                      fontSize: 18,
+                      fontSize: {sm:"14px",md:"15px"},
                       fontWeight: 400,
                       color: "#1D1D1D",
                       width: "100%",

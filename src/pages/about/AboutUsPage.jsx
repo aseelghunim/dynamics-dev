@@ -1,12 +1,13 @@
-import { Box, Container, Grid, Stack } from "@mui/system";
+import { Box, Container, Grid, Stack, useMediaQuery } from "@mui/system";
 import { usePageView } from "hooks/use-page-view";
 import { Seo } from "layout/components/Seo";
 import { tokens } from "locales/tokens";
 import { useTranslation } from "react-i18next";
 import { AboutUsHero } from "./components/AboutUsHero";
 import ValuesBanner from "./components/ValuesBanner";
-import product from "assets/about.svg";
+import product from "assets/about-hero-image-girl.png";
 import productRtl from "assets/aboutRtl.png";
+import productBg from "assets/about-hero-image-bg.svg"
 
 import background_dark from "assets/dynamics-gradient-dark.png";
 import background_green from "assets/dynamics-gradient-green.png";
@@ -25,14 +26,15 @@ const AboutUsPage = (props) => {
   useScrollToTop();
   const theme = useTheme();
   const isRtl = theme.direction === "rtl";
-
+  const isTablet = useMediaQuery("(max-width: 991px)");
+  const isMobile = useMediaQuery('(max-width: 767px)');
   return (
     <>
       <Seo />
       <main>
         <AboutUsHero />
         <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5", p: { xs: 0, sm: "0", md: 0 } }}>
-          <Container maxWidth="xxl">
+          <Container maxWidth="xxl" >
             <DualSection
               name='about-us-page-dual-section-1'
               reverse={true}
@@ -61,28 +63,46 @@ const AboutUsPage = (props) => {
           <Container
             maxWidth="xxl"
             sx={{
-              display: { xs: 'none', sm: "block" },
-              backgroundImage: `url(${isRtl ? productRtl : product})`,
-              backgroundSize: { xs: "cover", sm: "cover", },
+              display: "block",
+              backgroundImage: `url(${productBg})`,
+              backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: { xs: "center center", sm: "top center" },
               position: "relative",
               height: "100%",
 
-              paddingTop: { xs: 2,sm:2, md: 5 },
+              paddingTop: { xs: 2, sm: 2, md: 5 },
               paddingBottom: { xs: 2, sm: 2, md: 0 },
+
+              "::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                right: 0,
+                width: "100%",
+                height: "100%",
+                backgroundImage: `url(${product})`,
+                // backgroundSize: "50%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: isTablet ? "50%" : "contain",
+                backgroundPosition: "right bottom",
+                transform: isRtl ? "scaleX(-1)" : "none",
+                zIndex: 0,
+                display: isMobile ? 'none' : 'block'
+              },
               "@media (max-width: 991px)": {
                 width: "100vw",
                 maxWidth: "100%",
                 marginLeft: 0,
                 marginRight: 0,
+
               },
             }}
           >
             <Box maxWidth="xxl">
               <Container maxWidth="xxl" sx={{
 
-                "@media (min-width: 768px) and (max-width:991px)": {
+                "@media (max-width:991px)": {
                   paddingRight: "0!important",
                   paddingLeft: "0!important"
                 }
@@ -91,7 +111,7 @@ const AboutUsPage = (props) => {
                   container
                   spacing={2}
                   alignItems="stretch"
-                  sx={{ padding: { xs: 2, sm: 5 } }}
+                  sx={{ padding: { xs: 0, sm: 5 } }}
                 >
                   <Grid size={{ xs: 12, }}>
                     <Box
@@ -106,7 +126,7 @@ const AboutUsPage = (props) => {
                         <Box
                           sx={{
                             width: { xs: "100%", },
-                            minHeight: { xs: "auto", md: "500px" },
+                            minHeight: { xs: "auto", sm: "auto", md: "400px" },
                             display: "flex",
                           }}
                         >
@@ -132,7 +152,7 @@ const AboutUsPage = (props) => {
                               <Box
                                 maxWidth="xxl"
                                 sx={{
-                                  height: { xs: "auto",  },
+                                  height: { xs: "auto", },
                                   width: "100%",
                                 }}
                               >
@@ -164,9 +184,10 @@ const AboutUsPage = (props) => {
                                     variant="h2"
 
                                     sx={{
+
                                       fontSize: "2.5rem",
                                       "@media (max-width: 991px)": {
-                                        fontSize: "1.5rem!important",
+                                        fontSize: "1.25rem!important",
                                       },
                                     }}
                                   >
@@ -179,7 +200,7 @@ const AboutUsPage = (props) => {
                                       whiteSpace: "normal",
                                       wordBreak: "break-word",
                                       fontSize: "1.125rem!important",
-                                      width: {xs:"100%",sm:"60%"},
+                                      width: { xs: "100%", sm: "60%" },
                                       "@media (max-width: 991px)": {
                                         fontSize: "0.875rem!important",
                                         lineHeight: 1.6,
@@ -195,15 +216,16 @@ const AboutUsPage = (props) => {
                                       sx={{
                                         color: "white",
                                         borderColor: "white",
-                                        height: { xs: "50px", sm: "45px", md: "65px" },
-                                        width: { xs: "100%", sm: "175px" },
-                                        marginTop:"60px!important",
+                                        height: { xs: "41px", sm: "45px", md: "41px" },
+                                        width: {  xs: "175px" },
+                                        marginTop: "60px!important",
+                                        borderRadius: "8px",
 
-                                      // "@media (min-width: 768px) and (max-width:991px)": {
-                                      // },
+                                        // "@media (min-width: 768px) and (max-width:991px)": {
+                                        // },
                                         "@media (max-width: 991px)": {
                                           fontSize: "0.75rem",
-                                          marginTop:"24px!important",
+                                          marginTop: "24px!important",
 
                                         },
                                         "&:hover": {

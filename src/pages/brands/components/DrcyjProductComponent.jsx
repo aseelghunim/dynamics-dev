@@ -223,7 +223,7 @@ const DrcyjProductComponent = () => {
                   sx={{
                     maxWidth: "100%",
                     height: "auto",
-                    width: { xs: "70%", sm: "70%", md: "90%" },
+                    width: { xs: "70%", sm: "70%", md: "70%" },
                     mt: 0,
                   }}
                 />

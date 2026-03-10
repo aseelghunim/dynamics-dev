@@ -71,7 +71,10 @@ const ReneePage = (props) => {
                 title={t(tokens.brands.renee.keyBenefits)}
                 paragraph={
                   <>
-                    <ul>
+                    <ul style={{
+                      paddingLeft: 0,
+                      width: "70%"
+                    }}>
                       <li>{t(tokens.brands.renee.keyBenefit1)}</li>
                       <li>{t(tokens.brands.renee.keyBenefit2)}</li>
                       <li>{t(tokens.brands.renee.keyBenefit3)}</li>

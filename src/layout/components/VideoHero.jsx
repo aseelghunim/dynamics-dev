@@ -15,8 +15,11 @@ import './VideoHero.css'
 const heroButton = {
   color: "white",
   borderColor: "white",
-  height: { xs: "50px", md: "65px" },
-  width: { xs: "100%",sm:"250px", md: "281px" },
+  height: { xs: "35px", sm: "46px" },
+  fontSize:"18px",
+  width: { xs: "213px",sm:"250px" },
+  borderRadius:"8px!important",
+  backgroundColor: "rgba(255,255,255,0.2)",
   "&:hover": {
     borderColor: "white",
     color: "#ab92e1",
@@ -168,13 +171,13 @@ export const VideoHero = ({
       />
 
       {/* Scroll Down Button */}
-      <IconButton
+      {/* <IconButton
         onClick={handleScrollDown}
         sx={scrollButtonStyle}
         aria-label="Scroll down"
       >
         <ArrowDownwardIcon sx={{ fontSize: { xs: "20px", md: "32px" } }} />
-      </IconButton>
+      </IconButton> */}
 
       {/* Video Background */}
       <video
@@ -237,7 +240,7 @@ export const VideoHero = ({
                 <StyledTypography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "2.25rem",sm:"2.5rem", md: "3rem" },
+                    fontSize: { xs: "2.25rem",sm:"2.5rem", md: "2.5rem" },
 
                     textAlign: { xs: "center", sm: "left", md:"inherit" }
                   }}
@@ -268,9 +271,8 @@ export const VideoHero = ({
                 wordWrap: "break-word",
                 overflowWrap: "break-word",
                 textAlign: { xs: "center",sm:"start", md: "justify"},
-                "@media (max-width: 991px)": {
-                  fontSize: "1.125rem",
-                },
+                fontSize: "1.125rem!important",
+
               }}
             >
               {description}

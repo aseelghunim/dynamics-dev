@@ -26,24 +26,30 @@ const NewCommitmentBanner = () => {
       sx={{
         background: "linear-gradient(to right, #6bb6b6, #a9e0eb)",
         color: "white",
-        py: { xs: 4, sm: 4 },
+        py: { xs: 4, sm: 4,md:9 },
         px: { xs: 4, sm: 3 },
       }}
     >
-      <Section height={issmUp ? "auto" : "auto"}>
-        <Stack sx={{ minHeight: { xs: "auto", sm: "auto" } }} justifyContent="center">
+      <Section height={issmUp ? "auto" : "auto"} >
+        <Stack sx={{
+          minHeight: { xs: "auto", sm: "auto" },
+          width: { xs: "100%", md: "75%" },
+          margin: { xs: "0", md: "0 auto!important" }
+        }}
+          justifyContent="center">
           <Stack
             direction={{ xs: "column", sm: "row" }}
             justifyContent="center"
             alignItems="center"
-            spacing={{ xs: 2,sm:"25px", md: 5 }}
+            spacing={{ xs: 2, sm: "25px", md: "21px" }}
             divider={
               <Divider
                 orientation={issmUp ? "vertical" : "horizontal"}
                 flexItem
-                sx={{ borderColor: "rgba(255,255,255,0.6)",
-                
-              }}
+                sx={{
+                  borderColor: "rgba(255,255,255,0.6)",
+
+                }}
               />
             }
             sx={{
@@ -59,13 +65,8 @@ const NewCommitmentBanner = () => {
                 sx={{
                   textAlign: { xs: "center", sm: "left" },
                   lineHeight: 1.05,
+                  fontSize: { xs: "2.25rem", sm: "2rem", md: "2.5rem" }
 
-                  "@media (max-width: 767px)": {
-                    fontSize: "2.25rem",
-                  },
-                  " @media(min-width: 768px) and (max-width: 991px)": {
-                    fontSize: "2rem"
-                  }
                 }}
               >
                 {isEn ? (
@@ -87,17 +88,11 @@ const NewCommitmentBanner = () => {
                 textJustify: { sm: "inter-word" },
                 wordSpacing: { sm: "0.15em" },
                 letterSpacing: "0.02em",
-                lineHeight: 1.4,
+                lineHeight: 1.35,
                 maxWidth: { xs: 520, sm: "none" },
-                marginLeft:"25px!important",
-                "@media (max-width: 767px)": {
-                  fontSize: "0.95rem",
-                },
-                " @media(min-width: 768px) and (max-width: 991px)": {
-                  fontSize: "0.875rem",
-              
+                // marginLeft:"25px!important",
+                fontSize: { xs: "18px", sm: "14px", md: "18px" }
 
-                },
               }}
             >
               {t(tokens.commitment.paragraph)}

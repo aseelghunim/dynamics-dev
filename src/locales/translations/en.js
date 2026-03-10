@@ -688,9 +688,10 @@ export const en = {
 
   // dimono
 
-  [tokens.brands.dimono.title]: "Dimono",
+  [tokens.brands.dimono.title]: "CG Dimono PTx",
   [tokens.brands.dimono.subtitle]: "Experience Dimono",
-  [tokens.brands.dimono.description]: "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",
+  [tokens.brands.dimono.description]:"An advanced dermal filler designed to smooth expression lines, restore facial volume, and enhance overall skin quality.",
+  //  "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",
   [tokens.brands.dimono.description2]: "Our advanced injectable formulation is designed to improve skin quality from within, target-ing fine lines, texture irregularities, and early signs of aging. By supporting collagen stimulation and long-term dermal renewal, Dimono delivers balanced, natural-looking results with a focus on skin strength, elasticity, and refinement.",
 
   [tokens.brands.dimono.whatIs]: "What is Dimono?",

@@ -81,19 +81,8 @@ const DimonoPage = (props) => {
                   >
                     {t(tokens.brands.dimono.whatIsDescription)}
                   </Typography>
-                  <Box sx={{ height: { xs: "2px", md: "5px" } }} />
-                  <Typography
-                    variant="h4"
-                    sx={{
-                      fontSize: { xs: "1.25rem", md: "inherit" },
-                    }}
-                  >
-                    {/* {t(tokens.brands.ellanse.box2Title)} */}
-                  </Typography>
-                  <p>
-                    {/* {t(tokens.brands.ellanse.box1Description)} */}
-
-                  </p>
+                
+              
                   {/* <ul
                     sx={{
                       mt: { xs: 2, md: "160px" },

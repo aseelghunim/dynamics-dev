@@ -59,7 +59,7 @@ const ValuesBanner = (props) => {
         sx={{
           position: "relative",
           height: "100%",
-          padding: { xs: 0, sm: 5 },
+          padding: { xs: 0, sm: 5,md:3 },
           paddingTop: { xs: 0,sm:2, md: 5 },
           margin: 0,
         }}

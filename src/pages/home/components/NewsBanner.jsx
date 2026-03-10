@@ -102,6 +102,8 @@ const NewsBanner = () => {
           gutterBottom
           variant="body2"
           component="div"
+          fontSize="0.875rem!important"
+          fontWeight={600}
           sx={{ "@media (max-width: 991px)": { fontSize: "0.875rem" } }}
         >
           {item.title}
