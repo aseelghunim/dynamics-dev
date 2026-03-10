@@ -90,18 +90,7 @@ const DimonoApplicationArea = ({
             >
               <img src={logo} alt="Dimono Logo"
               />
-              <Typography
-                sx={{
-                  color: "#111",
-                  fontWeight: 600,
-                  fontSize: { xs: 12, sm: 16 },
-                  mt: { xs: 0.5, sm: 0.75 },
-                  opacity: 0.9,
-                  display:{xs:"block",sm:"none", md:"block"}
-                }}
-              >
-                {t(tokens.brands?.dimono?.applicationArea?.subtitle) || "Application Area"}
-              </Typography>
+            
             </Box>
 
             {/* ── MOBILE: overlay labels directly on image ── */}

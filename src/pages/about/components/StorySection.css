@@ -34,10 +34,27 @@
         padding-left: 0 !important;
     }
 
+    html[dir='rtl']  .story-section-parent.ksurgery-story-2 .first-stack,
+
+   html[dir='rtl'] .story-section-parent.ellanse-story-section-2 .first-stack,
+   html[dir='rtl'] .story-section-parent.lanluma-story-section-2 .first-stack,
+   html[dir='rtl'] .story-section-parent.maili-story-section-2 .first-stack {
+
+
+
+        padding-right: 0 !important;
+        padding-left: 96px!important;
+    }
+
+
+
     .story-section-parent.dimono-story-2 .first-stack {
         padding-right: 0 !important;
     }
-
+   html[dir='rtl'] .story-section-parent.dimono-story-2 .first-stack {
+        padding-right: 96px !important;
+        padding-left: 0!important;
+    }
     .story-section-parent.ellanse-story-section-1 span,
     .story-section-parent.ellanse-story-section-2 span,
     .story-section-parent.ellanse-story-section-3 span {

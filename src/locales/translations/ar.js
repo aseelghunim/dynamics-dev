@@ -44,39 +44,39 @@ export const ar = {
   [tokens.about.page.values.title]: "قيمنا",
   [tokens.about.page.values.value2.title]: "الشفافية",
   [tokens.about.page.values.value2.paragraph]:
-   
-  
-  "نؤمن بالتواصل المفتوح والوضوح في جميع تعاملاتنا، مما يعزز بيئة من الثقة والتفاهم المتبادل.",
-  
-  
+
+
+    "نؤمن بالتواصل المفتوح والوضوح في جميع تعاملاتنا، مما يعزز بيئة من الثقة والتفاهم المتبادل.",
+
+
   [tokens.about.page.values.value3.title]: "الأخلاق",
   [tokens.about.page.values.value3.paragraph]:
     " نلتزم بمبادئ أخلاقية قوية، مع ضمان أن تكون ممارساتنا التجارية عادلة ومسؤولة ومحترمة لجميع أصحاب المصلحة.",
-  
-  
-    [tokens.about.page.values.value5.title]: "المسؤولية",
+
+
+  [tokens.about.page.values.value5.title]: "المسؤولية",
   [tokens.about.page.values.value5.paragraph]:
-  
-  
-  "نتحمل مسؤولية أفعالنا وقراراتنا، ونحاسب أنفسنا أمام عملائنا وشركائنا وبعضنا البعض.",
+
+
+    "نتحمل مسؤولية أفعالنا وقراراتنا، ونحاسب أنفسنا أمام عملائنا وشركائنا وبعضنا البعض.",
   [tokens.about.page.values.value1.title]: "الجودة",
   [tokens.about.page.values.value1.paragraph]:
-  
-  
-  "نحن ملتزمون بتقديم منتجات وخدمات من الدرجة الأولى، مع ضمان أن كل جانب من جوانب عروضنا يلبي أو يتجاوز معايير الصناعة.",
+
+
+    "نحن ملتزمون بتقديم منتجات وخدمات من الدرجة الأولى، مع ضمان أن كل جانب من جوانب عروضنا يلبي أو يتجاوز معايير الصناعة.",
   [tokens.about.page.values.value4.title]: "النزاهة",
   [tokens.about.page.values.value4.paragraph]:
-   
-  
-  "نمارس أعمالنا بصدق وشفافية، مع الحفاظ على المعايير الأخلاقية وبناء الثقة مع شركائنا وعملائنا.",
+
+
+    "نمارس أعمالنا بصدق وشفافية، مع الحفاظ على المعايير الأخلاقية وبناء الثقة مع شركائنا وعملائنا.",
   [tokens.about.page.values.value6.title]: "لتميز  في الأعمال",
   [tokens.about.page.values.value6.paragraph]:
-   
-  
-  " نسعى جاهدين لتحقيق أعلى المعايير في جميع عملياتنا، مع التحسين المستمر لعملياتنا وخدماتنا لتقديم نتائج استثنائية لعملائنا.",
+
+
+    " نسعى جاهدين لتحقيق أعلى المعايير في جميع عملياتنا، مع التحسين المستمر لعملياتنا وخدماتنا لتقديم نتائج استثنائية لعملائنا.",
   [tokens.about.page.product.title]: "الالتزام بالتميز",
   [tokens.about.page.product.subtitle]: "خبرة عالمية، لمسة محلية",
-  
+
   [tokens.about.page.product
     .paragraph]: `ينعكس سعينا نحو التميز في اختيارنا الدقيق للمنتجات، ومعرفة فريقنا من الخبراء، والتزامنا بالبقاء في طليعة التطورات الصناعية. نحن نؤمن بأن التميز الحقيقي لا يكمن فقط فيما نفعله، بل في كيفية قيامنا به - بشغف ونزاهة وتركيز لا هوادة فيه على تحقيق أفضل النتائج الممكنة لعملائنا.`,
   [tokens.about.page.paragraph]: "تمكين الجمال، إلهام الثقة",
@@ -507,4 +507,264 @@ export const ar = {
   [tokens.terms.page.contact.title]: "معلومات الاتصال",
   [tokens.terms.page.contact.content]:
     "إذا كان لديكم أي أسئلة حول هذه الشروط والأحكام، يرجى التواصل معنا على Info@dynainv.com أو من خلال نموذج الاتصال الخاص بنا.",
-};
+
+
+  // drcyj
+
+  [tokens.brands.drcyj.title]: "د. ﺳﻲ واي ﺟﺎي",
+  [tokens.brands.drcyj.subtitle]: "اكتشف د. سي واي جاي",
+  [tokens.brands.drcyj.description]: "الجيل الجديد من الفيلرز الديناميكية والعملية.حل متطور لإعادة حيوية الشعر فيلر للشعر مصمم سريريًا لدعم صحة فروة الرأس، وتنشيط بصيلات الشعر، والمساعدة في تقليل ترقق الشعر للحصول على شعر أقوى وأكثر صحة بشكل ملحوظ.",
+  // "The New Generation of Dynamic and Practical Fillers Advanced Hair Revitalizing Solution. A clinically designed hair filler formulated to support scalp health, activate hair follicles, and help reduce hair thinning for visibly stronger, healthier-looking hair.",
+  [tokens.brands.drcyj.description2]:"يجمع علاج فيلر الشعر المتخصص لدينا بين حمض الهيالورونيك ومركّب قوي من الببتيدات لدعم صحة فروة الرأس وتحفيز نشاط بصيلات الشعر. ويتم حقنه مباشرة في فروة الرأس، حيث يساعد د. سي واي جاي على تقليل تساقط الشعر، وتحسين كثافة الشعر، وتعزيز نمو شعر أكثر صحة.",
+
+  [tokens.brands.drcyj.whatIs]: "ما هو د. ﺳﻲ واي ﺟﺎي؟",
+  [tokens.brands.drcyj.whatIsDescription]: "يُعدّ مُكثّف الشعر من دكتور سي واي جيه علاجًا مبتكرًا لفروة الرأس، مُصمّمًا لتجديد بصيلات الشعر الضعيفة أو الخاملة، ودعم نمو شعر صحي. تساعد تركيبته المتطورة من الببتيدات على تحسين الدورة الدموية الدقيقة في فروة الرأس، والحدّ من تساقط الشعر المفرط، وتعزيز حيوية الشعر بشكل عام. طُوّر هذا المنتج للأفراد الذين يبحثون عن تحسينات آمنة وفعّالة وملحوظة مع فترة نقاهة قصيرة.",
+  // "DR.CYJ Hair Filler is an innovative scalp treatment designed to rejuvenate weak or dormant hair follicles and support healthier hair growth. Its advanced peptide formula helps improve microcirculation in the scalp, reduce excessive hair fall, and enhance the overall vitality of the hair. Developed for individuals seeking safe, effective, and noticeable improvements with minimal downtime.",
+
+
+  // drcyj (Shape 2)
+  [tokens.brands.drcyj.product.title]: "فيلر شعر د. سي واي جي",
+  [tokens.brands.drcyj.product.subtitle]:"علاج لتجديد فروة الرأس لشعر أقوى وأكثر صحة",
+
+  // Section titles
+  [tokens.brands.drcyj.product.featuresTitle]: "مميزات المنتج",
+  [tokens.brands.drcyj.product.treatmentTitle]: "العلاج",
+  [tokens.brands.drcyj.product.keyBenefitsTitle]: "الفوائد الرئيسية",
+  [tokens.brands.drcyj.product.functionTitle]: "الوظيفة",
+
+  // Product Features list
+  [tokens.brands.drcyj.product.features[0]]: "تركيبة تحتوي على مركبات ببتيدية متقدمة",
+  [tokens.brands.drcyj.product.features[1]]: "يستهدف البصيلات الضعيفة أو المجهدة أو التي تعاني من الترقق",
+  [tokens.brands.drcyj.product.features[2]]:
+    "يدعم تحسين الدورة الدموية الدقيقة في فروة الرأس",
+  [tokens.brands.drcyj.product.features[3]]: "يساعد على استعادة كثافة الشعر وحيويته",
+
+
+
+
+
+  
+  // // Treatment list
+  [tokens.brands.drcyj.product.treatmentItems[0]]: "يُطبّق مباشرة على فروة الرأس",
+  [tokens.brands.drcyj.product.treatmentItems[1]]: "يُوصى به كخطة علاج تعتمد على الجلسات",
+  [tokens.brands.drcyj.product.treatmentItems[2]]: "فترة تعافٍ قصيرة مع عملية تطبيق مريحة",
+
+
+
+
+  // // Key Benefits list
+  [tokens.brands.drcyj.product.keyBenefitsItems[0]]: "يدعم شعراً أكثر صحة وقوة",
+  [tokens.brands.drcyj.product.keyBenefitsItems[1]]: "يساعد في تقليل ترقق الشعر والتساقط المفرط",
+  [tokens.brands.drcyj.product.keyBenefitsItems[2]]: "يعزز استعادة كثافة الشعر",
+  [tokens.brands.drcyj.product.keyBenefitsItems[3]]:
+    "مناسب للرجال والنساء الذين يعانون من بداية تساقط الشعر المبكر",
+
+
+
+  // // Function list
+  [tokens.brands.drcyj.product.functionItems[0]]: "يحفّز تدفق الدم في فروة الرأس",
+  [tokens.brands.drcyj.product.functionItems[1]]: "ينشّط بصيلات الشعر الخاملة",
+  [tokens.brands.drcyj.product.functionItems[2]]: "يساعد على تقليل تساقط الشعر",
+  [tokens.brands.drcyj.product.functionItems[3]]: "يعزز إعادة نمو الشعر بشكل طبيعي",
+
+
+
+  [tokens.brands.drcyj.productoverviewTitle]:
+    "كيف يعمل؟",
+  [tokens.brands.drcyj.productoverviewDesc]:"تستقر تركيبة د. سي واي جي خفيفة الوزن داخل أنسجة فروة الرأس، مما يسمح للببتيدات بالانتشار تدريجيًا عبر منطقة العلاج. يساعد هذا البطيء على توفير بيئة صحية حول بصيلات الشعر ويساهم في الحفاظ على حالة مثالية لفروة الرأس مع مرور الوقت.",
+
+
+    // dimono
+
+    [tokens.brands.dimono.title]: "سي جي ديمونو بي تي إكس",
+    [tokens.brands.dimono.subtitle]: "اكتشف ديمونو",
+    [tokens.brands.dimono.description]:"فيلر جلدي متطور مصمم لتنعيم خطوط التعبير، واستعادة حجم الوجه، وتعزيز جودة البشرة بشكل عام.",
+    // "An advanced dermal filler designed to smooth expression lines, restore facial volume, and enhance overall skin quality.",
+    //  "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",
+    [tokens.brands.dimono.description2]:"تعمل تركيبتنا المتطورة القابلة للحقن على تحسين جودة البشرة بشكل عام من خلال استهداف الخطوط الدقيقة، وعدم توحد لون البشرة، وعلامات الشيخوخة المبكرة. صُممت تركيبة ديمونو لدعم تحفيز إنتاج الكولاجين وتجديد البشرة على المدى الطويل، مما يوفر مظهرًا طبيعيًا ونضارة مع نتائج متوازنة ومتدرجة.",
+    // "تعمل تركيبتنا المتطورة القابلة للحقن على تحسين جودة البشرة بشكل عام من خلال استهداف الخطوط الدقيقة، وعدم توحد لون البشرة، وعلامات الشيخوخة المبكرة. صُممت تركيبة ديمونو لدعم تحفيز إنتاج الكولاجين وتجديد البشرة على المدى الطويل، مما يوفر مظهرًا طبيعيًا ونضارة مع نتائج متوازنة ومتدرجة.",
+  
+    [tokens.brands.dimono.whatIs]: "ما هو ديمونو؟",
+    [tokens.brands.dimono.whatIsDescription]:
+      "ديمونو بي تي إكس هو حشو جلدي مبتكر صُمم لعلاج الخطوط الدقيقة والتجاعيد ومناطق فقدان الحجم الناتجة عن حركة الوجه والتقدم في العمر. تجمع تركيبته الفريدة بين حمض الهيالورونيك والببتيدات المتخصصة لدعم نعومة الملمس وتحسين الترطيب واستعادة نضارة البشرة. وقد طُوِّر للمرضى الذين يبحثون عن نتائج آمنة وفعالة وطبيعية مع فترة تعافٍ قصيرة.",
+    [tokens.brands.dimono.box2Title]:
+      "عملية تحويلية للحفاظ على سلاسل حمض الهيالورونيك الجزيئية الطويلة",
+    
+    // DIMONO (Shape 2)
+    [tokens.brands.dimono.product.title]: "حشو جلدي ديمونو بي تي إكس",
+    
+    [tokens.brands.dimono.product.subtitle]:
+      "تنعيم خطوط التعبير وتحسين ملمس البشرة",
+    
+    // Section titles
+    [tokens.brands.dimono.product.featuresTitle]: "مميزات المنتج",
+    [tokens.brands.dimono.product.treatmentTitle]: "العلاج",
+    [tokens.brands.dimono.product.keyBenefitsTitle]: "الفوائد الرئيسية",
+    [tokens.brands.dimono.product.functionTitle]: "الوظيفة",
+    
+    // Product Features list
+    [tokens.brands.dimono.product.features[0]]: "متوفر بحجم 1 مل + 2 مل",
+    [tokens.brands.dimono.product.features[1]]: "تقنية قائمة على الببتيدات حاصلة على براءة اختراع",
+    [tokens.brands.dimono.product.features[2]]:
+      "علاج مريح مع تحسن فوري في مظهر البشرة",
+    [tokens.brands.dimono.product.features[3]]: "نتائج فورية تدوم حتى شهرين",
+    
+    // Treatment list
+    [tokens.brands.dimono.product.treatmentItems[0]]: "حقن جلدي خطي داخل الأدمة",
+    [tokens.brands.dimono.product.treatmentItems[1]]: "جلسة واحدة كل شهرين",
+    [tokens.brands.dimono.product.treatmentItems[2]]: "يوصى بـ 4-5 جلسات سنويًا",
+    
+    // Key Benefits list
+    [tokens.brands.dimono.product.keyBenefitsItems[0]]: "يخفف الخطوط الدقيقة والتجاعيد الديناميكية",
+    [tokens.brands.dimono.product.keyBenefitsItems[1]]: "يحسن ملمس البشرة ومرونتها",
+    [tokens.brands.dimono.product.keyBenefitsItems[2]]: "يعزز ترطيب البشرة لمظهر أكثر صحة",
+    [tokens.brands.dimono.product.keyBenefitsItems[3]]:
+      "يمنح نتائج جمالية طبيعية ومتوازنة",
+    [tokens.brands.dimono.product.keyBenefitsItems[4]]: "مناسب لمناطق متعددة من الوجه",
+    
+    // Function list
+    [tokens.brands.dimono.product.functionItems[0]]: "يساعد على تقليل توتر العضلات",
+    [tokens.brands.dimono.product.functionItems[1]]: "يخفف الخطوط الدقيقة والتجاعيد",
+    [tokens.brands.dimono.product.functionItems[2]]:
+      "يمنح البشرة إشراقًا وحيوية أكبر",
+    
+    [tokens.brands.dimono.productoverviewTitle]: "كيف يعمل؟",
+    [tokens.brands.dimono.productoverviewDesc]:
+      "بمجرد تطبيقه، يندمج Dimono PTx مع أنسجة الأدمة بتركيبة مرنة تتحرك بانسجام مع تعابير الوجه. يساهم هذا الاندماج السلس في تحسين ملمس البشرة والحفاظ على مظهر طبيعي دون إحساس بالصلابة أو الثقل.",
+    
+    [tokens.brands.dimono.applicationAreas[0]]: "التجاعيد العمودية",
+    [tokens.brands.dimono.applicationAreas[1]]: "تجاعيد العين الدقيقة",
+    [tokens.brands.dimono.applicationAreas[2]]: "الخطوط الدقيقة تحت العين",
+    [tokens.brands.dimono.applicationAreas[3]]: "طيات الأنف الشفوية",
+    [tokens.brands.dimono.applicationAreas[4]]: "التجاعيد حول الفم",
+    [tokens.brands.dimono.applicationAreas[5]]: "خطوط الجبهة",
+    [tokens.brands.dimono.applicationAreas[6]]: "خطوط الشفاه (الباركود)",
+    [tokens.brands.dimono.applicationAreas[7]]: "تجاعيد الرقبة",
+    [tokens.brands.dimono.applicationAreas[8]]: "الذقن وأسفل الوجه",
+    [tokens.brands.dimono.applicationAreas[9]]: "تجديد شباب اليدين",
+    
+
+    [tokens.brands.maili.title]: "مايلي",
+[tokens.brands.maili.subtitle]: "استكشف مايلي",
+[tokens.brands.maili.description]: "انعكاس حقيقي للرقي الجمالي",
+
+[tokens.brands.maili.description2]:"يساعد فيلر حمض الهيالورونيك المتطور على تعزيز الحجم وتنعيم التجاعيد وتحديد الملامح بنتائج ناعمة وطبيعية تتحرك بانسجام مع تعابير الوجه.",
+
+[tokens.brands.maili.whatIs]: "نقدم لكم مايلي",
+[tokens.brands.maili.whatIsDescription]:
+  "الاهتمام بالتفاصيل والرقي هما جوهر ما نقوم به. سنساعدك على إشعاع الثقة التي تأتي من معرفة أنك تبدين وتشعرين بأفضل حال. تتوفر علاجات MaiLi HA للفيلر الجلدي حصريًا في مراكز التميز الخاصة بنا، حيث ستتلقين العلاج على يد مختصين مؤهلين تأهيلًا عاليًا.",
+
+[tokens.brands.maili.box2Title]:
+  "عملية تحوّل للحفاظ على سلاسل HA طويلة الجزيئات",
+
+[tokens.brands.maili.box2p1]:
+  "تقنية OxiFree™ تخلق جلًا فريدًا بمرونة تشبه الزنبرك، ويشرح Smart Spring Science هذه الخصائص، جل من حمض الهيالورونيك يستجيب بشكل استثنائي للضغط، بينما يعمل بمرونة مع الحركة الطبيعية وتعبيرات الوجه الديناميكية.",
+
+[tokens.brands.maili.productoverviewTitle]:
+  "اختراق في جمال حمض الهيالورونيك (HA)",
+[tokens.brands.maili.productoverviewDesc]:
+  "كل علاج من علاجات حقن حمض الهيالورونيك من مايلي صُمم خصيصًا لك. سواء كنت ترغبين في تنعيم التجاعيد والخطوط الدقيقة، أو إضافة حجم وتحديد، أو الحصول على بشرة رائعة، فلدينا العلاج المناسب لك. اختاري مايلي للحصول على أفضل علاج تجميلي يمنحك إشراقة وثقة بالنفس. قد تختلف النتائج من مريض لآخر.",
+
+[tokens.brands.maili.articles.title]: "مايلي",
+[tokens.brands.maili.articles.subtitle]: "أحدث المقالات",
+
+[tokens.brands.maili.articles.items[0].title]: "لماذا تختار MaiLi",
+[tokens.brands.maili.articles.items[0].description]:
+  "اكتشف مجموعة MaiLi المكونة من أربعة أنواع متقدمة من فيلر حمض الهيالورونيك المصممة لتمكين الأطباء المتخصصين من تحقيق رؤيتك الجمالية بدقة فاخرة.",
+
+[tokens.brands.maili.articles.items[1].title]: "النتائج",
+[tokens.brands.maili.articles.items[1].description]:
+  "اختبر مجموعة MaiLi المكونة من أربعة أنواع متقدمة من فيلر حمض الهيالورونيك المصممة لتمكين الأطباء المتخصصين من تحقيق رؤيتك الجمالية بدقة فاخرة.",
+
+[tokens.brands.maili.articles.items[2].title]: "إجابات على أسئلتك",
+[tokens.brands.maili.articles.items[2].description]:
+  "من المهم جدًا تدليك منطقة العلاج لمدة 10 دقائق مرتين يوميًا لمدة أسبوعين بعد كل جلسة علاج.",
+
+  [tokens.brands.lanluma.title]: "لانلوما",
+[tokens.brands.lanluma.subtitle]: "اكتشف لانلوما",
+[tokens.brands.lanluma.description]: "تعزيز الجمال والثقة",
+
+[tokens.brands.lanluma.description2]:
+  "يعمل علاجنا القابل للحقن المحفز للكولاجين بعمق داخل الجلد لاستعادة الحجم وإعادة تشكيله تدريجيًا في الوجه والجسم. يحفز الإنتاج الطبيعي للكولاجين للحصول على تحديد طويل الأمد بمظهر طبيعي وثقة أكبر.",
+
+[tokens.brands.lanluma.whatIs]: "تعزيز الجمال والثقة",
+[tokens.brands.lanluma.whatIsDescription]:
+  "لانلوما هو فيلر قابل للحقن محفز للكولاجين للوجه والجسم، يعمل على تحديد الملامح وإعادة تشكيلها وتحفيز إنتاج الكولاجين الطبيعي، مما يمنح المرضى ثقة متجددة بمظهرهم.",
+
+[tokens.brands.lanluma.box2Title]:
+  "تمنح لانلوما نتائج طويلة الأمد بمظهر طبيعي",
+
+[tokens.brands.lanluma.box2p1]:
+  "لا تعمل لانلوما بالطريقة نفسها التي تعمل بها حقن حمض الهيالورونيك (HA)، لأنه لا يملأ المناطق ببساطة باستخدام الجل. بدلاً من ذلك، تعمل جزيئات PLLA بذكاء في عمق الجلد لتحفيز استجابة الجسم الطبيعية في إنتاج الكولاجين، مما يمنح نتائج تدوم أكثر من عامين. (J Am Acad Dermatol 2010;62:448-62)",
+
+[tokens.brands.lanluma.box2p2]:
+  "إيلانسي مخصص لتصحيح فقدان حجم الوجه بشكل طويل الأمد وللزراعة تحت الجلد في الوجه.",
+
+[tokens.brands.lanluma.productoverviewTitle]:
+  "الشكل هو أسلوب",
+[tokens.brands.lanluma.productoverviewDesc]:
+  "لانلوما هو احتفاء بالشكل والبنية واكتشاف الثقة من خلالهما. يساعد لانلوما على تقليل مظهر التجاعيد وإعادة تشكيل وتحديد ملامح الوجه والجسم.",
+
+[tokens.brands.lanluma.box3p1]:
+  "نقدّم تدريبًا مكثفًا لأطبائنا لإعداد مختصين مدربين تدريبًا عاليًا على الحقن، ونعمل مع أفضل الأطباء في هذا المجال. المكوّن الرئيسي القابل للحقن في لانلوما، وهو حمض البولي لاكتيك (PLLA)، يحفز الإنتاج الطبيعي للكولاجين الخاص بالجسم نفسه، مما يمنح تأثيرات تدوم أكثر من عامين. (المجلة الأمريكية لأمراض الجلدية 2010؛ 62:448-62).",
+
+[tokens.brands.lanluma.articles.title]: "لانلوما",
+[tokens.brands.lanluma.articles.subtitle]: "أحدث المقالات",
+
+[tokens.brands.lanluma.articles.items[0].title]: "دليل العناية بعد العلاج",
+[tokens.brands.lanluma.articles.items[0].description]:
+  "بعد العلاج، سيشرح لكِ طبيبكِ المختص كل ما يلزم ويوفر لكِ دليلًا سهلًا للعناية بعد العلاج يمكنكِ اتباعه.",
+
+[tokens.brands.lanluma.articles.items[1].title]: "شد الأرداف بدون جراحة",
+[tokens.brands.lanluma.articles.items[1].description]:
+  "هذا الفيلر المبتكر يعيد تشكيل الجسم ويحّفز إنتاج الكولاجين الطبيعي بما يعزز حجمًا طبيعيًا يبرز منحنيات الجسم بشكل متناسق وجذاب.",
+
+[tokens.brands.lanluma.articles.items[2].title]: "قبل وبعد",
+[tokens.brands.lanluma.articles.items[2].description]:
+  "من المهم جدًا تدليك منطقة العلاج لمدة 10 دقائق مرتين يوميًا لمدة أسبوعين بعد كل جلسة علاج.",
+
+
+
+
+  [tokens.brands.ellanse.title]: "إيلانسي",
+[tokens.brands.ellanse.subtitle]: "اكتشف إيلانسي",
+[tokens.brands.ellanse.description]: "سر تجديد شباب الوجه",
+
+[tokens.brands.ellanse.description2]: "تجديد ثنائي التأثير يمنح حجمًا فوريًا مع تحفيز الكولاجين الطبيعي لنتائج متجددة وطويلة الأمد بمظهر أكثر نعومة وتوازنًا.",
+  // "يوفر الفيلر المحفز للكولاجين ذو التأثير المزدوج حجمًا فوريًا مع تنشيط الإنتاج الطبيعي للكولاجين في الجسم. يساعد على استعادة بنية الوجه، وتنعيم الخطوط، ومنح تجديد راقٍ وطويل الأمد من الداخل.",
+
+[tokens.brands.ellanse.whatIs]: "حجم فوري، وفوائد طويلة الأمد",
+[tokens.brands.ellanse.whatIsDescription]:
+  "عندما يتعلق الأمر بتحسين مظهرك، فأنت لا ترغبين في حل مؤقت. بل ترغبين في طريقة آمنة* لتجديد بشرتك، تعزز جمالك وتمنحك نتائج تدوم. وهنا يأتي دورنا... *البيانات محفوظة في الملف",
+
+[tokens.brands.ellanse.box2Title]: "إعادة بناء جمالك الطبيعي",
+
+[tokens.brands.ellanse.box2p1]:
+  "يتجاوز إيلانسي مجرد تصحيح الخطوط والتجاعيد من خلال معالجة الأسباب الجذرية لشيخوخة الوجه. فهو يمنح نتائج فورية، وفي الوقت نفسه يحفز الإنتاج الطبيعي للكولاجين في الجسم لاستعادة الحجم وتجديد الوجه من الداخل. ويُستخدم إيلانسي لتصحيح فقدان حجم الوجه بشكل طويل الأمد من خلال الزرع تحت الجلد في الوجه.",
+
+[tokens.brands.ellanse.box2p2]:
+  "يُستخدم إيلانسي للتصحيح طويل الأمد لفقدان حجم الوجه وللزراعة تحت الجلد في الوجه.",
+
+[tokens.brands.ellanse.productoverviewTitle]:
+  "سر تجديد شباب الوجه",
+[tokens.brands.ellanse.productoverviewDesc]:
+  "إيلانسي هو الفيلر الجلدي الوحيد الذي يحقق حجمًا فوريًا ونتائج طويلة الأمد عبر تحفيز الكولاجين الذاتي، مما يمنح بشرة أكثر إشراقًا مع تحسن في الكثافة والشد والمرونة.",
+
+[tokens.brands.ellanse.box3p1]:
+  "نوفّر تدريبًا مكثفًا لإعداد مستخدمين خبراء، ونعمل فقط مع أفضل الأطباء في هذا المجال. يقدّم إيلانسي مجموعة من المنتجات لتلبية احتياجات متنوعة، بدءًا من تصحيح التجاعيد وصولًا إلى منح الشكل والحجم. وتمنح خصائصه مزدوجة التأثير المرضى نتائج فورية وطويلة الأمد* مع تحفيز طبيعي لكولاجين النوع الأول. *البيانات محفوظة في الملف.",
+
+[tokens.brands.ellanse.articles.title]: "إيلانسي",
+[tokens.brands.ellanse.articles.subtitle]: "أحدث المقالات",
+
+[tokens.brands.ellanse.articles.items[0].title]: "كيف تبدأ علامات التقدم في السن بالظهور",
+[tokens.brands.ellanse.articles.items[0].description]:
+  "لا تعني علامات شيخوخة الوجه بالضرورة أنكِ أصبحتِ كبيرة في السن. فهي تبدأ عادةً بالظهور في العشرينات من العمر عندما تبدأ مستويات الكولاجين والإيلاستين، وهما البروتينان اللذان يمنحان البشرة بنيتها، في الانخفاض.",
+
+[tokens.brands.ellanse.articles.items[1].title]: "شاهد نتائج حقيقية للمرضى",
+[tokens.brands.ellanse.articles.items[1].description]:
+  "القوة تكمن في النتائج، شاهديها بنفسك.",
+
+[tokens.brands.ellanse.articles.items[2].title]: "هل أنتِ مستعدة للتحدث إلى طبيب؟",
+[tokens.brands.ellanse.articles.items[2].description]:
+  "استخدمي أداة البحث عن الأطباء لدينا أو تواصلي معنا لمساعدتك في العثور على طبيب إيلانسي بالقرب منك.",
+  };

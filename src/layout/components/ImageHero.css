@@ -2,7 +2,11 @@
 .lanluma-image-hero-1::before {
     background-size: contain !important;
 }
+
 @media(min-width: 992px){
+   html[dir='rtl'] .image-hero-parent::before{
+        background-position: left bottom;
+    }
     .image-hero-parent h3{
     font-size: 36px!important;
     font-weight: 400!important;

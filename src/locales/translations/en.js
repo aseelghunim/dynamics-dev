@@ -767,7 +767,7 @@ export const en = {
 
 
 
-  // dimono
+  // drcyj
 
   [tokens.brands.drcyj.title]: "DR.CYJ",
   [tokens.brands.drcyj.subtitle]: "Experience DR.CYJ",
