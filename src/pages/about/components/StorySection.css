@@ -68,6 +68,15 @@
         padding-right: 56px !important;
     }
 
+
+    .story-section-parent.renee-story-2 ul{
+        padding-left: 12px;
+
+    }
+   html[dir='rtl'] .story-section-parent.renee-story-2 ul{
+        padding-right: 12px!important;
+
+    }
     .story-section-parent.renee-story-2 .first-stack {
         padding-top: 70px !important;
     }

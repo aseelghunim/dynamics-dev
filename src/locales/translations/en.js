@@ -16,7 +16,7 @@ export const en = {
   [tokens.about.title]: "About Us",
   [tokens.about.paragraph]:
     "We pride ourselves on our unique approach, which integrates the experience of seasoned professionals with the fresh perspectives of emerging talent. This synergy enables us to develop advanced products and services that not only keep pace with industry trends but often set new standards.",
-  [tokens.about.page.hero]: "Dynamics exists to create confidence",
+  [tokens.about.page.hero]: "Dynamics Medica exists to create confidence",
   [tokens.about.page.button]: "Our Vision, mission and values",
   [tokens.about.page.card1]:
     "Dynamics Medica LTD., was founded with the aim of becoming the leading aesthetic and beauty distributor, partner and service provider. We have a targeted interest in the evolving medical aesthetics market on both a local and regional level. We strive to incorporate new ideas and modernization efforts whilst simultaneously drawing on the experience, industry knowledge and customer loyalty built over the past few decades.",
@@ -35,7 +35,7 @@ export const en = {
   [tokens.about.page.card4.title]:
     "The Power to Transform Confidence and Appearance",
   [tokens.about.page.card4.paragraph]:
-    "Dynamics delivers a unique range of scientifically-advanced aesthetic products and services, designed exclusively for a global industry of highly-skilled practitioners; ensuring our community achieves real, long-lasting, and exceptional results, thus transforming confidence and appearance, every time.",
+    "Dynamics Medica delivers a unique range of scientifically-advanced aesthetic products and services, designed exclusively for a global industry of highly-skilled practitioners; ensuring our community achieves real, long-lasting, and exceptional results, thus transforming confidence and appearance, every time.",
   [tokens.cards.card3.title]: "Empowering Education",
   [tokens.cards.card3.paragraph]:
     "We are committed to educating our clients and partners about the latest advancements in aesthetics, empowering them to make informed decisions.",
@@ -133,8 +133,8 @@ export const en = {
     "Our Italian-made hyaluronic acid treatments blend cutting-edge technology with natural beauty enhancement. Ksurgery MED, by Vidapharma, delivers safe, effective, and scientifically-validated products, designed to meet the high standards of medical professionals in aesthetic care.",
   [tokens.brands.ksurgery.whatIs]: "What is ksurgery?",
   [tokens.brands.ksurgery.whatIsDescription]:
-  "K-Surgery is a medical aesthetic brand specializing in high-quality hyaluronic acid fillers and skin boosters. Made in Italy, its products provide safe and effective solutions for facial rejuvenation, body contouring, and skin hydration, delivering natural-looking results, immediate and long-lasting effects, and customizable treatments tailored to each patient.",
-    // "K-Surgery is a leading brand specializing in high-quality medical aesthetic products, particularly focusing on hyaluronic acid-based fillers and skin boosters. Offering solutions for facial rejuvenation, body contouring, and skin hydration, K-Surgery aims to provide professionals with safe, effective, and innovative products made entirely in Italy.",
+    "K-Surgery is a medical aesthetic brand specializing in high-quality hyaluronic acid fillers and skin boosters. Made in Italy, its products provide safe and effective solutions for facial rejuvenation, body contouring, and skin hydration, delivering natural-looking results, immediate and long-lasting effects, and customizable treatments tailored to each patient.",
+  // "K-Surgery is a leading brand specializing in high-quality medical aesthetic products, particularly focusing on hyaluronic acid-based fillers and skin boosters. Offering solutions for facial rejuvenation, body contouring, and skin hydration, K-Surgery aims to provide professionals with safe, effective, and innovative products made entirely in Italy.",
   [tokens.brands.ksurgery.keyBenefits]: "Key Benefits",
   [tokens.brands.ksurgery.keyBenefit1]: "Safe and effective treatments.",
   [tokens.brands.ksurgery.keyBenefit2]:
@@ -578,7 +578,7 @@ export const en = {
 
   [tokens.brands.ellanse.box2p1]: "Ellansé goes beyond correcting lines and wrinkles by addressing the root causes of facial ageing. It delivers immediate results while stimulating your body’s natural collagen production to restore volume and rejuvenate the face from within. Ellansé is indicated for long-lasting correction of facial volume loss through subdermal facial implantation.",
 
-    // "Where others’ benefits end at correcting lines and folds, Ellansé goes beyond, goes deeper, working to treat the true causes of facial ageing. While it instantly addresses lines and wrinkles, it also uses your body’s natural processes to set in motion long-term collagen production, safely restoring volume, rejuvenating your appearance from within.",
+  // "Where others’ benefits end at correcting lines and folds, Ellansé goes beyond, goes deeper, working to treat the true causes of facial ageing. While it instantly addresses lines and wrinkles, it also uses your body’s natural processes to set in motion long-term collagen production, safely restoring volume, rejuvenating your appearance from within.",
   [tokens.brands.ellanse.box2p2]:
     "Ellansé is indicated for the lasting correction of facial volume loss and for subdermal implantation in the face.",
 
@@ -649,6 +649,9 @@ export const en = {
   [tokens.brands.maili.description]: "A true reflection of Aesthetic Refinement",
 
   [tokens.brands.maili.description2]: "Our advanced hyaluronic acid filler is designed for precision and natural movement. It enhances volume, smooths wrinkles, and defines contours with soft, flexible, radiant results that adapt beautifully to expression.",
+  [tokens.brands.maili.bannerDescription]: "Our advanced hyaluronic acid filler is designed for precision and natural movement. It enhances volume, smooths wrinkles, and defines contours with soft, flexible, radiant results that adapt beautifully to expression.",
+  // "Our advanced hyaluronic acid filler is designed for precision and natural movement. It enhances volume, smooths wrinkles, and defines contours with soft, flexible, radiant results that adapt beautifully to expression.",
+
   // "Our Italian-made hyaluronic acid treatments blend cutting-edge technology with natural beauty enhancement. maili MED, by Vidapharma, delivers safe, effective, and scientifically-validated products, designed to meet the high standards of medical professionals in aesthetic care.",
   [tokens.brands.maili.whatIs]: "Introducing Maili",
   [tokens.brands.maili.whatIsDescription]: "Attention to detail and refinement are at the heart of what we do. We’ll help you to radiate the confidence that comes from knowing you look and feel your best. MaiLi HA dermal filler treatments are only available at our exclusive Centres of Excellence, where you’ll be treated by highly qualified practitioners.",
@@ -690,7 +693,7 @@ export const en = {
 
   [tokens.brands.dimono.title]: "CG Dimono PTx",
   [tokens.brands.dimono.subtitle]: "Experience Dimono",
-  [tokens.brands.dimono.description]:"An advanced dermal filler designed to smooth expression lines, restore facial volume, and enhance overall skin quality.",
+  [tokens.brands.dimono.description]: "An advanced dermal filler designed to smooth expression lines, restore facial volume, and enhance overall skin quality.",
   //  "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",
   [tokens.brands.dimono.description2]: "Our advanced injectable formulation is designed to improve skin quality from within, target-ing fine lines, texture irregularities, and early signs of aging. By supporting collagen stimulation and long-term dermal renewal, Dimono delivers balanced, natural-looking results with a focus on skin strength, elasticity, and refinement.",
 
@@ -860,6 +863,19 @@ export const en = {
   [tokens.brands.drcyj.productoverviewTitle]:
     "How it Works?",
   [tokens.brands.drcyj.productoverviewDesc]: "DR.CYJ’s lightweight formula settles into the scalp tissue, allowing its peptides to disperse gradually across the treatment area. This slow release supports a healthy environment around the hair follicles and helps maintain optimal scalp conditions over time.",
+
+
+
+
+  [tokens.brands.juvelook.buttonText]: "Discover Juvelook",
+  [tokens.brands.lenisna.buttonText]: "Discover Lenisna",
+  [tokens.brands.ksurgery.buttonText]: "Discover Ksurgery",
+  [tokens.brands.maili.buttonText]: "Discover MaiLi",
+  [tokens.brands.drcyj.buttonText]: "Discover DR.CYJ",
+  [tokens.brands.lanluma.buttonText]: "Discover Lanluma",
+  [tokens.brands.ellanse.buttonText]: "Discover ELLANSÉ",
+  [tokens.brands.dimono.buttonText]: "Discover CG Dimono PTx",
+  [tokens.brands.renee.buttonText]: "Discover Renée",
 
 
 

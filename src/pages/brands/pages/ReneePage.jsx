@@ -72,7 +72,7 @@ const ReneePage = (props) => {
                 paragraph={
                   <>
                     <ul style={{
-                      paddingLeft: 0,
+                      
                       width: "70%"
                     }}>
                       <li>{t(tokens.brands.renee.keyBenefit1)}</li>

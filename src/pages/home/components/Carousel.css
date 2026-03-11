@@ -10,7 +10,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 137px;
   backdrop-filter: blur(12px) saturate(150%);
   border-top: 0.07rem solid hsla(0, 0%, 100%, 0.3);
   margin: 0;
@@ -34,8 +34,8 @@
 
 /* ====== Items ====== */
 .carousel-item {
-  width: 113px;
-  height: 113px;
+  width: 78px;
+  height: 78px;
   margin: 0 10px;
   background-color: #111;
   border-radius: 50%;

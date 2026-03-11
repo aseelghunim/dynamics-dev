@@ -79,7 +79,6 @@ const bounce = keyframes`
 
 const scrollButtonStyle = {
   display: { xs: "none", md: "inline-flex" }, // hide on mobile, show on desktop
-
   position: "absolute",
   bottom: { xs: "15px", md: "85px" }, // Adjusted slightly lower
   left: "50%",

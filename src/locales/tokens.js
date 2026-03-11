@@ -176,6 +176,8 @@ export const tokens = {
       body: "brands.our_collection.body",
     },
     ksurgery: {
+      buttonText:"brands.ksurgery.buttonText",
+
       title: "brands.ksurgery.title",
       subtitle: "brands.ksurgery.subtitle",
       description: "brands.ksurgery.description",
@@ -346,6 +348,8 @@ export const tokens = {
       operaDescription2: "brands.ksurgery.operaDescription2",
     },
     renee: {
+      buttonText:"brands.renee.buttonText",
+
       title: "brands.renee.title",
       subtitle: "brands.renee.subtitle",
       description: "brands.renee.description",
@@ -448,6 +452,8 @@ export const tokens = {
       ],
     },
     lenisna: {
+      buttonText:"brands.lensina.buttonText",
+
       pageTitle: "brands.lenisna.pageTitle",
       pageDescription: "brands.lenisna.pageDescription",
       title: "brands.lenisna.title",
@@ -520,6 +526,8 @@ export const tokens = {
       },
     },
     juvelook: {
+      buttonText:"brands.juvelook.buttonText",
+
       pageTitle: "brands.juvelook.pageTitle",
       pageDescription: "brands.juvelook.pageDescription",
       title: "brands.juvelook.title",
@@ -589,6 +597,8 @@ export const tokens = {
 
 
     dimono: {
+      buttonText:"brands.dimono.buttonText",
+
       title: "brands.dimono.title",
       subtitle: "brands.dimono.subtitle",
       
@@ -657,6 +667,8 @@ export const tokens = {
 
 
     ellanse: {
+      buttonText:"brands.ellanse.buttonText",
+
       title: "brands.ellanse.title",
       subtitle: "brands.ellanse.subtitle",
       description: "brands.ellanse.description",
@@ -700,6 +712,8 @@ export const tokens = {
     },
 
     lanluma: {
+      buttonText:"brands.lanluma.buttonText",
+
       title: "brands.lanluma.title",
       subtitle: "brands.lanluma.subtitle",
       description: "brands.lanluma.description",
@@ -746,6 +760,8 @@ export const tokens = {
 
 
     maili: {
+      buttonText:"brands.maili.buttonText",
+
       title: "brands.maili.title",
       subtitle: "brands.maili.subtitle",
       description: "brands.maili.description",
@@ -789,6 +805,7 @@ export const tokens = {
     },
 
     drcyj: {
+      buttonText:"brands.drcyj.buttonText",
       title: "brands.drcyj.title",
       subtitle: "brands.drcyj.subtitle",
       description: "brands.drcyj.description",

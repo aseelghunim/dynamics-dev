@@ -29,7 +29,7 @@ const loaderStyle = {
 
 };
 
-const BrandContainer = ({ title, description, video, subTitle, path }) => {
+const BrandContainer = ({ title, description, buttonText, video, subTitle, path }) => {
   const { t } = useTranslation();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +44,12 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
         position: "relative", zIndex: 1, "@media (max-width: 767px)": {
           height: "100%",
         },
+
+        "@media(min-width:992px)": {
+          marginLeft: "7.5%",
+          marginRight: "7.5%",
+
+        },
         "@media (min-width: 768px) and (max-width:991px)": {
           height: "80%",
         },
@@ -54,7 +60,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
           spacing={2}
           sx={{
             flexGrow: 1,
-            paddingTop: { xs: "0", md: "10%" },
+            paddingTop: { xs: "0", md: "100px" },
             px: { xs: 2, md: 0 },
             "@media (max-width: 991px)": {
               height: "100%",
@@ -67,9 +73,9 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             <QuoteTypography
               variant="h6"
               sx={{
-                fontSize:"15px!important",
+                fontSize: "15px!important",
                 display: { xs: "none", sm: "flex" },
-                mb: {xs: "16px !important",md: "unset" }
+                mb: { xs: "16px !important", md: "unset" }
               }}
             >
               {title}
@@ -77,7 +83,8 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
             <Typography
               variant="h5"
               sx={{
-                fontSize:{xs:"24px",sm:"20px"},
+                fontSize: { xs: "24px", sm: "24px" },
+                marginTop:0,
                 "@media (max-width: 767px)": {
                   fontSize: "1.5rem",
                   marginTop: "0!important"
@@ -90,9 +97,10 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
               variant="body2"
               sx={{
                 textAlign: "justify",
-                fontSize:{xs:"18px",sm:"15px"},
+                fontSize: { xs: "18px", sm: "18px" },
+                marginTop:"16px!important",
                 "@media (max-width: 767px)": {
-                
+
                   textAlign: "left",
 
                 },
@@ -121,7 +129,7 @@ const BrandContainer = ({ title, description, video, subTitle, path }) => {
                 LinkComponent={RouterLink}
                 href={path}
               >
-                {t(tokens.common.discover_brand)}
+                {buttonText}
               </Button>
             </Box>
           </Stack>

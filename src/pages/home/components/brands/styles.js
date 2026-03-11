@@ -10,8 +10,12 @@ export const textStyle = {
 export const buttonStyle = {
   color: "white",
   borderColor: "white",
-  height: "65px",
-  width: "281px",
+  height: { xs: "35px", sm: "46px" },
+  fontSize:"18px",
+  width: { xs: "213px",sm:"250px" },
+  borderRadius:"8px!important",
+  backgroundColor: "rgba(255,255,255,0.2)",
+  marginTop:{xs:"24px",sm:"48px"},
   "&:hover": {
     borderColor: "white",
     color: "#ab92e1",

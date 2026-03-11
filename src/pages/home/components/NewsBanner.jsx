@@ -144,6 +144,7 @@ const NewsBanner = () => {
             height: "100%",
             padding: { xs: 2, sm: 2, md: 10 },
             paddingTop: { xs: 2, sm: "5rem!important", md: 10 },
+            paddingLeft: { xs: 2, sm: 2, md: 0},
             margin: 0,
           }}
         >

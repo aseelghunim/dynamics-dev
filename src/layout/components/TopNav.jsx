@@ -194,11 +194,11 @@ export const TopNav = (props) => {
         maxWidth="xxl"
         component="header"
         sx={{
-          height:{xs:"95px",sm:"72px", md:"90px"},
+          height: { xs: "95px", sm: "72px", md: "90px" },
           left: 0,
           position: "fixed",
           // backdropFilter: "blur(6px)",
-          backgroundColor:  elevate ? "white": "rgba(255, 255, 255, 0.2)",
+          backgroundColor: elevate ? "white" : "rgba(255, 255, 255, 0.2)",
 
           color: "#fff",
           right: 0,
@@ -224,261 +224,326 @@ export const TopNav = (props) => {
           },
         }}
       >
-        <Container maxWidth="xl">
-          {!smUp && (
-            <Stack
-              direction="row"
-              alignItems="center"
+        <Container maxWidth="xl" sx={{
+          "@media (min-width: 992px)": {
+            // fontSize: "2.25rem!important",
+            paddingLeft: "11%",
+            marginLeft: "-6px",
+            paddingRight: "11%"
+          },
+         
+         }}>
+        {!smUp && (
+          <Stack
+            direction="row"
+            alignItems="center"
+            sx={{
+              height: `${mobileHeaderHeight}px`,
+              position: "relative",
+              padding: 0,
+            }}
+          >
+            <Box sx={{ flex: "0 0 auto" }}>
+              <Tooltip title={languageLabel}>
+                <IconButton
+                  onClick={() => handleChange(language)}
+                  aria-label="language"
+                >
+                  <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
+                    <LanguageIcon />
+                  </SvgIcon>
+                </IconButton>
+              </Tooltip>
+            </Box>
+
+            <Box
+              component={RouterLink}
+              href={paths.index}
               sx={{
-                height: `${mobileHeaderHeight}px`,
-                position: "relative",
-                padding: 0,
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                height: 46,
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
               }}
             >
-              <Box sx={{ flex: "0 0 auto" }}>
-                <Tooltip title={languageLabel}>
-                  <IconButton
-                    onClick={() => handleChange(language)}
-                    aria-label="language"
-                  >
-                    <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
-                      <LanguageIcon />
-                    </SvgIcon>
-                  </IconButton>
-                </Tooltip>
-              </Box>
+              <img
+                style={{ height: "100%" }}
+                src={elevate ? logo : logoLight}
+                alt="Dynamics"
+              />
+            </Box>
 
-              <Box
-                component={RouterLink}
-                href={paths.index}
-                sx={{
-                  position: "absolute",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  height: 46,
-                  display: "flex",
-                  alignItems: "center",
-                  textDecoration: "none",
-                }}
+            <Box sx={{ marginLeft: "auto", flex: "0 0 auto" }}>
+              <IconButton
+                onClick={handleMenuOpen}
+                aria-label="menu"
+                sx={{ color: elevate ? "#ab92e1" : "#fff" }}
               >
-                <img
-                  style={{ height: "100%" }}
-                  src={elevate ? logo : logoLight}
-                  alt="Dynamics"
-                />
-              </Box>
+                <MenuIcon />
+              </IconButton>
+            </Box>
+          </Stack>
+        )}
 
-              <Box sx={{ marginLeft: "auto", flex: "0 0 auto" }}>
-                <IconButton
-                  onClick={handleMenuOpen}
-                  aria-label="menu"
-                  sx={{ color: elevate ? "#ab92e1" : "#fff" }}
-                >
-                  <MenuIcon />
-                </IconButton>
-              </Box>
-            </Stack>
-          )}
-
-          {smUp && (
+        {smUp && (
+          <Stack
+            direction="row"
+            sx={{
+              height: { xs: "95px", sm: "72px", md: "90px" },
+              alignItems: "center",
+            }}
+          >
             <Stack
+              alignItems="center"
               direction="row"
-              sx={{
-                height: { xs: "95px", sm: "72px",md:"90px" },
-                alignItems: "center",
-              }}
+              spacing={1}
+              sx={{ flex: "0 0 auto" }}
             >
               <Stack
+                component={RouterLink}
                 alignItems="center"
                 direction="row"
-                spacing={1}
-                sx={{ flex: "0 0 auto" }}
+                href={paths.index}
+                sx={{ textDecoration: "none" }}
               >
-                <Stack
-                  component={RouterLink}
-                  alignItems="center"
-                  direction="row"
-                  href={paths.index}
-                  sx={{ textDecoration: "none" }}
+                <Box
+                  style={{ height: "60px" }}
+                  sx={{
+                    "@media(min-width: 768px) and (max-width: 991px)": {
+                      width: "150px",
+                      objectFit: "cover",
+                    },
+                  }}
                 >
-                  <Box
-                    style={{ height: "60px" }}
-                    sx={{
-                      "@media(min-width: 768px) and (max-width: 991px)": {
-                        width: "150px",
-                        objectFit: "cover",
-                      },
-                    }}
-                  >
-                    <img
-                      style={{
-                        height: "100%",
-                        width: "100%",
-                        objectFit: "contain",
-                      }}
-                      src={elevate ? logo : logoLight}
-                      alt="Dynamics"
-                    />
-                  </Box>
-                </Stack>
-              </Stack>
-
-              <Stack
-                alignItems={"center"}
-                direction="column"
-                spacing={2}
-                sx={{ flex: 1 }}
-              >
-                <Box component="nav" sx={{ height: "100%", width: "100%" }}>
-                  <Stack
-                    component="ul"
-                    alignItems="center"
-                    justifyContent="center"
-                    direction="row"
-                    spacing={1}
-                    sx={{
-                      padding: "0!important",
-                      width: "100%",
+                  <img
+                    style={{
                       height: "100%",
-                      listStyle: "none",
-                      m: 0,
-                      p: 0,
-                      justifyContent: { sm: "flex-end", md: "center" },
+                      width: "100%",
+                      objectFit: "contain",
                     }}
-                  >
-                    {items.map((item, index) => {
-                      const checkPath = !!(item.path && pathname);
-                      const partialMatch = checkPath ? pathname.includes(item.path) : false;
-                      const exactMatch = checkPath ? pathname === item.path : false;
-                      const active = item.popover ? partialMatch : exactMatch;
-
-                      return (
-                        <TopNavItem
-                          active={active}
-                          external={item.external}
-                          key={item.title}
-                          path={item.path}
-                          popover={item.popover}
-                          title={item.title}
-                          isBrands={index === 2}
-                        />
-                      );
-                    })}
-                  </Stack>
+                    src={elevate ? logo : logoLight}
+                    alt="Dynamics"
+                  />
                 </Box>
               </Stack>
-
-              <Stack
-                alignItems="center"
-                direction="row"
-                sx={{ flex: "0 0 auto" }}
-              >
-                <Tooltip title={languageLabel}>
-                  <IconButton
-                    onClick={() => handleChange(language)}
-                    aria-label="language"
-                  >
-                    <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
-                      <LanguageIcon />
-                    </SvgIcon>
-                  </IconButton>
-                </Tooltip>
-              </Stack>
             </Stack>
-          )}
-        </Container>
 
-        {!smUp && (
-          <Drawer
-            anchor="right"
-            open={menuOpen}
-            onClose={handleMenuClose}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            PaperProps={{
-              sx: {
-                width: "calc(100vw - 50px)",
-                maxWidth: "100vw",
-                minHeight: "100vh",
-                borderRadius: 0,
-                overflowY: "auto",
-                boxShadow: "none",
-                backgroundColor: "#f8f8f8",
-                top: "0 !important",
-                left: "auto",
-                right: 0,
-                m: 0,
-                background: "white",
-              },
+            <Stack
+              alignItems={"center"}
+              direction="column"
+              spacing={2}
+              sx={{ flex: 1 }}
+            >
+              <Box component="nav" sx={{ height: "100%", width: "100%" }}>
+                <Stack
+                  component="ul"
+                  alignItems="center"
+                  justifyContent="center"
+                  direction="row"
+                  spacing={1}
+                  sx={{
+                    padding: "0!important",
+                    width: "100%",
+                    height: "100%",
+                    listStyle: "none",
+                    m: 0,
+                    p: 0,
+                    justifyContent: { sm: "flex-end", md: "center" },
+                  }}
+                >
+                  {items.map((item, index) => {
+                    const checkPath = !!(item.path && pathname);
+                    const partialMatch = checkPath ? pathname.includes(item.path) : false;
+                    const exactMatch = checkPath ? pathname === item.path : false;
+                    const active = item.popover ? partialMatch : exactMatch;
+
+                    return (
+                      <TopNavItem
+                        active={active}
+                        external={item.external}
+                        key={item.title}
+                        path={item.path}
+                        popover={item.popover}
+                        title={item.title}
+                        isBrands={index === 2}
+                      />
+                    );
+                  })}
+                </Stack>
+              </Box>
+            </Stack>
+
+            <Stack
+              alignItems="center"
+              direction="row"
+              sx={{ flex: "0 0 auto" }}
+            >
+              <Tooltip title={languageLabel}>
+                <IconButton
+                  onClick={() => handleChange(language)}
+                  aria-label="language"
+                >
+                  <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
+                    <LanguageIcon />
+                  </SvgIcon>
+                </IconButton>
+              </Tooltip>
+            </Stack>
+          </Stack>
+        )}
+      </Container>
+
+      {!smUp && (
+        <Drawer
+          anchor="right"
+          open={menuOpen}
+          onClose={handleMenuClose}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          PaperProps={{
+            sx: {
+              width: "calc(100vw - 50px)",
+              maxWidth: "100vw",
+              minHeight: "100vh",
+              borderRadius: 0,
+              overflowY: "auto",
+              boxShadow: "none",
+              backgroundColor: "#f8f8f8",
+              top: "0 !important",
+              left: "auto",
+              right: 0,
+              m: 0,
+              background: "white",
+            },
+          }}
+        >
+          <Box
+            sx={{
+              px: 0,
+              pt: 4.5,
+              pb: 0,
+              minHeight: "100vh",
             }}
           >
             <Box
               sx={{
-                px: 0,
-                pt: 4.5,
-                pb: 0,
-                minHeight: "100vh",
+                display: "flex",
+                justifyContent: "flex-end",
+                px: 2,
+                mb: 1,
+                width: "33px",
+                height: "33px",
+                marginLeft: "auto"
+              }}
+            >
+              <IconButton
+                onClick={handleMenuClose}
+                aria-label="close menu"
+                sx={{
+                  color: "#AC93E1",
+                  backgroundColor: "#fff",
+                  border: "none",
+                  width: "33px",
+                  height: "33px",
+
+                }}
+              >
+                <CloseIcon sx={{
+                  width: "33px",
+                  height: "33px",
+                }} />
+              </IconButton>
+            </Box>
+
+            <Box
+              component="img"
+              src={mobileNavBg}
+              alt="Dynamics Medica"
+              sx={{ marginBottom: "72px", px: 4 }}
+            />
+
+            <Box
+              sx={{
+                padding: "32px 32px 32px 0",
+                backgroundColor: "#F8F4FF",
+                borderRadius: "36px 36px 0 0",
+                height: "100vh",
               }}
             >
               <Box
+                component={RouterLink}
+                href={paths.index}
+                onClick={handleMenuClose}
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  px: 2,
-                  mb: 1,
-                  width: "33px",
-                  height:"33px",
-                  marginLeft: "auto"
+                  textDecoration: "none",
+                  display: "block",
+                  mb: 1.5,
                 }}
               >
-                <IconButton
-                  onClick={handleMenuClose}
-                  aria-label="close menu"
+                <Typography
                   sx={{
-                    color: "#AC93E1",
-                    backgroundColor: "#fff",
-                    border: "none",
-                   width: "33px",
-                  height:"33px",
-                   
+                    fontSize: { sm: "14px", md: "15px" },
+                    fontWeight: 400,
+                    color: "#1D1D1D",
+                    width: "100%",
+                    padding: "12px 0 12px 32px",
+                    borderRadius: "4px",
+                    "&:hover": {
+                      color: "white",
+                      backgroundColor: "#AC93E1",
+                    },
                   }}
                 >
-                  <CloseIcon sx={{ 
-                        width: "33px",
-                        height: "33px",
-                   }} />
-                </IconButton>
+                  {t(tokens.nav.home)}
+                </Typography>
               </Box>
 
               <Box
-                component="img"
-                src={mobileNavBg}
-                alt="Dynamics Medica"
-                sx={{ marginBottom: "72px", px: 4 }}
-              />
-
-              <Box
+                component={RouterLink}
+                href={paths.aboutUs}
+                onClick={handleMenuClose}
                 sx={{
-                  padding: "32px 32px 32px 0",
-                  backgroundColor: "#F8F4FF",
-                  borderRadius: "36px 36px 0 0",
-                  height: "100vh",
+                  textDecoration: "none",
+                  display: "block",
+                  mb: 1.5,
                 }}
               >
-                <Box
-                  component={RouterLink}
-                  href={paths.index}
-                  onClick={handleMenuClose}
+                <Typography
                   sx={{
-                    textDecoration: "none",
-                    display: "block",
+                    fontSize: { sm: "14px", md: "15px" },
+                    fontWeight: 400,
+                    color: "#1D1D1D",
+                    width: "100%",
+                    padding: "12px 0 12px 32px",
+                    borderRadius: "4px",
+                    "&:hover": {
+                      color: "white",
+                      backgroundColor: "#AC93E1",
+                    },
+                  }}
+                >
+                  {t(tokens.nav.about)}
+                </Typography>
+              </Box>
+
+              <Box sx={{ mb: 0 }}>
+                <Box
+                  onClick={() => setMobileBrandsOpen((prev) => !prev)}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    cursor: "pointer",
                     mb: 1.5,
                   }}
                 >
                   <Typography
                     sx={{
-                      fontSize: {sm:"14px",md:"15px"},
+                      fontSize: { sm: "14px", md: "15px" },
                       fontWeight: 400,
                       color: "#1D1D1D",
                       width: "100%",
@@ -490,130 +555,73 @@ export const TopNav = (props) => {
                       },
                     }}
                   >
-                    {t(tokens.nav.home)}
+                    {t(tokens.nav.brands)}
                   </Typography>
+
+                  <SvgIcon
+                    sx={{
+                      fontSize: 23,
+                      color: "#111",
+                      transform: mobileBrandsOpen
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
+                      transition: "transform 0.2s ease",
+                    }}
+                  >
+                    <svg
+                      width="23"
+                      height="11"
+                      viewBox="0 0 23 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M22.7321 0.384149C23.1321 0.8454 23.078 1.53983 22.6113 1.9352L12.2243 10.7352C11.8075 11.0883 11.1926 11.0883 10.7757 10.7352L0.38866 1.9352C-0.0780163 1.53983 -0.132029 0.845399 0.267874 0.384148C0.667925 -0.0771022 1.37054 -0.130533 1.83721 0.264835L11.5 8.4512L21.1628 0.264836C21.6295 -0.130532 22.3321 -0.0771013 22.7321 0.384149Z"
+                        fill="#272727"
+                      />
+                    </svg>
+                  </SvgIcon>
                 </Box>
 
-                <Box
-                  component={RouterLink}
-                  href={paths.aboutUs}
-                  onClick={handleMenuClose}
+                <Collapse in={mobileBrandsOpen} timeout={0}>
+                  <MobileBrandsGrid onItemClick={handleMenuClose} />
+                </Collapse>
+              </Box>
+
+              <Box
+                component={RouterLink}
+                href={paths.contactUs}
+                onClick={handleMenuClose}
+                sx={{
+                  textDecoration: "none",
+                  display: "block",
+                  mt: 0,
+                }}
+              >
+                <Typography
                   sx={{
-                    textDecoration: "none",
-                    display: "block",
-                    mb: 1.5,
+                    fontSize: { sm: "14px", md: "15px" },
+                    fontWeight: 400,
+                    color: "#1D1D1D",
+                    width: "100%",
+                    padding: "12px 0 12px 32px",
+                    borderRadius: "4px",
+                    "&:hover": {
+                      color: "white",
+                      backgroundColor: "#AC93E1",
+                    },
                   }}
                 >
-                  <Typography
-                    sx={{
-                      fontSize: {sm:"14px",md:"15px"},
-                      fontWeight: 400,
-                      color: "#1D1D1D",
-                      width: "100%",
-                      padding: "12px 0 12px 32px",
-                      borderRadius: "4px",
-                      "&:hover": {
-                        color: "white",
-                        backgroundColor: "#AC93E1",
-                      },
-                    }}
-                  >
-                    {t(tokens.nav.about)}
-                  </Typography>
-                </Box>
-
-                <Box sx={{ mb: 0 }}>
-                  <Box
-                    onClick={() => setMobileBrandsOpen((prev) => !prev)}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      cursor: "pointer",
-                      mb: 1.5,
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        fontSize: {sm:"14px",md:"15px"},
-                        fontWeight: 400,
-                        color: "#1D1D1D",
-                        width: "100%",
-                        padding: "12px 0 12px 32px",
-                        borderRadius: "4px",
-                        "&:hover": {
-                          color: "white",
-                          backgroundColor: "#AC93E1",
-                        },
-                      }}
-                    >
-                      {t(tokens.nav.brands)}
-                    </Typography>
-
-                    <SvgIcon
-                      sx={{
-                        fontSize: 23,
-                        color: "#111",
-                        transform: mobileBrandsOpen
-                          ? "rotate(180deg)"
-                          : "rotate(0deg)",
-                        transition: "transform 0.2s ease",
-                      }}
-                    >
-                      <svg
-                        width="23"
-                        height="11"
-                        viewBox="0 0 23 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M22.7321 0.384149C23.1321 0.8454 23.078 1.53983 22.6113 1.9352L12.2243 10.7352C11.8075 11.0883 11.1926 11.0883 10.7757 10.7352L0.38866 1.9352C-0.0780163 1.53983 -0.132029 0.845399 0.267874 0.384148C0.667925 -0.0771022 1.37054 -0.130533 1.83721 0.264835L11.5 8.4512L21.1628 0.264836C21.6295 -0.130532 22.3321 -0.0771013 22.7321 0.384149Z"
-                          fill="#272727"
-                        />
-                      </svg>
-                    </SvgIcon>
-                  </Box>
-
-                  <Collapse in={mobileBrandsOpen} timeout={0}>
-                    <MobileBrandsGrid onItemClick={handleMenuClose} />
-                  </Collapse>
-                </Box>
-
-                <Box
-                  component={RouterLink}
-                  href={paths.contactUs}
-                  onClick={handleMenuClose}
-                  sx={{
-                    textDecoration: "none",
-                    display: "block",
-                    mt: 0,
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontSize: {sm:"14px",md:"15px"},
-                      fontWeight: 400,
-                      color: "#1D1D1D",
-                      width: "100%",
-                      padding: "12px 0 12px 32px",
-                      borderRadius: "4px",
-                      "&:hover": {
-                        color: "white",
-                        backgroundColor: "#AC93E1",
-                      },
-                    }}
-                  >
-                    {t(tokens.nav.contact)}
-                  </Typography>
-                </Box>
+                  {t(tokens.nav.contact)}
+                </Typography>
               </Box>
             </Box>
-          </Drawer>
-        )}
-      </Box>
+          </Box>
+        </Drawer>
+      )}
+    </Box >
     </>
   );
 };

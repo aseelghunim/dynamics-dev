@@ -33,7 +33,7 @@ const NewCommitmentBanner = () => {
       <Section height={issmUp ? "auto" : "auto"} >
         <Stack sx={{
           minHeight: { xs: "auto", sm: "auto" },
-          width: { xs: "100%", md: "75%" },
+          width: { xs: "100%", md: "84%" },
           margin: { xs: "0", md: "0 auto!important" }
         }}
           justifyContent="center">
