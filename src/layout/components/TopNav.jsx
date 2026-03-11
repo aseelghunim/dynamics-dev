@@ -25,8 +25,8 @@ import { usePathname } from "hooks/use-pathname";
 import { useWindowScroll } from "hooks/use-window-scroll";
 import { paths } from "paths";
 
-import logo from "assets/logo.png";
-import logoLight from "assets/dynamics.png";
+import logo from "assets/logo.svg";
+import logoLight from "assets/logoLight.svg";
 import mobileNavBg from "assets/mobile-nav-bg.svg";
 
 import logo1 from "assets/home-brands-logos/logo1.png";
@@ -227,9 +227,9 @@ export const TopNav = (props) => {
         <Container maxWidth="xl" sx={{
           "@media (min-width: 992px)": {
             // fontSize: "2.25rem!important",
-            paddingLeft: "11%",
-            marginLeft: "-6px",
-            paddingRight: "11%"
+            paddingLeft: "180px",
+            // marginLeft: "-6px",
+            paddingRight: "180px"
           },
          
          }}>
@@ -263,14 +263,15 @@ export const TopNav = (props) => {
                 position: "absolute",
                 left: "50%",
                 transform: "translateX(-50%)",
-                height: 46,
+                height: {xs:"57px",sm:"40px",md:"50px"},
+                width:   {xs:"200px", sm:"178px", md:"220px"},
                 display: "flex",
                 alignItems: "center",
                 textDecoration: "none",
               }}
             >
               <img
-                style={{ height: "100%" }}
+                style={{ height: "100%",width:"100%" }}
                 src={elevate ? logo : logoLight}
                 alt="Dynamics"
               />
@@ -312,10 +313,8 @@ export const TopNav = (props) => {
                 <Box
                   style={{ height: "60px" }}
                   sx={{
-                    "@media(min-width: 768px) and (max-width: 991px)": {
-                      width: "150px",
-                      objectFit: "cover",
-                    },
+                    height: {xs:"57px",sm:"40px",md:"50px"},
+                    width:   {xs:"200px", sm:"178px", md:"220px"},
                   }}
                 >
                   <img

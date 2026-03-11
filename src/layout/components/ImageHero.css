@@ -4,6 +4,14 @@
 }
 
 @media(min-width: 992px){
+    .image-hero-parent span{
+        text-align: justify!important;
+        font-size: 18px!important;
+    }
+    .image-hero-parent{
+        padding-left: 156px;
+    padding-right: 156px;
+    }
    html[dir='rtl'] .image-hero-parent::before{
         background-position: left bottom;
     }
@@ -11,6 +19,10 @@
     font-size: 36px!important;
     font-weight: 400!important;
 
+    }
+    .image-hero-parent span{
+        margin-top: 32px!important;
+        font-size: 18px!important;
     }
    .maili-image-hero-1 h3{
     font-size: 36px!important;
@@ -22,6 +34,9 @@
     .drcyj-image-hero-1 {
         min-height: unset!important;
         height: 65vh;
+    }
+    .dimono-image-hero-1{
+        background-position: -36px 88px;
     }
 }
 @media(min-width: 768px) and (max-width: 991px) {

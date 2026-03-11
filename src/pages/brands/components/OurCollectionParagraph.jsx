@@ -12,18 +12,20 @@ const OurCollectionParagraph = () => {
 
   return (
     <Box
+    className="general-shared-section"
       sx={{
+        
         background: "linear-gradient(to right, #ec5e87, rgb(245, 203, 218))",
         color: "white",
         py: { xs: 4, sm: 4,md:9 },
-        px: { xs: 4, sm: 3 },
+        px: { xs: 4, sm: 3,md:19.5 },
       }}
     >
       <Section height={{ xs: "auto", md: "auto" }}>
         <Stack
           sx={{
             minHeight: { xs: "auto", sm: "auto" },
-            width: { xs: "100%", md: "75%" },
+            width: { xs: "100%", md: "100%" },
             margin: { xs: "0", md: "0 auto!important" }
           }}
           justifyContent="center"

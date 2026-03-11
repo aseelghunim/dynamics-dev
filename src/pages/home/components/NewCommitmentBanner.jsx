@@ -27,13 +27,13 @@ const NewCommitmentBanner = () => {
         background: "linear-gradient(to right, #6bb6b6, #a9e0eb)",
         color: "white",
         py: { xs: 4, sm: 4,md:9 },
-        px: { xs: 4, sm: 3 },
+        px: { xs: 4, sm: 3,md:19.5 },
       }}
     >
       <Section height={issmUp ? "auto" : "auto"} >
         <Stack sx={{
           minHeight: { xs: "auto", sm: "auto" },
-          width: { xs: "100%", md: "84%" },
+          width: { xs: "100%", md: "100%" },
           margin: { xs: "0", md: "0 auto!important" }
         }}
           justifyContent="center">

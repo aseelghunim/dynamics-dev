@@ -1,6 +1,5 @@
 import { Box, Container, Grid } from "@mui/system";
 
-import logo from "assets/logo.png";
 import { tokens } from "locales/tokens";
 import StorySection from "pages/about/components/StorySection";
 import { useTranslation } from "react-i18next";

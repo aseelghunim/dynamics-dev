@@ -1,3 +1,21 @@
+ .dimono-product-component h6{
+        /* padding-top: 0!important; */
+        color: #19254F!important;
+        font-family: "ParagraphFonts", serif!important;
+        font-weight: bold;
+
+    }
+    @media(min-width: 992px){
+   
+    .dimono-product-component li{
+        font-size: 13px!important;
+    }
+    .key-benifits-h6{
+        padding-top: 132px;
+
+
+    }
+}
 @media (min-width:768px) and (max-width: 991px){
     .product-logo{
         width: 70px

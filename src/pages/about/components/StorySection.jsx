@@ -194,10 +194,10 @@ const ImageBox = ({ reverse, passedImage, passedVideo }) => {
           position: "absolute",
           top: "10%",
           height: "80%",
-          width: { xs: "105%", sm: "115%" },
+          width: { xs: "105%", sm: "115%",md:"100%" },
           overflow: "hidden",
 
-          ...(reverse ? { left: { xs: "0", sm: -70, md: -110 } } : { right: { xs: "0", sm: -70, md: -110 } }),
+          ...(reverse ? { left: { xs: "0", sm: -70, md: -70 } } : { right: { xs: "0", sm: -70, md: -70 } }),
         }}
       >
         {isVideo ? (
@@ -257,7 +257,7 @@ const StorySection = ({
 }) => {
   return (
     <Box
-      className={`${name ?? ""} story-section-parent`}
+      className={`${name ?? ""} story-section-parent ${reverse? 'reverse':''}`}
       maxWidth="xxl"
       sx={{
         backgroundColor,

@@ -46,8 +46,8 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
         },
 
         "@media(min-width:992px)": {
-          marginLeft: "7.5%",
-          marginRight: "7.5%",
+          marginLeft: "132px",
+          marginRight: "132px",
 
         },
         "@media (min-width: 768px) and (max-width:991px)": {

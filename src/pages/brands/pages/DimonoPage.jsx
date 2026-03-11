@@ -2,11 +2,12 @@ import { Box, Container, Stack } from "@mui/system";
 import logoImage from "assets/dimono/1.png";
 import image from "assets/dimono/cover-girl.png";
 import background from 'assets/dimono/background.png'
+import backgroundRtl from 'assets/dimono/background-rtl.png'
 
 import girlImage from "assets/ellanse/girlImage.png";
 import video1 from "assets/dimono/video1.mp4";
 
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import background_green from "assets/dynamics-gradient-green.png";
 import { usePageView } from "hooks/use-page-view";
 import useScrollToTop from "hooks/useScrollToTop";
@@ -28,7 +29,8 @@ const DimonoPage = (props) => {
 
   usePageView();
   useScrollToTop();
-
+  const theme = useTheme();
+  const isRtl = theme.direction === "rtl";
   return (
     <>
       <Seo />
@@ -40,11 +42,12 @@ const DimonoPage = (props) => {
           videoSrc={video1}
           actionPath="#"
         />
-        <Box maxWidth="xxl" sx={{ backgroundColor: {xs:"#fff",sm:"#E0FFF5",md:"#fff"} }}>
+
+        <Box maxWidth="xxl" sx={{ backgroundColor: {xs:"#fff",sm:"#E0FFF5",md:"#E0FFF5"} }}>
           <Container maxWidth="xxl">
             <StorySection
               name='dimono-story-section-1'
-              backgroundColor={{ xs: "transparent",sm:"#E0FFF5", md: "#fff" }}
+              backgroundColor={{ xs: "transparent",sm:"#E0FFF5", md: "#E0FFF5" }}
               backImage={background_green}
 
               title={t(tokens.brands.ellanse.whatIs)}
@@ -105,7 +108,7 @@ const DimonoPage = (props) => {
         <ImageHero
         name='dimono-image-hero-1'
           sectionSx={{
-            backgroundImage: `url(${background})`,
+            backgroundImage: `url(${isRtl ? backgroundRtl : background})`,
             backgroundColor: {xs:"#e5e5e5",md:"transparent"},
             backgroundSize: "cover"
           }}
@@ -127,9 +130,9 @@ const DimonoPage = (props) => {
                 <Typography
                   variant="h3"
                   sx={{
-                    fontSize: { xs: "1.5rem", md: "inherit" },
+                    fontSize: { xs: "1.5rem", md: "2.25rem" },
                     color: "black",
-                    paddingLeft: { xs: "inherit", md: "35%" }
+                    paddingLeft: { xs: "inherit", md: "0" }
                   }}
                 >
                   {t(tokens.brands.dimono.productoverviewTitle)}
@@ -137,10 +140,10 @@ const DimonoPage = (props) => {
                 <Typography
                   variant="body"
                   sx={{
-                    fontSize: { xs: "0.875rem", md: "inherit" },
+                    fontSize: { xs: "0.875rem", md: "0.875rem" },
                     color: "black",
                     width: "100%",
-                    paddingLeft: { xs: "inherit", md: "35%" }
+                    paddingLeft: { xs: "inherit", md: "0" }
 
                   }}
                 >

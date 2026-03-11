@@ -73,7 +73,10 @@ const DimonoProductComponent = () => {
     <Box
     className="dimono-product-component"
       sx={{
-        p: { xs: 2, sm: "2rem" },
+        p: { xs: 2, sm: "2rem", md:"2rem"},
+        paddingLeft:{xs:2,sm:"2rem",md:19.5},
+        paddingRight:{xs:2,sm:"2rem",md:19.5},
+
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
@@ -146,14 +149,16 @@ const DimonoProductComponent = () => {
           /* ✅ DESKTOP (your existing 3-column layout) */
           <Grid container alignItems="center" spacing={4}>
             {/* LEFT */}
-            <Grid item xs={12} sm={4.5} md={4}>
+            <Grid item xs={12} sm={4.5} md={4.5}>
               <Box>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "#19254F", fontWeight: 600, fontSize: { xs: "1.5rem", sm: "10px", md: "1.5rem" } }}
-                >
-                  {product.title}
-                </Typography>
+              <Box
+                className="product-logo"
+                component="img"
+                src={productLogo}
+                alt="Dimono logo"
+                loading="lazy"
+                sx={{ width: 110, maxWidth: "100%" }}
+              />
 
                 <Typography
                   variant="body1"
@@ -164,16 +169,15 @@ const DimonoProductComponent = () => {
 
                 <Typography
                   variant="h6"
-                  sx={{ color: "#000", fontWeight: 400, fontSize: { xs: "1.25rem", sm: "10px", md: "1.25rem" }, mb: 1.5 }}
+                  sx={{ color: "#000", fontWeight: 400, 
+                  fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" }, mb: 1.5 }}
                 >
                   {product.featuresTitle}
                 </Typography>
 
                 <Box component="ul" sx={{ pl: 2, color: "#000", m: 0 }}>
                   {product.features.map((it) => (
-                    <li key={it} sx={{ 
-                      
-                     }}>{it}</li>
+                    <li key={it} >{it}</li>
                   ))}
                 </Box>
 
@@ -182,8 +186,8 @@ const DimonoProductComponent = () => {
                   sx={{
                     color: "#000",
                     fontWeight: 400,
-                    fontSize: { xs: "1.25rem", sm: "10px", md: "1.25rem" },
-                    mt: 3,
+                    fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
+                    mt: {xs:3,sm:3,md:8},
                     mb: 1.5,
                   }}
                 >
@@ -199,7 +203,7 @@ const DimonoProductComponent = () => {
             </Grid>
 
             {/* CENTER IMAGE */}
-            <Grid item xs={12} sm={3} md={4}>
+            <Grid item xs={12} sm={3} md={3}>
               <Box sx={{ textAlign: "center" }}>
                 <Box
                   component="img"
@@ -209,7 +213,7 @@ const DimonoProductComponent = () => {
                   sx={{
                     maxWidth: "100%",
                     height: "auto",
-                    width: "60%",
+                    width: "107px",
                     mt: 0,
                   }}
                 />
@@ -217,11 +221,15 @@ const DimonoProductComponent = () => {
             </Grid>
 
             {/* RIGHT */}
-            <Grid item xs={12} sm={4.5} md={3}>
+            <Grid item xs={12} sm={4.5} md={4.5}>
               <Box>
                 <Typography
+                className="key-benifits-h6"
                   variant="h6"
-                  sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}
+                  sx={{ color: "#000", fontWeight: 400,
+                  fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
+
+                   mb: 1.5 }}
                 >
                   {product.keyBenefitsTitle}
                 </Typography>
@@ -237,8 +245,10 @@ const DimonoProductComponent = () => {
                   sx={{
                     color: "#000",
                     fontWeight: 400,
-                    fontSize: "1.25rem",
-                    mt: 3,
+                    fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
+
+                    mt: {xs:3,sm:3,md:8},
+                    
                     mb: 1.5,
                   }}
                 >

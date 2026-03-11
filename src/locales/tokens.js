@@ -843,24 +843,24 @@ export const tokens = {
         functionItems: [
           "brands.drcyj.product.function.item1",
           "brands.drcyj.product.function.item2",
-          "brands.dimono.product.function.item3",
+          "brands.drcyj.product.function.item3",
         ],
       },
-      productoverviewTitle: "brands.dimono.productoverviewTitle",
-      productoverviewDesc: "brands.dimono.productoverviewDesc",
+      productoverviewTitle: "brands.drcyj.productoverviewTitle",
+      productoverviewDesc: "brands.drcyj.productoverviewDesc",
 
 
       applicationAreas:[
-        "brands.dimono.applicationAreas[0]",
-        "brands.dimono.applicationAreas[1]",
-        "brands.dimono.applicationAreas[2]",
-        "brands.dimono.applicationAreas[3]",
-        "brands.dimono.applicationAreas[4]",
-        "brands.dimono.applicationAreas[5]",
-        "brands.dimono.applicationAreas[6]",
-        "brands.dimono.applicationAreas[7]",
-        "brands.dimono.applicationAreas[8]",
-        "brands.dimono.applicationAreas[9]",
+        "brands.drcyj.applicationAreas[0]",
+        "brands.drcyj.applicationAreas[1]",
+        "brands.drcyj.applicationAreas[2]",
+        "brands.drcyj.applicationAreas[3]",
+        "brands.drcyj.applicationAreas[4]",
+        "brands.drcyj.applicationAreas[5]",
+        "brands.drcyj.applicationAreas[6]",
+        "brands.drcyj.applicationAreas[7]",
+        "brands.drcyj.applicationAreas[8]",
+        "brands.drcyj.applicationAreas[9]",
       ]
 
 

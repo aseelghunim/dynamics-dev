@@ -1,4 +1,26 @@
-@media(min-width: 768px) and (max-width: 991px){
+html[dir='rtl'] .first-items {
+    top: 16%;
+}
+
+html[dir='rtl'] .hand-arrow {
+    transform: scaleX(-1);
+}
+@media(min-width:992px) {
+    .dimono-logo {
+        width: 227px;
+        height: 45px;
+        margin: auto;
+
+    }
+
+    .dimono-logo img {
+        width: 100%;
+    }
+
+  
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
     .dimono-logo img {
         width: 142px;
     }
@@ -6,8 +28,8 @@
 
 @media(max-width:767px) {
     .dimono-area {
-margin-bottom: 30px;
-margin-top: 30px;
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
 
     .dimono-logo img {

@@ -81,7 +81,7 @@ const DimonoApplicationArea = ({
               className='dimono-logo'
               sx={{
                 position: "absolute",
-                top: { xs: 40, sm: 40 },
+                top: { xs: 40, sm: 40, md:64 },
                 left: 0,
                 right: 0,
                 textAlign: "center",
@@ -123,6 +123,7 @@ const DimonoApplicationArea = ({
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {/* Left list */}
               <Box
+              className="first-items"
                 sx={{
                   position: "absolute",
                   top: {sm:"30%",md:"33%"},
@@ -140,9 +141,9 @@ const DimonoApplicationArea = ({
                       sx={{
                         width: {sm:15,md:26},
                         height: {sm:15,md:26},
+                        color:"#A8D2E8",
                         borderRadius: "50%",
                         bgcolor: "#fff",
-                        color: "#111",
                         display: "grid",
                         placeItems: "center",
                         fontWeight: 800,
@@ -152,7 +153,7 @@ const DimonoApplicationArea = ({
                     >
                       {it.n}
                     </Box>
-                    <Typography sx={{ color: "#111", fontSize: {sm:7,md:14} , lineHeight: 1.2 }}>
+                    <Typography sx={{ color: "#111", fontSize: {sm:7,md:11} , lineHeight: 1.2 }}>
                       {it.label}
                     </Typography>
                   </Box>
@@ -180,7 +181,7 @@ const DimonoApplicationArea = ({
                         height: {sm:15,md:26},
                         borderRadius: "50%",
                         bgcolor: "#fff",
-                        color: "#111",
+                        color:"#A8D2E8",
                         display: "grid",
                         placeItems: "center",
                         fontWeight: 800,
@@ -190,7 +191,7 @@ const DimonoApplicationArea = ({
                     >
                       {it.n}
                     </Box>
-                    <Typography sx={{ color: "#111", fontSize: {sm:7,md:14}, lineHeight: 1.2 }}>
+                    <Typography sx={{ color: "#111", fontSize: {sm:7,md:11}, lineHeight: 1.2 }}>
                       {it.label}
                     </Typography>
                   </Box>
@@ -201,7 +202,7 @@ const DimonoApplicationArea = ({
               <Box
                 sx={{
                   position: "absolute",
-                  right: {sm:120, md:150},
+                  right: {sm:120, md:248},
                   top: "80%",
                   display: "flex",
                   alignItems: "center",
@@ -210,23 +211,24 @@ const DimonoApplicationArea = ({
               >
                 <Box
                   sx={{
-                    width:  {sm:15,md:40},
-                    height: {sm:15,md:40},
+                    width:  {sm:15,md:25},
+                    height: {sm:15,md:25},
                     borderRadius: "50%",
                     bgcolor: "#fff",
                     display: "grid",
                     placeItems: "center",
-                    boxShadow: "0 10px 22px rgba(0,0,0,0.12)",
+                    // boxShadow: "0 10px 22px rgba(0,0,0,0.12)",
                   }}
                 >
-                  <ArrowForwardRoundedIcon sx={{ color: "#6aaee5",
+                  <ArrowForwardRoundedIcon className="hand-arrow" sx={{ color: "#AAD2EB",
+                  fontSize:"14px",
                     "@media (min-width: 768px) and (max-width: 991px)": {
                       fontSize: "9px",
                     },
                 
                 }} />
                 </Box>
-                <Typography sx={{ color: "#111", fontSize: {sm:7,md:14}, fontWeight: 600, whiteSpace: "nowrap" }}>
+                <Typography sx={{ color: "#111", fontSize: {sm:7,md:11},  whiteSpace: "nowrap" }}>
                   {rightItems.find((x) => x.n === 10)?.label || "Hand rejuvenation"}
                 </Typography>
               </Box>

@@ -216,7 +216,7 @@ export const VideoHero = ({
           zIndex: 2,
           height: "100%",
           paddingBottom: { xs: 0, md: 5 },
-          marginLeft: { xs: 0, md: "7.5%" },
+          marginLeft: { xs: 0, md: "132px" },
           px: { xs: 2, md: 0 },
         }}
       >
