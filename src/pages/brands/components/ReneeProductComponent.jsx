@@ -75,9 +75,9 @@ const ReneeProductComponent = () => {
         t(tokens.brands.renee.products[0].skin[0].items[2]),
       ],
       img: product1,
-      buttonStyle: { color: "#0DADA5", borderColor: "#0DADA5" },
-      activeStyle: { backgroundColor: "#0DADA5" },
-      mobileIndicatorColor: "#0DADA5",
+      buttonStyle: { color: "#00AFA6", borderColor: "#00AFA6" },
+      activeStyle: { backgroundColor: "#00AFA6" },
+      mobileIndicatorColor: "#00AFA6",
     },
     {
       value: "product-2",
@@ -92,9 +92,9 @@ const ReneeProductComponent = () => {
         t(tokens.brands.renee.products[0].skin[1].items[2]),
       ],
       img: product2,
-      buttonStyle: { color: "#E48F75", borderColor: "#E48F75" },
-      activeStyle: { backgroundColor: "#E48F75" },
-      mobileIndicatorColor: "#E48F75",
+      buttonStyle: { color: "#F28A6F", borderColor: "#F28A6F" },
+      activeStyle: { backgroundColor: "#F28A6F" },
+      mobileIndicatorColor: "#F28A6F",
     },
     {
       value: "product-3",
@@ -109,9 +109,9 @@ const ReneeProductComponent = () => {
         t(tokens.brands.renee.products[0].skin[2].items[2]),
       ],
       img: product3,
-      buttonStyle: { color: "#F2E149", borderColor: "#F2E149" },
-      activeStyle: { backgroundColor: "#F2E149" },
-      mobileIndicatorColor: "#F2E149",
+      buttonStyle: { color: "#F7E12C", borderColor: "#F7E12C" },
+      activeStyle: { backgroundColor: "#F7E12C" },
+      mobileIndicatorColor: "#F7E12C",
     },
     {
       value: "product-4",
@@ -126,9 +126,9 @@ const ReneeProductComponent = () => {
         t(tokens.brands.renee.products[0].skin[3].items[2]),
       ],
       img: product4,
-      buttonStyle: { color: "#DFA9B3", borderColor: "#DFA9B3" },
-      activeStyle: { backgroundColor: "#DFA9B3" },
-      mobileIndicatorColor: "#DFA9B3",
+      buttonStyle: { color: "#E9A6B3", borderColor: "#E9A6B3" },
+      activeStyle: { backgroundColor: "#E9A6B3" },
+      mobileIndicatorColor: "#E9A6B3",
     },
     {
       value: "product-5",
@@ -143,9 +143,9 @@ const ReneeProductComponent = () => {
         t(tokens.brands.renee.products[0].skin[4].items[2]),
       ],
       img: product5,
-      buttonStyle: { color: "#EFB854", borderColor: "#EFB854" },
-      activeStyle: { backgroundColor: "#EFB854" },
-      mobileIndicatorColor: "#EFB854",
+      buttonStyle: { color: "#F8B53A", borderColor: "#F8B53A" },
+      activeStyle: { backgroundColor: "#F8B53A" },
+      mobileIndicatorColor: "#F8B53A",
     },
   ];
 
@@ -230,7 +230,7 @@ const ReneeProductComponent = () => {
                       <Typography
                         variant="body2"
                         sx={{
-                          color: "#6D6E71",
+                          color: "#7C7C7C",
                           fontSize: "1rem",
                           mb: 2,
                           mt: { xs: "-20px", sm: 0 },
@@ -282,7 +282,7 @@ const ReneeProductComponent = () => {
                     <Typography
                       variant="body2"
                       sx={{
-                        color: "#6D6E71",
+                        color: "#7C7C7C",
                         mb: 2,
                         fontSize: { xs: "1rem", sm: "1.25rem" },
                       }}
@@ -320,12 +320,13 @@ const ReneeProductComponent = () => {
   // ======== ✅ DESKTOP VIEW (UNCHANGED) =========
   return (
     <Box
+    className='renee-product'
       sx={{
         padding: { xs: 2, sm: 7, md: "2rem" },
         borderRadius: "8px",
         paddingRight: "24px",
-        paddingTop:"80px!important",
-        backgroundColor:{sm:"white",md:"#f8f9fa"}
+        paddingTop: "80px!important",
+        backgroundColor: { sm: "white", md: "#f8f9fa" }
       }}
       maxWidth="xxl"
     >
@@ -339,7 +340,7 @@ const ReneeProductComponent = () => {
                     <Typography
                       variant="body2"
                       sx={{
-                        fontSize: { xs: "1rem", sm: "inherit" },
+                        fontSize: { xs: "1rem", sm: "0.875rem" },
                         mb: { xs: 1, sm: 0 },
                       }}
                     >
@@ -354,21 +355,22 @@ const ReneeProductComponent = () => {
                       <Typography
                         variant="body1"
                         sx={{
-                          color: "#6D6E71",
-                          fontSize: { xs: "0.875rem", sm: "inherit" },
+                          color: "#7C7C7C",
+                          fontSize: { xs: "0.875rem", sm: "13px" },
                         }}
                       >
                         {product.subtitle}
                       </Typography>
                     </Box>
 
-                    <Box sx={{ mt: { xs: 1, sm: 6, md: 2 }, mb: { xs: 1, sm: 1, md: 2 } }}>
+                    <Box sx={{ mt: { xs: 1, sm: 6, md: 11 }, mb: { xs: 1, sm: 1, md: 1 } }}>
                       {product.preQuestion && (
                         <Typography
                           variant="body2"
                           sx={{
-                            color: "#8B49AA",
-                            fontSize: { xs: "0.75rem", sm: "inherit" },
+                            color: "#9B4FB3",
+                            fontSize: { xs: "0.75rem", sm: "0.875rem" },
+                            fontWeight:"600"
                           }}
                         >
                           {product.preQuestion}
@@ -378,7 +380,8 @@ const ReneeProductComponent = () => {
                         variant="body2"
                         sx={{
                           color: "#5A2772",
-                          fontSize: { xs: "0.75rem", sm: "inherit" },
+                          fontWeight:"600",
+                          fontSize: { xs: "0.75rem", sm: "0.875rem" },
                         }}
                       >
                         {product.question}
@@ -389,8 +392,9 @@ const ReneeProductComponent = () => {
                       variant="body1"
                       sx={{
                         mb: { xs: 1, sm: 2 },
-                        color: "#6D6E71",
-                        fontSize: { xs: "0.75rem", sm: "inherit" },
+                        color: "#7C7C7C",
+                        fontSize: { xs: "0.75rem", sm: "13px" },
+                        textAlign:"justify"
                       }}
                     >
                       {product.description}
@@ -402,7 +406,7 @@ const ReneeProductComponent = () => {
                       sx={{
                         textAlign: "center",
                         position: "relative",
-                        minHeight: { xs: "auto", sm: "auto", md: "457px" },
+                        minHeight: { xs: "auto", sm: "auto", md: "auto" },
                         mb: { xs: 2, sm: 0 },
                       }}
                     >
@@ -414,7 +418,7 @@ const ReneeProductComponent = () => {
                         sx={{
                           maxWidth: "100%",
                           height: "auto",
-                          width: { xs: "80%", sm: "100%" },
+                          width: { xs: "80%", sm: "238px" },
                         }}
                       />
                     </Box>
@@ -426,7 +430,8 @@ const ReneeProductComponent = () => {
                       sx={{
                         mb: 1,
                         color: "#5A2772",
-                        fontSize: { xs: "0.875rem", sm: "inherit" },
+                        fontSize: { xs: "0.875rem", sm: "0.875rem" },
+                        fontWeight:"600"
                       }}
                     >
                       {t(tokens.brands.renee.keyBenefits)}
@@ -435,7 +440,8 @@ const ReneeProductComponent = () => {
                       component="ul"
                       sx={{
                         pl: 2,
-                        fontSize: { xs: "0.75rem", sm: "1rem" },
+                        fontSize: { xs: "0.75rem", sm: "13px" },
+                        color:"#7c7c7c"
                       }}
                     >
                       {product.items.map((item, idx) => (
@@ -474,9 +480,13 @@ const ReneeProductComponent = () => {
                       }
                       onClick={() => setTabValue(product.value)}
                       sx={{
-                        minWidth: { xs: "100%", sm: "95px", md: "150px" },
-                        fontSize: { xs: "0.75rem", sm: "9px", md: "0.75rem" },
+                        width: { xs: "100%", sm: "95px", md: "125px" },
+                        height:{
+                          xs:"",sm:"",md:"35px"
+                        },
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "11px" },
                         py: { xs: 1, sm: 1.5 },
+                        px:0,
                         ...(product.value === tabValue
                           ? product.activeStyle
                           : product.buttonStyle),

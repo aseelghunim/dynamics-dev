@@ -10,7 +10,7 @@ import { tokens } from "locales/tokens";
 import { paths } from "paths";
 import { useTranslation } from "react-i18next";
 import { RouterLink } from "./router-link";
-import logo from "assets/dynamics-logo.svg";
+import logo from "assets/footer-logo.svg";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -60,8 +60,8 @@ export const Footer = () => {
                 src={logo}
                 alt="Dynamics Medica"
                 sx={{
-                  height: { xs:39,sm: 40, md: 49 },
-                  width: "auto",
+                  height: "auto",
+                  width:{ xs:136,sm: 161, md: 218 },
                   flexShrink: 0,
                 }}
               />

@@ -1,9 +1,11 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "locales/tokens";
 import { useTranslation } from "react-i18next";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import applicationAreaImg from "assets/dimono/dimono girl and arrows.png";
+import applicationAreaImgRtl from "assets/dimono/dimono girl and arrows-rtl.png";
+
 import logo from "assets/dimono/logo.png";
 import './DimonoApplicationArea.css';
 
@@ -13,7 +15,8 @@ const DimonoApplicationArea = ({
   rightItems: rightItemsProp,
 }) => {
   const { t } = useTranslation();
-
+  const theme = useTheme();
+  const isRtl = theme.direction === 'rtl';
   const leftItems =
     leftItemsProp ??
     [
@@ -63,7 +66,7 @@ const DimonoApplicationArea = ({
         {/* Base image */}
         <Box
           component="img"
-          src={applicationAreaImg}
+          src={isRtl? applicationAreaImgRtl : applicationAreaImg}
           alt="Dimono Application Area"
           loading="lazy"
           sx={{

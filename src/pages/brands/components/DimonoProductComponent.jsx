@@ -214,7 +214,9 @@ const DimonoProductComponent = () => {
                     maxWidth: "100%",
                     height: "auto",
                     width: "107px",
-                    mt: 0,
+                    mt: "140px",
+                    
+
                   }}
                 />
               </Box>

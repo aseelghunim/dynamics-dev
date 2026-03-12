@@ -2,7 +2,7 @@ import { Box, Container } from "@mui/system";
 import background_green from "assets/dynamics-gradient-green.png";
 import girlImage from "assets/renee/renee-girls.png";
 import productImage from "assets/renee/renee-product.png";
-import video from "assets/ReneeMovie1.mp4";
+import video from "assets/renee/video1.mp4";
 import { usePageView } from "hooks/use-page-view";
 import useScrollToTop from "hooks/useScrollToTop";
 import { Seo } from "layout/components/Seo";

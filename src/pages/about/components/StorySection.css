@@ -215,6 +215,17 @@
         padding-right: 0!important;
 
     }
+    html[dir='ltr'] .renee-story-2.story-section-parent.reverse{
+        padding-left: 124px!important;
+    }
+    html[dir='rtl'] .renee-story-2.story-section-parent.reverse{
+        padding-right: 124px!important;
+    padding-left: 48px!important;
+    }
+    .renee-story-2.story-section-parent.reverse h3{
+        padding-top: 0!important;
+    }
+
 }
 
 
