@@ -40,7 +40,6 @@ const KsurgeryPage = (props) => {
         {/* what is */}
         <Box maxWidth="xxl" sx={{
           backgroundColor: "#EEE8F5",
-
           "@media(min-width: 768px) ": {
             backgroundColor: "#E0FFF5!important"
           }
@@ -162,7 +161,7 @@ const KsurgeryPage = (props) => {
                     variant="body"
                     sx={{
                       textAlign: "justify",
-                      fontSize: { xs: "0.875rem", sm: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", sm: "0.875rem", md: "1.125rem" },
                       "@media(min-width: 768px) and (max-width: 991px)": {
                         marginTop: "20px!important",
                         lineHeight: "1.4!important"
@@ -179,7 +178,7 @@ const KsurgeryPage = (props) => {
                         lineHeight: "1.4!important"
                       },
                       textAlign: "justify",
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", md: "1.125rem" },
                     }}
                   >
                     {t(tokens.brands.ksurgery.operaDescription1)}
@@ -193,7 +192,7 @@ const KsurgeryPage = (props) => {
 
                       },
                       textAlign: "justify",
-                      fontSize: { xs: "0.875rem", md: "inherit" },
+                      fontSize: { xs: "0.875rem", md: "1.125rem" },
                     }}
                   >
                     {t(tokens.brands.ksurgery.operaDescription2)}
@@ -203,6 +202,7 @@ const KsurgeryPage = (props) => {
             />
           </Container>
         </Box>
+
         {isMobile && (
           <>
 
@@ -217,8 +217,8 @@ const KsurgeryPage = (props) => {
           </>
 
         )}
-        <Box
 
+        <Box
           component={"img"}
           src={icons}
           className="icons"
@@ -239,7 +239,7 @@ const KsurgeryPage = (props) => {
         <KsurgeryProductComponent collection={1} />
 
         <SharedSection
-          name="ksurgery-shared-section-2 "
+          name="ksurgery-shared-section-2"
           title={t(tokens.brands.ksurgery.skinbooster1)}
           description={t(tokens.brands.ksurgery.description3)}
           descriptionSx={{ textAlign: { xs: "center", md: "justify" } }}
@@ -295,7 +295,7 @@ const KsurgeryPage = (props) => {
                 <Box
                   component="ul"
                   sx={{
-                    fontSize: { xs: "0.75rem", sm: "0.875rem", md: "0.75rem" },
+                    fontSize: { xs: "0.75rem", sm: "0.875rem", md: "0.875rem" },
                     pl: 2,
                     m: 0,
                   }}
@@ -311,6 +311,7 @@ const KsurgeryPage = (props) => {
             </>
           }
         />
+
         {false && (
           <ImageHero
             image={image2}

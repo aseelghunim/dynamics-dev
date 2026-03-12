@@ -27,7 +27,7 @@ import opera_1_body_rev_img from "assets/ksurgery/products/body/rev-opera-body1.
 import ProductDetails from "./ProductDetails";
 import { useTranslation } from "react-i18next";
 import { tokens } from "locales/tokens";
-
+import './KsurgeryProductComponent.css'
 /**
  * Mobile-only purple section header like screenshot ("Face", "Body")
  */
@@ -37,7 +37,7 @@ const MobileSectionHeader = ({ label }) => {
       sx={{
         bgcolor: "primary.main",
         color: "#fff",
-        borderRadius: { xs: "3px", sm: 6 },
+        borderRadius: { xs: "3px", sm: 6, },
         px: 3,
         py: 2,
         width: "100%",
@@ -389,11 +389,16 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
 
   return (
     <Box
+      className='ksurgery-product'
       maxWidth="xxl"
       sx={{
         height: { xs: "auto", sm: "auto", md: "80vh" },
         minHeight: { xs: "400px", sm: "unset", md: "80vh" },
         backgroundColor: { xs: "#EEE8F5", sm: "#fff" },
+        "@media(min-width:992px)": {
+          paddingLeft: "132px",
+          paddingRight: "132px"
+        }
       }}
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
@@ -401,7 +406,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
           py: {
             xs: 1, sm: 2,
             "@media(min-width: 768px) and (max-width: 991px)": {
-              padding:"32px 88px 64px!important"
+              padding: "32px 88px 64px!important"
             }
           }
         }}>
@@ -431,22 +436,29 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
                 <ButtonGroup
                   variant="contained"
                   orientation={smUp ? "horizontal" : "vertical"}
-                  sx={{ width: { xs: "100%", sm: "auto" } }}
+                  sx={{
+                    width: { xs: "100%", sm: "106px" },
+                    height: "32px"
+                  }}
                 >
                   {tabs.map((tab) => (
                     <Button
                       key={tab.value}
                       onClick={() => handleTabChange(tab.value)}
-                      color={tabValue === tab.value ? "primary" : "inherit"}
+                      color={tabValue === tab.value ? "primary" : "white"}
+                      border={tabValue === tab.value ? "1px solid #A575F5" : "1px solid #A575F5"}
+
+
                       size="large"
                       sx={{
+                        border: "1px solid #A575F5",
                         width: { xs: "100%", sm: "auto" },
-                        fontSize: { xs: "0.75rem",sm:"10px", md: "0.75rem" },
-                        py: { xs: 1, sm: 1.5 },
+                        fontSize: { xs: "0.75rem", sm: "10px", md: "11px" },
+                        py: { xs: 1, sm: 0 },
                         "@media(min-width: 768px) and (max-width: 991px)": {
-                          borderRadius:"8px",
-                          width:"53px",
-                          height:"32px"
+                          borderRadius: "8px",
+                          width: "53px",
+                          height: "32px"
                         }
                       }}
                     >

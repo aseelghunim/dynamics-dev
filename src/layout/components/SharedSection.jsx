@@ -44,7 +44,7 @@ const SharedSection = ({
             }
             sx={{
               width: "100%",
-              maxWidth: { xs: 520,sm:"none", md: "75%" },
+              maxWidth: { xs: 520,sm:"none", md: "80%" },
               mx: "auto",
               textAlign: { xs: "center", sm: "left" },
             }}

@@ -46,7 +46,8 @@ const ProductDetails = ({ products, collection }) => {
                     fontWeight={{ xs: "bold", sm: "regular", md: "bold" }}
                     gutterBottom
                     sx={{
-                      fontSize: { xs: "1rem", sm: "0.875rem", md: "1rem" },
+                      fontFamily:"ParagraphFonts!important",
+                      fontSize: { xs: "1rem", sm: "0.875rem", md: "0.875rem" },
                     }}
                   >
                     {product.title}
@@ -56,7 +57,7 @@ const ProductDetails = ({ products, collection }) => {
                     color={theme.palette.primary.main}
                     gutterBottom
                     sx={{
-                      fontSize: { xs: "0.875rem", sm: "13px", md: "0.875rem" },
+                      fontSize: { xs: "0.875rem", sm: "13px", md: "13px" },
                     }}
                   >
                     {product.subtitle}
@@ -66,7 +67,7 @@ const ProductDetails = ({ products, collection }) => {
                     component="div"
                     gutterBottom
                     sx={{
-                      fontSize: { xs: "0.75rem", sm: "13px", md: "0.75rem" },
+                      fontSize: { xs: "0.75rem", sm: "13px", md: "13px" },
                       ...(product.descriptionSx || {}),
                     }}
                   >
@@ -85,7 +86,7 @@ const ProductDetails = ({ products, collection }) => {
                         <li key={item}>
                           <Typography
                             sx={{
-                              fontSize: { xs: "0.75rem", sm: "13px", md: "0.75rem" },
+                              fontSize: { xs: "0.75rem", sm: "13px", md: "13px" },
                             }}
                           >
                             {item}{" "}
@@ -101,7 +102,7 @@ const ProductDetails = ({ products, collection }) => {
                     gutterBottom
                     sx={{
                       mt: 2,
-                      fontSize: { xs: "0.75rem", sm: "13px", md: "0.75rem" },
+                      fontSize: { xs: "0.75rem", sm: "13px", md: "13px" },
                     }}
                   >
                     {product.description2}
@@ -172,10 +173,12 @@ const ProductDetails = ({ products, collection }) => {
           justifyContent={"space-around"}
           spacing={{ xs: 1, sm: 0 }}
           sx={{
+            columnGap: "12px!important",
             width: { xs: "100%",sm:collection == 1 ? "100%": "50%", md: "50%" },
+            justifyContent: collection == '1' ? "center":"space-around",
+
             "@media(min-width: 768px) and (max-width: 991px)": {
-              justifyContent: collection == '1' ? "center":"space-around",
-              columnGap: "12px"
+              // columnGap: "12px"
             }
           }}
         >
@@ -190,14 +193,16 @@ const ProductDetails = ({ products, collection }) => {
                     product.value === productTab ? "contained" : "outlined"
                   }
                   sx={{
-                    width: { xs: "100%", sm: "61px", md: "auto" },
-
-                    fontSize: { xs: "0.75rem", sm: "10px", md: "0.75rem" },
+                    width: { xs: "100%", sm: "61px", md: "61px" },
+                    height:"32px",
+                    px:0,
+                    borderRadius: "5px",
+                    fontSize: { xs: "0.75rem", sm: "10px", md: "11px" },
                     py: { xs: 1, sm: 0, md: 1.5 },
                     "@media(min-width: 768px) and (max-width: 991px)": {
                       fontWeight: "medium",
                       px: 0,
-                      height: "32px",
+                      width: "61px",
                       borderRadius: "8px"
                     }
                   }}

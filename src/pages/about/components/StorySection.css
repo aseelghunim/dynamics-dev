@@ -137,9 +137,8 @@
     }
 
 
-    .story-section-parent.dimono-story-2 .first-stack ,
-    .story-section-parent.lanluma-story-section-3 .first-stack
-    {
+    .story-section-parent.dimono-story-2 .first-stack,
+    .story-section-parent.lanluma-story-section-3 .first-stack {
         padding-right: 0 !important;
     }
 
@@ -202,29 +201,50 @@
     }
 
 
-   html[dir='rtl'] .lanluma-story-section-2.story-section-parent.reverse{
-        padding-right: 96px!important;
+    html[dir='rtl'] .lanluma-story-section-2.story-section-parent.reverse {
+        padding-right: 96px !important;
     }
-    html[dir='rtl'] .maili-story-section-2.story-section-parent.reverse .first-stack{
-        padding-left: 56px!important;
+
+    html[dir='rtl'] .maili-story-section-2.story-section-parent.reverse .first-stack {
+        padding-left: 56px !important;
     }
-    html[dir='ltr'] .maili-story-section-2.story-section-parent.reverse {
+
+    html[dir='ltr'] .maili-story-section-2.story-section-parent.reverse,
+    
+    html[dir='ltr'] .ksurgery-story-2.story-section-parent.reverse
+    {
         padding-left: 102px !important;
     }
-    html[dir='ltr'] .drcyj-story-section-1.story-section-parent .first-stack{
-        padding-right: 0!important;
+
+    html[dir='ltr'] .drcyj-story-section-1.story-section-parent .first-stack,
+    html[dir='ltr'] .ksurgery-story-1.story-section-parent .first-stack {
+        padding-right: 0 !important;
+    }
+
+    html[dir='ltr'] .renee-story-2.story-section-parent.reverse {
+        padding-left: 124px !important;
+    }
+
+    html[dir='rtl'] .renee-story-2.story-section-parent.reverse {
+        padding-right: 124px !important;
+        padding-left: 48px !important;
+    }
+
+    .renee-story-2.story-section-parent.reverse h3 {
+        padding-top: 0 !important;
+    }
+    html[dir='ltr'] .ksurgery-story-2.story-section-parent.reverse .first-stack{
+        padding-right: 56px!important;
+    }
+    html[dir='rtl'] .ksurgery-story-2.story-section-parent.reverse{
+        /* padding-left: 56px!important; */
+        padding-right: 102px !important;
 
     }
-    html[dir='ltr'] .renee-story-2.story-section-parent.reverse{
-        padding-left: 124px!important;
+    html[dir='rtl'] .ksurgery-story-2.story-section-parent.reverse .first-stack{
+        padding-left: 48px !important;
     }
-    html[dir='rtl'] .renee-story-2.story-section-parent.reverse{
-        padding-right: 124px!important;
-    padding-left: 48px!important;
-    }
-    .renee-story-2.story-section-parent.reverse h3{
-        padding-top: 0!important;
-    }
+    
 
 }
 
@@ -331,7 +351,7 @@
     }
 
     .lanluma-story-section-1 .first-stack,
-    
+
     .maili-story-section-1 .first-stack {
 
         padding-right: 0 !important;
