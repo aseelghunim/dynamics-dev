@@ -48,21 +48,22 @@ const AboutUsPage = (props) => {
           <Container maxWidth="xl">
             <ValuesBanner />
           </Container>
-          <Container maxWidth="xxl">
+          <Container maxWidth="xxl" className='about-us-page-dual-section-2-holder'>
             <DualSection
               name='about-us-page-dual-section-2'
               reverse={true}
-              title1={t(tokens.about.page.card3.title)}
-              paragraph1={t(tokens.about.page.card3.paragraph)}
-              title2={t(tokens.about.page.card4.title)}
-              paragraph2={t(tokens.about.page.card4.paragraph)}
-              backImage1={background_dark}
-              backImage2={background_green}
+              title1={t(tokens.about.page.card4.title)}
+              paragraph1={t(tokens.about.page.card4.paragraph)}
+              title2={t(tokens.about.page.card3.title)}
+              paragraph2={t(tokens.about.page.card3.paragraph)}
+              backImage2={background_dark}
+              backImage1={background_green}
             />
           </Container>
           <Container
             maxWidth="xxl"
             sx={{
+              className:'girl-section',
               display: "block",
               backgroundImage: `url(${productBg})`,
               backgroundSize: "cover",
@@ -70,6 +71,11 @@ const AboutUsPage = (props) => {
               backgroundPosition: { xs: "center center", sm: "top center" },
               position: "relative",
               height: "100%",
+              "@media(min-width:992px)": {
+                paddingLeft: "92px",
+                paddingRight: "92px",
+
+              },
 
               paddingTop: { xs: 2, sm: 2, md: 5 },
               paddingBottom: { xs: 2, sm: 2, md: 0 },
@@ -85,7 +91,7 @@ const AboutUsPage = (props) => {
                 // backgroundSize: "50%",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: isTablet ? "50%" : "contain",
-                backgroundPosition: "right bottom",
+                backgroundPosition: isRtl ? 'left bottom' : "right bottom",
                 transform: isRtl ? "scaleX(-1)" : "none",
                 zIndex: 0,
                 display: isMobile ? 'none' : 'block'
@@ -217,7 +223,7 @@ const AboutUsPage = (props) => {
                                         color: "white",
                                         borderColor: "white",
                                         height: { xs: "41px", sm: "45px", md: "41px" },
-                                        width: {  xs: "175px" },
+                                        width: { xs: "175px" },
                                         marginTop: "60px!important",
                                         borderRadius: "8px",
 

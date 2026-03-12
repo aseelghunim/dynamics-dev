@@ -189,7 +189,6 @@ const KsurgeryPage = (props) => {
                       "@media(min-width: 768px) and (max-width: 991px)": {
                         marginTop: "0!important",
                         lineHeight: "1.4!important"
-
                       },
                       textAlign: "justify",
                       fontSize: { xs: "0.875rem", md: "1.125rem" },

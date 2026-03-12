@@ -11,7 +11,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 import { QuoteTypography } from "layout/components/StyledTypography";
 import { tokens } from "locales/tokens";
 import { useTranslation } from "react-i18next";
-
+import './ValuesBanner.css'
 const ValuesBanner = (props) => {
   const { t } = useTranslation();
   const items1 = [
@@ -49,6 +49,7 @@ const ValuesBanner = (props) => {
 
   return (
     <Box
+    className='values-banner'
       maxWidth="xxl"
       sx={{
         backgroundColor: "#eee8f5",
@@ -80,9 +81,10 @@ const ValuesBanner = (props) => {
             >
               <QuoteTypography
                 sx={{
-                  color: "#012169",
+                  color: "#00226D",
+                  fontSize: "15px!important",
                   "@media (min-width: 768px) and (max-width:991px)": {
-                    fontSize: "15px!important",
+                   
                     width: "100%"
                   },
                   "@media (max-width: 767px)": {
@@ -106,12 +108,15 @@ const ValuesBanner = (props) => {
                     borderRadius: 0,
                   }}
                 >
-                  <CardContent sx={{ padding: { xs: 4, sm: 2 } }}>
+                  <CardContent sx={{ padding: { xs: 4, sm: 2,md:3 },pb:{ xs: 4, sm: 2,md:"24px!important" } }}>
                     <Typography
                       gutterBottom
                       variant="body2"
                       component="div"
                       sx={{
+                        fontSize: "15px!important",
+                        fontWeight: 600,
+                        marginBottom: "24px",
                         "@media (min-width: 768px) and (max-width:991px)": {
                           fontSize: "15px!important",
 
@@ -130,12 +135,12 @@ const ValuesBanner = (props) => {
                       component="div"
                       sx={{
                         color: { xs: "#000", sm: "text.secondary" },
-                        fontSize: { xs: "0.875rem", sm: "10px", md: "1rem" },
-                        textAlign: { xs: "left", sm: "left" },
+                        fontSize: { xs: "0.875rem", sm: "10px", md: "0.875rem" },
+                        textAlign: { xs: "left", sm: "justify" },
                         textJustify: "inter-word",
                         wordSpacing: "0.15em",
                         letterSpacing: "0.02em",
-                        lineHeight: { xs: "1.7", sm: "1.4", md: "1.7" },
+                        lineHeight: { xs: "1.7", sm: "1.4", md: "1.4" },
                         display: "block",
                         width: "100%",
                       }}

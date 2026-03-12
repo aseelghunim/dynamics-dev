@@ -1,4 +1,17 @@
+.about-us-page-dual-section-2-holder{
+    order: 2;
+}
+
 @media(min-width: 992px) {
+   html[dir='ltr'] .about-us-page-dual-section-1,    html[dir='ltr']  .about-us-page-dual-section-2{
+        padding-left: 132px;
+        padding-right: 90px;
+
+    }
+    html[dir='rtl'] .about-us-page-dual-section-1,    html[dir='rtl']  .about-us-page-dual-section-2{
+        padding-left: 90px;
+        padding-right: 132px;
+    }
     .dual-section-min-height-controller {
         min-width: 400px
     }

@@ -19,7 +19,7 @@ const TitleBox = ({
   const { t } = useTranslation();
 
   return (
-    <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex" }} className="test">
+    <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex", }} className="test">
       {" "}
       <Box
         sx={{
@@ -68,11 +68,11 @@ const TitleBox = ({
                   {component}
                 </Box>
               ) : (
-                <Stack spacing={{xs: 3, sm:1.5,md:3}} direction={"column"} sx={{ width: "100%" }}>
+                <Stack className="grid-holder" spacing={{xs: 3, sm:1.5,md:3}} direction={"column"} sx={{ width: "100%" }}>
                   <Typography
                     variant="h3"
                     sx={{
-                      pt: { xs: 0, sm: 2 },
+                      pt: { xs: 0, sm: 2,md:0 },
                       fontSize:{xs:"1.5rem",sm:"1.25rem",md:"1.5rem"}
                       // "@media (min-width:768px) and (max-width:991px)": {
                       //   fontSize: "1.25rem",
