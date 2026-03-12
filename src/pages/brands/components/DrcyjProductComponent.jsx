@@ -173,7 +173,7 @@ const DrcyjProductComponent = () => {
             {/* LEFT */}
             <Grid item xs={12} sm={4.5}>
               <Box>
-                <Typography variant="h5" sx={{ color: "#5A2772", fontWeight: 600 }}>
+                <Typography variant="h6" sx={{ color: "#5A2772", fontWeight: 600 }}>
                   {product.title}
                 </Typography>
 
@@ -184,21 +184,21 @@ const DrcyjProductComponent = () => {
                   {product.subtitle}
                 </Typography>
 
-                <Typography variant="h6" sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}>
+                <Typography variant="h6" sx={{ color: "#19254F", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}>
                   {product.featuresTitle}
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 2, color: "#000", m: 0 }}>
+                <Box component="ul" sx={{ pl: 2, color: "#7C7C7C", m: 0 }}>
                   {product.features.map((it) => (
                     <li key={it}>{it}</li>
                   ))}
                 </Box>
 
-                <Typography variant="h6" sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mt: 3, mb: 1.5 }}>
+                <Typography variant="h6" sx={{ color: "#19254F", fontWeight: 400, fontSize: "1.25rem", mt: 3, mb: 1.5 }}>
                   {product.treatmentTitle}
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 2, color: "#000", m: 0 }}>
+                <Box component="ul" sx={{ pl: 2, color: "#7C7C7C", m: 0 }}>
                   {product.treatments.map((it) => (
                     <li key={it}>{it}</li>
                   ))}
@@ -223,7 +223,7 @@ const DrcyjProductComponent = () => {
                   sx={{
                     maxWidth: "100%",
                     height: "auto",
-                    width: { xs: "70%", sm: "70%", md: "70%" },
+                    width: { xs: "70%", sm: "70%", md: "137px" },
                     mt: 0,
                   }}
                 />
@@ -233,21 +233,21 @@ const DrcyjProductComponent = () => {
             {/* RIGHT */}
             <Grid item xs={12} sm={4.5}>
               <Box>
-                <Typography variant="h6" sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}>
+                <Typography variant="h6" sx={{ color: "#19254F", fontWeight: 400, fontSize: "1.25rem", mb: 1.5 }}>
                   {product.keyBenefitsTitle}
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 2, color: "#000", m: 0 }}>
+                <Box component="ul" sx={{ pl: 2, color: "#7C7C7C", m: 0 }}>
                   {product.keyBenefits.map((it) => (
                     <li key={it}>{it}</li>
                   ))}
                 </Box>
 
-                <Typography variant="h6" sx={{ color: "#000", fontWeight: 400, fontSize: "1.25rem", mt: 3, mb: 1.5 }}>
+                <Typography variant="h6" sx={{ color: "#19254F", fontWeight: 400, fontSize: "1.25rem", mt: 3, mb: 1.5 }}>
                   {product.functionTitle}
                 </Typography>
 
-                <Box component="ul" sx={{ pl: 2, color: "#000", m: 0 }}>
+                <Box component="ul" sx={{ pl: 2, color: "#7C7C7C", m: 0 }}>
                   {product.functions.map((it) => (
                     <li key={it}>{it}</li>
                   ))}

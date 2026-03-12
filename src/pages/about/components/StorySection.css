@@ -1,8 +1,9 @@
 @media(min-width: 992px) {
     html[dir='ltr'] .story-section-parent
+
     /* ,
     html[dir='rtl'] .story-section-parent.reverse  */
-    {
+        {
         padding-left: 48px !important;
         padding-right: 72px !important;
     }
@@ -19,9 +20,10 @@
 
 
     html[dir='rtl'] .story-section-parent.reverse {
-        padding-right: 96px !important;
+        padding-right: 32px !important;
         padding-left: 0 !important;
     }
+
     .story-section-parent .min-height-controller {
         min-height: 440px;
     }
@@ -38,31 +40,38 @@
 
     html[dir='rtl'] .story-section-parent .first-stack {
         padding-right: 32px !important;
+        padding-left: 0 !important;
 
     }
 
-    
-    .dimono-story-section-1 .first-stack{
+
+    .dimono-story-section-1 .first-stack {
         padding-right: 32px;
     }
-    .dimono-story-section-1{
-        padding-bottom: 0!important;
+
+    .dimono-story-section-1 {
+        padding-bottom: 0 !important;
     }
-    .lanluma-story-section-2 .image-box > div{
+
+    .lanluma-story-section-2 .image-box>div {
         height: 400px;
-        top:0;
+        top: 0;
     }
-    html[dir='rtl'] .lanluma-story-section-2 .image-box > div{
-        height: 420px;
-    }
-    html[dir='rtl'] .lanluma-story-section-2 .image-box > div{
+
+    html[dir='rtl'] .lanluma-story-section-2 .image-box>div {
         height: 420px;
     }
 
-   html[dir='rtl'] .lanluma-story-section-1::before, html[dir='rtl'] .ellanse-story-section-1::bef{
+    /* html[dir='rtl'] .lanluma-story-section-2 .image-box>div {
+        height: 420px;
+    } */
+
+    html[dir='rtl'] .lanluma-story-section-1 .image-box>div>div,
+    html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         transform: none !important;
 
     }
+
     .ellanse-story-section-3 .first-stack {
         padding-top: 35px !important;
     }
@@ -83,29 +92,54 @@
     .story-section-parent.ksurgery-story-2 .first-stack,
 
     .story-section-parent.ellanse-story-section-2 .first-stack,
-    .story-section-parent.lanluma-story-section-2 .first-stack,
-    .story-section-parent.maili-story-section-2 .first-stack {
+    .story-section-parent.lanluma-story-section-2 .first-stack {
 
 
 
         padding-left: 0 !important;
+        padding-right: 32px !important;
     }
+
+
+
+
+    .story-section-parent.maili-story-section-2 .first-stack,
+
+    .story-section-parent.maili-story-section-1 .first-stack {
+        padding-right: 48px;
+        padding-left: 0;
+    }
+
+    html[dir='rtl'] .story-section-parent.maili-story-section-2 .first-stack,
+    html[dir='rtl'] .story-section-parent.maili-story-section-1 .first-stack {
+        padding-right: 0px;
+        padding-left: 48px;
+    }
+
+
 
     html[dir='rtl'] .story-section-parent.ksurgery-story-2 .first-stack,
 
     html[dir='rtl'] .story-section-parent.ellanse-story-section-2 .first-stack,
-    html[dir='rtl'] .story-section-parent.lanluma-story-section-2 .first-stack,
-    html[dir='rtl'] .story-section-parent.maili-story-section-2 .first-stack {
+    html[dir='rtl'] .story-section-parent.lanluma-story-section-2 .first-stack {
 
 
 
         padding-right: 0 !important;
-        padding-left: 96px !important;
+        padding-left: 32px !important;
     }
 
 
 
-    .story-section-parent.dimono-story-2 .first-stack {
+    html[dir='rtl'] .story-section-parent.maili-story-section-2.reverse {
+        padding-right: 102px !important;
+        padding-left: 0 !important;
+    }
+
+
+    .story-section-parent.dimono-story-2 .first-stack ,
+    .story-section-parent.lanluma-story-section-3 .first-stack
+    {
         padding-right: 0 !important;
     }
 
@@ -166,7 +200,27 @@
         text-align: justify;
 
     }
+
+
+   html[dir='rtl'] .lanluma-story-section-2.story-section-parent.reverse{
+        padding-right: 96px!important;
+    }
+    html[dir='rtl'] .maili-story-section-2.story-section-parent.reverse .first-stack{
+        padding-left: 56px!important;
+    }
+    html[dir='ltr'] .maili-story-section-2.story-section-parent.reverse {
+        padding-left: 102px !important;
+    }
+    html[dir='ltr'] .drcyj-story-section-1.story-section-parent .first-stack{
+        padding-right: 0!important;
+
+    }
 }
+
+
+
+
+
 
 @media(min-width: 768px) and (max-width: 991px) {
 
@@ -266,6 +320,7 @@
     }
 
     .lanluma-story-section-1 .first-stack,
+    
     .maili-story-section-1 .first-stack {
 
         padding-right: 0 !important;
