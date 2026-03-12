@@ -27,7 +27,7 @@ const JuvelookPage = (props) => {
       <Seo />
       <main>
         <VideoHero
-        name='juvelook'
+          name='juvelook'
           title2={t(tokens.brands.juvelook.pageTitle)}
           description={t(tokens.brands.juvelook.pageDescription)}
           videoSrc={video}
@@ -72,14 +72,14 @@ const JuvelookPage = (props) => {
           </Box>
         )}
         <ImageHero
-        name="juvelook-hero-2"
+          name="juvelook-hero-2"
           image={heroProductImage}
           imageCover={true}
 
           title={t(tokens.brands.juvelook.howIs)}
           description={t(tokens.brands.juvelook.howIsDescription)}
           descriptionSx={{
-            textAlign: {xs:"left",md:"justify"},
+            textAlign: { xs: "left", md: "justify" },
             textJustify: "inter-word",
             wordSpacing: "0.15em",
             letterSpacing: "0.02em",

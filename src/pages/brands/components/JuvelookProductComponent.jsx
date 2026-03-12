@@ -16,7 +16,7 @@ const JuvelookProductComponent = () => {
 
   const isTablet = useMediaQuery("(min-width:768px) and (max-width:991px)");
   const productImage = isTablet ? productTablet : product1;
-    const products = [
+  const products = [
     {
       value: "product-1",
       title1: t(tokens.brands.juvelook.products[0].aging[0].title1),
@@ -54,7 +54,9 @@ const JuvelookProductComponent = () => {
     <Box
       className="juvelook-product"
       sx={{
-        padding: { xs: 2, sm: "2rem" },
+        padding: { xs: 2, sm: "2rem", md: "2rem" },
+        paddingLeft: { xs: 2, sm: "2rem", md: 19.5 },
+        paddingRight: { xs: 2, sm: "2rem", md: 19.5 },
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
@@ -67,17 +69,19 @@ const JuvelookProductComponent = () => {
               <Box
                 component="img"
                 src={logo}
-                alt="Renee Lift"
+                alt="juvelook"
                 loading="lazy"
                 sx={{
-                  paddingTop: { xs: "16px", sm: 0, md: "16px" },
-                  marginLeft: { xs: 0, md: "-10px" },
-                  maxWidth: "100%",
-                  height: "auto",
-                  width: { xs: "120px", sm: "85px", md: "180px" },
+                  // paddingTop: { xs: "16px", sm: 0, md: "16px" },
+                  marginLeft: { xs: 0, md: "0" },
+                  width: { xs: "265px", sm: "85px", md: "126px" },
+                  height: { xs: "96px", sm: "27px", md: "40px" },
+                  objectFit: "cover"
+                  // width: { xs: "120px", sm: "85px", md: "180px" },
                 }}
               />
               <Typography
+                className="subtitle-p"
                 variant="body1"
                 sx={{
                   color: "#6D6E71",
@@ -91,12 +95,12 @@ const JuvelookProductComponent = () => {
             {products?.map((product) =>
               product.value === tabValue ? (
                 <>
-                  <Grid item xs={12} sm={4.5} md={3}>
+                  <Grid item xs={12} sm={4.5} md={4.5}>
                     <Stack spacing={{ xs: 3, sm: 2, md: 6 }}>
                       <Box>
                         <Typography
                           className="no-margin-p"
-                          variant="body2"
+                          variant="h6"
                           sx={{
                             color: "#1B5EA5",
                             mb: 2,
@@ -125,11 +129,11 @@ const JuvelookProductComponent = () => {
                       </Box>
                       <Box>
                         <Typography
-                          variant="body2"
+                          variant="h6"
                           sx={{
                             color: "#1B5EA5",
                             mb: 2,
-                            mt: { xs: 2, sm: 3, md: 10 },
+                            mt: { xs: 2, sm: 3, md: 6 },
                             fontSize: { xs: "1.25rem", sm: "11px", md: "1.25rem" },
                           }}
                         >
@@ -155,10 +159,10 @@ const JuvelookProductComponent = () => {
                       </Box>
                     </Stack>
                   </Grid>
-                  <Grid item xs={12} sm={3} md={6} sx={{
-
+                  <Grid item xs={12} sm={3} md={3} sx={{
+ alignSelf: "flex-end",
                     "@media(min-width:768px) and (max-width:991px)": {
-                      alignSelf: "flex-end"
+                     
                     }
                   }}>
                     <Box
@@ -167,8 +171,8 @@ const JuvelookProductComponent = () => {
                         justifyContent: "center",
                         alignItems: "center",
                         textAlign: "center",
-                        minHeight: { xs: "auto", md: "457px" },
-                        mt: { xs: 2, sm: 0, md: "-250px" },
+                        // minHeight: { xs: "auto", md: "457px" },
+                        mt: { xs: 2, sm: 0, md: 0 },
                         mb: { xs: 2, sm: 0 },
                       }}
                     >
@@ -181,10 +185,13 @@ const JuvelookProductComponent = () => {
                           maxWidth: "100%",
                           maxHeight: "100%",
                           height: "auto",
+                          // height: 324px;
+                          // width: 238px;
+                          // object-fit: cover;
                           width: { xs: "100%", sm: "95%", md: "auto" },
                           "@media(max-width:767px)": {
-                             marginTop: "-50px !important",
-                             transform: "scale(2)",
+                            marginTop: "-50px !important",
+                            transform: "scale(2)",
                           }
 
 
@@ -192,11 +199,11 @@ const JuvelookProductComponent = () => {
                       />
                     </Box>
                   </Grid>
-                  <Grid item xs={12} sm={4.5} md={3}>
+                  <Grid item xs={12} sm={4.5} md={4.5}>
                     <Stack spacing={{ xs: 3, sm: 2, md: 6 }}>
                       <Box>
                         <Typography
-                          variant="body2"
+                          variant="h6"
                           sx={{
                             mb: 2,
                             color: "#1B5EA5",
@@ -221,14 +228,14 @@ const JuvelookProductComponent = () => {
                       </Box>
                       <Box>
                         <Typography
-                          variant="body2"
+                          variant="h6"
                           sx={{
                             mb: 2,
                             color: "#1B5EA5",
                             fontSize: { xs: "1.25rem", sm: "11px", md: "1.25rem" },
                           }}
                         >
-                          {t(tokens.brands.renee.keyBenefits)}
+                          {t(tokens.brands.juvelook.keyBenefits)}
                         </Typography>
                         <Typography
                           component="ul"

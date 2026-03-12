@@ -1,14 +1,48 @@
-@media(min-width:768px) and (max-width:991px){
-    .juvelook-product{
-       padding-left: 64px!important;
-       padding-right: 0!important;
+.juvelook-product h6 {
+    /* padding-top: 0!important; */
+    color: #1B5EA5 !important;
+    font-family: "ParagraphFonts", serif !important;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+}
+
+@media(min-width: 992px) {
+    .subtitle-p {
+        margin-bottom: 48px
     }
-    .juvelook-product h5, .juvelook-product h6{
-        font-size: 11px!important;
-        font-weight: 600!important;
+
+    .juvelook-product h6 {
+        font-size: 0.875rem;
     }
-    .juvelook-product p,.juvelook-product li{
-        font-size: 9px!important;
+
+    .juvelook-product li , .juvelook-product p {
+        font-size: 13px !important;
     }
-  
+
+    .key-benifits-h6 {
+        padding-top: 132px;
+
+
+    }
+}
+
+
+@media(min-width:768px) and (max-width:991px) {
+    .juvelook-product {
+        padding-left: 64px !important;
+        padding-right: 0 !important;
+    }
+
+    .juvelook-product h5,
+    .juvelook-product h6 {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+    }
+
+    .juvelook-product p,
+    .juvelook-product li {
+        font-size: 9px !important;
+    }
+
 }

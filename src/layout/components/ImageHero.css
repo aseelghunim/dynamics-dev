@@ -4,7 +4,7 @@
 }
 
 @media(min-width: 992px){
-    .image-hero-parent span{
+    .image-hero-parent span,.image-hero-parent p{
         text-align: justify!important;
         font-size: 18px!important;
     }
@@ -15,7 +15,7 @@
    html[dir='rtl'] .image-hero-parent::before{
         background-position: left bottom;
     }
-    .image-hero-parent h3{
+    .image-hero-parent h3,.image-hero-parent h2{
     font-size: 36px!important;
     font-weight: 400!important;
 

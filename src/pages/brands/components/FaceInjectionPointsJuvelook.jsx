@@ -210,7 +210,7 @@ const FaceInjectionPointsJuvelook = () => {
             height: "100%",
             py: { xs: 4, md: 0 },
             paddingBottom: "0!important",
-            paddingLeft: { xs: 0, md: "16px" },
+            paddingLeft: { xs: 0, md: 20 },
             paddingRight: { xs: 0, md: "16px" },
 
           }}
@@ -223,16 +223,19 @@ const FaceInjectionPointsJuvelook = () => {
           >
             <Stack
               justifyContent="center"
-              alignItems="center"
+              alignItems="flex-start"
               sx={{ height: "100%" }}
               spacing={{ xs: 4, md: 20 }}
             >
               <Box sx={{
-                width: { xs: "80%", sm: "148px", md: "65%" },
-                "@media(min-width:768px) and (max-width:991px)": {
+                width: { xs: "283px", sm: "148px", md: "236px" },
+                marginLeft: "0",
+                height: { xs: "84px", sm: "44px", md: "70px" },
 
-                  marginLeft: "  -8px"
-                }
+                // "@media(min-width:768px) and (max-width:991px)": {
+
+                 
+                // }
               }}>
                 <Box component="img" src={logo} sx={{
 
@@ -242,7 +245,7 @@ const FaceInjectionPointsJuvelook = () => {
                   variant="body2"
                   sx={{
                     color: "#ffffff",
-                    fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
+                    fontSize: { xs: "0.875rem", sm: "9px", md: "1.25rem" },
                     mt: { xs: 1, md: 0 },
                   }}
                 >
@@ -262,7 +265,7 @@ const FaceInjectionPointsJuvelook = () => {
                   }}
                 >
                   <Stack
-                    sx={{ width: { xs: "60%", sm: "66px", md: "30%" } }}
+                    sx={{ width: { xs: "60%", sm: "66px", md: "106px" } }}
                     spacing={{ xs: 2, md: 5 }}
                   >
                     <Box component="img" src={stretchImage} sx={{
@@ -276,7 +279,7 @@ const FaceInjectionPointsJuvelook = () => {
                         p: 1,
                         textAlign: "center",
                         color: "#ABDFF4",
-                        fontSize: { xs: "0.75rem", sm: "9px", md: "inherit" },
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "14px" },
                         "@media(min-width:768px) and (max-width:991px)": {
                           width: "65px",
                           padding: "0!important",
@@ -289,8 +292,9 @@ const FaceInjectionPointsJuvelook = () => {
                   </Stack>
 
                   <Stack
-                    sx={{ width: { xs: "60%", sm: "66px", md: "30%" } }}
+                    sx={{ width: { xs: "60%", sm: "66px", md: "106px" } }}
                     spacing={{ xs: 2, md: 5 }}
+                    
                   >
                     <Box component="img" src={scarImage} sx={{
 
@@ -303,7 +307,7 @@ const FaceInjectionPointsJuvelook = () => {
                         p: 1,
                         textAlign: "center",
                         color: "#ABDFF4",
-                        fontSize: { xs: "0.75rem", sm: "9px", md: "inherit" },
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "14px" },
                         "@media(min-width:768px) and (max-width:991px)": {
                           width: "65px",
                           padding: "0!important",
