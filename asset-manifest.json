@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dynamics-dev/static/css/main.bc9e6ce6.css",
-    "main.js": "/dynamics-dev/static/js/main.7ef1c65c.js",
+    "main.css": "/dynamics-dev/static/css/main.5d6ed065.css",
+    "main.js": "/dynamics-dev/static/js/main.1e896428.js",
     "static/js/453.f037a3e1.chunk.js": "/dynamics-dev/static/js/453.f037a3e1.chunk.js",
     "static/media/about.mov": "/dynamics-dev/static/media/about.e3f2773cffb8c4ad96d6.mov",
     "static/media/video3.mp4": "/dynamics-dev/static/media/video3.9a44517e20046f0ee211.mp4",
@@ -39,7 +39,6 @@
     "static/media/3.png": "/dynamics-dev/static/media/3.87672aedc16cb9eb1641.png",
     "static/media/val2.png": "/dynamics-dev/static/media/val2.518366204ce83abcc094.png",
     "static/media/lenisna-product1.png": "/dynamics-dev/static/media/lenisna-product1.d0607ba83a84fe896e0b.png",
-    "static/media/juvelook-product-1.png": "/dynamics-dev/static/media/juvelook-product-1.77021f7d28446399f2c4.png",
     "static/media/mobile-bg.png": "/dynamics-dev/static/media/mobile-bg.7b814ce73144512bcb2e.png",
     "static/media/mobile-product.svg": "/dynamics-dev/static/media/mobile-product.05fb6fbb31cf91276cb3b66b318a58d4.svg",
     "static/media/cover-girl.png": "/dynamics-dev/static/media/cover-girl.402833b7fc67ac19cc51.png",
@@ -89,6 +88,7 @@
     "static/media/Lato-Regular.ttf": "/dynamics-dev/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
     "static/media/gradient.png": "/dynamics-dev/static/media/gradient.fdee85c0a8cb9a26a96e.png",
     "static/media/product1.webp": "/dynamics-dev/static/media/product1.9b4e6ced92252ee52640.webp",
+    "static/media/juvelook-product-1.png": "/dynamics-dev/static/media/juvelook-product-1.bf6f613cf58750dad34e.png",
     "static/media/dynamics-gradient-dark.png": "/dynamics-dev/static/media/dynamics-gradient-dark.73b18a95e857ec0caa82.png",
     "static/media/ksurgery-product.jpg": "/dynamics-dev/static/media/ksurgery-product.0000b58ad86370a772bb.jpg",
     "static/media/girlImage.png": "/dynamics-dev/static/media/girlImage.58e8519c045f6bd29dbe.png",
@@ -117,12 +117,12 @@
     "static/media/slick.ttf": "/dynamics-dev/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dynamics-dev/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/dynamics-dev/index.html",
-    "main.bc9e6ce6.css.map": "/dynamics-dev/static/css/main.bc9e6ce6.css.map",
-    "main.7ef1c65c.js.map": "/dynamics-dev/static/js/main.7ef1c65c.js.map",
+    "main.5d6ed065.css.map": "/dynamics-dev/static/css/main.5d6ed065.css.map",
+    "main.1e896428.js.map": "/dynamics-dev/static/js/main.1e896428.js.map",
     "453.f037a3e1.chunk.js.map": "/dynamics-dev/static/js/453.f037a3e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc9e6ce6.css",
-    "static/js/main.7ef1c65c.js"
+    "static/css/main.5d6ed065.css",
+    "static/js/main.1e896428.js"
   ]
 }
