@@ -39,6 +39,7 @@ import logo7 from "assets/home-brands-logos/logo7.svg";
 import logo8 from "assets/home-brands-logos/logo8.svg";
 import logo9 from "assets/home-brands-logos/logo9.svg";
 
+import './TopNav.css';
 const TOP_NAV_HEIGHT = 95;
 
 const MobileBrandsGrid = ({ onItemClick }) => {
@@ -58,10 +59,11 @@ const MobileBrandsGrid = ({ onItemClick }) => {
 
   return (
     <Box
+    className='top-nav'
       sx={{
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: 3,
+        gap: 4,
         pt: 3,
         pb: 4,
         px: 4,
@@ -263,8 +265,8 @@ export const TopNav = (props) => {
                 position: "absolute",
                 left: "50%",
                 transform: "translateX(-50%)",
-                height: {xs:"57px",sm:"40px",md:"50px"},
-                width:   {xs:"200px", sm:"178px", md:"220px"},
+                height: {xs:"57px",sm:"18px",md:"50px!important"},
+                width:   {xs:"200px", sm:"144px", md:"220px"},
                 display: "flex",
                 alignItems: "center",
                 textDecoration: "none",
@@ -311,10 +313,10 @@ export const TopNav = (props) => {
                 sx={{ textDecoration: "none" }}
               >
                 <Box
-                  style={{ height: "60px" }}
+                  // style={{ height: "60px" }}
                   sx={{
-                    height: {xs:"57px",sm:"40px",md:"50px"},
-                    width:   {xs:"200px", sm:"178px", md:"220px"},
+                    height: {xs:"57px",sm:"18px",md:"50px"},
+                    width:   {xs:"200px", sm:"144px", md:"220px"},
                   }}
                 >
                   <img
@@ -385,7 +387,7 @@ export const TopNav = (props) => {
                   onClick={() => handleChange(language)}
                   aria-label="language"
                 >
-                  <SvgIcon sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
+                  <SvgIcon className="language-btn" sx={{ color: elevate ? "#ab92e1" : "#fff" }}>
                     <LanguageIcon />
                   </SvgIcon>
                 </IconButton>
@@ -542,7 +544,7 @@ export const TopNav = (props) => {
                 >
                   <Typography
                     sx={{
-                      fontSize: { sm: "14px", md: "15px" },
+                      fontSize: { sm: "14px", md: "15px!important" },
                       fontWeight: 400,
                       color: "#1D1D1D",
                       width: "100%",

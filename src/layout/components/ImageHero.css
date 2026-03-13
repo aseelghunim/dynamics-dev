@@ -3,43 +3,62 @@
     background-size: contain !important;
 }
 
-@media(min-width: 992px){
-    .image-hero-parent span,.image-hero-parent p{
-        text-align: justify!important;
-        font-size: 18px!important;
+@media(min-width: 992px) {
+
+    .image-hero-parent span,
+    .image-hero-parent p {
+        text-align: justify !important;
+        font-size: 18px !important;
     }
-    .image-hero-parent{
+
+    .image-hero-parent {
         padding-left: 156px;
-    padding-right: 156px;
+        padding-right: 156px;
     }
-   html[dir='rtl'] .image-hero-parent::before{
+
+    html[dir='rtl'] .image-hero-parent::before {
         background-position: left bottom;
     }
-    .image-hero-parent h3,.image-hero-parent h2{
-    font-size: 36px!important;
-    font-weight: 400!important;
+
+    .image-hero-parent h3,
+    .image-hero-parent h2 {
+        font-size: 36px !important;
+        font-weight: 400 !important;
 
     }
-    .image-hero-parent span{
-        margin-top: 32px!important;
-        font-size: 18px!important;
+
+    .image-hero-parent span {
+        margin-top: 32px !important;
+        font-size: 18px !important;
     }
-   .maili-image-hero-1 h3{
-    font-size: 36px!important;
-   }
-    .maili-image-hero-1 span,.drcyj-image-hero-1 span{
-        margin-top: 32px!important;
-        font-size: 18px!important;
+
+    .maili-image-hero-1 h3 {
+        font-size: 36px !important;
     }
+
+    .maili-image-hero-1 span,
+    .drcyj-image-hero-1 span {
+        margin-top: 32px !important;
+        font-size: 18px !important;
+    }
+
     .drcyj-image-hero-1 {
-        min-height: unset!important;
+        min-height: unset !important;
         height: 65vh;
     }
-    .dimono-image-hero-1{
+
+    .dimono-image-hero-1 {
         background-position: -36px 88px;
     }
 }
+
 @media(min-width: 768px) and (max-width: 991px) {
+
+    .image-hero-parent h3,
+    .image-hero-parent h2 {
+        font-size: 32px !important;
+    }
+
     .ellanse-logo {
         width: 211px;
         height: 59px;
@@ -49,14 +68,48 @@
     }
 
     .image-hero-parent {
-        padding-left: 64px !important;
-        padding-right: 64px !important;
+        padding-left: 48px !important;
+        padding-right: 48px !important;
 
+    }
+
+    html[dir='ltr'] .image-hero-parent.leninsa-hero-1,
+    html[dir='ltr'] .image-hero-parent.lensina-image-hero-2 {
+
+        padding-left: 64px !important;
+
+    }
+
+    html[dir='rtl'] .image-hero-parent.leninsa-hero-1,
+    html[dir='rtl'] .image-hero-parent.lensina-image-hero-2 {
+        padding-right: 64px !important;
+    }
+
+    .image-hero-parent.ksurgery-image-hero {
+        padding-left: 32px !important;
+    }
+
+    html[dir='rtl'] .image-hero-parent.ksurgery-image-hero {
+        padding-right: 64px !important;
+        padding-left: 0 !important;
+    }
+
+    .image-hero-parent.dimono-image-hero-1 {
+        padding-left: 64px;
+        padding-right: 64px !important;
+    }
+
+    html[dir='rtl'] .ksurgery-stack {
+        /* align-items: flex-start!important; */
     }
 
     .text-holder {
         padding-left: 0 !important;
         text-align: start !important;
+    }
+
+    html[dir='rtl'] .text-holder {
+        padding-right: 0 !important;
     }
 
     .text-holder p,
@@ -66,6 +119,16 @@
         margin-right: auto !important;
         font-size: 15px !important;
     }
+
+    html[dir='rtl'] .text-holder p,
+    html[dir='rtl'] .text-holder span {
+        /* width: 60%; */
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+
+
 
     .drcyj-image-hero-1:before {
         background-position: -260px 50px !important;
@@ -80,7 +143,7 @@
     }
 
     .lanluma-image-hero-1 h3 {
-        font-size: 36px !important;
+        font-size: 32px !important;
     }
 
     .lanluma-image-hero-1 span {
@@ -114,13 +177,70 @@
 
     .dimono-image-hero-1::before {
         background-size: 50% !important;
-        background-position: 0 110px !important;
+        /* background-position: 0 110px !important; */
+    }
+
+    .dimono-image-hero-1 {
+        padding-left: 64px !important;
+        background-position: -56px 150px;
+        background-repeat: no-repeat;
+    }
+
+    html[dir='rtl'] .dimono-image-hero-1 {
+        background-position: right;
+    }
+
+    html[dir='rtl'] .dimono-image-hero-1::before {
+        /* transform: none!important; */
+        left: -50%;
     }
 
     .dimono-image-hero-1 h3 {
         font-size: 2rem;
         font-weight: 400;
     }
+
+
+    html[dir='rtl'] .drcyj-image-hero-1 {
+
+        padding-right: 60px !important;
+    }
+
+    html[dir='ltr'] .drcyj-image-hero-1 {
+
+        padding-left: 60px !important;
+    }
+
+    .drcyj-story-section-1 span {
+        word-spacing: 0;
+    }
+
+    .maili-image-hero-1 ,.ellanse-hero-image-1{
+        padding-left: 64px !important;
+    }
+
+    html[dir='rtl'] .maili-image-hero-1 ,   html[dir='rtl'] .lanluma-image-hero-1,  html[dir='rtl'] .ellanse-hero-image-1 {
+        padding-right: 64px !important;
+    }
+
+    html[dir='ltr'] .lanluma-image-hero-1, html[dir='ltr'] .ellanse-hero-image-1 {
+        padding-left: 64px !important;
+    }
+    html[dir='rtl'] .lanluma-image-hero-1::before {
+
+        left: -345px;
+        right: unset !important;
+    }
+
+    html[dir='rtl'] .lanluma-image-hero-1 span {
+        font-size: 18px !important;
+        width: 60% !important;
+    }
+    html[dir='rtl'] .ellanse-logo{
+        margin-left: auto!important;
+        margin-right: 0!important;
+    }
+    /* html[dir='rtl'] .ell */
 }
 
 
@@ -312,4 +432,5 @@
     .lensina-image-hero-2 {
         height: 100vh !important;
     }
+
 }

@@ -1,0 +1,53 @@
+.lenisna-product h6 {
+    /* padding-top: 0!important; */
+    color: #7B1237 !important;
+    font-family: "ParagraphFonts", serif !important;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+}
+
+@media(min-width: 992px) {
+    .lenisna-product{
+        padding-left: 156px!important;
+        padding-right: 156px!important;
+    }
+    .subtitle-p {
+        margin-bottom: 48px
+    }
+
+    .lenisna-product h6 {
+        font-size: 0.875rem;
+    }
+
+    .lenisna-product li , .lenisna-product p {
+        font-size: 13px !important;
+    }
+
+    .key-benifits-h6 {
+        padding-top: 132px;
+
+
+    }
+}
+
+
+@media(min-width:768px) and (max-width:991px) {
+    .lenisna-product {
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+    }
+    /* html[dir='rtl'] .juvelook-product */
+
+    .lenisna-product h5,
+    .lenisna-product h6 {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+    }
+
+    .lenisna-product p,
+    .lenisna-product li {
+        font-size: 9px !important;
+    }
+
+}

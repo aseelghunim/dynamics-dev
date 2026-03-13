@@ -32,9 +32,12 @@ export const Footer = () => {
   return (
     <Box
       sx={{
-        bgcolor:"#fff",
+        bgcolor: "#fff",
         pt: { xs: 3, sm: 2 },
-    
+        "@media(min-width:768px) and (max-width:991px)": {
+          paddingLeft: "40px",
+          paddingRight: "40px"
+        }
       }}
     >
       <Container maxWidth="lg">
@@ -61,7 +64,7 @@ export const Footer = () => {
                 alt="Dynamics Medica"
                 sx={{
                   height: "auto",
-                  width:{ xs:136,sm: 161, md: 218 },
+                  width: { xs: 136, sm: 161, md: 218 },
                   flexShrink: 0,
                 }}
               />
@@ -78,9 +81,13 @@ export const Footer = () => {
                     key={section.title + index}
                     LinkComponent={RouterLink}
                     href={section.path}
-                    sx={{ minWidth: "auto",fontSize:{
-                      sm:"13px",md:"13px"
-                    } }}
+                    sx={{
+                      minWidth: "auto",
+                      fontSize: {
+                        sm: "13px", md: "13px"
+                      },
+                      fontWeight: "400"
+                    }}
                   >
                     {section.title}
                   </Button>

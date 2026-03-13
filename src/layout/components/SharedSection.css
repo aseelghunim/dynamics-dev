@@ -1,25 +1,39 @@
-@media (min-width: 992px){
-    .general-shared-section{
-        padding-top: 88px!important;
-        padding-bottom: 88px!important;
+@media (min-width: 992px) {
+    .general-shared-section {
+        padding-top: 88px !important;
+        padding-bottom: 88px !important;
     }
 }
 
 
 
-@media(min-width: 768px) and (max-width: 991px){
-    .ksurgery-shared-section{
-        padding-top: 27px!important;
-        padding-bottom: 27px!important;
+@media(min-width: 768px) and (max-width: 991px) {
+    .general-shared-section {
+        padding-top: 56px !important;
+        padding-bottom: 56px !important;
+        padding-left: 64px !important;
+
     }
-    
+
+    html[dir='rtl'] .general-shared-section {
+        padding-right: 64px;
+        padding-left: unset;
+    }
+
+    .general-shared-section h2,
+    .general-shared-section p {
+        text-align: justify !important;
+    }
+
+    /* .general-shared-section h2{ */
+
 }
 
 @media(max-width:767px) {
     .ksurgery-shared-section {
-        padding-top: 32px!important;
-        padding-bottom: 48px!important;
-        padding-left: 32px!important;
-        padding-right: 32px!important;
+        padding-top: 32px !important;
+        padding-bottom: 48px !important;
+        padding-left: 32px !important;
+        padding-right: 32px !important;
     }
 }

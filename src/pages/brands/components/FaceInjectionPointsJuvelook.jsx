@@ -195,7 +195,7 @@ const FaceInjectionPointsJuvelook = () => {
           position: "relative", zIndex: 1, height: "100%",
           "@media(min-width:768px) and (max-width:991px)": {
             paddingRight: "0!important",
-            paddingLeft: "80px!important"
+            paddingLeft: "88px!important"
           }
 
 
@@ -218,11 +218,11 @@ const FaceInjectionPointsJuvelook = () => {
           <Box
             sx={{
               width: { xs: "100%", md: "40%" },
-              height: { xs: "auto", md: "100%" },
+              height: { xs: "auto",sm:"100%", md: "100%" },
             }}
           >
             <Stack
-              justifyContent="center"
+              justifyContent={{ sm:"space-between",md:"center" }}
               alignItems="flex-start"
               sx={{ height: "100%" }}
               spacing={{ xs: 4, md: 20 }}

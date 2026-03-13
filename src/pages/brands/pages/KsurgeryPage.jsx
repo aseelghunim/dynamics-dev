@@ -257,7 +257,7 @@ const KsurgeryPage = (props) => {
           descriptionSx={{ textAlign: "justify" }}
           component={
             <>
-              <Stack spacing={2}>
+              <Stack spacing={2} className='ksurgery-stack'>
                 <Typography
                   variant="h3"
                   sx={{

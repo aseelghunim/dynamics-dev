@@ -71,11 +71,11 @@ const DimonoProductComponent = () => {
 
   return (
     <Box
-    className="dimono-product-component"
+      className="dimono-product-component"
       sx={{
-        p: { xs: 2, sm: "2rem", md:"2rem"},
-        paddingLeft:{xs:2,sm:"2rem",md:19.5},
-        paddingRight:{xs:2,sm:"2rem",md:19.5},
+        p: { xs: 2, sm: "2rem", md: "2rem" },
+        paddingLeft: { xs: 2, sm: "2rem", md: 19.5 },
+        paddingRight: { xs: 2, sm: "2rem", md: 19.5 },
 
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
@@ -151,14 +151,14 @@ const DimonoProductComponent = () => {
             {/* LEFT */}
             <Grid item xs={12} sm={4.5} md={4.5}>
               <Box>
-              <Box
-                className="product-logo"
-                component="img"
-                src={productLogo}
-                alt="Dimono logo"
-                loading="lazy"
-                sx={{ width: 110, maxWidth: "100%" }}
-              />
+                <Box
+                  className="product-logo"
+                  component="img"
+                  src={productLogo}
+                  alt="Dimono logo"
+                  loading="lazy"
+                  sx={{ width: 110, maxWidth: "100%" }}
+                />
 
                 <Typography
                   variant="body1"
@@ -169,8 +169,10 @@ const DimonoProductComponent = () => {
 
                 <Typography
                   variant="h6"
-                  sx={{ color: "#000", fontWeight: 400, 
-                  fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" }, mb: 1.5 }}
+                  sx={{
+                    color: "#000", fontWeight: 400,
+                    fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" }, mb: 1.5
+                  }}
                 >
                   {product.featuresTitle}
                 </Typography>
@@ -187,7 +189,7 @@ const DimonoProductComponent = () => {
                     color: "#000",
                     fontWeight: 400,
                     fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
-                    mt: {xs:3,sm:3,md:8},
+                    mt: { xs: 3, sm: 3, md: 8 },
                     mb: 1.5,
                   }}
                 >
@@ -213,10 +215,8 @@ const DimonoProductComponent = () => {
                   sx={{
                     maxWidth: "100%",
                     height: "auto",
-                    width: "107px",
-                    mt: "140px",
-                    
-
+                    width: { sm: "70px", md: "107px" },
+                    mt: { xs: "140px", sm: "0", md: "140px" }
                   }}
                 />
               </Box>
@@ -226,12 +226,14 @@ const DimonoProductComponent = () => {
             <Grid item xs={12} sm={4.5} md={4.5}>
               <Box>
                 <Typography
-                className="key-benifits-h6"
+                  className="key-benifits-h6"
                   variant="h6"
-                  sx={{ color: "#000", fontWeight: 400,
-                  fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
+                  sx={{
+                    color: "#000", fontWeight: 400,
+                    fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
 
-                   mb: 1.5 }}
+                    mb: 1.5
+                  }}
                 >
                   {product.keyBenefitsTitle}
                 </Typography>
@@ -249,8 +251,8 @@ const DimonoProductComponent = () => {
                     fontWeight: 400,
                     fontSize: { xs: "1.25rem", sm: "10px", md: "0.875rem" },
 
-                    mt: {xs:3,sm:3,md:8},
-                    
+                    mt: { xs: 3, sm: 3, md: 8 },
+
                     mb: 1.5,
                   }}
                 >

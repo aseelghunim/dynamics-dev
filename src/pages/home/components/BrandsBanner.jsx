@@ -124,6 +124,10 @@ const BrandsBanner = (props) => {
           // Mobile: fixed height for just the video/content area
           // Desktop: full 100% height so absolute carousel anchors to bottom
           height: { xs: "100vh", sm: "100vh", md: "100vh" },
+          "@media(min-width: 768px) and (max-width: 991px)":{
+            paddingLeft: "50px"
+
+          }
         }}
       >
         {selectedBrand === BRANDS.KSURGERY && (

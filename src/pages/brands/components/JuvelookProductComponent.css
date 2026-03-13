@@ -31,8 +31,9 @@
 @media(min-width:768px) and (max-width:991px) {
     .juvelook-product {
         padding-left: 64px !important;
-        padding-right: 0 !important;
+        padding-right: 64px !important;
     }
+    /* html[dir='rtl'] .juvelook-product */
 
     .juvelook-product h5,
     .juvelook-product h6 {

@@ -108,7 +108,7 @@ const ValuesBanner = (props) => {
                     borderRadius: 0,
                   }}
                 >
-                  <CardContent sx={{ padding: { xs: 4, sm: 2,md:3 },pb:{ xs: 4, sm: 2,md:"24px!important" } }}>
+                  <CardContent sx={{ padding: { xs: 4, sm: 3,md:3 },pb:{ xs: 4, sm: 2,md:"24px!important" } }}>
                     <Typography
                       gutterBottom
                       variant="body2"

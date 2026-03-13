@@ -320,7 +320,7 @@ const ReneeProductComponent = () => {
   // ======== ✅ DESKTOP VIEW (UNCHANGED) =========
   return (
     <Box
-    className='renee-product'
+      className='renee-product'
       sx={{
         padding: { xs: 2, sm: 7, md: "2rem" },
         borderRadius: "8px",
@@ -340,7 +340,7 @@ const ReneeProductComponent = () => {
                     <Typography
                       variant="body2"
                       sx={{
-                        fontSize: { xs: "1rem", sm: "0.875rem" },
+                        fontSize: { xs: "1rem", sm: "9px", md: "0.875rem" },
                         mb: { xs: 1, sm: 0 },
                       }}
                     >
@@ -356,7 +356,7 @@ const ReneeProductComponent = () => {
                         variant="body1"
                         sx={{
                           color: "#7C7C7C",
-                          fontSize: { xs: "0.875rem", sm: "13px" },
+                          fontSize: { xs: "0.875rem", sm: "9px", md: "13px" },
                         }}
                       >
                         {product.subtitle}
@@ -369,8 +369,8 @@ const ReneeProductComponent = () => {
                           variant="body2"
                           sx={{
                             color: "#9B4FB3",
-                            fontSize: { xs: "0.75rem", sm: "0.875rem" },
-                            fontWeight:"600"
+                            fontSize: { xs: "0.75rem", sm: "9px", md: "0.875rem" },
+                            fontWeight: "600"
                           }}
                         >
                           {product.preQuestion}
@@ -380,8 +380,8 @@ const ReneeProductComponent = () => {
                         variant="body2"
                         sx={{
                           color: "#5A2772",
-                          fontWeight:"600",
-                          fontSize: { xs: "0.75rem", sm: "0.875rem" },
+                          fontWeight: "600",
+                          fontSize: { xs: "0.75rem",sm: "9px", md: "0.875rem" },
                         }}
                       >
                         {product.question}
@@ -393,8 +393,8 @@ const ReneeProductComponent = () => {
                       sx={{
                         mb: { xs: 1, sm: 2 },
                         color: "#7C7C7C",
-                        fontSize: { xs: "0.75rem", sm: "13px" },
-                        textAlign:"justify"
+                        fontSize: { xs: "0.75rem",sm: "9px", md: "13px" },
+                        textAlign: "justify"
                       }}
                     >
                       {product.description}
@@ -430,8 +430,8 @@ const ReneeProductComponent = () => {
                       sx={{
                         mb: 1,
                         color: "#5A2772",
-                        fontSize: { xs: "0.875rem", sm: "0.875rem" },
-                        fontWeight:"600"
+                        fontSize: { xs: "0.875rem",sm: "9px", md: "0.875rem" },
+                        fontWeight: "600"
                       }}
                     >
                       {t(tokens.brands.renee.keyBenefits)}
@@ -440,8 +440,8 @@ const ReneeProductComponent = () => {
                       component="ul"
                       sx={{
                         pl: 2,
-                        fontSize: { xs: "0.75rem", sm: "13px" },
-                        color:"#7c7c7c"
+                        fontSize: { xs: "0.75rem",sm: "9px", md: "13px" },
+                        color: "#7c7c7c"
                       }}
                     >
                       {product.items.map((item, idx) => (
@@ -480,13 +480,14 @@ const ReneeProductComponent = () => {
                       }
                       onClick={() => setTabValue(product.value)}
                       sx={{
-                        width: { xs: "100%", sm: "95px", md: "125px" },
-                        height:{
-                          xs:"",sm:"",md:"35px"
+                        borderRadius:"4px",
+                        width: { xs: "100%", sm: "90px", md: "125px" },
+                        height: {
+                          xs: "", sm: "26", md: "35px"
                         },
-                        fontSize: { xs: "0.75rem", sm: "9px", md: "11px" },
+                        fontSize: { xs: "0.75rem", sm: "7px", md: "11px" },
                         py: { xs: 1, sm: 1.5 },
-                        px:0,
+                        px: 0,
                         ...(product.value === tabValue
                           ? product.activeStyle
                           : product.buttonStyle),

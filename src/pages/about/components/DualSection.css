@@ -19,7 +19,10 @@
 
 @media(min-width: 768px) and (max-width:991px) {
 
-
+    .about-us-page-dual-section-1, .about-us-page-dual-section-2{
+        padding-left: 64px;
+        padding-right: 64px;
+    }
     .about-us-page-dual-section-1 .container,
     .about-us-page-dual-section-1 .container>div,
     .about-us-page-dual-section-2 .container,

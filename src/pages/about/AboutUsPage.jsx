@@ -90,7 +90,7 @@ const AboutUsPage = (props) => {
                 backgroundImage: `url(${product})`,
                 // backgroundSize: "50%",
                 backgroundRepeat: "no-repeat",
-                backgroundSize: isTablet ? "50%" : "contain",
+                backgroundSize: isTablet ? "43%" : "contain",
                 backgroundPosition: isRtl ? 'left bottom' : "right bottom",
                 transform: isRtl ? "scaleX(-1)" : "none",
                 zIndex: 0,

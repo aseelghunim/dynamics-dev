@@ -21,6 +21,11 @@
  }
 
  @media (min-width:768px) and (max-width: 991px) {
+     .dimono-product-component {
+         padding-left: 64px !important;
+         padding-right: 64px !important;
+     }
+
      .product-logo {
          width: 70px
      }

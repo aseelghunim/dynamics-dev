@@ -1,19 +1,28 @@
-@media(min-width:992px){
-    .renee-product{
-        padding-left: 156px!important;
-        padding-right: 156px!important;
-        padding-bottom: 64px!important;
+@media(min-width:992px) {
+    .renee-product {
+        padding-left: 156px !important;
+        padding-right: 156px !important;
+        padding-bottom: 64px !important;
     }
 }
 
-@media(max-width: 767px){
+@media(min-width: 768px) and (max-width: 991px) {
     .renee-product{
-        background-color: white!important;
+
+        padding-left: 64px;
+        padding-right: 64px;
     }
-    .renee-product > div > div > div{
+}
+
+@media(max-width: 767px) {
+    .renee-product {
+        background-color: white !important;
+    }
+
+    .renee-product>div>div>div {
         background-color: transparent;
         border-top: 1px solid #D9D9D9;
-    margin-top: 32px;
-    border-radius: 0!important;
+        margin-top: 32px;
+        border-radius: 0 !important;
     }
 }

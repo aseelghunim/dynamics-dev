@@ -151,8 +151,8 @@ export const TopNavItem = (props) => {
                   color: "var(--nav-item-color)",
                   flexGrow: 1,
                   fontFamily: (theme) => theme.typography.fontFamily,
-                  fontSize: 18,
-                  fontWeight: 600,
+                  fontSize: { sm: "14px!important", md: "14px" },
+                  fontWeight: 400,
                   lineHeight: "24px",
                   whiteSpace: "nowrap",
                   ...(active && { color: "var(--nav-item-active-color)" }),
@@ -211,7 +211,7 @@ export const TopNavItem = (props) => {
             <Typography
               component="span"
               variant="subtitle2"
-              sx={{ fontSize: 18, fontWeight: 600 }}
+              sx={{ fontSize: { sm: "14px!important", md: "14px" }, fontWeight: 400 }}
             >
               {title}
             </Typography>
@@ -298,7 +298,7 @@ export const TopNavItem = (props) => {
             flexGrow: 1,
             fontFamily: (theme) => theme.typography.fontFamily,
             fontSize: 18,
-            fontWeight: 600,
+            fontWeight: 400,
             lineHeight: "24px",
             whiteSpace: "nowrap",
             ...(active && { color: "var(--nav-item-active-color)" }),
@@ -308,7 +308,7 @@ export const TopNavItem = (props) => {
           <Typography
             component="span"
             variant="subtitle2"
-            sx={{ fontSize: {sm:14,md:18}, fontWeight: 600 }}
+            sx={{ fontSize: { sm: 14, md: 18 }, fontWeight: 400 }}
           >
             {title}
           </Typography>
