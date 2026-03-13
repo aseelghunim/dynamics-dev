@@ -12,7 +12,7 @@ const ContactUsPage = (props) => {
   return (
     <>
       <Seo />
-      <main>
+      <main style={{ backgroundColor:"white" }} >
         <ContactUsHero />
         <ContactSection />
         <ContactInfo />

@@ -17,7 +17,7 @@ import { paths } from "paths";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
-
+import './ContactForm.css'
 const Form = () => {
   const [formValues, setFormValues] = useState({
     title: "Mrs",
@@ -51,33 +51,51 @@ const Form = () => {
 
   return (
     <Box
+      className="contact-form"
       component="form"
       onSubmit={handleSubmit}
       sx={{
         width: { xs: "100%", md: "50%" },
         p: { xs: 2, md: 10 },
+        pt:"20px!important",
+        pb:"0!important",
         boxSizing: "content-box",
       }}
     >
       <RadioGroup
-        row={mdUp}
+        row={true}
         name="title"
         value={formValues.title}
         onChange={handleChange}
-        sx={{ mb: 2 }}
+        sx={{ mb: 2, }}
       >
         <FormControlLabel
           value="Mrs"
           control={<Radio />}
+          sx={{
+            // mb: 2,
+            "& .MuiFormControlLabel-label": {
+              fontSize: "13px",
+            },
+          }}
           label={t(tokens.contact.form.title.mr)}
         />
         <FormControlLabel
           value="Mr"
           control={<Radio />}
+
+          sx={{
+            // mb: 2,
+            "& .MuiFormControlLabel-label": {
+              fontSize: "13px",
+            },
+          }}
           label={t(tokens.contact.form.title.mrs)}
         />
       </RadioGroup>
       <TextField
+        className="contact-form-input"
+
         fullWidth
         label={t(tokens.contact.form.firstName)}
         name="firstName"
@@ -86,6 +104,8 @@ const Form = () => {
         margin="normal"
       />
       <TextField
+        className="contact-form-input"
+
         fullWidth
         label={t(tokens.contact.form.lastName)}
         name="lastName"
@@ -94,6 +114,8 @@ const Form = () => {
         margin="normal"
       />
       <TextField
+        className="contact-form-input"
+
         fullWidth
         label={t(tokens.contact.form.organization)}
         name="organization"
@@ -102,6 +124,8 @@ const Form = () => {
         margin="normal"
       />
       <TextField
+        className="contact-form-input"
+
         fullWidth
         label={t(tokens.contact.form.phone)}
         name="phone"
@@ -111,6 +135,8 @@ const Form = () => {
       />
 
       <Autocomplete
+        className="contact-form-input"
+
         id="country-select-demo"
         fullWidth
         options={countries}
@@ -151,6 +177,8 @@ const Form = () => {
         )}
       />
       <TextField
+        className="contact-form-input"
+
         fullWidth
         select
         label={t(tokens.contact.form.interested_in)}
@@ -164,6 +192,8 @@ const Form = () => {
         <MenuItem value="Other">Other</MenuItem>
       </TextField>
       <TextField
+        className="contact-form-input contact-form-input-textarea"
+            
         fullWidth
         label={t(tokens.contact.form.message)}
         name="message"
@@ -174,6 +204,8 @@ const Form = () => {
         margin="normal"
       />
       <FormControlLabel
+        className="contact-form-checkbox-label"
+
         control={
           <Checkbox
             checked={formValues.agreeToTerms}
@@ -187,7 +219,7 @@ const Form = () => {
             <Link
               component={RouterLink}
               to={paths.termsAndConditions}
-              color="primary"
+              color="#000"
               underline="hover"
             >
               {t(tokens.contact.form.terms_link)}
@@ -196,6 +228,7 @@ const Form = () => {
         }
       />
       <FormControlLabel
+        className="contact-form-checkbox-label"
         control={
           <Checkbox
             checked={formValues.receiveUpdates}
@@ -205,7 +238,14 @@ const Form = () => {
         }
         label={t(tokens.contact.form.update)}
       />
-      <Button variant="contained" type="submit" fullWidth sx={{ mt: 2 }}>
+      <Button variant="contained" type="submit" fullWidth sx={{
+        mt: "0",
+        height: "46px",
+        fontSize: "12px",
+        fontWeight: "bold",
+        borderRadius: "8px",
+        marginBottom: "48px"
+      }}>
         {t(tokens.contact.form.send)}
       </Button>
     </Box>
