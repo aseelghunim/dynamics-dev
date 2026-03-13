@@ -35,7 +35,7 @@ const renderChildItems = ({ items, depth = 0 }) => {
                 primaryTypographyProps={{
                   sx: {
                     color: "text.secondary",
-                    fontSize: { sm: "14px", md: "14px" },
+                    fontSize: { sm: "14px", md: "15px!important" },
                     fontWeight: 500,
                   },
                 }}
@@ -88,7 +88,7 @@ const renderChildItems = ({ items, depth = 0 }) => {
         <ListItemText
           primary={item.title}
           primaryTypographyProps={{
-            sx: { color: "text.secondary", fontSize: 18, fontWeight: 500 },
+            sx: { color: "text.secondary", fontSize: {sm:"14px",md:"15px"}, fontWeight: 500 },
           }}
         />
       </ListItemButton>
@@ -127,6 +127,7 @@ export const TopNavItem = (props) => {
                 py: "6px",
                 textAlign: "left",
                 width: "100%",
+
                 ...(active && { backgroundColor: "var(--nav-item-active-bg)" }),
                 "&:hover": { backgroundColor: "var(--nav-item-hover-bg)" },
               }}
@@ -151,7 +152,7 @@ export const TopNavItem = (props) => {
                   color: "var(--nav-item-color)",
                   flexGrow: 1,
                   fontFamily: (theme) => theme.typography.fontFamily,
-                  fontSize: { sm: "14px!important", md: "14px" },
+                  fontSize: { sm: "14px!important", md: "15px!important" },
                   fontWeight: 400,
                   lineHeight: "24px",
                   whiteSpace: "nowrap",
@@ -211,7 +212,7 @@ export const TopNavItem = (props) => {
             <Typography
               component="span"
               variant="subtitle2"
-              sx={{ fontSize: { sm: "14px!important", md: "14px" }, fontWeight: 400 }}
+              sx={{ fontSize: { sm: "14px!important", md: "15px!important" }, fontWeight: 400 }}
             >
               {title}
             </Typography>
@@ -297,7 +298,7 @@ export const TopNavItem = (props) => {
             color: "var(--nav-item-color)",
             flexGrow: 1,
             fontFamily: (theme) => theme.typography.fontFamily,
-            fontSize: 18,
+            fontSize: {sm:"14px",md:"15px!important"},
             fontWeight: 400,
             lineHeight: "24px",
             whiteSpace: "nowrap",
@@ -308,7 +309,7 @@ export const TopNavItem = (props) => {
           <Typography
             component="span"
             variant="subtitle2"
-            sx={{ fontSize: { sm: 14, md: 18 }, fontWeight: 400 }}
+            sx={{ fontSize: { sm: 14, md: 15 }, fontWeight: 400 }}
           >
             {title}
           </Typography>

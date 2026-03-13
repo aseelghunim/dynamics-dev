@@ -10,36 +10,6 @@ export const BrandsPopover = () => {
 
   const items = [
     {
-      title: t(tokens.brands.juvelook.title),
-      path: paths.brands.juvelook,
-      caption: t(tokens.brands.juvelook.subtitle),
-    },
-    {
-      title: t(tokens.brands.lenisna.title),
-      path: paths.brands.lenisna,
-      caption: t(tokens.brands.lenisna.subtitle),
-    },
-    {
-      title: t(tokens.brands.renee.title),
-      path: paths.brands.renee,
-      caption: t(tokens.brands.renee.subtitle),
-    },
-    {
-      title: t(tokens.brands.ksurgery.title),
-      path: paths.brands.ksurgery,
-      caption: t(tokens.brands.ksurgery.subtitle),
-    },
-    {
-      title: t(tokens.brands.dimono.title),
-      path: paths.brands.dimono,
-      caption: t(tokens.brands.dimono.subtitle),
-    },
-    {
-      title: t(tokens.brands.drcyj.title),
-      path: paths.brands.drcyj,
-      caption: t(tokens.brands.drcyj.subtitle),
-    },
-    {
       title: t(tokens.brands.maili.title),
       path: paths.brands.maili,
       caption: t(tokens.brands.maili.subtitle),
@@ -54,6 +24,42 @@ export const BrandsPopover = () => {
       path: paths.brands.ellanse,
       caption: t(tokens.brands.ellanse.subtitle),
     },
+    {
+      title: t(tokens.brands.ksurgery.title),
+      path: paths.brands.ksurgery,
+      caption: t(tokens.brands.ksurgery.subtitle),
+    },
+
+
+
+    {
+      title: t(tokens.brands.juvelook.title),
+      path: paths.brands.juvelook,
+      caption: t(tokens.brands.juvelook.subtitle),
+    },
+    {
+      title: t(tokens.brands.lenisna.title),
+      path: paths.brands.lenisna,
+      caption: t(tokens.brands.lenisna.subtitle),
+    },
+    {
+      title: t(tokens.brands.renee.title),
+      path: paths.brands.renee,
+      caption: t(tokens.brands.renee.subtitle),
+    },
+  
+    {
+      title: t(tokens.brands.dimono.title),
+      path: paths.brands.dimono,
+      caption: t(tokens.brands.dimono.subtitle),
+    },
+    {
+      title: t(tokens.brands.drcyj.title),
+      path: paths.brands.drcyj,
+      caption: t(tokens.brands.drcyj.subtitle),
+    },
+   
+    
   ];
 
   return (
@@ -95,7 +101,7 @@ export const BrandsPopover = () => {
               sx={{
                 display: "block",
                 fontFamily: (theme) => theme.typography.fontFamily,
-                fontSize: 14,
+                fontSize: 15,
                 fontWeight: 500,
                 lineHeight: "24px",
                 whiteSpace: "nowrap",

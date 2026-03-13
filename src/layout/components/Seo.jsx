@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 export const Seo = (props) => {
   const { title, description } = props;
 
-  const fullTitle = title ? title + " | Dynamics" : "Dynamics";
+  const fullTitle = title ? title + " | Dynamics Medica" : "Dynamics Medica";
 
   return (
     <Helmet>
