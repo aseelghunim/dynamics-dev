@@ -134,8 +134,8 @@ const ValuesBanner = (props) => {
                       variant="caption"
                       component="div"
                       sx={{
-                        color: { xs: "#000", sm: "text.secondary" },
-                        fontSize: { xs: "0.875rem", sm: "10px", md: "0.875rem" },
+                        color: { xs: "#000", sm: "#000" },
+                        fontSize: { xs: "0.875rem", sm: "10px", md: "11px" },
                         textAlign: { xs: "left", sm: "justify" },
                         textJustify: "inter-word",
                         wordSpacing: "0.15em",

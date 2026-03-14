@@ -75,7 +75,7 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
 
 
     .ellanse-story-section-3 .first-stack {
-        padding-top: 35px !important;
+        /* padding-top: 35px !important; */
     }
 
     .renee-story-1 .min-height-controller {
@@ -86,14 +86,12 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         min-height: 447px !important;
     }
 
-    .ksurgery-story-2 .min-height-controller,
-    .story-section-parent.ellanse-story-section-2 .min-height-controller {
+    .ksurgery-story-2 .min-height-controller {
         min-height: 435px !important;
     }
 
     .story-section-parent.ksurgery-story-2 .first-stack,
 
-    .story-section-parent.ellanse-story-section-2 .first-stack,
     .story-section-parent.lanluma-story-section-2 .first-stack {
 
 
@@ -102,6 +100,16 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         padding-right: 32px !important;
     }
 
+
+    
+    .story-section-parent.ellanse-story-section-2 .min-height-controller {
+        min-height: 450px;
+    }
+    .story-section-parent.ellanse-story-section-2 .first-stack {
+        padding-left: 0 !important;
+
+        padding-right: 48px !important;
+    }
 
 
 
@@ -122,7 +130,6 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
 
     html[dir='rtl'] .story-section-parent.ksurgery-story-2 .first-stack,
 
-    html[dir='rtl'] .story-section-parent.ellanse-story-section-2 .first-stack,
     html[dir='rtl'] .story-section-parent.lanluma-story-section-2 .first-stack {
 
 
@@ -131,7 +138,11 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         padding-left: 32px !important;
     }
 
+    html[dir='rtl'] .story-section-parent.ellanse-story-section-2 .first-stack{
+        padding-right: 0 !important;
 
+        padding-left: 48px!important;
+    }
 
     html[dir='rtl'] .story-section-parent.maili-story-section-2.reverse {
         padding-right: 102px !important;
@@ -192,6 +203,7 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
 
     .story-section-parent .min-height-controller h3 {
         font-size: 24px;
+        padding-top: 0 !important;
     }
 
     .story-section-parent .min-height-controller h3+p,
@@ -199,9 +211,13 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         font-size: 18px;
         line-height: 1.4;
         text-align: justify;
-
+        margin-top: 16px !important;
     }
 
+    /* .story-section-parent .min-height-controller h3+ p,
+    .story-section-parent .min-height-controller h3+span {
+        margin-top: 0 !important;
+    } */
 
     html[dir='rtl'] .lanluma-story-section-2.story-section-parent.reverse {
         padding-right: 96px !important;
@@ -611,12 +627,14 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         padding-left: 0;
         padding-right: 48px !important;
     }
-    .ellanse-story-section-2 .min-height-controller{
-        min-height: 400px!important;
+
+    .ellanse-story-section-2 .min-height-controller {
+        min-height: 400px !important;
     }
+
     html[dir='ltr'] .ellanse-story-section-2 {
-        padding-left: 64px!important;
-    padding-right: 53px!important;
+        padding-left: 64px !important;
+        padding-right: 53px !important;
     }
 }
 
@@ -857,4 +875,14 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         font-size: 0.8375rem !important;
         padding-bottom: 40px;
     }
+   
+    
+}
+.story-section-parent.ellanse-story-section-3 .first-stack span,
+.story-section-parent.lanluma-story-section-3 .first-stack span
+
+
+{
+
+    margin-top: 0 !important;
 }
