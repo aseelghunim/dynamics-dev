@@ -12,6 +12,9 @@ import logo6 from "assets/home-brands-logos/logo6.svg";
 import logo7 from "assets/home-brands-logos/logo7.svg";
 import logo8 from "assets/home-brands-logos/logo8.svg";
 import logo9 from "assets/home-brands-logos/logo9.svg";
+import logo66 from "assets/home-brands-logos/logo66.svg";
+import logo77 from "assets/home-brands-logos/logo77.svg";
+import logo99 from "assets/home-brands-logos/logo99.svg";
 
 const Carousel = ({ selectedBrand, active }) => {
   const carouselRef = useRef(null);
@@ -27,10 +30,10 @@ const Carousel = ({ selectedBrand, active }) => {
     { title: BRANDS.RENEE, logo: logo3 },
     { title: BRANDS.KSURGERY, logo: logo4 },
     { title: BRANDS.ELLANSE, logo: logo5 },
-    { title: BRANDS.LANLUMA, logo: logo6 },
-    { title: BRANDS.MAILI, logo: logo7 },
+    { title: BRANDS.LANLUMA, logo: logo66 },
+    { title: BRANDS.MAILI, logo: logo77 },
     { title: BRANDS.DIMONO, logo: logo8 },
-    { title: BRANDS.DRCYJ, logo: logo9 },
+    { title: BRANDS.DRCYJ, logo: logo99 },
   ];
 
   const updateIndicator = () => {
