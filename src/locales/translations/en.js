@@ -267,7 +267,7 @@ export const en = {
   [tokens.brands.ksurgery.operaDescription2]:
     "%100 MADE-IN-ITALY, a synonym of guarantee and excellence. ",
 
-  [tokens.brands.renee.title]: "Renee",
+  [tokens.brands.renee.title]: "Renée",
   [tokens.brands.renee.subtitle]: "Experience Renée",
   [tokens.brands.renee.description]:
     "Our injectable hyaluronic acid gels are meticulously crafted to hydrate and rejuvenate the skin, providing a refreshed and youthful appearance. With advanced formulations, Renée offers effective solutions for various aesthetic needs.",
@@ -390,7 +390,7 @@ export const en = {
   [tokens.brands.lenisna.pageDescription]:
     "Lenisna combines high-purity PDLLA with Hyaluronic Acid to deliver structural lifting, long-lasting volume, and visible correction of deep wrinkles.",
   [tokens.brands.lenisna.title]: "Lenisna",
-  [tokens.brands.lenisna.subtitle]: "Experience LENISNA",
+  [tokens.brands.lenisna.subtitle]: "Experience Lensina",
   [tokens.brands.lenisna.description]:
     "Our innovative spherical particles stimulate collagen production, offering natural volume for facial and body contouring. Ideal for wrinkle reduction and scar treatment.",
   [tokens.brands.lenisna.whatIs]: "What is lenisna?",
@@ -560,8 +560,8 @@ export const en = {
 
   // ellanse
 
-  [tokens.brands.ellanse.title]: "ELLANSÉ",
-  [tokens.brands.ellanse.subtitle]: "Experience ELLANSÉ",
+  [tokens.brands.ellanse.title]: "Ellansé",
+  [tokens.brands.ellanse.subtitle]: "Experience Ellansé",
   [tokens.brands.ellanse.description]: "The Secret to Facial Rejuvenation",
 
   [tokens.brands.ellanse.description2]: "Our dual-action collagen-stimulating filler delivers immediate volume while activating your body’s natural collagen production. It restores facial structure, smooths lines, and provides refined, long-lasting rejuvenation from within.",
@@ -692,7 +692,7 @@ export const en = {
   // dimono
 
   [tokens.brands.dimono.title]: "CG Dimono PTx",
-  [tokens.brands.dimono.subtitle]: "Experience Dimono",
+  [tokens.brands.dimono.subtitle]: "Experience CG Dimono PTx",
   [tokens.brands.dimono.description]: "An advanced dermal filler designed to smooth expression lines, restore facial volume, and enhance overall skin quality.",
   //  "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",
   [tokens.brands.dimono.description2]: "Our advanced injectable formulation is designed to improve skin quality from within, target-ing fine lines, texture irregularities, and early signs of aging. By supporting collagen stimulation and long-term dermal renewal, Dimono delivers balanced, natural-looking results with a focus on skin strength, elasticity, and refinement.",

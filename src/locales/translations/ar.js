@@ -577,7 +577,7 @@ export const ar = {
     // dimono
 
     [tokens.brands.dimono.title]: "سي جي ديمونو بي تي إكس",
-    [tokens.brands.dimono.subtitle]: "اكتشف ديمونو",
+    [tokens.brands.dimono.subtitle]: "اكتشف سي جي ديمونو بي تي إكس",
     [tokens.brands.dimono.description]:"فيلر جلدي متطور مصمم لتنعيم خطوط التعبير، واستعادة حجم الوجه، وتعزيز جودة البشرة بشكل عام.",
     // "An advanced dermal filler designed to smooth expression lines, restore facial volume, and enhance overall skin quality.",
     //  "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",

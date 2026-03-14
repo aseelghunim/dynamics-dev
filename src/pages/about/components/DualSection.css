@@ -49,4 +49,8 @@
     .about-us-page-dual-section-2 p {
         text-align: left !important;
     }
+   html[dir='rtl'] .about-us-page-dual-section-1 p,
+   html[dir='rtl']   .about-us-page-dual-section-2 p {
+        text-align: right !important;
+    }
 }
