@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dynamics-dev/static/css/main.b8728fd6.css",
-    "main.js": "/dynamics-dev/static/js/main.9b3fd37d.js",
+    "main.css": "/dynamics-dev/static/css/main.e5d233a6.css",
+    "main.js": "/dynamics-dev/static/js/main.83f0c9c4.js",
     "static/js/453.f037a3e1.chunk.js": "/dynamics-dev/static/js/453.f037a3e1.chunk.js",
     "static/media/about.mov": "/dynamics-dev/static/media/about.e3f2773cffb8c4ad96d6.mov",
     "static/media/video3.mp4": "/dynamics-dev/static/media/video3.9a44517e20046f0ee211.mp4",
@@ -63,13 +63,11 @@
     "static/media/rev-opera-face2.png": "/dynamics-dev/static/media/rev-opera-face2.6360603368fe6b77c539.png",
     "static/media/lenisnaGirl.png": "/dynamics-dev/static/media/lenisnaGirl.ea5e0c7791eb3153d33e.png",
     "static/media/logo9.svg": "/dynamics-dev/static/media/logo9.b941c521d820f0a9bceb8494370bafbc.svg",
-    "static/media/logo99.svg": "/dynamics-dev/static/media/logo99.0c45470559762b2f2d26bbc975c1e785.svg",
     "static/media/story-section-1-bg-desktop.svg": "/dynamics-dev/static/media/story-section-1-bg-desktop.3a65e870254464877a80e440173068e4.svg",
     "static/media/story-section-1-bg.svg": "/dynamics-dev/static/media/story-section-1-bg.ef23295cd84b23ee9ba9.svg",
     "static/media/lenisnaProduct.png": "/dynamics-dev/static/media/lenisnaProduct.14b588b5d317c5b37be1.png",
     "static/media/juvelook-product1.png": "/dynamics-dev/static/media/juvelook-product1.99fd5b4a98ceecf79511.png",
     "static/media/logo6.svg": "/dynamics-dev/static/media/logo6.de5a16963bf5acb1c98ebecd6cfe264d.svg",
-    "static/media/logo66.svg": "/dynamics-dev/static/media/logo66.684a39a5d2f3b0eb720f98bf9deaa94a.svg",
     "static/media/juvelookgirl.png": "/dynamics-dev/static/media/juvelookgirl.ba77d33db0e1c3708a4a.png",
     "static/media/product1.png": "/dynamics-dev/static/media/product1.3646118939fef2d3684d.png",
     "static/media/about-hero-image-girl.png": "/dynamics-dev/static/media/about-hero-image-girl.de566da477ea293dd1fc.png",
@@ -85,7 +83,6 @@
     "static/media/renee-product.png": "/dynamics-dev/static/media/renee-product.02864c4ae2e61a3e897e.png",
     "static/media/7.png": "/dynamics-dev/static/media/7.a03382a8e28b9d68e616.png",
     "static/media/logo7.svg": "/dynamics-dev/static/media/logo7.13d241a11144d6bad2ce782adb767222.svg",
-    "static/media/logo77.svg": "/dynamics-dev/static/media/logo77.13d241a11144d6bad2ce782adb767222.svg",
     "static/media/logo4.png": "/dynamics-dev/static/media/logo4.97e47c80b8edac097842.png",
     "static/media/product-1.png": "/dynamics-dev/static/media/product-1.35c46d13976455fd2a37.png",
     "static/media/Lato-Regular.ttf": "/dynamics-dev/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
@@ -120,12 +117,12 @@
     "static/media/slick.ttf": "/dynamics-dev/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/dynamics-dev/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/dynamics-dev/index.html",
-    "main.b8728fd6.css.map": "/dynamics-dev/static/css/main.b8728fd6.css.map",
-    "main.9b3fd37d.js.map": "/dynamics-dev/static/js/main.9b3fd37d.js.map",
+    "main.e5d233a6.css.map": "/dynamics-dev/static/css/main.e5d233a6.css.map",
+    "main.83f0c9c4.js.map": "/dynamics-dev/static/js/main.83f0c9c4.js.map",
     "453.f037a3e1.chunk.js.map": "/dynamics-dev/static/js/453.f037a3e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8728fd6.css",
-    "static/js/main.9b3fd37d.js"
+    "static/css/main.e5d233a6.css",
+    "static/js/main.83f0c9c4.js"
   ]
 }
