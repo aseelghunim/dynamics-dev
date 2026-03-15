@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container } from "@mui/system";
+import { Box  } from "@mui/system";
+import { Container } from "@mui/material";
 import Carousel from "./Carousel";
 import video1 from "assets/HeroMove1.mp4";
 import video4 from "assets/ksugery1.mp4";
@@ -15,9 +16,13 @@ import { useTranslation } from "react-i18next";
 import { tokens } from "locales/tokens";
 import { paths } from "paths";
 import { BRANDS } from "../contants";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const BrandsBanner = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const brands = React.useMemo(
     () => [
@@ -106,25 +111,29 @@ const BrandsBanner = () => {
     [t]
   );
 
-  const scrollerRef = React.useRef(null);
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const scrollerRef = React.useRef(null);
+  const scrollEndTimer = React.useRef(null);
+  const isProgrammaticScroll = React.useRef(false);
 
   React.useEffect(() => {
+    if (!isMobile) return;
+
     const el = scrollerRef.current;
     if (!el) return;
 
-    const onScroll = () => {
-      const slides = Array.from(
-        el.querySelectorAll("[data-brand-slide='true']")
-      );
-      if (!slides.length) return;
+    const slides = () =>
+      Array.from(el.querySelectorAll("[data-brand-slide='true']"));
+
+    const getClosestIndex = () => {
+      const nodes = slides();
+      if (!nodes.length) return 0;
 
       const viewportCenter = el.scrollLeft + el.clientWidth / 2;
-
       let bestIdx = 0;
       let bestDist = Infinity;
 
-      slides.forEach((node, idx) => {
+      nodes.forEach((node, idx) => {
         const slideCenter = node.offsetLeft + node.offsetWidth / 2;
         const dist = Math.abs(slideCenter - viewportCenter);
 
@@ -134,35 +143,83 @@ const BrandsBanner = () => {
         }
       });
 
-      setActiveIndex(bestIdx);
+      return bestIdx;
+    };
+
+    const snapToNearest = () => {
+      if (isProgrammaticScroll.current) return;
+
+      const nodes = slides();
+      const idx = getClosestIndex();
+      const target = nodes[idx];
+      if (!target) return;
+
+      setActiveIndex(idx);
+      el.scrollTo({
+        left: target.offsetLeft,
+        behavior: "smooth",
+      });
+    };
+
+    const onScroll = () => {
+      const idx = getClosestIndex();
+      setActiveIndex(idx);
+
+      if (scrollEndTimer.current) {
+        clearTimeout(scrollEndTimer.current);
+      }
+
+      if (!isProgrammaticScroll.current) {
+        scrollEndTimer.current = setTimeout(() => {
+          snapToNearest();
+        }, 140);
+      }
     };
 
     el.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    return () => el.removeEventListener("scroll", onScroll);
-  }, []);
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      if (scrollEndTimer.current) clearTimeout(scrollEndTimer.current);
+    };
+  }, [isMobile]);
 
   const scrollToBrand = (idx) => {
-    const el = scrollerRef.current;
-    if (!el) return;
+    setActiveIndex(idx);
 
-    const slides = Array.from(
-      el.querySelectorAll("[data-brand-slide='true']")
-    );
-    const target = slides[idx];
-    if (!target) return;
+    if (isMobile && scrollerRef.current) {
+      const slides = Array.from(
+        scrollerRef.current.querySelectorAll("[data-brand-slide='true']")
+      );
+      const target = slides[idx];
+      if (!target) return;
 
-    el.scrollTo({
-      left: target.offsetLeft,
-      behavior: "smooth",
-    });
+      if (scrollEndTimer.current) {
+        clearTimeout(scrollEndTimer.current);
+      }
+
+      isProgrammaticScroll.current = true;
+
+      scrollerRef.current.scrollTo({
+        left: target.offsetLeft,
+        behavior: "smooth",
+      });
+
+      setTimeout(() => {
+        isProgrammaticScroll.current = false;
+      }, 450);
+
+      return;
+    }
   };
+
+  const activeBrand = brands[activeIndex];
 
   return (
     <Box
       sx={{
-        p: 0,
+        padding: 0,
         overflow: "hidden",
         filter: "grayscale(100%)",
         backgroundColor: "#000",
@@ -170,55 +227,74 @@ const BrandsBanner = () => {
       }}
     >
       <Container
-        maxWidth="xxl"
+        // maxWidth="xl"
         disableGutters
         sx={{
           position: "relative",
-          margin: 0,
+          // margin: 0,
+          width: "100%",
           height: { xs: "100vh", sm: "100vh", md: "100vh" },
           overflow: "hidden",
+           "@media(max-width:767px)": {
+             margin:"0"
+           },
         }}
       >
-        <Box
-          ref={scrollerRef}
-          sx={{
-            display: "flex",
-            overflowX: "auto",
-            overflowY: "hidden",
-            scrollSnapType: "x mandatory",
-            WebkitOverflowScrolling: "touch",
-            height: "100%",
-            width: "100%",
-            "&::-webkit-scrollbar": { display: "none" },
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-        >
-          {brands.map((brand, index) => (
-            <Box
-              key={brand.key}
-              data-brand-slide="true"
-              sx={{
-                flex: "0 0 100%",
-                width: "100%",
-                minWidth: "100%",
-                height: "100%",
-                position: "relative",
-                scrollSnapAlign: "start",
-                overflow: "hidden",
-              }}
-            >
-              <BrandContainer
-                title={brand.title}
-                subTitle={brand.subTitle}
-                description={brand.description}
-                buttonText={brand.buttonText}
-                video={brand.video}
-                path={brand.path}
-              />
-            </Box>
-          ))}
-        </Box>
+        {isMobile ? (
+          <Box
+            ref={scrollerRef}
+            sx={{
+              display: "flex",
+              overflowX: "auto",
+              overflowY: "hidden",
+              scrollSnapType: "x mandatory",
+              WebkitOverflowScrolling: "touch",
+              scrollBehavior: "auto",
+              height: "100%",
+              width: "100%",
+              overscrollBehaviorX: "contain",
+              touchAction: "pan-x",
+              "&::-webkit-scrollbar": { display: "none" },
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            {brands.map((brand) => (
+              <Box
+                key={brand.key}
+                data-brand-slide="true"
+                sx={{
+                  flex: "0 0 100%",
+                  minWidth: "100%",
+                  width: "100%",
+                  height: "100%",
+                  position: "relative",
+                  scrollSnapAlign: "center",
+                  scrollSnapStop: "always",
+                  overflow: "hidden",
+                }}
+              >
+                <BrandContainer
+                  title={brand.title}
+                  subTitle={brand.subTitle}
+                  description={brand.description}
+                  buttonText={brand.buttonText}
+                  video={brand.video}
+                  path={brand.path}
+                />
+              </Box>
+            ))}
+          </Box>
+        ) : (
+          <BrandContainer
+            title={activeBrand.title}
+            subTitle={activeBrand.subTitle}
+            description={activeBrand.description}
+            buttonText={activeBrand.buttonText}
+            video={activeBrand.video}
+            path={activeBrand.path}
+          />
+        )}
 
         <Carousel
           items={brands}

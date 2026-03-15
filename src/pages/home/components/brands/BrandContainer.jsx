@@ -1,4 +1,4 @@
-import { Button, CircularProgress, Typography } from "@mui/material";
+import { Button, CircularProgress, Typography, useTheme } from "@mui/material";
 import { Box, Container, Stack } from "@mui/system";
 import { RouterLink } from "layout/components/router-link";
 import StyledTypography, {
@@ -37,23 +37,28 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
   const handleVideoLoaded = () => {
     setIsLoading(false); // Hide loader once the video can play
   };
-
+  const theme = useTheme();
+  const isRtl = theme.direction === "rtl";
   return (
     <>
-      <Container maxWidth="xl" sx={{
-        position: "relative", zIndex: 1, "@media (max-width: 767px)": {
-          height: "100%",
-        },
-
-        "@media(min-width:992px)": {
-          marginLeft: "132px",
-          marginRight: "132px",
-
-        },
-        "@media (min-width: 768px) and (max-width:991px)": {
-          height: "80%",
-        },
-      }}>
+      <Container
+        className="container"
+        // maxWidth="xl"
+        sx={{
+          position: "relative", zIndex: 1,
+          
+          "@media(min-width:992px)": {
+            paddingLeft: "64px",
+            paddingRight:  0 
+            // marginRight: "132px",
+          },
+          "@media (min-width: 768px) and (max-width:991px)": {
+            height: "80%",
+          },
+          "@media (max-width: 767px)": {
+            height: "100%",
+          },
+        }}>
         <Stack
           alignItems="center"
           direction={{ xs: "column", md: "row" }}
@@ -84,7 +89,7 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
               variant="h5"
               sx={{
                 fontSize: { xs: "24px", sm: "24px" },
-                marginTop:0,
+                marginTop: 0,
                 "@media (max-width: 767px)": {
                   fontSize: "1.5rem",
                   marginTop: "0!important"
@@ -98,7 +103,7 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
               sx={{
                 textAlign: "justify",
                 fontSize: { xs: "18px", sm: "18px" },
-                marginTop:"16px!important",
+                marginTop: "16px!important",
                 "@media (max-width: 767px)": {
 
                   textAlign: "left",
@@ -113,7 +118,7 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
                 sx={{
                   ...buttonStyle,
                   "@media (max-width: 767px)": {
-                    width: " 213px !important",
+                    width: "250px !important",
                     marginRight: "auto",
                     color: "#AC93E1 !important",
                     backgroundColor: "white!important",
