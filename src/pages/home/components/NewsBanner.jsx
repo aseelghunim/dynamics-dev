@@ -145,7 +145,7 @@ const NewsBanner = () => {
             padding: { xs: 2, sm: 2, md: 10 },
             paddingTop: { xs: 2, sm: "5rem!important", md: 10 },
             paddingLeft: { xs: 2, sm: 2, md: 0},
-            margin: 0,
+            margin: "auto",
           }}
         >
           <Grid container spacing={1} alignItems="stretch" justifyContent="center">

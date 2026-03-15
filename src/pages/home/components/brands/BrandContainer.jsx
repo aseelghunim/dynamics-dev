@@ -48,7 +48,7 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
           position: "relative", zIndex: 1,
 
           "@media(min-width:992px)": {
-            paddingLeft: "56px",
+            paddingLeft: "64px",
             paddingRight: 0
             // marginRight: "132px",
           },

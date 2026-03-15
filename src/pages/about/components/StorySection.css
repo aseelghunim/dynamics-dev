@@ -1,3 +1,5 @@
+
+
 html[dir='rtl'] .lanluma-story-section-1 .image-box>div>div,
 html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
     transform: none !important;
@@ -283,7 +285,24 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
 }
 
 
-
+@media(min-width: 1440px){
+    html[dir='ltr'] .story-section-parent.reverse {
+        padding-right: 0 !important;
+        padding-left: 102px !important;
+    }
+    html[dir='rtl'] .story-section-parent.reverse {
+        padding-left: 0 !important;
+        padding-right: 102px !important;
+    }
+    html[dir='ltr'] .story-section-parent.reverse {
+        padding-right: 0 !important;
+        padding-left: 96px !important;
+    }
+    .lanluma-story-section-2 .image-box>div {
+        height: 420px;
+        top: 0;
+    }
+}
 
 
 
