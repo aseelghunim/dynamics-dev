@@ -12,7 +12,7 @@ export const buttonStyle = {
   borderColor: "white",
   height: { xs: "35px", sm: "46px" },
   fontSize:"18px",
-  width: { xs: "213px",sm:"250px" },
+  width: { xs: "213px",sm:"250px",lg:"300px" },
   borderRadius:"8px!important",
   backgroundColor: "rgba(255,255,255,0.2)",
   marginTop:{xs:"24px",sm:"48px"},

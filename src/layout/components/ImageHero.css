@@ -1,3 +1,10 @@
+@media(min-width:1399px){
+    .image-hero-parent{
+        height: 70vh!important;
+        min-height: unset!important;
+    }
+}
+
 .dimono-image-hero-1::before,
 .lanluma-image-hero-1::before {
     background-size: contain !important;
