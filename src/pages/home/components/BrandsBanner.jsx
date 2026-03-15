@@ -1,5 +1,5 @@
 import React from "react";
-import { Box  } from "@mui/system";
+import { Box } from "@mui/system";
 import { Container } from "@mui/material";
 import Carousel from "./Carousel";
 import video1 from "assets/HeroMove1.mp4";
@@ -227,7 +227,7 @@ const BrandsBanner = () => {
       }}
     >
       <Container
-        // maxWidth="xl"
+        maxWidth="xxl"
         disableGutters
         sx={{
           position: "relative",
@@ -235,9 +235,9 @@ const BrandsBanner = () => {
           width: "100%",
           height: { xs: "100vh", sm: "100vh", md: "100vh" },
           overflow: "hidden",
-           "@media(max-width:767px)": {
-             margin:"0"
-           },
+          "@media(max-width:767px)": {
+            margin: "0"
+          },
         }}
       >
         {isMobile ? (

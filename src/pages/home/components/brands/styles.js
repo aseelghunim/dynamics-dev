@@ -29,7 +29,7 @@ export const videoStyle = {
   left: "50%",
   minWidth: "100%",
   minHeight: "100%",
-  width: "auto",
+  width: "100%",
   height: "auto",
   transform: "translate(-50%, -50%)",
   objectFit: "cover",

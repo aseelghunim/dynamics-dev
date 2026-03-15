@@ -13,8 +13,8 @@ import { buttonStyle, videoStyle } from "./styles";
 const heroTextStyle = {
   color: "#fff",
   width: { xs: "100%", md: "50%" },
-  "@media (max-width: 767px)": {
-    height: "100%",
+  "@media (max-width: 991px)": {
+    height: "100vh",
     justifyContent: "center",
     marginTop: "-70px !important"
   },
@@ -40,16 +40,16 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
   const theme = useTheme();
   const isRtl = theme.direction === "rtl";
   return (
-    <>
+    <div maxWidth="unset">
       <Container
-        className="container"
+        // className="container"
         // maxWidth="xl"
         sx={{
           position: "relative", zIndex: 1,
-          
+
           "@media(min-width:992px)": {
-            paddingLeft: "64px",
-            paddingRight:  0 
+            paddingLeft: "56px",
+            paddingRight: 0
             // marginRight: "132px",
           },
           "@media (min-width: 768px) and (max-width:991px)": {
@@ -172,7 +172,7 @@ const BrandContainer = ({ title, description, buttonText, video, subTitle, path 
           }
         }
       `}</style>
-    </>
+    </div>
   );
 };
 
