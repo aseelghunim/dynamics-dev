@@ -53,14 +53,15 @@ const LenisnaProductComponent = () => {
     <Box
       className="lenisna-product"
       sx={{
-        padding: { xs: 2, sm: 8, md: "2rem" },
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xl"
+    // maxWidth="xl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
-        <Container maxWidth="xl" sx={{ py: { xs: 2, sm: 0, md: 2 } }}>
+        <Container className="container" maxWidth="xl" sx={{ padding: { xs: 4, sm: 8, md: "3rem" }, }}>
+
+
           <Grid container alignItems="stretch">
             <Grid item xs={12} sm={12}>
               <Box

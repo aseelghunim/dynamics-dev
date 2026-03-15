@@ -28,7 +28,7 @@ const ReneePage = (props) => {
           description={t(tokens.brands.renee.description)}
           videoSrc={video}
         />
-        <Box maxWidth="xl" sx={{ backgroundColor: { xs: "white", sm: "#E0FFF5" } }}>
+        <Box  sx={{ backgroundColor: { xs: "white", sm: "#E0FFF5" } }}>
           <Container maxWidth="xl">
             <StorySection
               name="renee-story-1"
@@ -63,7 +63,7 @@ const ReneePage = (props) => {
             <ReneeProductComponent />
           </Box>
 
-          <Box sx={{ order: { xs: 1, md: 2 }, backgroundColor: { xs: "white", sm: "#E0FFF5" } }} maxWidth="xl">
+          <Box sx={{ order: { xs: 1, md: 2 }, backgroundColor: { xs: "white", sm: "#E0FFF5" } }} >
             <Container maxWidth="xl" sx={{ padding: { xs: "0!important", md: 5 }, }}>
               <StorySection
                 name="renee-story-2"

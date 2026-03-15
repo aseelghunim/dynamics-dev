@@ -99,6 +99,7 @@ const LenisnaPage = (props) => {
             </Container>
           </Box>
         )}
+        
         <ImageHero
         name='lensina-image-hero-2'
           image={heroProductImage}

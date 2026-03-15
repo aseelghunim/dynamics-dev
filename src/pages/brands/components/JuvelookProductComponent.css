@@ -8,6 +8,7 @@
 }
 
 @media(min-width: 992px) {
+  
     .subtitle-p {
         margin-bottom: 48px
     }
@@ -29,12 +30,17 @@
 
 
 @media(min-width:768px) and (max-width:991px) {
-    .juvelook-product {
-        padding-left: 64px !important;
-        padding-right: 64px !important;
+   html[dir='ltr'] .juvelook-product .container{
+        padding-left: 96px !important;
+        /* padding-right: 64px !important; */
     }
     /* html[dir='rtl'] .juvelook-product */
 
+
+
+    html[dir='rtl'] .juvelook-product .container{
+        padding-right: 96px!important;
+    }
     .juvelook-product h5,
     .juvelook-product h6 {
         font-size: 11px !important;

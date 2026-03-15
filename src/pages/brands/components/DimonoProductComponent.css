@@ -8,7 +8,14 @@
  }
 
  @media(min-width: 992px) {
+  
+    .dimono-product-component .container{
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 180px;
+        padding-right: 180px;
 
+    }
      .dimono-product-component li {
          font-size: 13px !important;
      }
@@ -21,7 +28,7 @@
  }
 
  @media (min-width:768px) and (max-width: 991px) {
-     .dimono-product-component {
+     .dimono-product-component .container {
          padding-left: 64px !important;
          padding-right: 64px !important;
      }

@@ -43,11 +43,11 @@ const DimonoPage = (props) => {
           actionPath="#"
         />
 
-        <Box maxWidth="xl" sx={{ backgroundColor: {xs:"#fff",sm:"#E0FFF5",md:"#E0FFF5"} }}>
+        <Box sx={{ backgroundColor: { xs: "#fff", sm: "#E0FFF5", md: "#E0FFF5" } }}>
           <Container maxWidth="xl">
             <StorySection
               name='dimono-story-section-1'
-              backgroundColor={{ xs: "transparent",sm:"#E0FFF5", md: "#E0FFF5" }}
+              backgroundColor={{ xs: "transparent", sm: "#E0FFF5", md: "#E0FFF5" }}
               backImage={background_green}
 
               title={t(tokens.brands.ellanse.whatIs)}
@@ -84,8 +84,8 @@ const DimonoPage = (props) => {
                   >
                     {t(tokens.brands.dimono.whatIsDescription)}
                   </Typography>
-                
-              
+
+
                   {/* <ul
                     sx={{
                       mt: { xs: 2, md: "160px" },
@@ -106,10 +106,10 @@ const DimonoPage = (props) => {
         <DimonoApplicationArea />
 
         <ImageHero
-        name='dimono-image-hero-1'
+          name='dimono-image-hero-1'
           sectionSx={{
             backgroundImage: `url(${isRtl ? backgroundRtl : background})`,
-            backgroundColor: {xs:"#e5e5e5",md:"transparent"},
+            backgroundColor: { xs: "#e5e5e5", md: "transparent" },
             backgroundSize: "cover"
           }}
           image={image}

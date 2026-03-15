@@ -3,8 +3,8 @@ import Form from "./ContactForm";
 
 const ContactSection = (props) => {
   return (
-    <Box maxWidth="xl" id="contact-form">
-      <Container maxWidth="lg">
+    <Box  id="contact-form">
+      <Container maxWidth="xl">
         <Stack justifyContent="center" direction="row" sx={{ width: "100%" }}>
           <Form />
         </Stack>

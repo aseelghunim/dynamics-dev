@@ -91,13 +91,13 @@ const DrcyjProductComponent = () => {
     <Box
       className="drcyj-product"
       sx={{
-        p: { xs: 0, sm: 0, md: "2rem" },
+        // p: { xs: 0, sm: 0, md: "2rem" },
         borderRadius: { xs: 0, sm: "8px" },
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xl"
+      // maxWidth="xl"
     >
-      <Container maxWidth="xl" sx={{ py: { xs: 3, sm: 2 } }}>
+      <Container className="container" maxWidth="xl" sx={{ py: { xs: 3, sm: 2 } }}>
         {isMobile ? (
           // ✅ MOBILE: match screenshot (centered image, one-column sections)
           <Box sx={{ display: "flex", justifyContent: "center" }}>

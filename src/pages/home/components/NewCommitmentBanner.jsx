@@ -29,12 +29,15 @@ const NewCommitmentBanner = () => {
         background: "linear-gradient(to right, #6bb6b6, #a9e0eb)",
         color: "white",
         py: { xs: 4, sm: 4, md: 9 },
+        "@media(min-width:768px) and (max-width:991px)":{
+          paddingLeft:"40px"
+        }
        
       }}
     >
       <Container
         maxWidth="xl" sx={{ 
-          px: { xs: 4, sm: 3, md: 19.5,lg:19.5 },
+          px: { xs: 4, sm: 3, md: 19.5 },
         }}>
 
 

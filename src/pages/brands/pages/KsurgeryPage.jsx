@@ -38,7 +38,7 @@ const KsurgeryPage = (props) => {
         />
 
         {/* what is */}
-        <Box maxWidth="xl" sx={{
+        <Box sx={{
           backgroundColor: "#EEE8F5",
           "@media(min-width: 768px) ": {
             backgroundColor: "#E0FFF5!important"
@@ -124,10 +124,7 @@ const KsurgeryPage = (props) => {
 
         )}
 
-
-
-
-        <Box maxWidth="xl" sx={{
+        <Box sx={{
           backgroundColor: { xs: "#eee8f5", sm: "#E0FFF5" }
         }}>
           <Container maxWidth="xl">
@@ -222,6 +219,8 @@ const KsurgeryPage = (props) => {
           src={icons}
           className="icons"
           maxWidth="xl"
+          marginLeft="auto"
+          marginRight="auto"
           sx={{
             width: "100%",
             height: "auto",

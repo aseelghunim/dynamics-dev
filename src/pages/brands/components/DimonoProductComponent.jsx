@@ -73,16 +73,15 @@ const DimonoProductComponent = () => {
     <Box
       className="dimono-product-component"
       sx={{
-        p: { xs: 2, sm: "2rem", md: "2rem" },
-        paddingLeft: { xs: 2, sm: "2rem", md: 19.5 },
-        paddingRight: { xs: 2, sm: "2rem", md: 19.5 },
+      
+    //  p: { xs: 2, sm: "2rem", },
 
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xl"
+      // maxWidth="xl"
     >
-      <Container maxWidth="xl" sx={{ py: 2 }}>
+      <Container className="container" maxWidth="xl" >
         {/* ✅ MOBILE (matches screenshot: header -> subtitle -> image -> sections) */}
         {isMobile ? (
           <Stack spacing={3} sx={{ width: "100%" }}>
@@ -147,7 +146,7 @@ const DimonoProductComponent = () => {
           </Stack>
         ) : (
           /* ✅ DESKTOP (your existing 3-column layout) */
-          <Grid container alignItems="center" spacing={4}>
+          <Grid container  alignItems="center" spacing={4}>
             {/* LEFT */}
             <Grid item xs={12} sm={4.5} md={4.5}>
               <Box>

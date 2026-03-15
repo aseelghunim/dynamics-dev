@@ -390,15 +390,12 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
   return (
     <Box
       className='ksurgery-product'
-      maxWidth="xl"
+      // maxWidth="xl"
       sx={{
         height: { xs: "auto", sm: "auto", md: "80vh" },
         minHeight: { xs: "400px", sm: "unset", md: "80vh" },
         backgroundColor: { xs: "#EEE8F5", sm: "#fff" },
-        "@media(min-width:992px)": {
-          paddingLeft: "132px",
-          paddingRight: "132px"
-        }
+     
       }}
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
@@ -408,6 +405,10 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
             "@media(min-width: 768px) and (max-width: 991px)": {
               padding: "32px 88px 64px!important"
             }
+          },
+          "@media(min-width:992px)": {
+            paddingLeft: "156px",
+            paddingRight: "156px"
           }
         }}>
           {/* ✅ MOBILE: show Face section then Body section like screenshot */}

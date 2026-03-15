@@ -33,21 +33,33 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
     .story-section-parent .min-height-controller {
         min-height: 440px;
     }
-
+.story-section-parent .story-section-text-holder{
+    min-width: 450px;
+}
     .story-section-parent .first-stack {
         padding-bottom: 0 !important;
         padding-top: 75px !important;
     }
 
+    html[dir='ltr'] .story-section-parent.lanluma-story-section-1 .first-stack {
+        padding-left: 40px !important;
+        padding-right: 0 !important;
+    }
+    .story-section-parent.lanluma-story-section-1{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .story-section-parent.lanluma-story-section-2{
+        padding-top: 0;
+        /* padding-bottom: 0; */
+    }
     html[dir='ltr'] .story-section-parent .first-stack {
         padding-left: 32px !important;
-
     }
 
     html[dir='rtl'] .story-section-parent .first-stack {
         padding-right: 32px !important;
         padding-left: 0 !important;
-
     }
 
 
@@ -213,6 +225,7 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         line-height: 1.4;
         text-align: justify;
         margin-top: 16px !important;
+        letter-spacing: 0;
     }
 
     /* .story-section-parent .min-height-controller h3+ p,
@@ -742,9 +755,11 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
     .renee-story-2 li {
         text-align: left;
     }
-   html[dir='rtl'] .renee-story-2 li {
+
+    html[dir='rtl'] .renee-story-2 li {
         text-align: right;
     }
+
     .renee-story-2 h3 {
         font-size: 1.25rem;
     }
@@ -792,11 +807,12 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         left: -16px !important;
     }
 
-    .renee-story-2 ul{
-        padding-left:12px
+    .renee-story-2 ul {
+        padding-left: 12px
     }
-    html[dir='rtl'] .renee-story-2 ul{
-        padding-right:12px
+
+    html[dir='rtl'] .renee-story-2 ul {
+        padding-right: 12px
     }
 
     html[dir='rtl'] .ellanse-story-section-3 {

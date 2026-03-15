@@ -10,7 +10,7 @@ const AboutUsBanner = (props) => {
   const { t } = useTranslation();
   return (
     <>
-      <Box maxWidth="xl" sx={{ backgroundColor: "#eee8f5" }}>
+      <Box  sx={{ backgroundColor: "#eee8f5" }}>
         <Container maxWidth="xl" sx={{ 
            "@media (min-width: 768px) and (max-width: 991px)": {
               padding: "16px!important"

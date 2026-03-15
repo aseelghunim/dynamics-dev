@@ -8,9 +8,9 @@
 }
 
 @media(min-width: 992px) {
-    .lenisna-product{
-        padding-left: 156px!important;
-        padding-right: 156px!important;
+    .lenisna-product .container{
+        padding-left: 172px!important;
+        padding-right: 172px!important;
     }
     .subtitle-p {
         margin-bottom: 48px
@@ -33,7 +33,7 @@
 
 
 @media(min-width:768px) and (max-width:991px) {
-    .lenisna-product {
+    .lenisna-product .cotainer{
         padding-left: 64px !important;
         padding-right: 64px !important;
     }

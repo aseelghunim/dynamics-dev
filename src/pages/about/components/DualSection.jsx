@@ -19,7 +19,7 @@ const TitleBox = ({
   const { t } = useTranslation();
 
   return (
-    <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex", }} className="test">
+    <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex", }} className="item">
       {" "}
       <Box
         sx={{
@@ -170,13 +170,16 @@ const DualSection = ({
       <Container maxWidth="xl" className='container'>
         <Grid
           container
-          spacing={2}
-          alignItems="stretch"
+          flexWrap={"nowrap"}
+          spacing="10px"
+          columnGap={"10px"}
+          justifyContent={"space-between"}
+          alignItems="center"
           sx={{
             paddingTop: { xs: 2, sm: 5 },
             paddingBottom: { xs: 2, sm: 5 },
 
-            paddinLeft:{xs:0,sm:0,md:5},
+            paddingLeft:{xs:0,sm:0,md:5},
             paddingRight:{xs:0,sm:0, md:5}
             
           }}

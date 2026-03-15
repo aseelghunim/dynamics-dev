@@ -40,7 +40,7 @@ const LanlumaPage = (props) => {
           videoSrc={video1}
           actionPath="#"
         />
-        <Box maxWidth="xl" sx={{ backgroundColor: "#FFFFFF", }}>
+        <Box  sx={{ backgroundColor: "#FFFFFF", }}>
           <Container maxWidth="xl" sx={{ padding: { xs: "0", sm: "1rem" } }}>
             <StorySection
               name="lanluma-story-section-1"
@@ -111,7 +111,7 @@ const LanlumaPage = (props) => {
           </Container>
         </Box>
 
-        <Box maxWidth="xl" sx={{ backgroundColor: { xs: "#EEE8F5", sm: "#fff" } }}>
+        <Box  sx={{ backgroundColor: { xs: "#EEE8F5", sm: "#fff" } }}>
           <Container maxWidth="xl">
             <StorySection
               name="lanluma-story-section-2"
@@ -238,7 +238,7 @@ const LanlumaPage = (props) => {
 
 
 
-        <Box maxWidth="xl" sx={{ backgroundColor: "#EEE8F5" }}>
+        <Box  sx={{ backgroundColor: "#EEE8F5" }}>
           <Container maxWidth="xl">
             <StorySection
               name="lanluma-story-section-3"

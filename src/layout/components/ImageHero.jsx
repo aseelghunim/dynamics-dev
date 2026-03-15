@@ -26,7 +26,7 @@ export const ImageHero = ({
   return (
     <Box
       className={`${name ?? ""} image-hero-parent`}
-      maxWidth="xxl"
+      // maxWidth="xxl"
       sx={{
         position: "relative",
         height: { xs: "auto", sm: "45vh", md: "100vh" },
@@ -65,6 +65,7 @@ export const ImageHero = ({
         }}
       />
       <Container
+      className="container"
         maxWidth="xl"
         sx={{
           position: "relative",

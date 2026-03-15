@@ -163,7 +163,7 @@ const ReneeProductComponent = () => {
           padding: { xs: 2, sm: "2rem" },
           // borderRadius: "8px",
         }}
-        maxWidth="xl"
+      // maxWidth="xl"
       >
         <Container maxWidth="xl" sx={{ py: { xs: 1, sm: 2 } }}>
           <Box sx={{ width: "100%" }}>
@@ -322,16 +322,19 @@ const ReneeProductComponent = () => {
     <Box
       className='renee-product'
       sx={{
-        padding: { xs: 2, sm: 7, md: "2rem" },
+        // padding: { xs: 3, sm: 7, md: "2rem" },
         borderRadius: "8px",
-        paddingRight: "24px",
-        paddingTop: "80px!important",
+        // paddingRight: "24px",
         backgroundColor: { sm: "white", md: "#f8f9fa" }
       }}
-      maxWidth="xl"
+    // maxWidth="xl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
-        <Container maxWidth="xl" sx={{ py: { xs: 1, sm: 2 } }}>
+        <Container className="container" maxWidth="xl" sx={{
+          py: { xs: 1, sm: 2 },
+          paddingRight: "24px",
+          paddingTop: "80px!important",
+        }}>
           <Grid container spacing={{ xs: 2, sm: 4 }} alignItems="center">
             {products?.map((product) =>
               product.value === tabValue ? (
@@ -381,7 +384,7 @@ const ReneeProductComponent = () => {
                         sx={{
                           color: "#5A2772",
                           fontWeight: "600",
-                          fontSize: { xs: "0.75rem",sm: "9px", md: "0.875rem" },
+                          fontSize: { xs: "0.75rem", sm: "9px", md: "0.875rem" },
                         }}
                       >
                         {product.question}
@@ -393,7 +396,7 @@ const ReneeProductComponent = () => {
                       sx={{
                         mb: { xs: 1, sm: 2 },
                         color: "#7C7C7C",
-                        fontSize: { xs: "0.75rem",sm: "9px", md: "13px" },
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "13px" },
                         textAlign: "justify"
                       }}
                     >
@@ -430,7 +433,7 @@ const ReneeProductComponent = () => {
                       sx={{
                         mb: 1,
                         color: "#5A2772",
-                        fontSize: { xs: "0.875rem",sm: "9px", md: "0.875rem" },
+                        fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
                         fontWeight: "600"
                       }}
                     >
@@ -440,7 +443,7 @@ const ReneeProductComponent = () => {
                       component="ul"
                       sx={{
                         pl: 2,
-                        fontSize: { xs: "0.75rem",sm: "9px", md: "13px" },
+                        fontSize: { xs: "0.75rem", sm: "9px", md: "13px" },
                         color: "#7c7c7c"
                       }}
                     >
@@ -480,7 +483,7 @@ const ReneeProductComponent = () => {
                       }
                       onClick={() => setTabValue(product.value)}
                       sx={{
-                        borderRadius:"4px",
+                        borderRadius: "4px",
                         width: { xs: "100%", sm: "90px", md: "125px" },
                         height: {
                           xs: "", sm: "26", md: "35px"

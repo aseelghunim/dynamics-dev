@@ -145,24 +145,15 @@ const FaceInjectionPointsLenisna = () => {
   ];
 
   return (
-    <Box maxWidth="xl">
-      <Container
-        maxWidth="xl"
-        disableGutters
-        sx={{
-          position: "relative",
-          zIndex: 1,
-          height: "100%",
-          px: 0, // IMPORTANT: remove container side padding
-        }}
-      >
+    <Box>
+      
         {/* Full-bleed wrapper on mobile only */}
         <Box
           sx={{
             position: "relative",
             width: "100%",
             // mobile: make it span the viewport width even inside a centered container
-            width: { xs: "100vw", sm: "100%" },
+            width: { xs: "100%", sm: "100%" },
             left: { xs: "50%", sm: "auto" },
             right: { xs: "50%", sm: "auto" },
             marginLeft: { xs: "-50vw", sm: 0 },
@@ -188,9 +179,9 @@ const FaceInjectionPointsLenisna = () => {
           {/* Logo + title overlay */}
           <Box
             sx={{
-              width: { xs: "60%",sm:"126px",md: "25%" },
+              width: { xs: "60%",sm:"126px",md:"211px" },
               position: "absolute",
-              top: { xs: 40,sm:"24px", md: 150 }, // slightly higher on mobile
+              top: { xs: 40,sm:"24px", md: 90 }, // slightly higher on mobile
               left: 0,
               right: 0,
               margin: "auto",
@@ -198,7 +189,7 @@ const FaceInjectionPointsLenisna = () => {
             }}
           >
             <Stack justifyContent="center" alignItems="center">
-              <Box component="img" src={logo} sx={{ width: { xs: "70%", sm: "100%" } }} />
+              <Box component="img" src={logo} sx={{ width: { xs: "70%", sm: "100%",} }} />
               <Typography
                 variant="body2"
                 sx={{
@@ -217,7 +208,7 @@ const FaceInjectionPointsLenisna = () => {
             <Point key={position.id} position={position} smUp={smUp} />
           ))}
         </Box>
-      </Container>
+   
     </Box>
   );
 };

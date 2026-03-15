@@ -1,7 +1,7 @@
 @media(min-width:1399px){
     .image-hero-parent{
-        height: 70vh!important;
-        min-height: unset!important;
+        /* height: 70vh!important;
+        min-height: unset!important; */
     }
 }
 
@@ -11,16 +11,18 @@
 }
 
 @media(min-width: 992px) {
-
+    .lensina-image-hero-2 p{
+        width: 80%;
+    }
     .image-hero-parent span,
     .image-hero-parent p {
         text-align: justify !important;
         font-size: 18px !important;
     }
 
-    .image-hero-parent {
-        padding-left: 156px;
-        padding-right: 156px;
+    .image-hero-parent .container{
+        padding-left: 176px;
+        padding-right: 176px;
     }
 
     html[dir='rtl'] .image-hero-parent::before {
@@ -74,9 +76,9 @@
 
     }
 
-    .image-hero-parent {
-        padding-left: 48px !important;
-        padding-right: 48px !important;
+    .image-hero-parent .container{
+        padding-left: 96px !important;
+        padding-right: 96px !important;
 
     }
 

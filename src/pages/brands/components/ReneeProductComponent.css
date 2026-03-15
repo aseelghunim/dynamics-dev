@@ -1,7 +1,7 @@
 @media(min-width:992px) {
-    .renee-product {
-        padding-left: 156px !important;
-        padding-right: 156px !important;
+    .renee-product .container{
+        padding-left: 172px !important;
+        padding-right: 172px !important;
         padding-bottom: 64px !important;
     }
 }

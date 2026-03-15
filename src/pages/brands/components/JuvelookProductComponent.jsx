@@ -54,16 +54,20 @@ const JuvelookProductComponent = () => {
     <Box
       className="juvelook-product"
       sx={{
-        padding: { xs: 2, sm: "2rem", md: "2rem" },
-        paddingLeft: { xs: 2, sm: "2rem", md: 19.5 },
-        paddingRight: { xs: 2, sm: "2rem", md: 19.5 },
+
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xl"
+    // maxWidth="xl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
-        <Container maxWidth="xl" sx={{ py: 2 }}>
+        <Container className="container" maxWidth="xl" sx={{
+        //  padding: { xs: 2, sm: "2rem", md: "2rem" },
+         py: 6,
+
+          paddingLeft: { xs: 2, sm: "2rem", md: 21,lg:22,xl:22 },
+          paddingRight: { xs: 2, sm: "2rem", md: 21,lg:22,xl:22 },
+        }}>
           <Grid container alignItems="stretch">
             <Grid item xs={12} sm={12}>
               <Box
@@ -160,9 +164,9 @@ const JuvelookProductComponent = () => {
                     </Stack>
                   </Grid>
                   <Grid item xs={12} sm={3} md={3} sx={{
- alignSelf: "flex-end",
+                    alignSelf: "flex-end",
                     "@media(min-width:768px) and (max-width:991px)": {
-                     
+
                     }
                   }}>
                     <Box

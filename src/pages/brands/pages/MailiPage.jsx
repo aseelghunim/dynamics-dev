@@ -37,7 +37,7 @@ const MailiPage = (props) => {
           videoSrc={video1}
           actionPath="#"
         />
-        <Box maxWidth="xl" sx={{ backgroundColor: "#E0FFF5" }}>
+        <Box  sx={{ backgroundColor: "#E0FFF5" }}>
           <Container maxWidth="xl">
             <StorySection
               name='maili-story-section-1'
@@ -159,7 +159,7 @@ const MailiPage = (props) => {
             </>
           }
         />
-        <Box maxWidth="xl" sx={{ backgroundColor: "#E0FFF5" }}>
+        <Box  sx={{ backgroundColor: "#E0FFF5" }}>
           <Container maxWidth="xl">
             <StorySection
             name="maili-story-section-2"

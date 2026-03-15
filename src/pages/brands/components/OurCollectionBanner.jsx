@@ -105,7 +105,7 @@ const OurCollectionBanner = () => {
   );
 
   return (
-    <Box maxWidth="xl" sx={{ backgroundColor: "#eee8f5", }}>
+    <Box  sx={{ backgroundColor: "#eee8f5", }}>
       {isMobile ? (
         // Mobile: ONLY cards scroll horizontally (no heading)
         <Container
@@ -156,7 +156,10 @@ const OurCollectionBanner = () => {
             position: "relative",
             height: "100%",
             padding: { xs: 2, md: 10 },
+            paddingRight:{xs:2,md:10,xl:0},
             // paddingTop: ,
+            marginRight:"auto!important",
+            marginLeft:"auto!important",
             margin: 0,
           }}
         >

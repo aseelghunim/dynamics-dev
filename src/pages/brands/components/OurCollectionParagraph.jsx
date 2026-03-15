@@ -1,4 +1,4 @@
-import { Divider, useTheme, useMediaQuery } from "@mui/material";
+import { Divider, useTheme, useMediaQuery, Container } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import StyledTypography from "layout/components/StyledTypography";
 import { tokens } from "locales/tokens";
@@ -18,10 +18,12 @@ const OurCollectionParagraph = () => {
         background: "linear-gradient(to right, #ec5e87, rgb(245, 203, 218))",
         color: "white",
         py: { xs: 4, sm: 4,md:9 },
-        px: { xs: 4, sm: 3,md:19.5 },
+     
       }}
     >
-      <Section height={{ xs: "auto", md: "auto" }}>
+      <Container maxWidth='xl' sx={{    px: { xs: 4, sm: 3,md:19.5 }, }} >
+
+ <Section height={{ xs: "auto", md: "auto" }}>
         <Stack
           sx={{
             minHeight: { xs: "auto", sm: "auto" },
@@ -81,6 +83,8 @@ const OurCollectionParagraph = () => {
           </Stack>
         </Stack>
       </Section>
+      </Container>
+     
     </Box>
   );
 };

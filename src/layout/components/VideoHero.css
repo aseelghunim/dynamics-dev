@@ -7,11 +7,13 @@
         align-items: start!important;
         padding-bottom: 120px;
         margin-top: 0!important;
-        padding-left: 72px;
+        /* padding-left: 72px; */
+        padding-left: 64px;
+
     }
     html[dir='rtl'] .video-parent .video-text-holder{
         padding-left: unset;
-        padding-right: 72px;
+        padding-right: 64px;
     }
     .video-text-holder p{
         max-width: 75% !important;

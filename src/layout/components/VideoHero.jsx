@@ -1,8 +1,9 @@
-import { Button, Typography } from "@mui/material";
+import { Button, IconButton, Typography, keyframes } from "@mui/material";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 import StyledTypography from "layout/components/StyledTypography";
 import PropTypes from "prop-types";
@@ -53,6 +54,37 @@ const loaderStyle = {
   zIndex: 3,
 };
 
+const bounce = keyframes`
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+`;
+const scrollButtonStyle = {
+  display: { xs: "none", md: "inline-flex" }, // hide on mobile, show on desktop
+
+  position: "absolute",
+  bottom: { xs: "15px", md: "85px" }, // Adjusted slightly lower
+  left: "50%",
+  transform: "translateX(-50%)",
+  zIndex: 4,
+  backgroundColor: "rgba(255, 255, 255, 0.2)",
+  backdropFilter: "blur(10px)",
+  border: "2px solid rgba(255, 255, 255, 0.5)",
+  borderRadius: "8px",
+  width: { xs: "40px", md: "56px" }, // Smaller on mobile
+  height: { xs: "40px", md: "56px" }, // Smaller on mobile
+  color: "white",
+  animation: `${bounce} 2s infinite`,
+  "&:hover": {
+    backgroundColor: "rgba(255, 255, 255, 0.3)",
+    borderColor: "rgba(255, 255, 255, 0.8)",
+    transform: "translateX(-50%) translateY(3px)",
+  },
+  transition: "all 0.3s ease",
+};
 export const VideoHero = ({
   name = "",
   title,
@@ -68,7 +100,17 @@ export const VideoHero = ({
   const handleVideoLoaded = () => {
     setIsLoading(false);
   };
+  const handleScrollDown = () => {
+    // Get navbar element (header) to calculate its height
+    const navbar = document.querySelector("header");
+    const navbarHeight = navbar ? navbar.offsetHeight : 120; // Fallback to 120px if not found
 
+    // Scroll to just below the hero section, accounting for navbar height
+    window.scrollTo({
+      top: window.innerHeight - navbarHeight,
+      behavior: "smooth",
+    });
+  };
   return (
     <Box
       className={`video-parent ${name}`}
@@ -90,7 +132,14 @@ export const VideoHero = ({
           },
         }}
       />
-
+      {/* Scroll Down Button */}
+      <IconButton
+        onClick={handleScrollDown}
+        sx={scrollButtonStyle}
+        aria-label="Scroll down"
+      >
+        <ArrowDownwardIcon sx={{ fontSize: { xs: "20px", md: "32px" } }} />
+      </IconButton>
       <video
         autoPlay
         muted

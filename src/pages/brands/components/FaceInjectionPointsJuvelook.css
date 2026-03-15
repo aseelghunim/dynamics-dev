@@ -1,6 +1,27 @@
-@media(min-width:768px) and (max-width:991px){
+@media(min-width:992px){
+   html[dir='ltr'] .face-injection-juvelook .container{
+        padding-left: 176px;
+        padding-right: 0;
+    }
+    html[dir='rtl'] .face-injection-juvelook .container{
+        /* padding-right: 88px; */
+        padding-right: 176px;
 
-.mark-svg svg{
-    width: 15px!important;
+        padding-left: 0;
+        margin-left: 0!important;
+    }
 }
+@media(min-width:768px) and (max-width:991px) {
+    html[dir='ltr'] .face-injection-juvelook .container{
+        padding-left: 96px!important;
+        padding-right: 0!important;
+    }
+    html[dir='rtl'] .face-injection-juvelook .container{
+        padding-right: 96px!important;
+        padding-left: 0!important;
+    }
+    
+    .mark-svg svg {
+        width: 15px !important;
+    }
 }

@@ -1,28 +1,54 @@
-.about-us-page-dual-section-2-holder{
+.about-us-page-dual-section-2-holder {
     order: 2;
 }
 
 @media(min-width: 992px) {
-   html[dir='ltr'] .about-us-page-dual-section-1,    html[dir='ltr']  .about-us-page-dual-section-2{
-        padding-left: 132px;
+    .about-us-page-dual-section-1 {
+    
+    }
+
+    .about-us-page-dual-section-1 .item,
+    .about-us-page-dual-section-2 .item {
+        max-width: 550px;
+    }
+
+    html[dir='ltr'] .about-us-page-dual-section-1,
+    html[dir='ltr'] .about-us-page-dual-section-2 {
+        padding-left: 90px;
         padding-right: 90px;
 
     }
-    html[dir='rtl'] .about-us-page-dual-section-1,    html[dir='rtl']  .about-us-page-dual-section-2{
+
+    html[dir='rtl'] .about-us-page-dual-section-1,
+    html[dir='rtl'] .about-us-page-dual-section-2 {
         padding-left: 90px;
-        padding-right: 132px;
+        padding-right: 90px;
     }
+
     .dual-section-min-height-controller {
-        min-width: 400px
+        min-height: 400px;
+        max-height: 450px;
+        /* width: 510px; */
+
     }
+
+    .dual-section-min-height-controller p {
+
+        margin-top: 36px !important;
+        line-height: 1.35;
+        letter-spacing: -2%;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width:991px) {
 
-    .about-us-page-dual-section-1, .about-us-page-dual-section-2{
+    .about-us-page-dual-section-1,
+    .about-us-page-dual-section-2 {
         padding-left: 64px;
         padding-right: 64px;
     }
+
     .about-us-page-dual-section-1 .container,
     .about-us-page-dual-section-1 .container>div,
     .about-us-page-dual-section-2 .container,
@@ -49,8 +75,9 @@
     .about-us-page-dual-section-2 p {
         text-align: left !important;
     }
-   html[dir='rtl'] .about-us-page-dual-section-1 p,
-   html[dir='rtl']   .about-us-page-dual-section-2 p {
+
+    html[dir='rtl'] .about-us-page-dual-section-1 p,
+    html[dir='rtl'] .about-us-page-dual-section-2 p {
         text-align: right !important;
     }
 }
