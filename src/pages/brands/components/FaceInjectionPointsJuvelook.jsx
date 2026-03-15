@@ -247,6 +247,7 @@ const FaceInjectionPointsJuvelook = () => {
                     color: "#ffffff",
                     fontSize: { xs: "0.875rem", sm: "9px", md: "1.25rem" },
                     mt: { xs: 1, md: 0 },
+                   
                   }}
                 >
                   {t(tokens.brands.juvelook.face.title)}
@@ -261,7 +262,10 @@ const FaceInjectionPointsJuvelook = () => {
                   spacing={{ xs: 3, md: 10 }}
                   sx={{
                     width: "100%",
-                    padding: { xs: "0 16px", sm: "0 16px 60px 0", md: "unset" }
+                    padding: { xs: "0 16px", sm: "0 16px 60px 0", md: "unset" },
+                    "@media(max-width:767px)":{
+                      marginTop: "72px"
+                    }
                   }}
                 >
                   <Stack

@@ -145,9 +145,9 @@ const DrcyjProductComponent = () => {
                     alt={product.title}
                     loading="lazy"
                     sx={{
-                      width: "65%",       // 👈 tweak if you want bigger/smaller
-                      maxWidth: 260,
-                      minWidth: 180,
+                      width: {xs:"155px",sm:"99px",md:"137px"},       // 👈 tweak if you want bigger/smaller
+                      // maxWidth: 260,
+                      // minWidth: 180,
                       height: "auto",
                       display: "block",
                       // marginTop:"0!important"

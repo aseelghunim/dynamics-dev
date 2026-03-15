@@ -268,6 +268,10 @@
     .juvelook-hero-1 p {
         text-align: left !important;
     }
+   html[dir='rtl'] .ksurgery-image-hero p,
+   html[dir='rtl']  .juvelook-hero-1 p {
+        text-align: right !important;
+    }
 
     .ksurgery-image-hero ul {
         margin-top: 24px !important;

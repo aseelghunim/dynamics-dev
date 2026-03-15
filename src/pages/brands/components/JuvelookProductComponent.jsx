@@ -74,7 +74,7 @@ const JuvelookProductComponent = () => {
                 sx={{
                   // paddingTop: { xs: "16px", sm: 0, md: "16px" },
                   marginLeft: { xs: 0, md: "0" },
-                  width: { xs: "265px", sm: "85px", md: "126px" },
+                  width: { xs: "230px", sm: "85px", md: "126px" },
                   height: { xs: "96px", sm: "27px", md: "40px" },
                   objectFit: "cover"
                   // width: { xs: "120px", sm: "85px", md: "180px" },
@@ -85,7 +85,7 @@ const JuvelookProductComponent = () => {
                 variant="body1"
                 sx={{
                   color: "#6D6E71",
-                  mb: { xs: 2, sm: "50px" },
+                  mb: { xs: "40px", sm: "50px" },
                   fontSize: { xs: "0.875rem", sm: "9px", md: "0.875rem" },
                 }}
               >
@@ -188,10 +188,10 @@ const JuvelookProductComponent = () => {
                           // height: 324px;
                           // width: 238px;
                           // object-fit: cover;
-                          width: { xs: "100%", sm: "95%", md: "auto" },
+                          width: { xs: "80%", sm: "95%", md: "auto" },
                           "@media(max-width:767px)": {
-                            marginTop: "-50px !important",
-                            transform: "scale(2)",
+                            marginBottom: "-50px !important",
+                            // transform: "scale(2)",
                           }
 
 
