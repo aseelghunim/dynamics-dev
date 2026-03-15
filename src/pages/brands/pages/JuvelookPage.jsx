@@ -50,8 +50,8 @@ const JuvelookPage = (props) => {
         <JuvelookProductComponent />
         <FaceInjectionPointsJuvelook />
         {false && (
-          <Box maxWidth="xxl" sx={{ backgroundColor: "#CCE5FF" }}>
-            <Container maxWidth="xxl">
+          <Box maxWidth="xl" sx={{ backgroundColor: "#CCE5FF" }}>
+            <Container maxWidth="xl">
               <StorySection
                 backgroundColor="#CCE5FF"
                 title={t(tokens.brands.juvelook.keyBenefits)}
@@ -88,8 +88,8 @@ const JuvelookPage = (props) => {
         />
 
         {false && (
-          <Box maxWidth="xxl" sx={{ backgroundColor: "#CCE5FF" }}>
-            <Container maxWidth="xxl">
+          <Box maxWidth="xl" sx={{ backgroundColor: "#CCE5FF" }}>
+            <Container maxWidth="xl">
               <StorySection
                 backgroundColor="#CCE5FF"
                 reverse={true}

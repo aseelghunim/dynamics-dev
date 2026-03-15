@@ -145,9 +145,9 @@ const FaceInjectionPointsLenisna = () => {
   ];
 
   return (
-    <Box maxWidth="xxl">
+    <Box maxWidth="xl">
       <Container
-        maxWidth="xxl"
+        maxWidth="xl"
         disableGutters
         sx={{
           position: "relative",

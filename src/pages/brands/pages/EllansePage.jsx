@@ -44,8 +44,8 @@ const EllansePage = (props) => {
           actionPath="#"
         />
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: { xs: "#E0FFF5", md: "#fff" } }}>
-          <Container maxWidth="xxl">
+        <Box maxWidth="xl" sx={{ backgroundColor: { xs: "#E0FFF5", md: "#fff" } }}>
+          <Container maxWidth="xl">
             <StorySection
               name="ellanse-story-section-1"
               backgroundColor={{ xs: "#E0FFF5", md: "#fff" }}
@@ -104,8 +104,8 @@ const EllansePage = (props) => {
           </Container>
         </Box>
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#E0FFF5" }}>
-          <Container maxWidth="xxl">
+        <Box maxWidth="xl" sx={{ backgroundColor: "#E0FFF5" }}>
+          <Container maxWidth="xl">
             <StorySection
               name="ellanse-story-section-2"
               backgroundColor="#E0FFF5"
@@ -271,8 +271,8 @@ const EllansePage = (props) => {
           }
         />
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#E0FFF5" }}>
-          <Container maxWidth="xxl">
+        <Box maxWidth="xl" sx={{ backgroundColor: "#E0FFF5" }}>
+          <Container maxWidth="xl">
             <StorySection
               name="ellanse-story-section-3"
 

@@ -46,8 +46,8 @@ const LenisnaPage = (props) => {
         <LenisnaProductComponent />
         <FaceInjectionPointsLenisna />
         {false && (
-          <Box maxWidth="xxl" sx={{ backgroundColor: "#E9C1CA" }}>
-            <Container maxWidth="xxl">
+          <Box maxWidth="xl" sx={{ backgroundColor: "#E9C1CA" }}>
+            <Container maxWidth="xl">
               <StorySection
                 backgroundColor="#E9C1CA"
                 title2={t(tokens.brands.lenisna.results)}
@@ -78,8 +78,8 @@ const LenisnaPage = (props) => {
         )}
 
         {false && (
-          <Box maxWidth="xxl" sx={{ backgroundColor: "#E9C1CA" }}>
-            <Container maxWidth="xxl">
+          <Box maxWidth="xl" sx={{ backgroundColor: "#E9C1CA" }}>
+            <Container maxWidth="xl">
               <StorySection
                 backgroundColor="#E9C1CA"
                 title={t(tokens.brands.lenisna.keyBenefits)}

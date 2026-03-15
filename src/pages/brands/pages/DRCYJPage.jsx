@@ -41,8 +41,8 @@ const DRCYJPage = (props) => {
         />
 
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#fff" }}>
-          <Container maxWidth="xxl">
+        <Box maxWidth="xl" sx={{ backgroundColor: "#fff" }}>
+          <Container maxWidth="xl">
             <StorySection
               name='drcyj-story-section-1'
               backgroundColor="#fff"

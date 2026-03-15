@@ -95,7 +95,7 @@ const DrcyjProductComponent = () => {
         borderRadius: { xs: 0, sm: "8px" },
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xxl"
+      maxWidth="xl"
     >
       <Container maxWidth="xl" sx={{ py: { xs: 3, sm: 2 } }}>
         {isMobile ? (

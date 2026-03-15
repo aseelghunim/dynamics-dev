@@ -57,7 +57,7 @@ const LenisnaProductComponent = () => {
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xxl"
+      maxWidth="xl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
         <Container maxWidth="xl" sx={{ py: { xs: 2, sm: 0, md: 2 } }}>

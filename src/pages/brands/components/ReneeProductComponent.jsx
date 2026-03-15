@@ -163,7 +163,7 @@ const ReneeProductComponent = () => {
           padding: { xs: 2, sm: "2rem" },
           // borderRadius: "8px",
         }}
-        maxWidth="xxl"
+        maxWidth="xl"
       >
         <Container maxWidth="xl" sx={{ py: { xs: 1, sm: 2 } }}>
           <Box sx={{ width: "100%" }}>
@@ -328,7 +328,7 @@ const ReneeProductComponent = () => {
         paddingTop: "80px!important",
         backgroundColor: { sm: "white", md: "#f8f9fa" }
       }}
-      maxWidth="xxl"
+      maxWidth="xl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
         <Container maxWidth="xl" sx={{ py: { xs: 1, sm: 2 } }}>

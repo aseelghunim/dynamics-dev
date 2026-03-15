@@ -390,7 +390,7 @@ const KsurgeryProductComponent = ({ collection = 1 }) => {
   return (
     <Box
       className='ksurgery-product'
-      maxWidth="xxl"
+      maxWidth="xl"
       sx={{
         height: { xs: "auto", sm: "auto", md: "80vh" },
         minHeight: { xs: "400px", sm: "unset", md: "80vh" },

@@ -1,6 +1,6 @@
 import { Button, Typography } from "@mui/material";
-import { Box, Container, Grid, Stack } from "@mui/system";
-
+import { Box, Grid, Stack } from "@mui/system";
+import Container from "@mui/material/Container";
 import image from "assets/gradient.png";
 import { tokens } from "locales/tokens";
 import { buttonStyle } from "pages/home/components/brands/styles";
@@ -158,7 +158,7 @@ const DualSection = ({
   return (
     <Box
       className={name ?? ""}
-      maxWidth="xxl"
+      // maxWidth="xl"
       sx={{
         backgroundColor: { backgroundColor },
         position: "relative",
@@ -167,10 +167,7 @@ const DualSection = ({
         paddingBottom: { xs: 2, sm: 5 },
       }}
     >
-      <Container maxWidth="xxl" className='container' 
-      
-      
-      >
+      <Container maxWidth="xl" className='container'>
         <Grid
           container
           spacing={2}

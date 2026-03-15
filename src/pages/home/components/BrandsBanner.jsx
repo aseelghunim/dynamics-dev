@@ -1,4 +1,6 @@
-import { Box, Container } from "@mui/system";
+import { Box } from "@mui/system";
+import Container from "@mui/material/Container";
+
 import Carousel from "./Carousel";
 import { useState } from "react";
 import { BRANDS } from "../contants";
@@ -117,7 +119,7 @@ const BrandsBanner = (props) => {
       }}
     >
       <Container
-        maxWidth="xxl"
+        maxWidth="xl"
         sx={{
           position: "relative",
           margin: 0,

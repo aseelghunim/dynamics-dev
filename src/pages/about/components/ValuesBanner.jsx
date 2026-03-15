@@ -50,18 +50,21 @@ const ValuesBanner = (props) => {
   return (
     <Box
     className='values-banner'
-      maxWidth="xxl"
+      maxWidth="xl"
       sx={{
         backgroundColor: "#eee8f5",
       }}
     >
       <Container
-        maxWidth="xxl"
+        maxWidth="xl"
         sx={{
           position: "relative",
           height: "100%",
           padding: { xs: 0, sm: 5,md:3 },
-          paddingTop: { xs: 0,sm:2, md: 5 },
+          paddingTop: { xs: 0,sm:2, md: 0 },
+          paddingBottom:{
+            xs:0,sm:5,md:0
+          },
           margin: 0,
         }}
       >

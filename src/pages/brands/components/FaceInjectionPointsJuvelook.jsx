@@ -179,7 +179,7 @@ const FaceInjectionPointsJuvelook = () => {
 
   return (
     <Box
-      maxWidth="xxl"
+      maxWidth="xl"
       sx={{
         position: "relative",
         height: { xs: "auto", sm: "35vh", md: "100vh" },
@@ -190,7 +190,7 @@ const FaceInjectionPointsJuvelook = () => {
       }}
     >
       <Container
-        maxWidth="xxl"
+        maxWidth="xl"
         sx={{
           position: "relative", zIndex: 1, height: "100%",
           "@media(min-width:768px) and (max-width:991px)": {

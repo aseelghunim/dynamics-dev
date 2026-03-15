@@ -3,7 +3,7 @@ import { Box, Container, Stack } from "@mui/system";
 const Section = ({ height = "80vh", backGroundImage, children }) => {
   return (
     <Box
-      maxWidth="xxl"
+      maxWidth="xl"
       sx={
         backGroundImage
           ? {

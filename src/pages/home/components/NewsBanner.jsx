@@ -135,10 +135,10 @@ const NewsBanner = () => {
   const EDGE_GUTTER = 32; // px like your design padding
 
   return (
-    <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5" }}>
+    <Box maxWidth="xl" sx={{ backgroundColor: "#eee8f5" }}>
       {!isMobile ? (
         <Container
-          maxWidth="xxl"
+          maxWidth="xl"
           sx={{
             position: "relative",
             height: "100%",
@@ -173,7 +173,7 @@ const NewsBanner = () => {
       ) : (
         // ✅ Mobile: remove container side padding and manage gutters inside scroller
         <Container
-          maxWidth="xxl"
+          maxWidth="xl"
           disableGutters
           sx={{
             position: "relative",

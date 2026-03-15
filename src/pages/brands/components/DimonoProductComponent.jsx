@@ -80,7 +80,7 @@ const DimonoProductComponent = () => {
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xxl"
+      maxWidth="xl"
     >
       <Container maxWidth="xl" sx={{ py: 2 }}>
         {/* ✅ MOBILE (matches screenshot: header -> subtitle -> image -> sections) */}

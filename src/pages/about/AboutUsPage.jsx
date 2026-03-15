@@ -33,8 +33,8 @@ const AboutUsPage = (props) => {
       <Seo />
       <main>
         <AboutUsHero />
-        <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5", p: { xs: 0, sm: "0", md: 0 } }}>
-          <Container maxWidth="xxl" >
+        <Box sx={{ backgroundColor: "#eee8f5", p: { xs: 0, sm: "0", md: 0 } }}>
+          <Container maxWidth="xl" >
             <DualSection
               name='about-us-page-dual-section-1'
               reverse={true}
@@ -48,7 +48,7 @@ const AboutUsPage = (props) => {
           <Container maxWidth="xl">
             <ValuesBanner />
           </Container>
-          <Container maxWidth="xxl" className='about-us-page-dual-section-2-holder'>
+          <Container maxWidth="xl" className='about-us-page-dual-section-2-holder'>
             <DualSection
               name='about-us-page-dual-section-2'
               reverse={true}
@@ -60,10 +60,15 @@ const AboutUsPage = (props) => {
               backImage1={background_green}
             />
           </Container>
-          <Container
-            maxWidth="xxl"
+
+
+
+
+
+
+          <Box
             sx={{
-              className:'girl-section',
+              className: 'girl-section',
               display: "block",
               backgroundImage: `url(${productBg})`,
               backgroundSize: "cover",
@@ -71,33 +76,14 @@ const AboutUsPage = (props) => {
               backgroundPosition: { xs: "center center", sm: "top center" },
               position: "relative",
               height: "100%",
-              "@media(min-width:992px)": {
-                paddingLeft: "92px",
-                paddingRight: "92px",
 
-              },
 
               paddingTop: { xs: 2, sm: 2, md: 5 },
               paddingBottom: { xs: 2, sm: 2, md: 0 },
 
-              "::before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                right: 0,
-                width: "100%",
-                height: "100%",
-                backgroundImage: `url(${product})`,
-                // backgroundSize: "50%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: isTablet ? "43%" : "contain",
-                backgroundPosition: isRtl ? 'left bottom' : "right bottom",
-                transform: isRtl ? "scaleX(-1)" : "none",
-                zIndex: 0,
-                display: isMobile ? 'none' : 'block'
-              },
+             
               "@media (max-width: 991px)": {
-                width: "100vw",
+                // width: "100vw",
                 maxWidth: "100%",
                 marginLeft: 0,
                 marginRight: 0,
@@ -105,16 +91,44 @@ const AboutUsPage = (props) => {
               },
             }}
           >
-            <Box maxWidth="xxl">
-              <Container maxWidth="xxl" sx={{
-
+            <Container
+              maxWidth="xl"
+              sx={{
+                "@media(min-width:992px)": {
+                  paddingLeft: "116px",
+                  paddingRight: "116px",
+                  
+                },
+                "::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  right: isRtl ? "50%":"unset",
+                  left: isRtl ? "unset": "50%",
+                  width: "100%",
+                  maxWidth:"1440px",
+                  transform: isRtl ? "translateX(50%) scaleX(-1)": "translateX(-50%) scaleX(1)",
+                  // left:"50%",/
+                  height: "100%",
+                  backgroundImage: `url(${product})`,
+                  // backgroundSize: "50%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: isTablet ? "43%" : "contain",
+                  backgroundPosition: isRtl ? 'left bottom' : "right bottom",
+                  // transform: isRtl ? "scaleX(-1)" : "none",
+                  zIndex: 0,
+                  display: isMobile ? 'none' : 'block'
+                },
+              }}
+            >
+              <Box sx={{
                 "@media (max-width:991px)": {
                   paddingRight: "0!important",
                   paddingLeft: "0!important"
                 }
               }}>
                 <Grid
-                  container
+                  // container
                   spacing={2}
                   alignItems="stretch"
                   sx={{ padding: { xs: 0, sm: 5 } }}
@@ -156,7 +170,7 @@ const AboutUsPage = (props) => {
                               sx={{ width: "100%" }}
                             >
                               <Box
-                                maxWidth="xxl"
+                                // maxWidth="xl"
                                 sx={{
                                   height: { xs: "auto", },
                                   width: "100%",
@@ -255,11 +269,16 @@ const AboutUsPage = (props) => {
                     </Box>
                   </Grid>
                 </Grid>
-              </Container>
-            </Box>
-          </Container>
+              </Box>
+            </Container>
+          </Box>
+          {/* </Container> */}
+
+
+
+
         </Box>
-      </main>
+      </main >
     </>
   );
 };

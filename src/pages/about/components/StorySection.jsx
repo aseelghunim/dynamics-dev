@@ -258,7 +258,7 @@ const StorySection = ({
   return (
     <Box
       className={`${name ?? ""} story-section-parent ${reverse? 'reverse':''}`}
-      maxWidth="xxl"
+      maxWidth="xl"
       sx={{
         backgroundColor,
         position: "relative",

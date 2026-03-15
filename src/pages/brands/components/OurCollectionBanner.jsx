@@ -105,11 +105,11 @@ const OurCollectionBanner = () => {
   );
 
   return (
-    <Box maxWidth="xxl" sx={{ backgroundColor: "#eee8f5", }}>
+    <Box maxWidth="xl" sx={{ backgroundColor: "#eee8f5", }}>
       {isMobile ? (
         // Mobile: ONLY cards scroll horizontally (no heading)
         <Container
-          maxWidth="xxl"
+          maxWidth="xl"
           disableGutters
           sx={{
             position: "relative",
@@ -151,7 +151,7 @@ const OurCollectionBanner = () => {
       ) : (
         // Desktop + Tablet: heading stays, cards scroll horizontally right next to it
         <Container
-          maxWidth="xxl"
+          maxWidth="xl"
           sx={{
             position: "relative",
             height: "100%",

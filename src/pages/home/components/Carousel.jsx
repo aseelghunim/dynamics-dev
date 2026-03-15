@@ -100,7 +100,7 @@ const Carousel = ({ selectedBrand, active }) => {
   return (
     <div className="carousel-container">
       <Container
-        maxWidth="xxl"
+        maxWidth="xl"
         sx={{
           position: "relative",
           margin: 0,

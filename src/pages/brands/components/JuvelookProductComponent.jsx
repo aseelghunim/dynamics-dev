@@ -60,7 +60,7 @@ const JuvelookProductComponent = () => {
         borderRadius: "8px",
         backgroundColor: "#FFFFFF",
       }}
-      maxWidth="xxl"
+      maxWidth="xl"
     >
       <Stack alignItems={"stretch"} sx={{ width: "100%" }}>
         <Container maxWidth="xl" sx={{ py: 2 }}>

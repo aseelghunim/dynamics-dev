@@ -43,8 +43,8 @@ const DimonoPage = (props) => {
           actionPath="#"
         />
 
-        <Box maxWidth="xxl" sx={{ backgroundColor: {xs:"#fff",sm:"#E0FFF5",md:"#E0FFF5"} }}>
-          <Container maxWidth="xxl">
+        <Box maxWidth="xl" sx={{ backgroundColor: {xs:"#fff",sm:"#E0FFF5",md:"#E0FFF5"} }}>
+          <Container maxWidth="xl">
             <StorySection
               name='dimono-story-section-1'
               backgroundColor={{ xs: "transparent",sm:"#E0FFF5", md: "#E0FFF5" }}
