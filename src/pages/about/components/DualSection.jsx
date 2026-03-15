@@ -170,7 +170,7 @@ const DualSection = ({
       <Container maxWidth="xl" className='container'>
         <Grid
           container
-          flexWrap={"nowrap"}
+          flexWrap=   {{xs:"wrap", sm:"nowrap"}}
           spacing="10px"
           columnGap={"10px"}
           justifyContent={"space-between"}
