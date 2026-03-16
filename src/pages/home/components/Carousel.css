@@ -9,7 +9,6 @@
   left: 0;
   right: 0;
   height: 137px;
-  /* backdrop-filter: blur(12px) saturate(150%); */
   border-top: 0.07rem solid hsla(0, 0%, 100%, 0.3);
   margin: 0;
   padding: 0;
@@ -45,6 +44,16 @@
   justify-content: center;
   position: relative;
   padding-bottom: 0;
+}
+
+.carousel-logos.ltr {
+  direction: ltr;
+  flex-direction: row;
+}
+
+.carousel-logos.rtl {
+  direction: ltr;             /* keeps offsetLeft predictable for JS */
+  flex-direction: row-reverse; /* visually shows logos right-to-left */
 }
 
 .carousel-logos::-webkit-scrollbar {
@@ -138,11 +147,14 @@
     margin: 0 6px;
   }
 }
-@media(min-width:768px){
-  .carousel-item.active::after,.carousel-track-line{
+
+@media (min-width: 768px) {
+  .carousel-item.active::after,
+  .carousel-track-line {
     display: none;
   }
 }
+
 /* ====== Mobile ====== */
 @media (max-width: 767px) {
   .carousel-container {
@@ -181,4 +193,3 @@
     height: 4px;
   }
 }
-

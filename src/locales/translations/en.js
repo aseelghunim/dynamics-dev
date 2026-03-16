@@ -131,7 +131,7 @@ export const en = {
   [tokens.brands.ksurgery.subtitle]: "Experience Ksurgery",
   [tokens.brands.ksurgery.description]:
     "Our Italian-made hyaluronic acid treatments blend cutting-edge technology with natural beauty enhancement. Ksurgery MED, by Vidapharma, delivers safe, effective, and scientifically-validated products, designed to meet the high standards of medical professionals in aesthetic care.",
-  [tokens.brands.ksurgery.whatIs]: "What is ksurgery?",
+  [tokens.brands.ksurgery.whatIs]: "What is Ksurgery?",
   [tokens.brands.ksurgery.whatIsDescription]:
     "K-Surgery is a medical aesthetic brand specializing in high-quality hyaluronic acid fillers and skin boosters. Made in Italy, its products provide safe and effective solutions for facial rejuvenation, body contouring, and skin hydration, delivering natural-looking results, immediate and long-lasting effects, and customizable treatments tailored to each patient.",
   // "K-Surgery is a leading brand specializing in high-quality medical aesthetic products, particularly focusing on hyaluronic acid-based fillers and skin boosters. Offering solutions for facial rejuvenation, body contouring, and skin hydration, K-Surgery aims to provide professionals with safe, effective, and innovative products made entirely in Italy.",
@@ -653,7 +653,7 @@ export const en = {
   // "Our advanced hyaluronic acid filler is designed for precision and natural movement. It enhances volume, smooths wrinkles, and defines contours with soft, flexible, radiant results that adapt beautifully to expression.",
 
   // "Our Italian-made hyaluronic acid treatments blend cutting-edge technology with natural beauty enhancement. maili MED, by Vidapharma, delivers safe, effective, and scientifically-validated products, designed to meet the high standards of medical professionals in aesthetic care.",
-  [tokens.brands.maili.whatIs]: "Introducing Maili",
+  [tokens.brands.maili.whatIs]: "Introducing MaiLi",
   [tokens.brands.maili.whatIsDescription]: "Attention to detail and refinement are at the heart of what we do. We’ll help you to radiate the confidence that comes from knowing you look and feel your best. MaiLi HA dermal filler treatments are only available at our exclusive Centres of Excellence, where you’ll be treated by highly qualified practitioners.",
   [tokens.brands.maili.box2Title]: "A transformational process to preserve long molecular HA chains",
   // [tokens.brands.maili.box2Description]: "Where others’ benefits end at correcting lines and folds, Ellansé goes beyond, goes deeper, working to treat the true causes of facial ageing. While it instantly addresses lines and wrinkles, it also uses your body’s natural processes to set in motion long-term collagen production, safely restoring volume, rejuvenating your appearance from within.",
@@ -697,8 +697,8 @@ export const en = {
   //  "The New Generation of Dynamic and Practical Fillers in Aesthetic Skincare. A dynamic dermal filler designed to smooth expression lines, enhance skin quality, and restore a refreshed appearance.",
   [tokens.brands.dimono.description2]: "Our advanced injectable formulation is designed to improve skin quality from within, target-ing fine lines, texture irregularities, and early signs of aging. By supporting collagen stimulation and long-term dermal renewal, Dimono delivers balanced, natural-looking results with a focus on skin strength, elasticity, and refinement.",
 
-  [tokens.brands.dimono.whatIs]: "What is Dimono?",
-  [tokens.brands.dimono.whatIsDescription]: "Dimono PTx is an innovative dermal filler formulated to treat fine lines, wrinkles, and areas of volume loss caused by facial movement and aging. Its unique combination of Hyaluronic Acid and specialized peptides supports smoother texture, improved hydration, and a revitalized complexion. Developed for patients seeking safe, effective, and naturally enhanced outcomes with minimal downtime.",
+  [tokens.brands.dimono.whatIs]: "What is CG Dimono PTx?",
+  [tokens.brands.dimono.whatIsDescription]: "CG Dimono PTx is an innovative dermal filler formulated to treat fine lines, wrinkles, and areas of volume loss caused by facial movement and aging. Its unique combination of Hyaluronic Acid and specialized peptides supports smoother texture, improved hydration, and a revitalized complexion. Developed for patients seeking safe, effective, and naturally enhanced outcomes with minimal downtime.",
   [tokens.brands.dimono.box2Title]: "A transformational process to preserve long molecular HA chains",
   // [tokens.brands.dimono.box2Description]: "Where others’ benefits end at correcting lines and folds, Ellansé goes beyond, goes deeper, working to treat the true causes of facial ageing. While it instantly addresses lines and wrinkles, it also uses your body’s natural processes to set in motion long-term collagen production, safely restoring volume, rejuvenating your appearance from within.",
 

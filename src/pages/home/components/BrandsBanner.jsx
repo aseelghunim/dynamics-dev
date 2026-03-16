@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Container } from "@mui/material";
 import Carousel from "./Carousel";
-import video1 from "assets/HeroMove1.mp4";
+import video1 from "assets/juvelook/home-video.mp4";
 import video4 from "assets/ksugery1.mp4";
 import video2 from "assets/lenisna.mov";
 import video3 from "assets/renee/video1.mp4";
@@ -19,10 +19,15 @@ import { BRANDS } from "../contants";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+const WHEEL_LOCK_MS = 600;
+const SWIPE_THRESHOLD = 50;
+const SNAP_SETTLE_MS = 150;
+
 const BrandsBanner = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isRTL = i18n.dir() === "rtl";
 
   const brands = React.useMemo(
     () => [
@@ -111,119 +116,177 @@ const BrandsBanner = () => {
     [t]
   );
 
+  const total = brands.length;
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const scrollerRef = React.useRef(null);
-  const scrollEndTimer = React.useRef(null);
-  const isProgrammaticScroll = React.useRef(false);
+
+  const clamp = React.useCallback(
+    (idx) => Math.max(0, Math.min(total - 1, idx)),
+    [total]
+  );
+
+  const goTo = React.useCallback(
+    (idx) => setActiveIndex(clamp(idx)),
+    [clamp]
+  );
+
+  // ── Mobile scroller ──────────────────────────────────────────────
+  const mobileScrollerRef = React.useRef(null);
+  const scrollEndTimerRef = React.useRef(null);
+  const isProgrammatic = React.useRef(false);
+
+  const mobileScrollTo = React.useCallback((logicalIdx) => {
+    const el = mobileScrollerRef.current;
+    if (!el) return;
+    const slides = Array.from(el.querySelectorAll("[data-slide]"));
+    const target = slides[logicalIdx];
+    if (!target) return;
+
+    clearTimeout(scrollEndTimerRef.current);
+    isProgrammatic.current = true;
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+      block: "nearest",
+    });
+
+    setTimeout(() => {
+      isProgrammatic.current = false;
+    }, 450);
+  }, []);
+
+  const getClosestIndex = React.useCallback(() => {
+    const el = mobileScrollerRef.current;
+    if (!el) return 0;
+    const slides = Array.from(el.querySelectorAll("[data-slide]"));
+    const scrollerRect = el.getBoundingClientRect();
+    const center = scrollerRect.left + scrollerRect.width / 2;
+
+    let bestIdx = 0;
+    let bestDist = Infinity;
+
+    slides.forEach((node, i) => {
+      const rect = node.getBoundingClientRect();
+      const nodeCenter = rect.left + rect.width / 2;
+      const dist = Math.abs(nodeCenter - center);
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestIdx = i;
+      }
+    });
+
+    return bestIdx;
+  }, []);
 
   React.useEffect(() => {
     if (!isMobile) return;
-
-    const el = scrollerRef.current;
+    const el = mobileScrollerRef.current;
     if (!el) return;
 
-    const slides = () =>
-      Array.from(el.querySelectorAll("[data-brand-slide='true']"));
-
-    const getClosestIndex = () => {
-      const nodes = slides();
-      if (!nodes.length) return 0;
-
-      const viewportCenter = el.scrollLeft + el.clientWidth / 2;
-      let bestIdx = 0;
-      let bestDist = Infinity;
-
-      nodes.forEach((node, idx) => {
-        const slideCenter = node.offsetLeft + node.offsetWidth / 2;
-        const dist = Math.abs(slideCenter - viewportCenter);
-
-        if (dist < bestDist) {
-          bestDist = dist;
-          bestIdx = idx;
-        }
-      });
-
-      return bestIdx;
-    };
-
-    const snapToNearest = () => {
-      if (isProgrammaticScroll.current) return;
-
-      const nodes = slides();
-      const idx = getClosestIndex();
-      const target = nodes[idx];
-      if (!target) return;
-
-      setActiveIndex(idx);
-      el.scrollTo({
-        left: target.offsetLeft,
-        behavior: "smooth",
-      });
-    };
-
-    const onScroll = () => {
+    const handleScroll = () => {
       const idx = getClosestIndex();
       setActiveIndex(idx);
 
-      if (scrollEndTimer.current) {
-        clearTimeout(scrollEndTimer.current);
-      }
+      if (isProgrammatic.current) return;
 
-      if (!isProgrammaticScroll.current) {
-        scrollEndTimer.current = setTimeout(() => {
-          snapToNearest();
-        }, 140);
-      }
+      clearTimeout(scrollEndTimerRef.current);
+      scrollEndTimerRef.current = setTimeout(() => {
+        const snapIdx = getClosestIndex();
+        setActiveIndex(snapIdx);
+        mobileScrollTo(snapIdx);
+      }, SNAP_SETTLE_MS);
     };
 
-    el.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
-      el.removeEventListener("scroll", onScroll);
-      if (scrollEndTimer.current) clearTimeout(scrollEndTimer.current);
+      el.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollEndTimerRef.current);
     };
-  }, [isMobile]);
+  }, [isMobile, getClosestIndex, mobileScrollTo]);
 
-  const scrollToBrand = (idx) => {
-    setActiveIndex(idx);
-
-    if (isMobile && scrollerRef.current) {
-      const slides = Array.from(
-        scrollerRef.current.querySelectorAll("[data-brand-slide='true']")
-      );
-      const target = slides[idx];
-      if (!target) return;
-
-      if (scrollEndTimer.current) {
-        clearTimeout(scrollEndTimer.current);
-      }
-
-      isProgrammaticScroll.current = true;
-
-      scrollerRef.current.scrollTo({
-        left: target.offsetLeft,
-        behavior: "smooth",
-      });
-
-      setTimeout(() => {
-        isProgrammaticScroll.current = false;
-      }, 450);
-
-      return;
+  React.useEffect(() => {
+    setActiveIndex(0);
+    if (isMobile) {
+      const timer = setTimeout(() => mobileScrollTo(0), 60);
+      return () => clearTimeout(timer);
     }
-  };
+  }, [isRTL, isMobile, mobileScrollTo]);
 
-  const activeBrand = brands[activeIndex];
+  // ── Desktop wheel / touch / keyboard ────────────────────────────
+  const wheelLocked = React.useRef(false);
+  const touchStartX = React.useRef(0);
+
+  const handleWheel = React.useCallback(
+    (e) => {
+      if (wheelLocked.current) return;
+      const delta =
+        Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(delta) < 18) return;
+  
+      wheelLocked.current = true;
+  
+      if (isRTL) {
+        goTo(activeIndex + (delta > 0 ? -1 : 1));
+      } else {
+        goTo(activeIndex + (delta > 0 ? 1 : -1));
+      }
+  
+      setTimeout(() => {
+        wheelLocked.current = false;
+      }, WHEEL_LOCK_MS);
+    },
+    [activeIndex, goTo, isRTL]
+  );
+
+  const handleTouchStart = React.useCallback((e) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = React.useCallback(
+    (e) => {
+      const delta = e.changedTouches[0].clientX - touchStartX.current;
+      if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+      // Same in both LTR and RTL — swipe left = next, swipe right = prev
+      goTo(activeIndex + (delta < 0 ? 1 : -1));
+    },
+    [activeIndex, goTo]
+  );
+
+  React.useEffect(() => {
+    if (isMobile) return;
+    const handleKey = (e) => {
+      // Same in both directions — ArrowRight = next, ArrowLeft = prev
+      if (e.key === "ArrowRight") goTo(activeIndex + 1);
+      if (e.key === "ArrowLeft") goTo(activeIndex - 1);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [isMobile, activeIndex, goTo]);
+
+  const handleSelect = React.useCallback(
+    (idx) => {
+      setActiveIndex(idx);
+      if (isMobile) mobileScrollTo(idx);
+    },
+    [isMobile, mobileScrollTo]
+  );
+
+  // ── Desktop slide transform ──────────────────────────────────────
+  // Always row, always translate left — no RTL flip needed.
+  // dir="rtl" on the outer Box handles text/button alignment inside slides.
+  const desktopTranslate = `translateX(-${(activeIndex * 100) / total}%)`;
 
   return (
     <Box
+      dir={isRTL ? "rtl" : "ltr"}
       sx={{
         padding: 0,
         overflow: "hidden",
         filter: "grayscale(100%)",
         backgroundColor: "#000",
-        height: { xs: "100vh", sm: "100vh", md: "100vh" },
+        height: "100vh",
       }}
     >
       <Container
@@ -231,21 +294,19 @@ const BrandsBanner = () => {
         disableGutters
         sx={{
           position: "relative",
-          // margin: 0,
           width: "100%",
-          height: { xs: "100vh", sm: "100vh", md: "100vh" },
+          height: "100vh",
           overflow: "hidden",
-          "@media(max-width:767px)": {
-            margin: "0"
-          },
         }}
       >
         {isMobile ? (
+          // ── Mobile: native scroll snap, always LTR internally ──
           <Box
-            ref={scrollerRef}
+            ref={mobileScrollerRef}
             sx={{
               display: "flex",
-              overflowX: "auto",
+              flexDirection: "row",
+              overflowX: "scroll",
               overflowY: "hidden",
               scrollSnapType: "x mandatory",
               WebkitOverflowScrolling: "touch",
@@ -254,22 +315,29 @@ const BrandsBanner = () => {
               width: "100%",
               overscrollBehaviorX: "contain",
               touchAction: "pan-x",
-              "&::-webkit-scrollbar": { display: "none" },
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
+              "&::-webkit-scrollbar": { height: 4 },
+              "&::-webkit-scrollbar-track": {
+                background: "rgba(255,255,255,0.08)",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                background: "rgba(255,255,255,0.45)",
+                borderRadius: 2,
+              },
+              scrollbarWidth: "thin",
+              scrollbarColor:
+                "rgba(255,255,255,0.45) rgba(255,255,255,0.08)",
             }}
           >
             {brands.map((brand) => (
               <Box
                 key={brand.key}
-                data-brand-slide="true"
+                data-slide
                 sx={{
                   flex: "0 0 100%",
                   minWidth: "100%",
-                  width: "100%",
                   height: "100%",
                   position: "relative",
-                  scrollSnapAlign: "center",
+                  scrollSnapAlign: "start",
                   scrollSnapStop: "always",
                   overflow: "hidden",
                 }}
@@ -286,20 +354,65 @@ const BrandsBanner = () => {
             ))}
           </Box>
         ) : (
-          <BrandContainer
-            title={activeBrand.title}
-            subTitle={activeBrand.subTitle}
-            description={activeBrand.description}
-            buttonText={activeBrand.buttonText}
-            video={activeBrand.video}
-            path={activeBrand.path}
-          />
+          // ── Desktop: transform-based slider ──
+          <Box
+            onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            tabIndex={0}
+            aria-roledescription="slider"
+            aria-label="Brands slider"
+            sx={{
+              width: "100%",
+              height: "100%",
+              overflow: "hidden",
+              outline: "none",
+              userSelect: "none",
+              touchAction: "pan-y",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                width: `${total * 100}%`,
+                height: "100%",
+                transform: desktopTranslate,
+                transition:
+                  "transform 0.55s cubic-bezier(0.77, 0, 0.175, 1)",
+                willChange: "transform",
+              }}
+            >
+              {brands.map((brand) => (
+                <Box
+                  key={brand.key}
+                  sx={{
+                    flex: `0 0 ${100 / total}%`,
+                    width: `${100 / total}%`,
+                    height: "100%",
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                >
+                  <BrandContainer
+                    title={brand.title}
+                    subTitle={brand.subTitle}
+                    description={brand.description}
+                    buttonText={brand.buttonText}
+                    video={brand.video}
+                    path={brand.path}
+                  />
+                </Box>
+              ))}
+            </Box>
+          </Box>
         )}
 
         <Carousel
           items={brands}
           activeIndex={activeIndex}
-          onSelect={scrollToBrand}
+          onSelect={handleSelect}
+          isRTL={isRTL}
         />
       </Container>
     </Box>

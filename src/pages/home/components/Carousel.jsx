@@ -14,7 +14,12 @@ import logo9 from "assets/home-brands-logos/logo999.webp";
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9];
 
-const Carousel = ({ items, activeIndex, onSelect }) => {
+const Carousel = ({
+  items = [],
+  activeIndex = 0,
+  onSelect = () => {},
+  isRTL = false,
+}) => {
   const logosScrollerRef = useRef(null);
   const itemRefs = useRef([]);
 
@@ -23,29 +28,24 @@ const Carousel = ({ items, activeIndex, onSelect }) => {
 
     const carousel = logosScrollerRef.current;
     const item = itemRefs.current[index];
-
-    const itemLeft = item.offsetLeft;
-    const itemWidth = item.offsetWidth;
+    console.log({index})
     const carouselWidth = carousel.offsetWidth;
     const maxScrollLeft = carousel.scrollWidth - carouselWidth;
 
-    let scrollPosition = itemLeft - carouselWidth / 2 + itemWidth / 2;
+    let scrollPosition =
+      item.offsetLeft - carouselWidth / 2 + item.offsetWidth / 2;
+    scrollPosition = Math.max(0, Math.min(scrollPosition, maxScrollLeft));
 
-    if (scrollPosition < 0) scrollPosition = 0;
-    if (scrollPosition > maxScrollLeft) scrollPosition = maxScrollLeft;
-
-    carousel.scrollTo({
-      left: scrollPosition,
-      behavior,
-    });
+    carousel.scrollTo({ left: scrollPosition, behavior });
   };
 
   useEffect(() => {
+    if (!items.length) return;
     scrollLogoToCenter(activeIndex, "smooth");
-  }, [activeIndex]);
+  }, [activeIndex, items.length, isRTL]);
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" dir={isRTL ? "rtl" : "ltr"}>
       <Container
         maxWidth="xl"
         sx={{
@@ -66,13 +66,18 @@ const Carousel = ({ items, activeIndex, onSelect }) => {
           <Box sx={{ width: "100%" }}>
             <div className="carousel">
               <div className="carousel-track-line" />
-
-              <div className="carousel-logos" ref={logosScrollerRef}>
+              {/* No dir attribute — keeps scrollLeft always positive/predictable */}
+              <div
+                className={`carousel-logos ${isRTL ? "rtl" : "ltr"}`}
+                ref={logosScrollerRef}
+              >
                 {items.map((item, index) => (
                   <div
                     key={item.key}
                     ref={(el) => (itemRefs.current[index] = el)}
-                    className={`carousel-item ${activeIndex === index ? "active" : ""}`}
+                    className={`carousel-item ${
+                      activeIndex === index ? "active" : ""
+                    }`}
                     onClick={() => onSelect(index)}
                   >
                     <img src={logos[index]} alt={item.key} />
