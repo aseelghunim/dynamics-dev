@@ -7,10 +7,10 @@ import logo2 from "assets/home-brands-logos/logo2.png";
 import logo3 from "assets/home-brands-logos/logo3.png";
 import logo4 from "assets/home-brands-logos/logo4.png";
 import logo5 from "assets/home-brands-logos/logo5.svg";
-import logo6 from "assets/home-brands-logos/logo6.svg";
-import logo7 from "assets/home-brands-logos/logo7.svg";
+import logo6 from "assets/home-brands-logos/logo666.webp";
+import logo7 from "assets/home-brands-logos/logo777.png";
 import logo8 from "assets/home-brands-logos/logo8.svg";
-import logo9 from "assets/home-brands-logos/logo9.svg";
+import logo9 from "assets/home-brands-logos/logo999.webp";
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9];
 

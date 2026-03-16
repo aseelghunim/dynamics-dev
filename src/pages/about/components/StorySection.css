@@ -302,6 +302,19 @@ html[dir='rtl'] .ellanse-story-section-1 .image-box>div>div {
         height: 420px;
         top: 0;
     }
+    html[dir='ltr'] .story-section-parent.renee-story-1 .first-stack {
+     
+        padding-right: 86px !important;
+    }
+    html[dir='ltr'] .story-section-parent.maili-story-section-1 .first-stack,
+    
+   html[dir='ltr'] .story-section-parent.ellanse-story-section-1 .first-stack,
+   html[dir='ltr'] .story-section-parent.ellanse-story-section-3 .first-stack
+
+    {
+        padding-left: 40px;
+        padding-right: 0;
+    }
 }
 
 

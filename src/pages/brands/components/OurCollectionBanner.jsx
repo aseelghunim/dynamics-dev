@@ -151,7 +151,7 @@ const OurCollectionBanner = () => {
       ) : (
         // Desktop + Tablet: heading stays, cards scroll horizontally right next to it
         <Container
-          maxWidth="xl"
+          maxWidth="xxl"
           sx={{
             position: "relative",
             height: "100%",
@@ -159,6 +159,7 @@ const OurCollectionBanner = () => {
             paddingRight:{xs:2,md:10,xl:0},
             // paddingTop: ,
             marginRight:"auto!important",
+
             marginLeft:"auto!important",
             margin: 0,
           }}

@@ -214,7 +214,7 @@ const DimonoProductComponent = () => {
                   sx={{
                     maxWidth: "100%",
                     height: "auto",
-                    width: { sm: "70px", md: "107px" },
+                    width: { sm: "70px", md: "107px",xl:"117px"},
                     mt: { xs: "140px", sm: "0", md: "140px" }
                   }}
                 />

@@ -1,7 +1,6 @@
 @media(min-width:1399px){
-    .image-hero-parent{
-        /* height: 70vh!important;
-        min-height: unset!important; */
+    .image-hero-parent span{
+       width: 70%;
     }
 }
 
