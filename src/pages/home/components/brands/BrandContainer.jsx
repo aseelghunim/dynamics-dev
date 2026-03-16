@@ -50,7 +50,7 @@ const BrandContainer = ({
     <>
       <Container
 
-        maxWidth="xl"
+        // maxWidth="xl"
         sx={{
           position: "relative",
           zIndex: 1,
@@ -58,8 +58,9 @@ const BrandContainer = ({
             height: "100%",
           },
           "@media(min-width:992px)": {
-            marginLeft: "132px",
-            marginRight: "132px",
+            paddingLeft: "64px",
+            paddingRight: 0
+            // marginRight: "132px",
           },
           // "@media(min-width:1400px)": {
           //   paddingTop: "132px",
