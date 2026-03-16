@@ -167,7 +167,7 @@ const BrandsBanner = () => {
 
     slides.forEach((node, i) => {
       const rect = node.getBoundingClientRect();
-      const nodeCenter = rect.left + rect.width / 2;
+      const nodeCenter =  rect.left + rect.width / 2;
       const dist = Math.abs(nodeCenter - center);
       if (dist < bestDist) {
         bestDist = dist;

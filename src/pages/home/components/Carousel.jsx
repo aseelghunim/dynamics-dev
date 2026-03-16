@@ -23,12 +23,16 @@ const Carousel = ({
   const logosScrollerRef = useRef(null);
   const itemRefs = useRef([]);
 
+  // In RTL, we render items in reverse order visually,
+  // so we need to map activeIndex to the reversed position
+  const displayItems = isRTL ? [...items].reverse() : items;
+  const displayIndex = isRTL ? items.length - 1 - activeIndex : activeIndex;
+
   const scrollLogoToCenter = (index, behavior = "auto") => {
     if (!itemRefs.current[index] || !logosScrollerRef.current) return;
 
     const carousel = logosScrollerRef.current;
     const item = itemRefs.current[index];
-    console.log({index})
     const carouselWidth = carousel.offsetWidth;
     const maxScrollLeft = carousel.scrollWidth - carouselWidth;
 
@@ -41,7 +45,7 @@ const Carousel = ({
 
   useEffect(() => {
     if (!items.length) return;
-    scrollLogoToCenter(activeIndex, "smooth");
+    scrollLogoToCenter(displayIndex, "smooth");
   }, [activeIndex, items.length, isRTL]);
 
   return (
@@ -66,23 +70,26 @@ const Carousel = ({
           <Box sx={{ width: "100%" }}>
             <div className="carousel">
               <div className="carousel-track-line" />
-              {/* No dir attribute — keeps scrollLeft always positive/predictable */}
+              {/* Always direction: ltr so offsetLeft and scrollTo are predictable */}
               <div
-                className={`carousel-logos ${isRTL ? "rtl" : "ltr"}`}
+                className="carousel-logos"
                 ref={logosScrollerRef}
               >
-                {items.map((item, index) => (
-                  <div
-                    key={item.key}
-                    ref={(el) => (itemRefs.current[index] = el)}
-                    className={`carousel-item ${
-                      activeIndex === index ? "active" : ""
-                    }`}
-                    onClick={() => onSelect(index)}
-                  >
-                    <img src={logos[index]} alt={item.key} />
-                  </div>
-                ))}
+                {displayItems.map((item, index) => {
+                  const isActive = index === displayIndex;
+                  // Map display index back to original index for onSelect
+                  const originalIndex = isRTL ? items.length - 1 - index : index;
+                  return (
+                    <div
+                      key={item.key}
+                      ref={(el) => (itemRefs.current[index] = el)}
+                      className={`carousel-item ${isActive ? "active" : ""}`}
+                      onClick={() => onSelect(originalIndex)}
+                    >
+                      <img src={logos[originalIndex]} alt={item.key} />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </Box>
@@ -91,5 +98,6 @@ const Carousel = ({
     </div>
   );
 };
+
 
 export default Carousel;

@@ -37,6 +37,8 @@
 /* ====== Logos scroller ====== */
 .carousel-logos {
   display: flex;
+  flex-direction: row;        /* always LTR internally */
+  direction: ltr;             /* always LTR internally */
   overflow-x: auto;
   overflow-y: visible;
   scroll-behavior: smooth;
@@ -46,15 +48,7 @@
   padding-bottom: 0;
 }
 
-.carousel-logos.ltr {
-  direction: ltr;
-  flex-direction: row;
-}
-
-.carousel-logos.rtl {
-  direction: ltr;             /* keeps offsetLeft predictable for JS */
-  flex-direction: row-reverse; /* visually shows logos right-to-left */
-}
+/*  */
 
 .carousel-logos::-webkit-scrollbar {
   display: none;
