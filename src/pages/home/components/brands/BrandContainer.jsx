@@ -82,6 +82,9 @@ const BrandContainer = ({
               height: "100%",
               justifyContent: "center",
             },
+             "@media(min-width:1500px)": {
+            paddingTop: "300px",
+          },
           }}
         >
           <Stack spacing={3} sx={heroTextStyle} className="slide-up">
