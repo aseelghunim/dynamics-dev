@@ -178,6 +178,8 @@ const BrandsBanner = () => {
     return bestIdx;
   }, []);
 
+
+
   React.useEffect(() => {
     if (!isMobile) return;
     const el = mobileScrollerRef.current;
@@ -221,18 +223,17 @@ const BrandsBanner = () => {
   const handleWheel = React.useCallback(
     (e) => {
       if (wheelLocked.current) return;
-      const delta =
-        Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      const delta = e.deltaX;
       if (Math.abs(delta) < 18) return;
-  
+
       wheelLocked.current = true;
-  
+
       if (isRTL) {
         goTo(activeIndex + (delta > 0 ? -1 : 1));
       } else {
         goTo(activeIndex + (delta > 0 ? 1 : -1));
       }
-  
+
       setTimeout(() => {
         wheelLocked.current = false;
       }, WHEEL_LOCK_MS);
@@ -264,7 +265,19 @@ const BrandsBanner = () => {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [isMobile, activeIndex, goTo]);
+  React.useEffect(() => {
+    if (isMobile) return;
+    const el = sliderRef.current;
+    if (!el) return;
 
+    const onWheel = (e) => {
+      e.preventDefault();
+      handleWheel(e);
+    };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, [isMobile, handleWheel]);
   const handleSelect = React.useCallback(
     (idx) => {
       setActiveIndex(idx);
@@ -272,7 +285,12 @@ const BrandsBanner = () => {
     },
     [isMobile, mobileScrollTo]
   );
-
+  const sliderRef = React.useRef(null);
+  React.useEffect(() => {
+    if (!isMobile && sliderRef.current) {
+      sliderRef.current.focus();
+    }
+  }, [isMobile, isRTL]);
   // ── Desktop slide transform ──────────────────────────────────────
   // Always row, always translate left — no RTL flip needed.
   // dir="rtl" on the outer Box handles text/button alignment inside slides.
@@ -356,10 +374,12 @@ const BrandsBanner = () => {
         ) : (
           // ── Desktop: transform-based slider ──
           <Box
+            ref={sliderRef}
             onWheel={handleWheel}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             tabIndex={0}
+            autoFocus
             aria-roledescription="slider"
             aria-label="Brands slider"
             sx={{
