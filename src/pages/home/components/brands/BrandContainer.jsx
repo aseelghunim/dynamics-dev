@@ -76,7 +76,7 @@ const BrandContainer = ({
           spacing={2}
           sx={{
             flexGrow: 1,
-            paddingTop: { xs: "0", md: "100px",xl:"200px" },
+            paddingTop: { xs: "0", md: "100px",xl:"10%" },
             px: { xs: 2, md: 0 },
             "@media (max-width: 991px)": {
               height: "100%",

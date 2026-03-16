@@ -374,12 +374,12 @@ const BrandsBanner = () => {
         ) : (
           // ── Desktop: transform-based slider ──
           <Box
-            ref={sliderRef}
-            onWheel={handleWheel}
+            // ref={sliderRef}
+            // onWheel={handleWheel}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             tabIndex={0}
-            autoFocus
+            // autoFocus
             aria-roledescription="slider"
             aria-label="Brands slider"
             sx={{
