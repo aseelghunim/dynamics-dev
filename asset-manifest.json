@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dynamics-dev/static/css/main.2bfaed62.css",
-    "main.js": "/dynamics-dev/static/js/main.c6ca8b40.js",
+    "main.js": "/dynamics-dev/static/js/main.4bf19d31.js",
     "static/js/453.f037a3e1.chunk.js": "/dynamics-dev/static/js/453.f037a3e1.chunk.js",
     "static/media/about.mov": "/dynamics-dev/static/media/about.e3f2773cffb8c4ad96d6.mov",
     "static/media/video3.mp4": "/dynamics-dev/static/media/video3.9a44517e20046f0ee211.mp4",
@@ -10,6 +10,7 @@
     "static/media/video1.mp4": "/dynamics-dev/static/media/video1.8d95cb6ff19611c4ef0e.mp4",
     "static/media/ksugery1.mp4": "/dynamics-dev/static/media/ksugery1.568fd5777512801e3f82.mp4",
     "static/media/lenisna.mov": "/dynamics-dev/static/media/lenisna.1d168ace8bdd57a1e14f.mov",
+    "static/media/Video_3_HomePage.mp4": "/dynamics-dev/static/media/Video_3_HomePage.188d61c9fdb533e55747.mp4",
     "static/media/home-video.mp4": "/dynamics-dev/static/media/home-video.83cbab394206425fd42e.mp4",
     "static/media/our_brands.mp4": "/dynamics-dev/static/media/our_brands.a36feb20cd26ac27f14c.mp4",
     "static/media/LeisnaMovie.mp4": "/dynamics-dev/static/media/LeisnaMovie.96641caa3a9167dcaafe.mp4",
@@ -18,7 +19,6 @@
     "static/media/background.png": "/dynamics-dev/static/media/background.61c7842dbc54a602686a.png",
     "static/media/ContactUsMovie1.mp4": "/dynamics-dev/static/media/ContactUsMovie1.8db94ba1b4edd5645705.mp4",
     "static/media/val5.png": "/dynamics-dev/static/media/val5.c7c4d121235b34d77b82.png",
-    "static/media/Video_Lanluma_HomePage.mp4": "/dynamics-dev/static/media/Video_Lanluma_HomePage.c6f49b1a305cabf57be6.mp4",
     "static/media/dimono girl and arrows.png": "/dynamics-dev/static/media/dimono girl and arrows.3e47a99cf7f72dab8a1f.png",
     "static/media/product4.png": "/dynamics-dev/static/media/product4.4bf457692716dde695f7.png",
     "static/media/4.png": "/dynamics-dev/static/media/4.76d656594499b3740411.png",
@@ -121,11 +121,11 @@
     "static/media/slick.woff": "/dynamics-dev/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/dynamics-dev/index.html",
     "main.2bfaed62.css.map": "/dynamics-dev/static/css/main.2bfaed62.css.map",
-    "main.c6ca8b40.js.map": "/dynamics-dev/static/js/main.c6ca8b40.js.map",
+    "main.4bf19d31.js.map": "/dynamics-dev/static/js/main.4bf19d31.js.map",
     "453.f037a3e1.chunk.js.map": "/dynamics-dev/static/js/453.f037a3e1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2bfaed62.css",
-    "static/js/main.c6ca8b40.js"
+    "static/js/main.4bf19d31.js"
   ]
 }
