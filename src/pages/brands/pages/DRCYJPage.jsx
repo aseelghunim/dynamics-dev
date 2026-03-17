@@ -95,7 +95,7 @@ const DRCYJPage = (props) => {
         <ImageHero
           name='drcyj-image-hero-1'
           sectionSx={{
-
+            height:"80vh",
             backgroundImage: `url(${background})`,
 
             backgroundSize: "cover"
@@ -128,7 +128,7 @@ const DRCYJPage = (props) => {
                   sx={{
                     fontSize: { xs: "0.875rem", md: "inherit" },
                     color: "black",
-                    width: {xs:"100%",md:"80%"}
+                    width: {xs:"100%",md:"100%"}
                   }}
                 >
                   {t(tokens.brands.drcyj.productoverviewDesc)}

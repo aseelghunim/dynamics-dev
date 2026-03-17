@@ -130,11 +130,14 @@
     justify-content: flex-start;
     overflow-x: auto;
     overflow-y: visible;
-    padding-left: 48px;
+    padding-left: 96px;
     padding-right: 48px;
     padding-bottom: 0;
   }
-
+html[dir='rtl'] .carousel-logos{
+  padding-right: 96px;
+  padding-left: 48px;
+}
   .carousel-item {
     width: 93px;
     height: 93px;

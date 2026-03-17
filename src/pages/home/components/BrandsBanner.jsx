@@ -304,7 +304,13 @@ const BrandsBanner = () => {
         overflow: "hidden",
         filter: "grayscale(100%)",
         backgroundColor: "#000",
-        height: "100vh",
+        height: "90vh",
+        "@media(min-width:768px) and (max-width:991px)": {
+          height: "55vh",
+        },
+        "@media(min-width:1500px)": {
+          height: "70vh",
+        },
       }}
     >
       <Container
@@ -313,8 +319,14 @@ const BrandsBanner = () => {
         sx={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "90vh",
           overflow: "hidden",
+          "@media(min-width:768px) and (max-width:991px)": {
+            height: "55vh",
+          },
+          "@media(min-width:1500px)": {
+            height: "70vh",
+          },
         }}
       >
         {isMobile ? (

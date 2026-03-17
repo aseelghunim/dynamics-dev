@@ -67,6 +67,9 @@ const BrandContainer = ({
           // },
           "@media (min-width: 768px) and (max-width:991px)": {
             height: "80%",
+            paddingRight:"96px",
+            paddingLeft:"96px"
+
           },
         }}
       >
@@ -76,15 +79,15 @@ const BrandContainer = ({
           spacing={2}
           sx={{
             flexGrow: 1,
-            paddingTop: { xs: "0", md: "100px",xl:"10%" },
+            paddingTop: { xs: "0", md: "100px", },
             px: { xs: 2, md: 0 },
             "@media (max-width: 991px)": {
               height: "100%",
               justifyContent: "center",
             },
-             "@media(min-width:1500px)": {
-            paddingTop: "300px",
-          },
+            "@media(min-width:1500px)": {
+              // paddingTop: "300px",
+            },
           }}
         >
           <Stack spacing={3} sx={heroTextStyle} className="slide-up">
@@ -93,7 +96,7 @@ const BrandContainer = ({
               sx={{
                 fontSize: "15px!important",
                 display: { xs: "none", sm: "flex" },
-                mb: { xs: "16px !important", md: "unset" },
+                mb: { xs: "16px !important", md: "0!important" },
               }}
             >
               {title}

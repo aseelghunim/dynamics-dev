@@ -1,6 +1,6 @@
 @media(min-width:1399px){
     .image-hero-parent span{
-       width: 70%;
+       width: 90%;
     }
 }
 
@@ -52,9 +52,11 @@
 
     .drcyj-image-hero-1 {
         min-height: unset !important;
-        height: 65vh;
+        /* height: 65vh; */
     }
-
+    .drcyj-image-hero-1::before{
+        background-position: -222px 8px!important;
+}
     .dimono-image-hero-1 {
         background-position: -36px 88px;
     }
