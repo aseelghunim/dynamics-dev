@@ -9,7 +9,7 @@ import video3 from "assets/renee/video1.mp4";
 import video5 from "assets/ellanse/video3.mp4";
 import video6 from "assets/maili/video3.mp4";
 import video7 from "assets/dimono/video2.mp4";
-import video8 from "assets/lanluma/Video_3_HomePage.mp4";
+import video8 from "assets/lanluma/Video_Lanluma_HomePage_2.mp4";
 import video9 from "assets/drcyj/video2.mp4";
 import BrandContainer from "./brands/BrandContainer";
 import { useTranslation } from "react-i18next";
